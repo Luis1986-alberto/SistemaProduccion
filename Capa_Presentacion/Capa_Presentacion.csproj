@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96F3E5D8-4C9D-4085-A009-0E28EA5A1ABD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Capa_Presentacion</RootNamespace>
+    <AssemblyName>Sistema_Produccion</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="ComboBoxMultiColumns">
+      <HintPath>..\packages\ComboBoxMultiColumns.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\DataGridViewPrinter.cs" />
+    <Compile Include="Clases\PropertyComparer.cs" />
+    <Compile Include="Clases\SortableBindingList.cs" />
+    <Compile Include="Clases\Validar_Campos.cs" />
+    <Compile Include="Clases\Variables_Globales.cs" />
+    <Compile Include="Formularios\Logistica\Frm_CondicionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_CondicionPago.Designer.cs">
+      <DependentUpon>Frm_CondicionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_EstadoInmueble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_EstadoInmueble.Designer.cs">
+      <DependentUpon>Frm_EstadoInmueble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_FormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_FormaPago.Designer.cs">
+      <DependentUpon>Frm_FormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_Proveedores.Designer.cs">
+      <DependentUpon>Frm_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoProveedor.Designer.cs">
+      <DependentUpon>Frm_TipoProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_UbicacionInmueble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_UbicacionInmueble.Designer.cs">
+      <DependentUpon>Frm_UbicacionInmueble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Adhesivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Adhesivo.Designer.cs">
+      <DependentUpon>Frm_Adhesivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_AgenteAduanero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_AgenteAduanero.Designer.cs">
+      <DependentUpon>Frm_AgenteAduanero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_Almacen.Designer.cs">
+      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_AlmacenAduana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_AlmacenAduana.Designer.cs">
+      <DependentUpon>Frm_AlmacenAduana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_PropiedadesMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_PropiedadesMaterial.Designer.cs">
+      <DependentUpon>Frm_PropiedadesMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.Designer.cs">
+      <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_RegistroEstandar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_RegistroEstandar.Designer.cs">
+      <DependentUpon>Frm_RegistroEstandar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_RegistroMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_RegistroMaquina.Designer.cs">
+      <DependentUpon>Frm_RegistroMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_SectorAlmacenPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_SectorAlmacenPT.Designer.cs">
+      <DependentUpon>Frm_SectorAlmacenPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Area.Designer.cs">
+      <DependentUpon>Frm_Area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Año.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Año.Designer.cs">
+      <DependentUpon>Frm_Año.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Buscar.Designer.cs">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Cargotrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Cargotrabajador.Designer.cs">
+      <DependentUpon>Frm_Cargotrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Carreta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Carreta.Designer.cs">
+      <DependentUpon>Frm_Carreta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CategoriaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CategoriaMaterial.Designer.cs">
+      <DependentUpon>Frm_CategoriaMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CodigoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CodigoEvento.Designer.cs">
+      <DependentUpon>Frm_CodigoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Color.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Color.Designer.cs">
+      <DependentUpon>Frm_Color.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CondicionCobranza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CondicionCobranza.designer.cs">
+      <DependentUpon>Frm_CondicionCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CondicionProceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_CondicionProceso.Designer.cs">
+      <DependentUpon>Frm_CondicionProceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Empaquetado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Empaquetado.Designer.cs">
+      <DependentUpon>Frm_Empaquetado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Empresa.Designer.cs">
+      <DependentUpon>Frm_Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EspesorTuco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EspesorTuco.Designer.cs">
+      <DependentUpon>Frm_EspesorTuco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Estado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Estado.Designer.cs">
+      <DependentUpon>Frm_Estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Control Calidad\Frm_EstadoCalificacionCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Control Calidad\Frm_EstadoCalificacionCC.Designer.cs">
+      <DependentUpon>Frm_EstadoCalificacionCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoFormulacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoFormulacion.Designer.cs">
+      <DependentUpon>Frm_EstadoFormulacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoMaquina.Designer.cs">
+      <DependentUpon>Frm_EstadoMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoOrdenProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoOrdenProduccion.Designer.cs">
+      <DependentUpon>Frm_EstadoOrdenProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Etiqueta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Etiqueta.Designer.cs">
+      <DependentUpon>Frm_Etiqueta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoProcesoOrdenProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_EstadoProcesoOrdenProduccion.Designer.cs">
+      <DependentUpon>Frm_EstadoProcesoOrdenProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Etiquetadoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Etiquetadoras.Designer.cs">
+      <DependentUpon>Frm_Etiquetadoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_FamiliaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_FamiliaProduccion.Designer.cs">
+      <DependentUpon>Frm_FamiliaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_FormaSustrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_FormaSustrato.Designer.cs">
+      <DependentUpon>Frm_FormaSustrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_GrupoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_GrupoProduccion.Designer.cs">
+      <DependentUpon>Frm_GrupoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_IGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_IGV.Designer.cs">
+      <DependentUpon>Frm_IGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_LineaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_LineaProduccion.Designer.cs">
+      <DependentUpon>Frm_LineaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Local.Designer.cs">
+      <DependentUpon>Frm_Local.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_LocalvsArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_LocalvsArea.Designer.cs">
+      <DependentUpon>Frm_LocalvsArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_MaquinaMezcladora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_MaquinaMezcladora.Designer.cs">
+      <DependentUpon>Frm_MaquinaMezcladora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_MarcaMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_MarcaMaterial.Designer.cs">
+      <DependentUpon>Frm_MarcaMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_MedidaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_MedidaProduccion.Designer.cs">
+      <DependentUpon>Frm_MedidaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Control Calidad\Frm_MotivoObservacion_CC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Control Calidad\Frm_MotivoObservacion_CC.Designer.cs">
+      <DependentUpon>Frm_MotivoObservacion_CC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Presicionbalanza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Presicionbalanza.Designer.cs">
+      <DependentUpon>Frm_Presicionbalanza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Principal.Designer.cs">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Prioridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Prioridad.Designer.cs">
+      <DependentUpon>Frm_Prioridad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Semana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Semana.Designer.cs">
+      <DependentUpon>Frm_Semana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_SubFamiliaProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Catalogo General\Frm_SubFamiliaProduccion.Designer.cs">
+      <DependentUpon>Frm_SubFamiliaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoDespacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoDespacho.Designer.cs">
+      <DependentUpon>Frm_TipoDespacho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoFuelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoFuelle.Designer.cs">
+      <DependentUpon>Frm_TipoFuelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_MarcaMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_MarcaMaquina.Designer.cs">
+      <DependentUpon>Frm_MarcaMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PaisProcedencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PaisProcedencia.Designer.cs">
+      <DependentUpon>Frm_PaisProcedencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PieImprenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PieImprenta.Designer.cs">
+      <DependentUpon>Frm_PieImprenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PosicionTaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_PosicionTaca.Designer.cs">
+      <DependentUpon>Frm_PosicionTaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_ProcesosProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_ProcesosProduccion.Designer.cs">
+      <DependentUpon>Frm_ProcesosProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Rodillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Rodillo.Designer.cs">
+      <DependentUpon>Frm_Rodillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoAsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoAsa.Designer.cs">
+      <DependentUpon>Frm_TipoAsa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoIngreso.Designer.cs">
+      <DependentUpon>Frm_TipoIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoLaminacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoLaminacion.Designer.cs">
+      <DependentUpon>Frm_TipoLaminacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaquina.Designer.cs">
+      <DependentUpon>Frm_TipoMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_TipoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Materia Prima\Frm_TipoMaterial.Designer.cs">
+      <DependentUpon>Frm_TipoMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaterialExtruir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaterialExtruir.Designer.cs">
+      <DependentUpon>Frm_TipoMaterialExtruir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaterialLaminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMaterialLaminado.Designer.cs">
+      <DependentUpon>Frm_TipoMaterialLaminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoMoneda.Designer.cs">
+      <DependentUpon>Frm_TipoMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProcesoCorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProcesoCorte.Designer.cs">
+      <DependentUpon>Frm_TipoProcesoCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProcesoLaminado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProcesoLaminado.Designer.cs">
+      <DependentUpon>Frm_TipoProcesoLaminado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProduccion.Designer.cs">
+      <DependentUpon>Frm_TipoProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoProducto.Designer.cs">
+      <DependentUpon>Frm_TipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoRubro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoRubro.Designer.cs">
+      <DependentUpon>Frm_TipoRubro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Frm_TipoSalida.Designer.cs">
+      <DependentUpon>Frm_TipoSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoSello.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoSello.Designer.cs">
+      <DependentUpon>Frm_TipoSello.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTinta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTinta.Designer.cs">
+      <DependentUpon>Frm_TipoTinta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTrabajador.Designer.cs">
+      <DependentUpon>Frm_TipoTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTratado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTratado.Designer.cs">
+      <DependentUpon>Frm_TipoTratado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTroquel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoTroquel.Designer.cs">
+      <DependentUpon>Frm_TipoTroquel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_UnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_UnidadMedida.Designer.cs">
+      <DependentUpon>Frm_UnidadMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_UsoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_UsoProducto.Designer.cs">
+      <DependentUpon>Frm_UsoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Usuario.Designer.cs">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MDIFrm_Produccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MDIFrm_Produccion.Designer.cs">
+      <DependentUpon>MDIFrm_Produccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\Logistica\Frm_CondicionPago.resx">
+      <DependentUpon>Frm_CondicionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_EstadoInmueble.resx">
+      <DependentUpon>Frm_EstadoInmueble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_FormaPago.resx">
+      <DependentUpon>Frm_FormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_Proveedores.resx">
+      <DependentUpon>Frm_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_TipoProveedor.resx">
+      <DependentUpon>Frm_TipoProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_UbicacionInmueble.resx">
+      <DependentUpon>Frm_UbicacionInmueble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Adhesivo.resx">
+      <DependentUpon>Frm_Adhesivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Materia Prima\Frm_AgenteAduanero.resx">
+      <DependentUpon>Frm_AgenteAduanero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_Almacen.resx">
+      <DependentUpon>Frm_Almacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Materia Prima\Frm_AlmacenAduana.resx">
+      <DependentUpon>Frm_AlmacenAduana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Materia Prima\Frm_PropiedadesMaterial.resx">
+      <DependentUpon>Frm_PropiedadesMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.resx">
+      <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_RegistroEstandar.resx">
+      <DependentUpon>Frm_RegistroEstandar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_RegistroMaquina.resx">
+      <DependentUpon>Frm_RegistroMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_SectorAlmacenPT.resx">
+      <DependentUpon>Frm_SectorAlmacenPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Area.resx">
+      <DependentUpon>Frm_Area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Año.resx">
+      <DependentUpon>Frm_Año.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Buscar.resx">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Cargotrabajador.resx">
+      <DependentUpon>Frm_Cargotrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Carreta.resx">
+      <DependentUpon>Frm_Carreta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_CategoriaMaterial.resx">
+      <DependentUpon>Frm_CategoriaMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Cliente.resx">
+      <DependentUpon>Frm_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_CodigoEvento.resx">
+      <DependentUpon>Frm_CodigoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Color.resx">
+      <DependentUpon>Frm_Color.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_CondicionCobranza.resx">
+      <DependentUpon>Frm_CondicionCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_CondicionProceso.resx">
+      <DependentUpon>Frm_CondicionProceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Empaquetado.resx">
+      <DependentUpon>Frm_Empaquetado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Empresa.resx">
+      <DependentUpon>Frm_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_EspesorTuco.resx">
+      <DependentUpon>Frm_EspesorTuco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Estado.resx">
+      <DependentUpon>Frm_Estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Control Calidad\Frm_EstadoCalificacionCC.resx">
+      <DependentUpon>Frm_EstadoCalificacionCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_EstadoFormulacion.resx">
+      <DependentUpon>Frm_EstadoFormulacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_EstadoMaquina.resx">
+      <DependentUpon>Frm_EstadoMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_EstadoOrdenProduccion.resx">
+      <DependentUpon>Frm_EstadoOrdenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Etiqueta.resx">
+      <DependentUpon>Frm_Etiqueta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_EstadoProcesoOrdenProduccion.resx">
+      <DependentUpon>Frm_EstadoProcesoOrdenProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Etiquetadoras.resx">
+      <DependentUpon>Frm_Etiquetadoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_FamiliaProduccion.resx">
+      <DependentUpon>Frm_FamiliaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_FormaSustrato.resx">
+      <DependentUpon>Frm_FormaSustrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogo General\Frm_GrupoProduccion.resx">
+      <DependentUpon>Frm_GrupoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_IGV.resx">
+      <DependentUpon>Frm_IGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogo General\Frm_LineaProduccion.resx">
+      <DependentUpon>Frm_LineaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Local.resx">
+      <DependentUpon>Frm_Local.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_LocalvsArea.resx">
+      <DependentUpon>Frm_LocalvsArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_MaquinaMezcladora.resx">
+      <DependentUpon>Frm_MaquinaMezcladora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Materia Prima\Frm_MarcaMaterial.resx">
+      <DependentUpon>Frm_MarcaMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogo General\Frm_MedidaProduccion.resx">
+      <DependentUpon>Frm_MedidaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Control Calidad\Frm_MotivoObservacion_CC.resx">
+      <DependentUpon>Frm_MotivoObservacion_CC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Presicionbalanza.resx">
+      <DependentUpon>Frm_Presicionbalanza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Prioridad.resx">
+      <DependentUpon>Frm_Prioridad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Semana.resx">
+      <DependentUpon>Frm_Semana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Catalogo General\Frm_SubFamiliaProduccion.resx">
+      <DependentUpon>Frm_SubFamiliaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoDespacho.resx">
+      <DependentUpon>Frm_TipoDespacho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoFuelle.resx">
+      <DependentUpon>Frm_TipoFuelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_MarcaMaquina.resx">
+      <DependentUpon>Frm_MarcaMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_PaisProcedencia.resx">
+      <DependentUpon>Frm_PaisProcedencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_PieImprenta.resx">
+      <DependentUpon>Frm_PieImprenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_PosicionTaca.resx">
+      <DependentUpon>Frm_PosicionTaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_ProcesosProduccion.resx">
+      <DependentUpon>Frm_ProcesosProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Rodillo.resx">
+      <DependentUpon>Frm_Rodillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoAsa.resx">
+      <DependentUpon>Frm_TipoAsa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_TipoIngreso.resx">
+      <DependentUpon>Frm_TipoIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoLaminacion.resx">
+      <DependentUpon>Frm_TipoLaminacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoMaquina.resx">
+      <DependentUpon>Frm_TipoMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Materia Prima\Frm_TipoMaterial.resx">
+      <DependentUpon>Frm_TipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoMaterialExtruir.resx">
+      <DependentUpon>Frm_TipoMaterialExtruir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoMaterialLaminado.resx">
+      <DependentUpon>Frm_TipoMaterialLaminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoMoneda.resx">
+      <DependentUpon>Frm_TipoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoProcesoCorte.resx">
+      <DependentUpon>Frm_TipoProcesoCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoProcesoLaminado.resx">
+      <DependentUpon>Frm_TipoProcesoLaminado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoProduccion.resx">
+      <DependentUpon>Frm_TipoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoProducto.resx">
+      <DependentUpon>Frm_TipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoRubro.resx">
+      <DependentUpon>Frm_TipoRubro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Frm_TipoSalida.resx">
+      <DependentUpon>Frm_TipoSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoSello.resx">
+      <DependentUpon>Frm_TipoSello.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoTinta.resx">
+      <DependentUpon>Frm_TipoTinta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoTrabajador.resx">
+      <DependentUpon>Frm_TipoTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoTratado.resx">
+      <DependentUpon>Frm_TipoTratado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoTroquel.resx">
+      <DependentUpon>Frm_TipoTroquel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_UnidadMedida.resx">
+      <DependentUpon>Frm_UnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_UsoProducto.resx">
+      <DependentUpon>Frm_UsoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Usuario.resx">
+      <DependentUpon>Frm_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MDIFrm_Produccion.resx">
+      <DependentUpon>MDIFrm_Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ajouter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usbstick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search hdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleche Bas 2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleche Haut 2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media_prev_Mejorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media_backwards_Mejorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media_fastforward - Mejorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media_next_Mejorado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bobina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diametro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diametro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancho Final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memory cleaner.png" />
+    <None Include="Resources\Sentido1a.bmp" />
+    <None Include="Resources\Sentido1b.bmp" />
+    <None Include="Resources\Sentido2a.bmp" />
+    <None Include="Resources\Sentido2b.bmp" />
+    <None Include="Resources\Sentido3a.bmp" />
+    <None Include="Resources\Sentido3b.bmp" />
+    <None Include="Resources\Sentido4a.bmp" />
+    <None Include="Resources\Sentido4b.bmp" />
+    <None Include="Resources\Sentido5a.bmp" />
+    <None Include="Resources\Sentido5b.bmp" />
+    <None Include="Resources\Sentido6a.bmp" />
+    <None Include="Resources\Sentido6b.bmp" />
+    <None Include="Resources\Sentido7a.bmp" />
+    <None Include="Resources\Sentido7b.bmp" />
+    <None Include="Resources\Sentido8a.bmp" />
+    <None Include="Resources\Sentido8b.bmp" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
+      <Project>{5c9a83f5-cb90-46d8-a6e5-82f4407ea77d}</Project>
+      <Name>Capa_Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Negocios\Capa_Negocios.csproj">
+      <Project>{d0f32e7f-0716-4dd7-8379-8cbefe11718f}</Project>
+      <Name>Capa_Negocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

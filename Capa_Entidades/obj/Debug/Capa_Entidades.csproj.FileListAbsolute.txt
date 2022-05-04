@@ -1,0 +1,5 @@
+D:\Sistemas\Sistema Produccion\Capa_Entidades\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\Sistema Produccion\Capa_Entidades\bin\Debug\Capa_Entidades.pdb
+D:\Sistemas\Sistema Produccion\Capa_Entidades\obj\Debug\Capa_Entidades.csproj.CoreCompileInputs.cache
+D:\Sistemas\Sistema Produccion\Capa_Entidades\obj\Debug\Capa_Entidades.dll
+D:\Sistemas\Sistema Produccion\Capa_Entidades\obj\Debug\Capa_Entidades.pdb

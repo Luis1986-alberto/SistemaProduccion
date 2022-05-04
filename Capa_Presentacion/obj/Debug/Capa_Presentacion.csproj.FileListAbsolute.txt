@@ -1,0 +1,566 @@
+D:\Sistemas\Sistemas_Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojAssemblyReference.cache
+D:\Sistemas\Sistemas_Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Login.resources
+D:\Sistemas\Sistemas_Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+D:\Sistemas\Sistemas_Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
+D:\Sistemas\Sistemas_Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojAssemblyReference.cache
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.frm_Año.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Login.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_Principal.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Dapper.dll
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Entidades.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Dapper.xml
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Buscar.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\DapperExtensions.dll
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\DapperExtensions.pdb
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Usuario.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Almacen.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Carreta.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Clientes.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Color.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionPago.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionProceso.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empaquetado.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empresa.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EmpresaEtiqueta.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoProcesoOrdenProduccion.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FormaSustrato.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Fuelle.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ImpresoraRodillo.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Maquina.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaquina.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Mes.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PaisProcedencia.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Pestaña.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PieImprenta.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PosicionTaca.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ProcesosProduccion.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_RegistroEstandar.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Rodillo.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoAsa.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoImpresion.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoIngreso.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaquina.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProduccion.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProducto.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoRubro.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSalida.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSello.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSustrato.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTinta.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTrabajador.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Tratado.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Troquel.resources
+E:\Nueva Sistema CC\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UnidadMedida.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\DapperExtensions.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Dapper.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\EnvDTE.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Newtonsoft.Json.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\stdole.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Microsoft.MSXML.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Datos.dll.config
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Entidades.pdb
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Capa_Negocios.dll.config
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Dapper.xml
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\Newtonsoft.Json.xml
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.AssemblyReference.cache
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Almacen.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Año.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Buscar.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Carreta.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Clientes.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Color.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionPago.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionProceso.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empaquetado.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empresa.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EmpresaEtiqueta.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoProcesoOrdenProduccion.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FormaSustrato.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Fuelle.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ImpresoraRodillo.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Login.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Maquina.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaquina.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Mes.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PaisProcedencia.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Pestaña.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PieImprenta.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PosicionTaca.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ProcesosProduccion.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_RegistroEstandar.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_RegistroTrabajadores.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Rodillo.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoAsa.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoImpresion.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoIngreso.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaquina.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProduccion.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProducto.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoRubro.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSalida.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSello.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSustrato.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTinta.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTrabajador.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Tratado.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Troquel.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UnidadMedida.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Usuario.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_VisorReportViewer.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_Principal.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\RdlCompile.cache
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\RdlCompile.compiled
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.Shared.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\ShockwaveFlashObjects.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Sistemas\Sistemas Produccion\Capa presentación\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\DapperExtensions.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\EnvDTE.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Slapper.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Dapper.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Newtonsoft.Json.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\stdole.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.MSXML.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Entidades.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll.config
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll.config
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Dapper.xml
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Newtonsoft.Json.xml
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.AssemblyReference.cache
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_CondicionPago.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_EstadoInmueble.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_FormaPago.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_Proveedores.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_TipoProveedor.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_UbicacionInmueble.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Adhesivo.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_AgenteAduanero.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Almacen.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_AlmacenAduana.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PropiedadesMaterial.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_ImpresoraVSRodillo.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroEstandar.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroMaquina.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_SectorAlmacenPT.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Area.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Año.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Buscar.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Cargotrabajador.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Carreta.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CategoriaMaterial.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Cliente.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CodigoEvento.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Color.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionCobranza.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionProceso.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empaquetado.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empresa.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EspesorTuco.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Estado.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoCalificacionCC.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoFormulacion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoMaquina.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoOrdenProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Etiqueta.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoOrdenProduccion_Programa.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Etiquetadoras.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FamiliaProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FormaSustrato.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_GrupoProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_IGV.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_LineaProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Local.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_LocalvsArea.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MaquinaMezcladora.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaterial.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MedidaProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MotivoObservacion_CC.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Presicionbalanza.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Principal.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Prioridad.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Semana.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_SubFamiliaProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoDespacho.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoFuelle.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Login.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaquina.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PaisProcedencia.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PieImprenta.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PosicionTaca.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ProcesosProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Rodillo.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoAsa.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoIngreso.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoLaminacion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaquina.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterial.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterialExtruir.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterialLaminado.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMoneda.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProcesoCorte.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProcesoLaminado.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProduccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProducto.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoRubro.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSalida.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSello.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTinta.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTrabajador.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTratado.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTroquel.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UnidadMedida.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UsoProducto.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Usuario.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_Produccion.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\DapperExtensions.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\EnvDTE.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Slapper.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Dapper.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Newtonsoft.Json.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\stdole.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Microsoft.MSXML.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Entidades.pdb
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll.config
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll.config
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Dapper.xml
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Newtonsoft.Json.xml
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.AssemblyReference.cache
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_CondicionPago.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_EstadoInmueble.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_FormaPago.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_Proveedores.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_TipoProveedor.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_UbicacionInmueble.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Adhesivo.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_AgenteAduanero.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Almacen.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_AlmacenAduana.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PropiedadesMaterial.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_ImpresoraVSRodillo.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroEstandar.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroMaquina.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_SectorAlmacenPT.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Area.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Año.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Buscar.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Cargotrabajador.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Carreta.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CategoriaMaterial.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Cliente.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CodigoEvento.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Color.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionCobranza.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_CondicionProceso.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empaquetado.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Empresa.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EspesorTuco.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Estado.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoCalificacionCC.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoFormulacion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoMaquina.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoOrdenProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Etiqueta.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_EstadoOrdenProduccion_Programa.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Etiquetadoras.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FamiliaProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_FormaSustrato.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_GrupoProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_IGV.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_LineaProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Local.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_LocalvsArea.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MaquinaMezcladora.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaterial.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MedidaProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MotivoObservacion_CC.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Presicionbalanza.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Principal.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Prioridad.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Semana.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_SubFamiliaProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoDespacho.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoFuelle.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Login.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_MarcaMaquina.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PaisProcedencia.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PieImprenta.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_PosicionTaca.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_ProcesosProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Rodillo.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoAsa.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoIngreso.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoLaminacion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaquina.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterial.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterialExtruir.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMaterialLaminado.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoMoneda.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProcesoCorte.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProcesoLaminado.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProduccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoProducto.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoRubro.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSalida.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoSello.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTinta.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTrabajador.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTratado.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_TipoTroquel.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UnidadMedida.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UsoProducto.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Usuario.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_Produccion.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+G:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ComboBoxMultiColumns.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe.config
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.exe
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.pdb
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\AxShockwaveFlashObjects.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.Shared.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\ShockwaveFlashObjects.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0F32E7F-0716-4DD7-8379-8CBEFE11718F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capa_Negocios</RootNamespace>
+    <AssemblyName>Capa_Negocios</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperExtensions, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.7.0\lib\net461\DapperExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.11.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Slapper, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slapper.AutoMapper.2.0.1\lib\net46\Slapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LG_aAlmacen_CN.cs" />
+    <Compile Include="LG_aClaseServicioMaquina_CN.cs" />
+    <Compile Include="LG_aConcepto_CN.cs" />
+    <Compile Include="LG_aCondicionPago_CN.cs" />
+    <Compile Include="LG_aEstadoInmueble_CN.cs" />
+    <Compile Include="LG_aEstadoSolicitud_CN.cs" />
+    <Compile Include="LG_aFamilia_CN.cs" />
+    <Compile Include="LG_aFormaPago_CN.cs" />
+    <Compile Include="LG_aGrupo_CN.cs" />
+    <Compile Include="LG_aInmueble_CN.cs" />
+    <Compile Include="LG_aLinea_CN.cs" />
+    <Compile Include="LG_aMes_CN.cs" />
+    <Compile Include="LG_aPropietario_CN.cs" />
+    <Compile Include="LG_aTipoCompra_CN.cs" />
+    <Compile Include="LG_aTipoCosto_CN.cs" />
+    <Compile Include="LG_aTipoDocumento_CN.cs" />
+    <Compile Include="LG_aTipoInmueble_CN.cs" />
+    <Compile Include="LG_aTipoMotivo_CN.cs" />
+    <Compile Include="LG_aTipoProveedor_CN.cs" />
+    <Compile Include="LG_aTipoServicioMaquina_CN.cs" />
+    <Compile Include="LG_aTipoTrabajoMaquina_CN.cs" />
+    <Compile Include="LG_aTipo_CN.cs" />
+    <Compile Include="LG_aUbicacionInmueble_CN.cs" />
+    <Compile Include="LG_xProveedor_CN.cs" />
+    <Compile Include="MP_aAgenteAduanero_CN.cs" />
+    <Compile Include="MP_aAlmacenAduana_CN.cs" />
+    <Compile Include="MP_aBanco_CN.cs" />
+    <Compile Include="MP_aCategoriaMaterial_CN.cs" />
+    <Compile Include="MP_aMarcaMaterial_CN.cs" />
+    <Compile Include="MP_aPropiedadesMaterial_CN.cs" />
+    <Compile Include="MP_aTipoCompraMaterial_CN.cs" />
+    <Compile Include="MP_aTipoMaterial_CN.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PR_aAdhesivo_CN.cs" />
+    <Compile Include="PR_aArea_CN.cs" />
+    <Compile Include="PR_aAsa_CN.cs" />
+    <Compile Include="PR_aAño_CN.cs" />
+    <Compile Include="PR_aCargoTrabajador_CN.cs" />
+    <Compile Include="PR_aCarreta_CN.cs" />
+    <Compile Include="PR_mEstandarExtrusion_CN.cs" />
+    <Compile Include="PR_mEstandarImpresion_CN.cs" />
+    <Compile Include="PR_mEstandar_CN.cs" />
+    <Compile Include="PR_mImpresora_CN.cs" />
+    <Compile Include="PR_mMaquina_CN.cs" />
+    <Compile Include="PR_mUsuarios_CN.cs" />
+    <Compile Include="PR_xLocalArea_CN.cs" />
+    <Compile Include="PR_mClientes_CN.cs" />
+    <Compile Include="PR_aCodigoEvento_CN.cs" />
+    <Compile Include="PR_aColor_CN.cs" />
+    <Compile Include="LG_aCondicionCobranza_CN.cs" />
+    <Compile Include="PR_aCondicionProceso_CN.cs" />
+    <Compile Include="PR_aDerivadoColor_CN.cs" />
+    <Compile Include="PR_Adhesivo_CN.cs" />
+    <Compile Include="PR_aEmpaquetado_CN.cs" />
+    <Compile Include="PR_aEmpresa_CN.cs" />
+    <Compile Include="PR_aEspesorTuco_CN.cs" />
+    <Compile Include="PR_aEstadoCalificacion_CC_CN.cs" />
+    <Compile Include="PR_aEstadoFormulacion_CN.cs" />
+    <Compile Include="PR_aEstadoMaquina_CN.cs" />
+    <Compile Include="PR_aEstadoOrdenProduccion_Programa_CN.cs" />
+    <Compile Include="PR_aEstado_CN.cs" />
+    <Compile Include="PR_aEstado_OP_CN.cs" />
+    <Compile Include="PR_aEstandarColor_CN.cs" />
+    <Compile Include="PR_aEtiquetadoras_CN.cs" />
+    <Compile Include="PR_aEtiqueta_CN.cs" />
+    <Compile Include="PR_aFabricanteMaterial_CN.cs" />
+    <Compile Include="PR_aFamilia_Produccion_CN.cs" />
+    <Compile Include="PR_aFormaEmpaquetado_CN.cs" />
+    <Compile Include="PR_aFormaSustrato_CN.cs" />
+    <Compile Include="PR_aGrupo_Produccion_CN.cs" />
+    <Compile Include="PR_aIGV_CN.cs" />
+    <Compile Include="PR_aLineaColor_CN.cs" />
+    <Compile Include="PR_aLinea_Produccion_CN.cs" />
+    <Compile Include="PR_aLocal_CN.cs" />
+    <Compile Include="PR_aMarcaMaquina_CN.cs" />
+    <Compile Include="PR_aMarcaMaterial_CN.cs" />
+    <Compile Include="PR_aMedidas_Produccion_CN.cs" />
+    <Compile Include="PR_aMezcladora_CN.cs" />
+    <Compile Include="PR_aMotivoObservacion_CC_CN.cs" />
+    <Compile Include="PR_aPeriodo_CN.cs" />
+    <Compile Include="PR_aPieImprenta_CN.cs" />
+    <Compile Include="PR_aPosicionTaca_CN.cs" />
+    <Compile Include="PR_aPrecisionBalanza_CN.cs" />
+    <Compile Include="PR_aPrioridad_CN.cs" />
+    <Compile Include="PR_aProcesos_CN.cs" />
+    <Compile Include="PR_aRodillo_CN.cs" />
+    <Compile Include="PR_aSectorAlmacenPT_CN.cs" />
+    <Compile Include="PR_aSemana_CN.cs" />
+    <Compile Include="PR_aSubFamilia_Produccion_CN.cs" />
+    <Compile Include="PR_aTipoEstadoDespacho_CN.cs" />
+    <Compile Include="PR_aTipoFuelle_CN.cs" />
+    <Compile Include="LG_aTipoIngreso_CN.cs" />
+    <Compile Include="PR_aTipoLaminacion_CN.cs" />
+    <Compile Include="PR_aTipoMaquina_CN.cs" />
+    <Compile Include="PR_aTipoMaterialExtruir_CN.cs" />
+    <Compile Include="PR_aTipoMaterialLaminado_CN.cs" />
+    <Compile Include="PR_aTipoMaterialMezclar_CN.cs" />
+    <Compile Include="PR_aTipoMoneda_CN.cs" />
+    <Compile Include="PR_aTipoProcesoCorte_CN.cs" />
+    <Compile Include="PR_aTipoProcesoLaminado_CN.cs" />
+    <Compile Include="PR_aTipoProduccion_CN.cs" />
+    <Compile Include="PR_aTipoProducto_CN.cs" />
+    <Compile Include="PR_aTipoRubro_CN.cs" />
+    <Compile Include="LG_aTipoSalida_CN.cs" />
+    <Compile Include="PR_aTipoSello_CN.cs" />
+    <Compile Include="PR_aTipoTinta_CN.cs" />
+    <Compile Include="PR_aTipoTrabajador_CN.cs" />
+    <Compile Include="PR_aTipoTratado_CN.cs" />
+    <Compile Include="PR_aTipoTroquel_CN.cs" />
+    <Compile Include="PR_aUnidadMedidas_CN.cs" />
+    <Compile Include="PR_aUsoProducto_CN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Datos\Capa_Datos.csproj">
+      <Project>{6b23ce65-2968-4205-a4ed-58669faf2ae9}</Project>
+      <Name>Capa_Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">
+      <Project>{5c9a83f5-cb90-46d8-a6e5-82f4407ea77d}</Project>
+      <Name>Capa_Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

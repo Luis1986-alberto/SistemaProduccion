@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C9A83F5-CB90-46D8-A6E5-82F4407EA77D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capa_Entidades</RootNamespace>
+    <AssemblyName>Capa_Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tablas\LG_aAlmacen.cs" />
+    <Compile Include="Tablas\LG_aClaseServicioMaquina.cs" />
+    <Compile Include="Tablas\LG_aConcepto.cs" />
+    <Compile Include="Tablas\LG_aCondicionCobranza.cs" />
+    <Compile Include="Tablas\LG_aEstadoInmueble.cs" />
+    <Compile Include="Tablas\LG_aEstadoSolicitud.cs" />
+    <Compile Include="Tablas\LG_aFamilia.cs" />
+    <Compile Include="Tablas\LG_aFormaPago.cs" />
+    <Compile Include="Tablas\LG_aGrupo.cs" />
+    <Compile Include="Tablas\LG_aInmueble.cs" />
+    <Compile Include="Tablas\LG_aLinea.cs" />
+    <Compile Include="Tablas\LG_aMes.cs" />
+    <Compile Include="Tablas\LG_aPropietario.cs" />
+    <Compile Include="Tablas\LG_aTipo.cs" />
+    <Compile Include="Tablas\LG_aTipoCompra.cs" />
+    <Compile Include="Tablas\LG_aTipoCosto.cs" />
+    <Compile Include="Tablas\LG_aTipoDocumento.cs" />
+    <Compile Include="Tablas\LG_aTipoInmueble.cs" />
+    <Compile Include="Tablas\LG_aTipoMotivo.cs" />
+    <Compile Include="Tablas\LG_aTipoProveedor.cs" />
+    <Compile Include="Tablas\LG_aTipoServicioMaquina.cs" />
+    <Compile Include="Tablas\LG_aTipoTrabajoMaquina.cs" />
+    <Compile Include="Tablas\LG_aUbicacionInmueble.cs" />
+    <Compile Include="Tablas\LG_aUnidad.cs" />
+    <Compile Include="Tablas\LG_xProveedor.cs" />
+    <Compile Include="Tablas\MP_aAgenteAduanero.cs" />
+    <Compile Include="Tablas\MP_aAlmacenAduana.cs" />
+    <Compile Include="Tablas\MP_aBanco.cs" />
+    <Compile Include="Tablas\MP_aCategoriaMaterial.cs" />
+    <Compile Include="Tablas\MP_aPropiedadesMaterial.cs" />
+    <Compile Include="Tablas\MP_aTipoCompraMaterial.cs" />
+    <Compile Include="Tablas\MP_aTipoMaterial.cs" />
+    <Compile Include="Tablas\PR_aPosicionTaca.cs" />
+    <Compile Include="Tablas\PR_aTipoRubro.cs" />
+    <Compile Include="Tablas\PR_aTipoTratado.cs" />
+    <Compile Include="Tablas\PR_aAdhesivo.cs" />
+    <Compile Include="Tablas\PR_aArea.cs" />
+    <Compile Include="Tablas\PR_aAsa.cs" />
+    <Compile Include="Tablas\PR_aAño.cs" />
+    <Compile Include="Tablas\PR_aCargoTrabajador.cs" />
+    <Compile Include="Tablas\PR_aCarreta.cs" />
+    <Compile Include="Tablas\PR_aCodigoEvento.cs" />
+    <Compile Include="Tablas\PR_aColor.cs" />
+    <Compile Include="Tablas\PR_aConcatenacion.cs" />
+    <Compile Include="Tablas\LG_aCondicionPago.cs" />
+    <Compile Include="Tablas\PR_aCondicionProceso.cs" />
+    <Compile Include="Tablas\PR_aDerivadoColor.cs" />
+    <Compile Include="Tablas\PR_aEmpaquetado.cs" />
+    <Compile Include="Tablas\PR_aEmpresa.cs" />
+    <Compile Include="Tablas\PR_aEspesorTuco.cs" />
+    <Compile Include="Tablas\PR_aEstado.cs" />
+    <Compile Include="Tablas\PR_aEstadoCalificacion_CC.cs" />
+    <Compile Include="Tablas\PR_aEstadoFormulacion.cs" />
+    <Compile Include="Tablas\PR_aEstadoMaquina.cs" />
+    <Compile Include="Tablas\PR_aEstadoOrdenProduccion_Programa.cs" />
+    <Compile Include="Tablas\PR_aEstado_OP.cs" />
+    <Compile Include="Tablas\PR_aEstandarColor.cs" />
+    <Compile Include="Tablas\PR_aEtiqueta.cs" />
+    <Compile Include="Tablas\PR_aEtiquetadoras.cs" />
+    <Compile Include="Tablas\PR_aFabricanteMaterial.cs" />
+    <Compile Include="Tablas\PR_aFamilia_Produccion.cs" />
+    <Compile Include="Tablas\PR_aFormaEmpaquetado.cs" />
+    <Compile Include="Tablas\PR_aFormaSustrato.cs" />
+    <Compile Include="Tablas\PR_aGrupo_Produccion.cs" />
+    <Compile Include="Tablas\PR_aIGV.cs" />
+    <Compile Include="Tablas\PR_aLineaColor.cs" />
+    <Compile Include="Tablas\PR_aLinea_Produccion.cs" />
+    <Compile Include="Tablas\PR_aLocal.cs" />
+    <Compile Include="Tablas\PR_aMarcaMaquina.cs" />
+    <Compile Include="Tablas\MP_aMarcaMaterial.cs" />
+    <Compile Include="Tablas\PR_aMedidas_Produccion.cs" />
+    <Compile Include="Tablas\PR_aMezcladora.cs" />
+    <Compile Include="Tablas\PR_aModeloMaquina.cs" />
+    <Compile Include="Tablas\PR_aMotivoObservacion_CC.cs" />
+    <Compile Include="Tablas\PR_aPeriodo.cs" />
+    <Compile Include="Tablas\PR_aPieImprenta.cs" />
+    <Compile Include="Tablas\PR_aPrecisionBalanza.cs" />
+    <Compile Include="Tablas\PR_aPrioridad.cs" />
+    <Compile Include="Tablas\PR_aProcesos.cs" />
+    <Compile Include="Tablas\PR_aRodillos.cs" />
+    <Compile Include="Tablas\PR_aSectorAlmacenPT.cs" />
+    <Compile Include="Tablas\PR_aSemana.cs" />
+    <Compile Include="Tablas\PR_aSubFamilia_Produccion.cs" />
+    <Compile Include="Tablas\PR_aSubMenu.cs" />
+    <Compile Include="Tablas\PR_aTipoEstadoDespacho.cs" />
+    <Compile Include="Tablas\PR_aTipoFuelle.cs" />
+    <Compile Include="Tablas\LG_aTipoIngreso.cs" />
+    <Compile Include="Tablas\PR_aTipoLaminacion.cs" />
+    <Compile Include="Tablas\PR_aTipoMaquina.cs" />
+    <Compile Include="Tablas\PR_aTipoMaterialExtruir.cs" />
+    <Compile Include="Tablas\PR_aTipoMaterialLaminado.cs" />
+    <Compile Include="Tablas\PR_aTipoMaterialMezclar.cs" />
+    <Compile Include="Tablas\PR_aTipoMoneda.cs" />
+    <Compile Include="Tablas\PR_aTipoProcesoCorte.cs" />
+    <Compile Include="Tablas\PR_aTipoProcesoLaminado.cs" />
+    <Compile Include="Tablas\LG_aTipoSalida.cs" />
+    <Compile Include="Tablas\PR_aTipoSello.cs" />
+    <Compile Include="Tablas\PR_aTipoTinta.cs" />
+    <Compile Include="Tablas\PR_aTipoTrabajador.cs" />
+    <Compile Include="Tablas\PR_aTipoTroquel.cs" />
+    <Compile Include="Tablas\PR_aUnidadMedidas.cs" />
+    <Compile Include="Tablas\PR_aTipoProduccion.cs" />
+    <Compile Include="Tablas\PR_aTipoProducto.cs" />
+    <Compile Include="Tablas\PR_aUsoProducto.cs" />
+    <Compile Include="Tablas\PR_mAlmacenBobinas.cs" />
+    <Compile Include="Tablas\PR_mAlmacenBobinasImpresas.cs" />
+    <Compile Include="Tablas\PR_mAlmacenBobinas_Hist.cs" />
+    <Compile Include="Tablas\PR_mAlmacenProdTermCom_Ing.cs" />
+    <Compile Include="Tablas\PR_mAlmacenProdTermCom_Sal.cs" />
+    <Compile Include="Tablas\PR_mAlmacenProdTerminados.cs" />
+    <Compile Include="Tablas\PR_mBalanza.cs" />
+    <Compile Include="Tablas\PR_mCapacidadExtrusion.cs" />
+    <Compile Include="Tablas\PR_mClientes.cs" />
+    <Compile Include="Tablas\PR_mDetalle_SustratoEstandar.cs" />
+    <Compile Include="Tablas\PR_mDetalle_SustratoLaminado.cs" />
+    <Compile Include="Tablas\PR_mEstandarCorte.cs" />
+    <Compile Include="Tablas\PR_mEstandar.cs" />
+    <Compile Include="Tablas\PR_mEstandarExtrusion.cs" />
+    <Compile Include="Tablas\PR_mEstandarImpresion.cs" />
+    <Compile Include="Tablas\PR_mEstandarLaminado.cs" />
+    <Compile Include="Tablas\PR_mEstandarSellado.cs" />
+    <Compile Include="Tablas\PR_mFamilia_VS_SubFamilia.cs" />
+    <Compile Include="Tablas\PR_mMaquina.cs" />
+    <Compile Include="Tablas\PR_mMateriales.cs" />
+    <Compile Include="Tablas\PR_mMotivoScrap.cs" />
+    <Compile Include="Tablas\PR_aNivelUsuario.cs" />
+    <Compile Include="Tablas\PR_mProductosProduccion.cs" />
+    <Compile Include="Tablas\PR_mStockProdComercial.cs" />
+    <Compile Include="Tablas\PR_mStockProdTerminados.cs" />
+    <Compile Include="Tablas\PR_mTrabajador.cs" />
+    <Compile Include="Tablas\PR_mUsuarios.cs" />
+    <Compile Include="Tablas\PR_mVendedores.cs" />
+    <Compile Include="Tablas\PR_xAvanceAlmacenPT.cs" />
+    <Compile Include="Tablas\PR_xAvanceCalidad.cs" />
+    <Compile Include="Tablas\PR_xAvanceCorte.cs" />
+    <Compile Include="Tablas\PR_xAvanceDespacho.cs" />
+    <Compile Include="Tablas\PR_xAvanceExtrusionInd.cs" />
+    <Compile Include="Tablas\PR_xAvanceImpresionInd.cs" />
+    <Compile Include="Tablas\PR_xAvanceLaminado.cs" />
+    <Compile Include="Tablas\PR_xAvanceMezclado.cs" />
+    <Compile Include="Tablas\PR_xAvanceSelladoInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceCorte.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceExtruInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceImpreInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceLaminado.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceMezclado.cs" />
+    <Compile Include="Tablas\PR_xDetalleAvanceSellaInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleInsumo.cs" />
+    <Compile Include="Tablas\PR_xDetalleMermaAvCorteInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleMermaAvExtruInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleMermaAvImpInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleMermaAvLamInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleMermaSellaInd.cs" />
+    <Compile Include="Tablas\PR_xDetalleModeloFormulacion.cs" />
+    <Compile Include="Tablas\PR_xDetalleProgramacionMezclado.cs" />
+    <Compile Include="Tablas\PR_xDetalle_OP.cs" />
+    <Compile Include="Tablas\PR_xDetIngProdCom_PT.cs" />
+    <Compile Include="Tablas\PR_xEstandarIndustrial_Color.cs" />
+    <Compile Include="Tablas\PR_xEstructuraCodBar.cs" />
+    <Compile Include="Tablas\PR_xHistorialLiquidacionProd.cs" />
+    <Compile Include="Tablas\PR_mImpresora.cs" />
+    <Compile Include="Tablas\PR_xIngProdCom_PT.cs" />
+    <Compile Include="Tablas\PR_xKardexCom_PT.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionCorte.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionExtrusionInd.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionImpresionInd.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionLaminado.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionMezclado.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionProduccion.cs" />
+    <Compile Include="Tablas\PR_xLiquidacionSelladoInd.cs" />
+    <Compile Include="Tablas\PR_xLocalArea.cs" />
+    <Compile Include="Tablas\PR_xMezcladoIndustrial.cs" />
+    <Compile Include="Tablas\PR_xModeloFormulacionGeneral.cs" />
+    <Compile Include="Tablas\PR_xOrdenProduccionInd.cs" />
+    <Compile Include="Tablas\PR_xPedidosIndustriales.cs" />
+    <Compile Include="Tablas\PR_xPedidos_DetSustrato_LM.cs" />
+    <Compile Include="Tablas\PR_xPedido_Productos.cs" />
+    <Compile Include="Tablas\PR_xPosicionMaquina.cs" />
+    <Compile Include="Tablas\PR_xProgramacionMezclado.cs" />
+    <Compile Include="Tablas\PR_xProgramaCorteInd.cs" />
+    <Compile Include="Tablas\PR_xProgramaExtrusionInd.cs" />
+    <Compile Include="Tablas\PR_xProgramaImpresionInd.cs" />
+    <Compile Include="Tablas\PR_xProgramaLaminadoInd.cs" />
+    <Compile Include="Tablas\PR_xProgramaMezclado.cs" />
+    <Compile Include="Tablas\PR_xProgramaSelladoInd.cs" />
+    <Compile Include="Tablas\PR_xSalProdCom_PT.cs" />
+    <Compile Include="Tablas\PR_xStockProdTerm_Comercial.cs" />
+    <Compile Include="Tablas\PR_xVentaProducto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vistas\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

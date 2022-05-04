@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Capa_Entidades.Tablas
+{
+    public class PR_aEmpaquetado
+    {
+        public byte IdEmpaquetado { get; set; }
+        public string Descripcion { get; set; }
+
+        public PR_aEmpaquetado()
+        { }
+
+        public PR_aEmpaquetado(byte idEmpaquetado, string descripcion)
+        {
+            IdEmpaquetado = idEmpaquetado;
+            Descripcion = descripcion;
+        }
+
+    }
+}
