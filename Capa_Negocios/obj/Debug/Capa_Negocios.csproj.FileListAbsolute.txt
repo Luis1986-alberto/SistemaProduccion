@@ -38,3 +38,23 @@ G:\Sistemas\Sistema Produccion\Capa_Negocios\obj\Debug\Capa_Negocios.csproj.Core
 G:\Sistemas\Sistema Produccion\Capa_Negocios\obj\Debug\Capa_Negocios.csproj.CopyComplete
 G:\Sistemas\Sistema Produccion\Capa_Negocios\obj\Debug\Capa_Negocios.dll
 G:\Sistemas\Sistema Produccion\Capa_Negocios\obj\Debug\Capa_Negocios.pdb
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Negocios.dll.config
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Negocios.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Negocios.pdb
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Datos.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Dapper.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\DapperExtensions.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Newtonsoft.Json.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Slapper.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Datos.pdb
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Datos.dll.config
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Capa_Entidades.pdb
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Dapper.xml
+D:\Sistemas\SistemaProduccion\Capa_Negocios\bin\Debug\Newtonsoft.Json.xml
+D:\Sistemas\SistemaProduccion\Capa_Negocios\obj\Debug\Capa_Negocios.csproj.AssemblyReference.cache
+D:\Sistemas\SistemaProduccion\Capa_Negocios\obj\Debug\Capa_Negocios.csproj.CoreCompileInputs.cache
+D:\Sistemas\SistemaProduccion\Capa_Negocios\obj\Debug\Capa_Negocios.csproj.CopyComplete
+D:\Sistemas\SistemaProduccion\Capa_Negocios\obj\Debug\Capa_Negocios.dll
+D:\Sistemas\SistemaProduccion\Capa_Negocios\obj\Debug\Capa_Negocios.pdb

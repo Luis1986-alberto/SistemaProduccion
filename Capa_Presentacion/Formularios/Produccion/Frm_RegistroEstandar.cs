@@ -372,7 +372,6 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Flag_Apilar = (Chk_FlagApilar.Checked == true) ? "1" : "0",
                     Flag_Biodegradable = (Chk_FlagBiodegradable.Checked == true) ? "1" : "0",
                     Flag_Congelado = (Chk_FlagCongelado.Checked == true) ? "1" : "0",
-
                     Flag_Impresion = (Chk_DynasTratado.Checked == true) ? "1" : "0",
                     Dynas_Extrusion = decimal.Parse(nud_Dynas.Value.ToString()),
                     Flag_Refile = (Chk_FlagRefile.Checked == true) ? "1" : "0",
@@ -384,14 +383,12 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Flag_UsoPesado = (Chk_FlagUsoPesado.Checked == true) ? "1" : "0",
                     Flag_Otros = (Chk_Otros.Checked == true) ? "1" : "0",
                     Nota_Otros = txt_Otrosaplicativos.Text,
-
                     Medida_Manga = decimal.Parse(nud_medidaanchobobina.Value.ToString()),
                     IdUnidadManga = byte.Parse(Cbo_UnidadMedidaAnchoBob.SelectedValue.ToString()),
                     Flag_Fuelle = (Chk_Fuelle.Checked == true) ? "1" : "0",
                     Medida_Fuelle = decimal.Parse(nud_medidafuelle.Value.ToString()),
                     IdUnidadFuelle = byte.Parse(Cbo_unidadMedidaFuelle.SelectedValue.ToString()),
                     Flag_FuelleIncluido = (Chk_FuelleIncluido.Checked == true) ? "1" : "0",
-
                     Medida_Espesor = decimal.Parse(nud_medidaespesor.Value.ToString()),
                     IdUnidadEspesor = byte.Parse(Cbo_UMEspesorBob.SelectedValue.ToString()),
                     Nota_Tratado = Txt_DiseñoTratado.Text,
@@ -400,14 +397,12 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Gramaje_Lineal = decimal.Parse(txt_GramajeLineal.Text),
                     Relacion_Soplado = decimal.Parse(nud_RelacionSoplado.Value.ToString()),
                     Ruta_FotoPlanoMecanicoExtr = txt_direccionPlanoExtrusion.Text,
-
                     Medida_Tuco_Extrusion = decimal.Parse(nud_medidaTuco.Value.ToString()),
                     IdUnidadMedidaTuco = byte.Parse(cbo_UnidadmedidaTuco.SelectedValue.ToString()),
                     Diametro_Tuco_Extrusion = decimal.Parse(nud_DiametroTuco.Value.ToString()),
                     IdUnidadMedidaDiametroTuco = byte.Parse(cbo_umdiametrotuco.SelectedValue.ToString()),
                     Peso_Tuco_Extrusion = decimal.Parse(nud_PesoTuco.Value.ToString()),
                     IdUnidadMedidaPesoTuco = byte.Parse(cbo_UMPesoTuco.SelectedValue.ToString()),
-
                     Diametro_Cabezal = decimal.Parse(nud_Diametrocabezal.Value.ToString()),
                     Gap_Extrusion = decimal.Parse(nud_Gapextrusion.Value.ToString()),
                     IdTipoTratado = byte.Parse(Cbo_tratado.SelectedValue.ToString()),
@@ -498,8 +493,7 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Flag_Etiqueta = (chk_Etiquetado.Checked == true)?"1":"0",
                     Flag_Etiqueta_Caja = (chk_etiquetacaja.Checked == true)?"1":"0",
                     Flag_Etiqueta_Fardo = (chk_Etiquetado.Checked == true)? "1":"0",
-                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true)?"1":"0",
-                    
+                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true)?"1":"0",                    
                     Flag_DetalleEtiqueta = (rb_AxLxE.Checked == true)?"1":"0",
                     IdTipoFuelle = int.Parse(Cbo_Fuellesellado.SelectedValue.ToString()),
                     Medida_Fuelle = decimal.Parse(nud_medidafuellesell.Value.ToString()),

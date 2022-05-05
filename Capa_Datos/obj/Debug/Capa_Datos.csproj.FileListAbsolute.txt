@@ -32,3 +32,20 @@ G:\Sistemas\Sistema Produccion\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompil
 G:\Sistemas\Sistema Produccion\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
 G:\Sistemas\Sistema Produccion\Capa_Datos\obj\Debug\Capa_Datos.dll
 G:\Sistemas\Sistema Produccion\Capa_Datos\obj\Debug\Capa_Datos.pdb
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Capa_Datos.dll.config
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Capa_Datos.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Capa_Datos.pdb
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Dapper.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\DapperExtensions.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Newtonsoft.Json.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Slapper.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Capa_Entidades.pdb
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Dapper.xml
+D:\Sistemas\SistemaProduccion\Capa_Datos\bin\Debug\Newtonsoft.Json.xml
+D:\Sistemas\SistemaProduccion\Capa_Datos\obj\Debug\Capa_Datos.csproj.AssemblyReference.cache
+D:\Sistemas\SistemaProduccion\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+D:\Sistemas\SistemaProduccion\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
+D:\Sistemas\SistemaProduccion\Capa_Datos\obj\Debug\Capa_Datos.dll
+D:\Sistemas\SistemaProduccion\Capa_Datos\obj\Debug\Capa_Datos.pdb
