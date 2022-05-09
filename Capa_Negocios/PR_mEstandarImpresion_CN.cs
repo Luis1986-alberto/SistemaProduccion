@@ -19,10 +19,10 @@ namespace Capa_Negocios
         public PR_mEstandarImpresion TraerPorId (Int32 videstandarimp)
         { return PR_mEstandarImpresion_CD._Instancia.TraerPorID(videstandarimp); }
 
-        public void Descargar_ImagenProducto(PictureBox imagen, long videstandarimp)
-        {
-            PR_mEstandarImpresion_CD._Instancia.Descargar_Imagen(imagen, videstandarimp);
-        }
+
+
+        public void Descargar_ImagenProducto(PictureBox imagen, Int32 videstandarimp)
+        {PR_mEstandarImpresion_CD._Instancia.Descargar_Imagen(imagen, videstandarimp);}
 
 
 

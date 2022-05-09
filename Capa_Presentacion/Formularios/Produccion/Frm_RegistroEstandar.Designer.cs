@@ -30,9 +30,9 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_RegistroEstandar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -4312,7 +4312,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel41.Controls.Add(this.Btn_EliminarPlanoSellado);
             this.panel41.Controls.Add(this.Btn_AgregarPlanoSellado);
             this.panel41.Controls.Add(this.img_PlanoMecanicoSellado);
-            this.panel41.Location = new System.Drawing.Point(831, 14);
+            this.panel41.Location = new System.Drawing.Point(828, 14);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(383, 396);
             this.panel41.TabIndex = 179;
@@ -4678,9 +4678,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.cbo_tipoasa.DisplayMember = "Descripcion_Asa";
             this.cbo_tipoasa.FormattingEnabled = true;
-            this.cbo_tipoasa.Location = new System.Drawing.Point(106, 9);
+            this.cbo_tipoasa.Location = new System.Drawing.Point(109, 9);
             this.cbo_tipoasa.Name = "cbo_tipoasa";
-            this.cbo_tipoasa.Size = new System.Drawing.Size(236, 21);
+            this.cbo_tipoasa.Size = new System.Drawing.Size(233, 21);
             this.cbo_tipoasa.TabIndex = 171;
             this.cbo_tipoasa.ValueMember = "IdAsa";
             // 
@@ -4762,9 +4762,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.cbo_tipotroquel.DisplayMember = "Descripcion_TipoTroquel";
             this.cbo_tipotroquel.FormattingEnabled = true;
-            this.cbo_tipotroquel.Location = new System.Drawing.Point(106, 9);
+            this.cbo_tipotroquel.Location = new System.Drawing.Point(109, 9);
             this.cbo_tipotroquel.Name = "cbo_tipotroquel";
-            this.cbo_tipotroquel.Size = new System.Drawing.Size(236, 21);
+            this.cbo_tipotroquel.Size = new System.Drawing.Size(233, 21);
             this.cbo_tipotroquel.TabIndex = 169;
             this.cbo_tipotroquel.ValueMember = "IdTroquel";
             // 
@@ -4796,9 +4796,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.cbo_tiposello.DisplayMember = "Descripcion_TipoSello";
             this.cbo_tiposello.FormattingEnabled = true;
-            this.cbo_tiposello.Location = new System.Drawing.Point(106, 11);
+            this.cbo_tiposello.Location = new System.Drawing.Point(109, 11);
             this.cbo_tiposello.Name = "cbo_tiposello";
-            this.cbo_tiposello.Size = new System.Drawing.Size(236, 21);
+            this.cbo_tiposello.Size = new System.Drawing.Size(233, 21);
             this.cbo_tiposello.TabIndex = 167;
             this.cbo_tiposello.ValueMember = "IdTipoSello";
             // 
@@ -4891,9 +4891,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // nud_cantpistas
             // 
-            this.nud_cantpistas.Location = new System.Drawing.Point(106, 11);
+            this.nud_cantpistas.Location = new System.Drawing.Point(109, 11);
             this.nud_cantpistas.Name = "nud_cantpistas";
-            this.nud_cantpistas.Size = new System.Drawing.Size(58, 20);
+            this.nud_cantpistas.Size = new System.Drawing.Size(55, 20);
             this.nud_cantpistas.TabIndex = 164;
             this.nud_cantpistas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -5093,7 +5093,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label61.ForeColor = System.Drawing.Color.White;
             this.label61.Location = new System.Drawing.Point(0, -1);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(414, 27);
+            this.label61.Size = new System.Drawing.Size(414, 25);
             this.label61.TabIndex = 141;
             this.label61.Text = "PESOS PROMEDIO";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5431,9 +5431,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.cbo_etiquetaempresa.DisplayMember = "Descripcion";
             this.cbo_etiquetaempresa.FormattingEnabled = true;
-            this.cbo_etiquetaempresa.Location = new System.Drawing.Point(106, 142);
+            this.cbo_etiquetaempresa.Location = new System.Drawing.Point(108, 142);
             this.cbo_etiquetaempresa.Name = "cbo_etiquetaempresa";
-            this.cbo_etiquetaempresa.Size = new System.Drawing.Size(222, 21);
+            this.cbo_etiquetaempresa.Size = new System.Drawing.Size(220, 21);
             this.cbo_etiquetaempresa.TabIndex = 182;
             this.cbo_etiquetaempresa.ValueMember = "IdEmpresaEtiqueta";
             // 
@@ -5493,9 +5493,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_Unidadporpaquete
             // 
-            this.txt_Unidadporpaquete.Location = new System.Drawing.Point(107, 41);
+            this.txt_Unidadporpaquete.Location = new System.Drawing.Point(108, 41);
             this.txt_Unidadporpaquete.Name = "txt_Unidadporpaquete";
-            this.txt_Unidadporpaquete.Size = new System.Drawing.Size(59, 20);
+            this.txt_Unidadporpaquete.Size = new System.Drawing.Size(58, 20);
             this.txt_Unidadporpaquete.TabIndex = 175;
             this.txt_Unidadporpaquete.Text = "0";
             this.txt_Unidadporpaquete.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -5516,9 +5516,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.cbo_Empaquetado.DisplayMember = "Descripcion";
             this.cbo_Empaquetado.FormattingEnabled = true;
-            this.cbo_Empaquetado.Location = new System.Drawing.Point(107, 9);
+            this.cbo_Empaquetado.Location = new System.Drawing.Point(108, 9);
             this.cbo_Empaquetado.Name = "cbo_Empaquetado";
-            this.cbo_Empaquetado.Size = new System.Drawing.Size(234, 21);
+            this.cbo_Empaquetado.Size = new System.Drawing.Size(233, 21);
             this.cbo_Empaquetado.TabIndex = 173;
             this.cbo_Empaquetado.ValueMember = "IdEmpaquetado";
             // 
@@ -6095,14 +6095,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dgv_Mnt.AllowUserToAddRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
             this.dgv_Mnt.BackgroundColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Mnt.ColumnHeadersHeight = 35;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdEstandar,
@@ -6111,25 +6111,25 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Codigo_Estandar,
             this.Descripcion_Estandar,
             this.Diseño_Estandar});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Mnt.Location = new System.Drawing.Point(0, 48);
             this.dgv_Mnt.Name = "dgv_Mnt";
             this.dgv_Mnt.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Mnt.RowHeadersWidth = 51;
             this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Mnt.Size = new System.Drawing.Size(1216, 463);

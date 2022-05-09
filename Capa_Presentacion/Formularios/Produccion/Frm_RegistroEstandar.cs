@@ -472,44 +472,45 @@ namespace Capa_Presentacion.Formularios.Produccion
                 };
             }
 
-           if( tc_procesos.TabPages["Tbp_Sellado"].Enabled == true)
+            if (tc_procesos.TabPages["Tbp_Sellado"].Enabled == true)
             {
-                string v = cbo_etiquetaempresa.SelectedValue.ToString();
                 mestsellado = new PR_mEstandarSellado
                 {
-                    IdEstandarSellado = ((short)idsellado),                    
+                    IdEstandarSellado = idsellado,
+                    IdEstandar = Int32.Parse(txt_IdEstandar.Text),
                     IdEtiqueta = byte.Parse(cbo_etiquetaempresa.SelectedValue.ToString()),
                     IdEmpaquetado = byte.Parse(cbo_Empaquetado.SelectedValue.ToString()),
                     IdAsa = byte.Parse(cbo_tipoasa.SelectedValue.ToString()),
                     IdTroquel = byte.Parse(cbo_tipotroquel.SelectedValue.ToString()),
                     IdTipoSello = byte.Parse(cbo_tiposello.SelectedValue.ToString()),
-                    Flag_Posicion_Sello = (rb_InicioPosicionSello.Checked == true)? "1":"0",
+                    Flag_Posicion_Sello = (rb_InicioPosicionSello.Checked == true) ? "1" : "0",
                     Ancho = decimal.Parse(nud_Ancho.Value.ToString()),
                     Largo = decimal.Parse(nud_largo.Value.ToString()),
                     IdUnidadLargo = byte.Parse(cbo_unidadmedidabolsa.SelectedValue.ToString()),
                     UnidadxPaquete = short.Parse(txt_Unidadporpaquete.Text),
                     PaquetexCaja = decimal.Parse(txt_cantpaqueteXcaja.Text),
-                    MillarxCaja = decimal.Parse(txt_cantmillaresXcajafardo.Text),
-                    Flag_Etiqueta = (chk_Etiquetado.Checked == true)?"1":"0",
-                    Flag_Etiqueta_Caja = (chk_etiquetacaja.Checked == true)?"1":"0",
-                    Flag_Etiqueta_Fardo = (chk_Etiquetado.Checked == true)? "1":"0",
-                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true)?"1":"0",                    
-                    Flag_DetalleEtiqueta = (rb_AxLxE.Checked == true)?"1":"0",
+                    MillarxCaja = decimal.Parse(txt_cantmillaresXcajafardo.Text),                   
+                    Flag_Etiqueta = (chk_Etiquetado.Checked == true) ? "1" : "0",
+                    Flag_Etiqueta_Caja = (chk_etiquetacaja.Checked == true) ? "1" : "0",
+                    Flag_Etiqueta_Fardo = (chk_Etiquetado.Checked == true) ? "1" : "0",
+                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true) ? "1" : "0",
+                    Flag_DetalleEtiqueta = (rb_AxLxE.Checked == true) ? "1" : "0",
                     IdTipoFuelle = int.Parse(Cbo_Fuellesellado.SelectedValue.ToString()),
                     Medida_Fuelle = decimal.Parse(nud_medidafuellesell.Value.ToString()),
-                    Flag_Perforaciones = (Chk_Perforaciones.Checked == true)?"1":"0",
+                    IdUnidadFuelle = byte.Parse(cbo_UMfuellesellado.SelectedValue.ToString()),
+                    Flag_Perforaciones = (Chk_Perforaciones.Checked == true) ? "1" : "0",
                     Numero_Perforaciones = byte.Parse(nud_cantperforaciones.Value.ToString()),
                     Medida_Perforaciones = decimal.Parse(nud_diametroperforacion.Value.ToString()),
                     IdUnidadPerforaciones = byte.Parse(cbo_umperforaciones.SelectedValue.ToString()),
                     Flag_Pestaña = (chk_Pestaña.Checked == true) ? "1" : "0",
                     Medida_Pestaña = decimal.Parse(nud_medidapestaña.Value.ToString()),
                     IdUnidadPestaña = byte.Parse(cbo_umpestaña.SelectedValue.ToString()),
-                    Flag_Solapa = (chk_solapa.Checked == true)?"1":"0",
+                    Flag_Solapa = (chk_solapa.Checked == true) ? "1" : "0",
                     Medida_Solapa = decimal.Parse(nud_medidasolapa.Value.ToString()),
                     IdUnidadSolapa = byte.Parse(cbo_umsolapa.SelectedValue.ToString()),
-                    Flag_Refile = (chk_refilesellado.Checked == true)?"1":"0",
+                    Flag_Refile = (chk_refilesellado.Checked == true) ? "1" : "0",
                     Medida_Refile = decimal.Parse(nud_medidarefile.Value.ToString()),
-                    IdUnidadRefile = byte.Parse(cbo_umrefilesellado.SelectedValue.ToString()),  
+                    IdUnidadRefile = byte.Parse(cbo_umrefilesellado.SelectedValue.ToString()),
                     Peso_Tuco = decimal.Parse(txt_pesotuco.Text),
                     Peso_Envase = decimal.Parse(txt_pesoenvase.Text),
                     Peso_Promedio_Fardo = decimal.Parse(txt_pesocajafardo.Text),
@@ -517,6 +518,7 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Peso_Promedio_Paquete = decimal.Parse(txt_pesopaquete.Text),
                     Nota_Sellado = txt_notasellado.Text,
                     Ruta_FotoPlanoMecanicoSell = txt_DireccionubicacionPlanosellado.Text,
+                    Numero_Pistas = byte.Parse(nud_cantpistas.Value.ToString()),
                 };
             }
 

@@ -103,6 +103,7 @@
     <Compile Include="PR_aCarreta_CN.cs" />
     <Compile Include="PR_mEstandarExtrusion_CN.cs" />
     <Compile Include="PR_mEstandarImpresion_CN.cs" />
+    <Compile Include="PR_mEstandarSellado_CN.cs" />
     <Compile Include="PR_mEstandar_CN.cs" />
     <Compile Include="PR_mImpresora_CN.cs" />
     <Compile Include="PR_mMaquina_CN.cs" />
