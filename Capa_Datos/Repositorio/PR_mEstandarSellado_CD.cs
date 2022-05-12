@@ -159,6 +159,7 @@ namespace Capa_Datos.Repositorio
                         SqlCommand cmd = new SqlCommand
                             ("Update PR_mEstandarSellado set Foto_PlanoMecanicoSell = @Foto_PlanoMecanicoSell where IdEstandarSellado = @Id ", ConexionSql);
                         cmd.Parameters.AddWithValue("@Foto_PlanoMecanicoSell", SqlDbType.Image);
+                        cmd.Parameters.AddWithValue("@Id", videstandarsellado);
                         System.IO.MemoryStream ms = new System.IO.MemoryStream();
                         imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                         cmd.Parameters["@Foto_PlanoMecanicoSell"].Value = ms.GetBuffer();

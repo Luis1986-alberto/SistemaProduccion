@@ -421,6 +421,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesotuco = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nud_PaquetesXCaja = new System.Windows.Forms.NumericUpDown();
             this.label117 = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
@@ -441,7 +442,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label49 = new System.Windows.Forms.Label();
             this.txt_cantmillaresXcajafardo = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.txt_cantpaqueteXcaja = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.txt_Unidadporpaquete = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -586,6 +586,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             ((System.ComponentModel.ISupportInitialize)(this.nud_Ancho)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_PaquetesXCaja)).BeginInit();
             this.panel28.SuspendLayout();
             this.tbp_Corte.SuspendLayout();
             this.panel40.SuspendLayout();
@@ -1072,6 +1073,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_diametroSolicitado.Name = "nud_diametroSolicitado";
             this.nud_diametroSolicitado.Size = new System.Drawing.Size(67, 20);
             this.nud_diametroSolicitado.TabIndex = 23;
+            this.nud_diametroSolicitado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_diametroSolicitado_KeyPress);
             // 
             // label157
             // 
@@ -1661,6 +1663,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_RelacionSoplado.Name = "nud_RelacionSoplado";
             this.nud_RelacionSoplado.Size = new System.Drawing.Size(67, 20);
             this.nud_RelacionSoplado.TabIndex = 59;
+            this.nud_RelacionSoplado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_RelacionSoplado_KeyPress);
             // 
             // label161
             // 
@@ -1726,6 +1729,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_PesoTuco.Name = "nud_PesoTuco";
             this.nud_PesoTuco.Size = new System.Drawing.Size(65, 20);
             this.nud_PesoTuco.TabIndex = 56;
+            this.nud_PesoTuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_PesoTuco_KeyPress);
             // 
             // label151
             // 
@@ -1779,6 +1783,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_DiametroTuco.Name = "nud_DiametroTuco";
             this.nud_DiametroTuco.Size = new System.Drawing.Size(67, 20);
             this.nud_DiametroTuco.TabIndex = 53;
+            this.nud_DiametroTuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_DiametroTuco_KeyPress);
             // 
             // label120
             // 
@@ -1832,6 +1837,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidaTuco.Name = "nud_medidaTuco";
             this.nud_medidaTuco.Size = new System.Drawing.Size(65, 20);
             this.nud_medidaTuco.TabIndex = 50;
+            this.nud_medidaTuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidaTuco_KeyPress);
             // 
             // label103
             // 
@@ -1906,6 +1912,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidaanchobobina.Name = "nud_medidaanchobobina";
             this.nud_medidaanchobobina.Size = new System.Drawing.Size(65, 20);
             this.nud_medidaanchobobina.TabIndex = 44;
+            this.nud_medidaanchobobina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidaanchobobina_KeyPress);
             // 
             // label15
             // 
@@ -1925,6 +1932,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidaespesor.Name = "nud_medidaespesor";
             this.nud_medidaespesor.Size = new System.Drawing.Size(67, 20);
             this.nud_medidaespesor.TabIndex = 47;
+            this.nud_medidaespesor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidaespesor_KeyPress);
             // 
             // label16
             // 
@@ -2005,6 +2013,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidarefile.Name = "nud_medidarefile";
             this.nud_medidarefile.Size = new System.Drawing.Size(65, 20);
             this.nud_medidarefile.TabIndex = 41;
+            this.nud_medidarefile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidarefile_KeyPress);
             // 
             // Chk_FlagRefile
             // 
@@ -2076,6 +2085,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidafuelle.Name = "nud_medidafuelle";
             this.nud_medidafuelle.Size = new System.Drawing.Size(59, 20);
             this.nud_medidafuelle.TabIndex = 35;
+            this.nud_medidafuelle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidafuelle_KeyPress);
             // 
             // cmd_unidadmedidafuelle
             // 
@@ -2506,6 +2516,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_Gapextrusion.Name = "nud_Gapextrusion";
             this.nud_Gapextrusion.Size = new System.Drawing.Size(72, 20);
             this.nud_Gapextrusion.TabIndex = 75;
+            this.nud_Gapextrusion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_Gapextrusion_KeyPress);
             // 
             // label165
             // 
@@ -2543,6 +2554,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_Diametrocabezal.Name = "nud_Diametrocabezal";
             this.nud_Diametrocabezal.Size = new System.Drawing.Size(69, 20);
             this.nud_Diametrocabezal.TabIndex = 74;
+            this.nud_Diametrocabezal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_Diametrocabezal_KeyPress);
             // 
             // label14
             // 
@@ -2625,6 +2637,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_Dynas.Name = "nud_Dynas";
             this.nud_Dynas.Size = new System.Drawing.Size(67, 20);
             this.nud_Dynas.TabIndex = 67;
+            this.nud_Dynas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_Dynas_KeyPress);
             // 
             // txt_Otrosaplicativos
             // 
@@ -3355,6 +3368,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_numeropistas.Size = new System.Drawing.Size(44, 20);
             this.nud_numeropistas.TabIndex = 101;
             this.nud_numeropistas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_numeropistas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_numeropistas_KeyPress);
             // 
             // txt_EspesorClisse
             // 
@@ -3364,6 +3378,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_EspesorClisse.TabIndex = 102;
             this.txt_EspesorClisse.Text = "0.00";
             this.txt_EspesorClisse.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_EspesorClisse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_EspesorClisse_KeyPress);
             // 
             // cmd_EspesorClisse
             // 
@@ -3492,9 +3507,10 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.nud_numeroclises.Location = new System.Drawing.Point(264, 66);
             this.nud_numeroclises.Name = "nud_numeroclises";
-            this.nud_numeroclises.Size = new System.Drawing.Size(51, 20);
+            this.nud_numeroclises.Size = new System.Drawing.Size(56, 20);
             this.nud_numeroclises.TabIndex = 99;
             this.nud_numeroclises.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_numeroclises.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_numeroclises_KeyPress);
             // 
             // label20
             // 
@@ -3539,6 +3555,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_numerorepiticiones.Size = new System.Drawing.Size(44, 20);
             this.nud_numerorepiticiones.TabIndex = 90;
             this.nud_numerorepiticiones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_numerorepiticiones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_numerorepiticiones_KeyPress);
             // 
             // nud_numerobandas
             // 
@@ -3547,6 +3564,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_numerobandas.Size = new System.Drawing.Size(44, 20);
             this.nud_numerobandas.TabIndex = 94;
             this.nud_numerobandas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_numerobandas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_numerobandas_KeyPress);
             // 
             // txt_medidarepeticion
             // 
@@ -3556,6 +3574,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_medidarepeticion.TabIndex = 91;
             this.txt_medidarepeticion.Text = "0.00";
             this.txt_medidarepeticion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_medidarepeticion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_medidarepeticion_KeyPress);
             // 
             // label23
             // 
@@ -3577,6 +3596,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_medidabandas.TabIndex = 95;
             this.txt_medidabandas.Text = "0.00";
             this.txt_medidabandas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_medidabandas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_medidabandas_KeyPress);
             // 
             // label24
             // 
@@ -3609,6 +3629,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_numeronegativo.Size = new System.Drawing.Size(44, 20);
             this.nud_numeronegativo.TabIndex = 98;
             this.nud_numeronegativo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_numeronegativo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_numeronegativo_KeyPress);
             // 
             // cmd_umrepeticiones
             // 
@@ -3648,9 +3669,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.Cbo_unidadmedidabandas.DisplayMember = "Sigla_Unidad";
             this.Cbo_unidadmedidabandas.FormattingEnabled = true;
-            this.Cbo_unidadmedidabandas.Location = new System.Drawing.Point(324, 37);
+            this.Cbo_unidadmedidabandas.Location = new System.Drawing.Point(322, 37);
             this.Cbo_unidadmedidabandas.Name = "Cbo_unidadmedidabandas";
-            this.Cbo_unidadmedidabandas.Size = new System.Drawing.Size(78, 21);
+            this.Cbo_unidadmedidabandas.Size = new System.Drawing.Size(80, 21);
             this.Cbo_unidadmedidabandas.TabIndex = 96;
             this.Cbo_unidadmedidabandas.ValueMember = "IdUnidadMedida";
             // 
@@ -3792,6 +3813,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_cantcolorretira.Size = new System.Drawing.Size(37, 20);
             this.nud_cantcolorretira.TabIndex = 111;
             this.nud_cantcolorretira.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_cantcolorretira.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_cantcolorretira_KeyPress);
             // 
             // txt_colorestira
             // 
@@ -3821,6 +3843,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_cantcolortira.Size = new System.Drawing.Size(37, 20);
             this.nud_cantcolortira.TabIndex = 108;
             this.nud_cantcolortira.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nud_cantcolortira.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_cantcolortira_KeyPress);
             // 
             // label28
             // 
@@ -3980,6 +4003,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_anchotaca.Name = "nud_anchotaca";
             this.nud_anchotaca.Size = new System.Drawing.Size(43, 20);
             this.nud_anchotaca.TabIndex = 145;
+            this.nud_anchotaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_anchotaca_KeyPress);
             // 
             // label55
             // 
@@ -4001,6 +4025,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_largotaca.Name = "nud_largotaca";
             this.nud_largotaca.Size = new System.Drawing.Size(54, 20);
             this.nud_largotaca.TabIndex = 144;
+            this.nud_largotaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_largotaca_KeyPress);
             // 
             // groupBox3
             // 
@@ -4032,6 +4057,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_GradosCalor.TabIndex = 133;
             this.txt_GradosCalor.Text = "0.00";
             this.txt_GradosCalor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_GradosCalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GradosCalor_KeyPress);
             // 
             // txt_GradosCongelamiento
             // 
@@ -4041,6 +4067,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_GradosCongelamiento.TabIndex = 136;
             this.txt_GradosCongelamiento.Text = "0.00";
             this.txt_GradosCongelamiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_GradosCongelamiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GradosCongelamiento_KeyPress);
             // 
             // txt_otrostintasresistentes
             // 
@@ -4216,6 +4243,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medrefilesellado.Size = new System.Drawing.Size(58, 20);
             this.nud_medrefilesellado.TabIndex = 205;
             this.nud_medrefilesellado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_medrefilesellado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medrefilesellado_KeyPress);
             // 
             // cbo_umrefilesellado
             // 
@@ -4278,6 +4306,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidasolapa.Size = new System.Drawing.Size(58, 20);
             this.nud_medidasolapa.TabIndex = 201;
             this.nud_medidasolapa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_medidasolapa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidasolapa_KeyPress);
             // 
             // cbo_umsolapa
             // 
@@ -4458,6 +4487,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidapestaña.Size = new System.Drawing.Size(58, 20);
             this.nud_medidapestaña.TabIndex = 197;
             this.nud_medidapestaña.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_medidapestaña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidapestaña_KeyPress);
             // 
             // cbo_umpestaña
             // 
@@ -4508,6 +4538,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_diametroperforacion.Size = new System.Drawing.Size(71, 20);
             this.nud_diametroperforacion.TabIndex = 193;
             this.nud_diametroperforacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_diametroperforacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_diametroperforacion_KeyPress);
             // 
             // cbo_umperforaciones
             // 
@@ -4555,6 +4586,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_cantperforaciones.Size = new System.Drawing.Size(58, 20);
             this.nud_cantperforaciones.TabIndex = 192;
             this.nud_cantperforaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_cantperforaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_cantperforaciones_KeyPress);
             // 
             // panel29
             // 
@@ -4604,6 +4636,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_medidafuellesell.Size = new System.Drawing.Size(62, 20);
             this.nud_medidafuellesell.TabIndex = 188;
             this.nud_medidafuellesell.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_medidafuellesell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_medidafuellesell_KeyPress);
             // 
             // Cbo_Fuellesellado
             // 
@@ -4613,7 +4646,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Cbo_Fuellesellado.Name = "Cbo_Fuellesellado";
             this.Cbo_Fuellesellado.Size = new System.Drawing.Size(110, 21);
             this.Cbo_Fuellesellado.TabIndex = 186;
-            this.Cbo_Fuellesellado.ValueMember = "IdFuelle";
+            this.Cbo_Fuellesellado.ValueMember = "IdTipoFuelle";
             // 
             // cbo_UMfuellesellado
             // 
@@ -4766,7 +4799,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_tipotroquel.Name = "cbo_tipotroquel";
             this.cbo_tipotroquel.Size = new System.Drawing.Size(233, 21);
             this.cbo_tipotroquel.TabIndex = 169;
-            this.cbo_tipotroquel.ValueMember = "IdTroquel";
+            this.cbo_tipotroquel.ValueMember = "IdTipoTroquel";
             // 
             // panel25
             // 
@@ -4896,6 +4929,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_cantpistas.Size = new System.Drawing.Size(55, 20);
             this.nud_cantpistas.TabIndex = 164;
             this.nud_cantpistas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_cantpistas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_cantpistas_KeyPress);
             // 
             // label42
             // 
@@ -4992,6 +5026,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_largo.Size = new System.Drawing.Size(58, 20);
             this.nud_largo.TabIndex = 161;
             this.nud_largo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_largo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_largo_KeyPress);
             // 
             // nud_Ancho
             // 
@@ -5001,6 +5036,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_Ancho.Size = new System.Drawing.Size(60, 20);
             this.nud_Ancho.TabIndex = 160;
             this.nud_Ancho.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_Ancho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_Ancho_KeyPress);
             // 
             // panel3
             // 
@@ -5106,6 +5142,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesoenvase.TabIndex = 209;
             this.txt_pesoenvase.Text = "0.000";
             this.txt_pesoenvase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_pesoenvase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pesoenvase_KeyPress);
             // 
             // label60
             // 
@@ -5127,6 +5164,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesocajafardo.TabIndex = 210;
             this.txt_pesocajafardo.Text = "0.000";
             this.txt_pesocajafardo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_pesocajafardo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pesocajafardo_KeyPress);
             // 
             // label59
             // 
@@ -5148,6 +5186,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesomillar.TabIndex = 212;
             this.txt_pesomillar.Text = "00.000";
             this.txt_pesomillar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_pesomillar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pesomillar_KeyPress);
             // 
             // label58
             // 
@@ -5169,6 +5208,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesopaquete.TabIndex = 211;
             this.txt_pesopaquete.Text = "00.000";
             this.txt_pesopaquete.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_pesopaquete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pesopaquete_KeyPress);
             // 
             // label57
             // 
@@ -5190,6 +5230,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pesotuco.TabIndex = 208;
             this.txt_pesotuco.Text = "0.000";
             this.txt_pesotuco.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_pesotuco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pesotuco_KeyPress);
             // 
             // label56
             // 
@@ -5207,6 +5248,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.nud_PaquetesXCaja);
             this.panel2.Controls.Add(this.label117);
             this.panel2.Controls.Add(this.label116);
             this.panel2.Controls.Add(this.label115);
@@ -5223,7 +5265,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel2.Controls.Add(this.label49);
             this.panel2.Controls.Add(this.txt_cantmillaresXcajafardo);
             this.panel2.Controls.Add(this.label47);
-            this.panel2.Controls.Add(this.txt_cantpaqueteXcaja);
             this.panel2.Controls.Add(this.label46);
             this.panel2.Controls.Add(this.txt_Unidadporpaquete);
             this.panel2.Controls.Add(this.label45);
@@ -5233,6 +5274,20 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(391, 203);
             this.panel2.TabIndex = 123;
+            // 
+            // nud_PaquetesXCaja
+            // 
+            this.nud_PaquetesXCaja.Location = new System.Drawing.Point(294, 41);
+            this.nud_PaquetesXCaja.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.nud_PaquetesXCaja.Name = "nud_PaquetesXCaja";
+            this.nud_PaquetesXCaja.Size = new System.Drawing.Size(47, 20);
+            this.nud_PaquetesXCaja.TabIndex = 189;
+            this.nud_PaquetesXCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nud_PaquetesXCaja.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_PaquetesXCaja_KeyPress);
             // 
             // label117
             // 
@@ -5435,7 +5490,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_etiquetaempresa.Name = "cbo_etiquetaempresa";
             this.cbo_etiquetaempresa.Size = new System.Drawing.Size(220, 21);
             this.cbo_etiquetaempresa.TabIndex = 182;
-            this.cbo_etiquetaempresa.ValueMember = "IdEmpresaEtiqueta";
+            this.cbo_etiquetaempresa.ValueMember = "IdEtiqueta";
             // 
             // label49
             // 
@@ -5457,6 +5512,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_cantmillaresXcajafardo.TabIndex = 177;
             this.txt_cantmillaresXcajafardo.Text = "0.00";
             this.txt_cantmillaresXcajafardo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_cantmillaresXcajafardo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantmillaresXcajafardo_KeyPress);
             // 
             // label47
             // 
@@ -5469,15 +5525,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label47.Size = new System.Drawing.Size(87, 13);
             this.label47.TabIndex = 129;
             this.label47.Text = "Mill. Caja / Fardo";
-            // 
-            // txt_cantpaqueteXcaja
-            // 
-            this.txt_cantpaqueteXcaja.Location = new System.Drawing.Point(282, 41);
-            this.txt_cantpaqueteXcaja.Name = "txt_cantpaqueteXcaja";
-            this.txt_cantpaqueteXcaja.Size = new System.Drawing.Size(59, 20);
-            this.txt_cantpaqueteXcaja.TabIndex = 176;
-            this.txt_cantpaqueteXcaja.Text = "0.00";
-            this.txt_cantpaqueteXcaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label46
             // 
@@ -5499,6 +5546,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_Unidadporpaquete.TabIndex = 175;
             this.txt_Unidadporpaquete.Text = "0";
             this.txt_Unidadporpaquete.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Unidadporpaquete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Unidadporpaquete_KeyPress);
             // 
             // label45
             // 
@@ -6400,6 +6448,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_PaquetesXCaja)).EndInit();
             this.panel28.ResumeLayout(false);
             this.panel28.PerformLayout();
             this.tbp_Corte.ResumeLayout(false);
@@ -6703,7 +6752,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txt_cantmillaresXcajafardo;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox txt_cantpaqueteXcaja;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox txt_Unidadporpaquete;
         private System.Windows.Forms.Label label45;
@@ -6908,5 +6956,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.RadioButton rb_FinalPosicionSello;
         private System.Windows.Forms.RadioButton rb_InicioPosicionSello;
+        private System.Windows.Forms.NumericUpDown nud_PaquetesXCaja;
     }
 }

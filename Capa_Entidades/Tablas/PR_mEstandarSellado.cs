@@ -10,52 +10,57 @@ namespace Capa_Entidades.Tablas
     {
         public Int32 IdEstandarSellado { get; set; }
         public Int32 IdEstandar { get; set; }
-        public Nullable<byte> IdEtiqueta { get; set; }
-        public Nullable<byte> IdEmpaquetado { get; set; }
-        public Nullable<byte> IdAsa { get; set; }
-        public Nullable<byte> IdTroquel { get; set; }
-        public Nullable<byte> IdTipoSello { get; set; }
-        public Nullable<decimal> Ancho { get; set; }
-        public Nullable<decimal> Largo { get; set; }
+        public byte IdEtiqueta { get; set; }
+        public byte IdEmpaquetado { get; set; }
+        public byte IdAsa { get; set; }
+        public byte IdTroquel { get; set; }
+        public byte IdTipoSello { get; set; }
+        public decimal Ancho { get; set; }
+        public decimal Largo { get; set; }
         public string Flag_Posicion_Sello { get; set; }        
-        public Nullable<short> UnidadxPaquete { get; set; }
-        public Nullable<decimal> PaquetexCaja { get; set; }
-        public Nullable<byte> IdUnidadLargo { get; set; }
-        public Nullable<decimal> MillarxCaja { get; set; }
+        public short UnidadxPaquete { get; set; }
+        public byte PaquetexCaja { get; set; }
+        public byte IdUnidadLargo { get; set; }
+        public decimal MillarxCaja { get; set; }
         public string Flag_Etiqueta { get; set; }
         public string Flag_Solapa { get; set; }
         public string Flag_Etiqueta_Paquete { get; set; }
-        public Nullable<decimal> Medida_Solapa { get; set; }
-        public Nullable<byte> IdUnidadSolapa { get; set; }
         public string Flag_Etiqueta_Caja { get; set; }
+        public decimal Peso_Promedio_Fardo { get; set; }
+        public decimal Medida_Solapa { get; set; }
+        public byte IdUnidadSolapa { get; set; }  
         public string Flag_Refile { get; set; }
-        public Nullable<decimal> Medida_Refile { get; set; }
-        public Nullable<byte> IdUnidadRefile { get; set; }
+        public decimal Medida_Refile { get; set; }
+        public byte IdUnidadRefile { get; set; }
         public string Flag_DetalleEtiqueta { get; set; }
         public string Flag_Pestaña { get; set; }
-        public Nullable<decimal> Medida_Pestaña { get; set; }
-        public Nullable<byte> IdUnidadPestaña { get; set; }
-        public Int32 IdTipoFuelle { get; set; }
+        public decimal Medida_Pestaña { get; set; }
+        public byte IdUnidadPestaña { get; set; }
+        public byte IdTipoFuelle { get; set; }
         public decimal Medida_Fuelle { get; set; }
         public byte IdUnidadFuelle { get; set; }        
         public string Flag_Perforaciones { get; set; }             
-        public Nullable<byte> Numero_Pistas { get; set; }
-        public Nullable<byte> Numero_Perforaciones { get; set; }
-        public Nullable<decimal> Medida_Perforaciones { get; set; }
-        public Nullable<byte> IdUnidadPerforaciones { get; set; }
+        public byte Numero_Pistas { get; set; }
+        public byte Numero_Perforaciones { get; set; }
+        public decimal Medida_Perforaciones { get; set; }
+        public byte IdUnidadPerforaciones { get; set; }
         public string Flag_Etiqueta_Fardo { get; set; }
-        public string Nota_Sellado { get; set; }    
-        public Nullable<decimal> Peso_Promedio_Fardo { get; set; }
-        public Nullable<decimal> Peso_Promedio_Millar { get; set; }
-        public Nullable<decimal> Peso_Promedio_Paquete { get; set; }
-        public Nullable<decimal> Peso_Tuco { get; set; }
-        public Nullable<decimal> Peso_Envase { get; set; }
+        public string Nota_Sellado { get; set; }            
+        public decimal Peso_Promedio_Millar { get; set; }
+        public decimal Peso_Promedio_Paquete { get; set; }
+        public decimal Peso_Tuco { get; set; }
+        public decimal Peso_Envase { get; set; }
         public string Ruta_FotoPlanoMecanicoSell { get; set; }
         public byte[] Foto_PlanoMecanicoSell { get; set; }
 
 
         public PR_mEstandarSellado()
         { }
+
+        public PR_mEstandarSellado(Int32 _idestandar)
+        {this.IdEstandar = _idestandar;}
+
+
 
         public virtual PR_aAsa oPR_aAsa { get; set; }
         public virtual PR_aEmpaquetado oPR_aEmpaquetado { get; set; }

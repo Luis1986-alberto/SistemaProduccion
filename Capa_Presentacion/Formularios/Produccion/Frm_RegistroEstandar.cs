@@ -51,13 +51,12 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             bln_Nuevo = true;
             bln_Editar = false;
-            txt_IdEstandar.Text = "0";
             tbc_Mnt.SelectTab(0);
             Estado_Toolbar(bln_Nuevo);
-
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             HabilitarControles(true);
             Limpiar_Controles();
+            txt_IdEstandar.Text = "0";
         }
 
         private void Cargar_Combos()
@@ -316,7 +315,6 @@ namespace Capa_Presentacion.Formularios.Produccion
                string rpta = PR_mEstandar_CN._Instancia.Eliminar_Estandar(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstandar"].Value.ToString()));
                 
                 Cargar_Datos();
-
                 tbc_Mnt.SelectTab(1);
                 tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
             }
@@ -474,28 +472,29 @@ namespace Capa_Presentacion.Formularios.Produccion
 
             if (tc_procesos.TabPages["Tbp_Sellado"].Enabled == true)
             {
-                mestsellado = new PR_mEstandarSellado
+                mestsellado = new PR_mEstandarSellado()
                 {
                     IdEstandarSellado = idsellado,
                     IdEstandar = Int32.Parse(txt_IdEstandar.Text),
-                    IdEtiqueta = byte.Parse(cbo_etiquetaempresa.SelectedValue.ToString()),
-                    IdEmpaquetado = byte.Parse(cbo_Empaquetado.SelectedValue.ToString()),
                     IdAsa = byte.Parse(cbo_tipoasa.SelectedValue.ToString()),
                     IdTroquel = byte.Parse(cbo_tipotroquel.SelectedValue.ToString()),
                     IdTipoSello = byte.Parse(cbo_tiposello.SelectedValue.ToString()),
-                    Flag_Posicion_Sello = (rb_InicioPosicionSello.Checked == true) ? "1" : "0",
                     Ancho = decimal.Parse(nud_Ancho.Value.ToString()),
                     Largo = decimal.Parse(nud_largo.Value.ToString()),
                     IdUnidadLargo = byte.Parse(cbo_unidadmedidabolsa.SelectedValue.ToString()),
-                    UnidadxPaquete = short.Parse(txt_Unidadporpaquete.Text),
-                    PaquetexCaja = decimal.Parse(txt_cantpaqueteXcaja.Text),
-                    MillarxCaja = decimal.Parse(txt_cantmillaresXcajafardo.Text),                   
+                    Flag_Posicion_Sello = (rb_InicioPosicionSello.Checked == true) ? "1" : "0",
+                    Numero_Pistas = byte.Parse(nud_cantpistas.Value.ToString()),
+                    IdEmpaquetado = byte.Parse(cbo_Empaquetado.SelectedValue.ToString()),
+                    UnidadxPaquete = short.Parse(txt_Unidadporpaquete.Text.ToString()),
+                    PaquetexCaja = byte.Parse(nud_PaquetesXCaja.Value.ToString()),
+                    MillarxCaja = decimal.Parse(txt_cantmillaresXcajafardo.Text.ToString()),
                     Flag_Etiqueta = (chk_Etiquetado.Checked == true) ? "1" : "0",
+                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true) ? "1" : "0",
                     Flag_Etiqueta_Caja = (chk_etiquetacaja.Checked == true) ? "1" : "0",
                     Flag_Etiqueta_Fardo = (chk_Etiquetado.Checked == true) ? "1" : "0",
-                    Flag_Etiqueta_Paquete = (chk_etiquetapaquete.Checked == true) ? "1" : "0",
+                    IdEtiqueta = byte.Parse(cbo_etiquetaempresa.SelectedValue.ToString()),
                     Flag_DetalleEtiqueta = (rb_AxLxE.Checked == true) ? "1" : "0",
-                    IdTipoFuelle = int.Parse(Cbo_Fuellesellado.SelectedValue.ToString()),
+                    IdTipoFuelle = byte.Parse(Cbo_Fuellesellado.SelectedValue.ToString()),
                     Medida_Fuelle = decimal.Parse(nud_medidafuellesell.Value.ToString()),
                     IdUnidadFuelle = byte.Parse(cbo_UMfuellesellado.SelectedValue.ToString()),
                     Flag_Perforaciones = (Chk_Perforaciones.Checked == true) ? "1" : "0",
@@ -518,7 +517,7 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Peso_Promedio_Paquete = decimal.Parse(txt_pesopaquete.Text),
                     Nota_Sellado = txt_notasellado.Text,
                     Ruta_FotoPlanoMecanicoSell = txt_DireccionubicacionPlanosellado.Text,
-                    Numero_Pistas = byte.Parse(nud_cantpistas.Value.ToString()),
+
                 };
             }
 
@@ -607,6 +606,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             txt_CodigoEstandar.Text = "";
             txt_CodigoBarrasEstandar.Text = "";
             Txt_RutaProducto.Text = "";
+            Dtp_FechaCreacion.Value = DateTime.Now;
             nud_diametroSolicitado.Value = decimal.Parse("0.00");
             
             //EXTRUSION
@@ -688,7 +688,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             nud_largo.Value = 0;
             nud_cantpistas.Value = 0;
             txt_Unidadporpaquete.Text = "0";
-            txt_cantpaqueteXcaja.Text = "0.00";
+            nud_PaquetesXCaja.Text = "0";
             txt_cantmillaresXcajafardo.Text = "0.00";
             chk_Etiquetado.Checked = false;
             chk_EtiquetaFardo.Checked = false;
@@ -1146,6 +1146,53 @@ namespace Capa_Presentacion.Formularios.Produccion
             img_PlanoMecanicoSellado.Image = null;
             txt_DireccionubicacionPlanosellado.Text = "";
         }
+
+        private void nud_PaquetesXCaja_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void txt_Unidadporpaquete_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void txt_cantmillaresXcajafardo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_Ancho_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_largo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_cantpistas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_medidafuellesell_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_cantperforaciones_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_diametroperforacion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidapestaña_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidasolapa_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medrefilesellado_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_pesotuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_pesoenvase_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_pesocajafardo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_pesopaquete_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_pesomillar_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_numerorepiticiones_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_numerobandas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_numeronegativo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_numeropistas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_cantcolortira_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_cantcolorretira_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void txt_medidarepeticion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_medidabandas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_numeroclises_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void txt_EspesorClisse_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_GradosCalor_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_GradosCongelamiento_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_largotaca_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_anchotaca_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidafuelle_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidarefile_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidaanchobobina_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);       
+        private void nud_medidaTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_DiametroTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_PesoTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_RelacionSoplado_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_medidaespesor_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_Dynas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_Diametrocabezal_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_Gapextrusion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void nud_diametroSolicitado_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+
+
+
         private void cmd_refile_Click(object sender, EventArgs e)
         {
             Frm_UnidadMedida unidadmedida = new Frm_UnidadMedida();
