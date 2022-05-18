@@ -26,7 +26,7 @@ namespace Capa_Presentacion.Clases
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo Letras");
+                MessageBox.Show("Solo Letras","Error!! Tipo de Dato");
             }
         }
 
@@ -47,7 +47,7 @@ namespace Capa_Presentacion.Clases
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo Números");
+                MessageBox.Show("Solo Números", "Error!! Tipo de Dato");
             }
         }
 
@@ -72,7 +72,7 @@ namespace Capa_Presentacion.Clases
             else
             {
                 v.Handled = true;
-                MessageBox.Show("Solo números o números con punto decimal");
+                MessageBox.Show("Solo números o números con punto decimal", "Error!! Tipo de Dato !!");
             }
         }
     }

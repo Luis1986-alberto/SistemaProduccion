@@ -4,6 +4,8 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios.Produccion
@@ -52,6 +54,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             bln_Nuevo = true;
             bln_Editar = false;
             tbc_Mnt.SelectTab(0);
+            tc_procesos.SelectTab(0);
             Estado_Toolbar(bln_Nuevo);
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             HabilitarControles(true);
@@ -140,6 +143,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         private void Entrada_Datos(Int32 idestandar)
         {
+            Limpiar_Controles();
             var i = PR_mEstandar_CN._Instancia.TraerIdEstandar(idestandar);            
             txt_IdEstandar.Text = i.IdEstandar.ToString();
             Cbo_Cliente.SelectedValue = i.IdCliente;
@@ -266,6 +270,57 @@ namespace Capa_Presentacion.Formularios.Produccion
                 nud_anchotaca.Value = imp.Medida_AnchoTaca;
                 txt_notaimpresion.Text = imp.Nota_Impresion;
             }
+
+            // Sellado
+            if(idsellado > 0)
+            {
+                var sell = PR_mEstandarSellado_CN._Instancia.TraerPor_Id(idsellado);
+                nud_Ancho.Value = sell.Ancho;
+                nud_largo.Value = sell.Largo;
+                cbo_unidadmedidabolsa.SelectedValue = sell.IdUnidadLargo;
+                txt_cantidadPistas.Text = sell.Numero_Pistas.ToString();
+                rb_InicioPosicionSello.Checked = (sell.Flag_Posicion_Sello == "1")? true : false;
+                rb_FinalPosicionSello.Checked = (sell.Flag_Posicion_Sello == "0")? true : false;
+                cbo_tiposello.SelectedValue = sell.IdTipoSello;
+                cbo_tipotroquel.SelectedValue = sell.IdTroquel;
+                cbo_tipoasa.SelectedValue = sell.IdAsa;
+                cbo_Empaquetado.SelectedValue = sell.IdEmpaquetado;
+                txt_Unidadporpaquete.Text = sell.UnidadxPaquete.ToString();
+                nud_PaquetesXCaja.Value = sell.PaquetexCaja;
+                txt_cantmillaresXcajafardo.Text = sell.MillarxCaja.ToString();
+                chk_Etiquetado.Checked = (sell.Flag_Etiqueta == "1") ? true : false;
+                chk_etiquetacaja.Checked = (sell.Flag_Etiqueta_Caja == "1") ? true : false;
+                chk_EtiquetaFardo.Checked = (sell.Flag_Etiqueta_Fardo == "1") ? true : false;
+                chk_etiquetapaquete.Checked = (sell.Flag_Etiqueta_Paquete == "1") ? true : false;
+                cbo_etiquetaempresa.SelectedValue = sell.IdEtiqueta;
+                rb_AxLxE.Checked = (sell.Flag_DetalleEtiqueta == "1") ? true : false;
+                rb_AxL.Checked = (sell.Flag_DetalleEtiqueta == "0") ? true : false;
+                Cbo_Fuellesellado.SelectedValue = sell.IdTipoFuelle;
+                nud_medidafuellesell.Value = sell.Medida_Fuelle;
+                cbo_UMfuellesellado.SelectedValue = sell.IdUnidadFuelle;
+                Chk_Perforaciones.Checked = (sell.Flag_Perforaciones == "1") ? true : false;
+                nud_cantperforaciones.Value = sell.Numero_Perforaciones;
+                nud_diametroperforacion.Value = sell.Medida_Perforaciones;
+                cbo_umperforaciones.SelectedValue = sell.IdUnidadPerforaciones;
+                chk_Pestaña.Checked = (sell.Flag_Pestaña == "1") ? true : false;
+                nud_medidapestaña.Value = sell.Medida_Pestaña;
+                cbo_umpestaña.SelectedValue = sell.IdUnidadPestaña;
+                chk_solapa.Checked = (sell.Flag_Solapa == "1") ? true : false;
+                nud_medidasolapa.Value = sell.Medida_Solapa;
+                cbo_umsolapa.SelectedValue = sell.IdUnidadSolapa;
+                chk_refilesellado.Checked = (sell.Flag_Refile == "1") ? true : false;
+                nud_medrefilesellado.Value = sell.Medida_Refile;
+                cbo_umrefilesellado.SelectedValue = sell.IdUnidadRefile;
+                txt_pesotuco.Text = sell.Peso_Tuco.ToString();
+                txt_pesoenvase.Text = sell.Peso_Envase.ToString();
+                txt_pesocajafardo.Text = sell.Peso_Promedio_Fardo.ToString();
+                txt_pesopaquete.Text = sell.Peso_Promedio_Paquete.ToString();
+                txt_pesomillar.Text = sell.Peso_Promedio_Millar.ToString();
+                txt_notasellado.Text = sell.Nota_Sellado;
+                txt_DireccionubicacionPlanosellado.Text = sell.Ruta_FotoPlanoMecanicoSell;
+            }
+
+
         }
 
         private void tls_Modificar_Click(object sender, EventArgs e)
@@ -483,7 +538,7 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Largo = decimal.Parse(nud_largo.Value.ToString()),
                     IdUnidadLargo = byte.Parse(cbo_unidadmedidabolsa.SelectedValue.ToString()),
                     Flag_Posicion_Sello = (rb_InicioPosicionSello.Checked == true) ? "1" : "0",
-                    Numero_Pistas = byte.Parse(nud_cantpistas.Value.ToString()),
+                    Numero_Pistas = byte.Parse(txt_cantidadPistas.Text.ToString()),
                     IdEmpaquetado = byte.Parse(cbo_Empaquetado.SelectedValue.ToString()),
                     UnidadxPaquete = short.Parse(txt_Unidadporpaquete.Text.ToString()),
                     PaquetexCaja = byte.Parse(nud_PaquetesXCaja.Value.ToString()),
@@ -517,7 +572,6 @@ namespace Capa_Presentacion.Formularios.Produccion
                     Peso_Promedio_Paquete = decimal.Parse(txt_pesopaquete.Text),
                     Nota_Sellado = txt_notasellado.Text,
                     Ruta_FotoPlanoMecanicoSell = txt_DireccionubicacionPlanosellado.Text,
-
                 };
             }
 
@@ -539,8 +593,30 @@ namespace Capa_Presentacion.Formularios.Produccion
                                                                                 mestsellado, img_PlanoMecanicoSellado);
             if (bln_Editar) rpta = PR_mEstandar_CN._Instancia.Actualizar_estandar(estadart, Img_Producto, mestextrusion, Img_PlanoExtrusion, mestimpresion, Img_Arte,
                                                                                 mestsellado, img_PlanoMecanicoSellado);
-             
-        
+           if(rpta == "PROCESADO")
+            {
+                if (bln_Nuevo)
+                { MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                else { MessageBox.Show("Se Actualizo el registro", "Actualizar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+
+                bln_Editar = false;
+                bln_Nuevo = false;
+
+                Estado_Toolbar(bln_Editar);
+                tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
+                HabilitarControles(false);
+                
+                tc_procesos.TabPages["Tbp_Extrusion"].Enabled =  false;
+                tc_procesos.TabPages["Tbp_Impresion"].Enabled =  false;
+                tc_procesos.TabPages["Tbp_Sellado"].Enabled =  false;
+                tc_procesos.TabPages["Tbp_Laminado"].Enabled = false;
+                tc_procesos.TabPages["Tbp_Doblado"].Enabled =  false;
+                tc_procesos.TabPages["Tbp_Corte"].Enabled =  false;
+                tbc_Mnt.SelectTab(1);
+            }
+            else { MessageBox.Show(rpta, "error Inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            Cargar_Datos();
+
         }
 
         private void tls_Deshacer_Click(object sender, EventArgs e)
@@ -686,7 +762,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             //SELLADO
             nud_Ancho.Value = 0;
             nud_largo.Value = 0;
-            nud_cantpistas.Value = 0;
+            txt_cantidadPistas.Text = "0";
             txt_Unidadporpaquete.Text = "0";
             nud_PaquetesXCaja.Text = "0";
             txt_cantmillaresXcajafardo.Text = "0.00";
@@ -939,16 +1015,20 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             Img_Producto.Image = null;
             Img_PlanoExtrusion.Image = null;
+            Img_Arte.Image = null;
+            img_PlanoMecanicoSellado.Image = null;
+
             if (bln_Nuevo == false)
             {
                 if (Chk_MostrarImagen.Checked == true)
                 { 
                     PR_mEstandar_CN._Instancia.Descargar_ImagenProducto(Img_Producto, Int32.Parse(txt_IdEstandar.Text));
-                    PR_mEstandarExtrusion_CN._Instancia.Descargar_ImagenProducto(Img_PlanoExtrusion, idextrusion);
+                    if (idextrusion > 0) PR_mEstandarExtrusion_CN._Instancia.Descargar_ImagenProducto(Img_PlanoExtrusion, idextrusion);
+                    if (idimpresion > 0) PR_mEstandarImpresion_CN._Instancia.Descargar_ImagenProducto(Img_Arte, idimpresion);
+                    if (idsellado > 0) PR_mEstandarSellado_CN._Instancia.Descargar_ImagenProducto(img_PlanoMecanicoSellado, idsellado);
+
                 }
-            }
-         
-                        
+            }           
         }
 
         private void Chk_Fuelle_CheckedChanged(object sender, EventArgs e)
@@ -1151,8 +1231,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void txt_Unidadporpaquete_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
         private void txt_cantmillaresXcajafardo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_Ancho_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
-        private void nud_largo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
-        private void nud_cantpistas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
+        private void nud_largo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);        
         private void nud_medidafuellesell_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_cantperforaciones_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
         private void nud_diametroperforacion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
@@ -1190,14 +1269,76 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void nud_Diametrocabezal_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_Gapextrusion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_diametroSolicitado_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
+        private void txt_cantidadPistas_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
 
+        private void tls_Primero_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mnt.Rows.Count == 0) { return; }
 
+            dgv_Mnt.ClearSelection();
+            dgv_Mnt.Rows[0].Selected = true;
+            Entrada_Datos(int.Parse(dgv_Mnt.SelectedRows[0].Cells["Idestandar"].Value.ToString()));
+            dgv_Mnt.FirstDisplayedScrollingRowIndex = dgv_Mnt.SelectedRows[0].Index;
+        }
+
+        private void tls_Anterior_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mnt.Rows.Count == 0) { return; }
+
+            int SelectIndex = dgv_Mnt.SelectedRows[0].Index;
+
+            if (SelectIndex == 0) { return; }
+            dgv_Mnt.ClearSelection();
+            dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
+            SelectIndex = SelectIndex - 1;
+
+            Entrada_Datos(int.Parse(dgv_Mnt.SelectedRows[0].Cells["Idestandar"].Value.ToString()));
+        }
+
+        private void tls_Siguiente_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mnt.Rows.Count == 0) { return; }
+
+            int SelectIndex = dgv_Mnt.SelectedRows[0].Index;
+            if (dgv_Mnt.Rows.Count - 1 == SelectIndex) { return; }
+            dgv_Mnt.ClearSelection();
+            dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
+            SelectIndex = SelectIndex + 1;
+            Entrada_Datos(int.Parse(dgv_Mnt.SelectedRows[0].Cells["Idestandar"].Value.ToString()));
+        }
+
+        private void tls_Ultimo_Click(object sender, EventArgs e)
+        {
+            if (dgv_Mnt.Rows.Count == 0) { return; }
+
+            dgv_Mnt.ClearSelection();
+            dgv_Mnt.Rows[dgv_Mnt.Rows.Count - 1].Selected = true;
+            Entrada_Datos(int.Parse(dgv_Mnt.SelectedRows[0].Cells["Idestandar"].Value.ToString()));
+            dgv_Mnt.FirstDisplayedScrollingRowIndex = dgv_Mnt.SelectedRows[0].Index;
+        }
+
+        private void tls_Previo_Click(object sender, EventArgs e)
+        {
+            if (SetupThePrinting())
+            {
+                PrintPreviewDialog MyPrintPreviewDialog = new PrintPreviewDialog();
+                MyPrintPreviewDialog.Document = PrintDocument;              
+                MyPrintPreviewDialog.ShowDialog();
+            }
+        }
 
         private void cmd_refile_Click(object sender, EventArgs e)
         {
             Frm_UnidadMedida unidadmedida = new Frm_UnidadMedida();
             unidadmedida.ShowDialog();
             cbo_umrefilesellado.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {           
+            bool more = dgr_Visor_Grilla.DrawDataGridView(e.Graphics);
+            if (more == true)
+                e.HasMorePages = true;
         }
 
         private void chk_FiltroCliente_CheckedChanged(object sender, EventArgs e)
@@ -1226,7 +1367,32 @@ namespace Capa_Presentacion.Formularios.Produccion
             Cbo_Fuellesellado.DataSource = PR_aTipoFuelle_CN._Instancia.Lista_TipoFuelle();                 
         }
 
-         
+        private bool SetupThePrinting()
+        {
+            PrintDialog MyPrintDialog = new PrintDialog();
+            MyPrintDialog.AllowCurrentPage = false;
+            MyPrintDialog.AllowPrintToFile = false;
+            MyPrintDialog.AllowSelection = false;
+            MyPrintDialog.AllowSomePages = false;
+            MyPrintDialog.PrintToFile = false;
+            MyPrintDialog.ShowHelp = false;
+            MyPrintDialog.ShowNetwork = false;
+
+            if (MyPrintDialog.ShowDialog() != DialogResult.OK)
+                return false;
+
+            PrintDocument.DocumentName = "Lista de Estandares";
+            PrintDocument.PrinterSettings = MyPrintDialog.PrinterSettings;
+            PrintDocument.DefaultPageSettings = MyPrintDialog.PrinterSettings.DefaultPageSettings;
+            PrintDocument.DefaultPageSettings.Margins = new Margins(40, 40, 40, 40);
+
+            if (MessageBox.Show("Desea que el informe se centre en la página", "Estilo de Impresion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                dgr_Visor_Grilla = new DataGridViewPrinter(dgv_Mnt, PrintDocument, true, true, "Listado de Estandares", new Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, true);
+            else
+                dgr_Visor_Grilla = new DataGridViewPrinter(dgv_Mnt, PrintDocument, false, true, "Listado de Estandares", new Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, true);
+            return true;
+        }
+
 
     }
 }

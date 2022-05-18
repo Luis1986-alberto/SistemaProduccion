@@ -117,7 +117,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
-                    var sqldelete = "Delete From PR_mEstandarSellado where IdEstandarSellado = @Id";
+                    var sqldelete = "Delete From PR_mEstandarSellado where Idestandar = @Id";
                     ConexionSql.ExecuteScalar<PR_mEstandarSellado>(sqldelete, new { id = videstandar });
                 }
                 return "PROCESADO";
@@ -131,7 +131,7 @@ namespace Capa_Datos.Repositorio
             using(var ConexionSql = new SqlConnection(cadenaconexion))
             {
                 ConexionSql.Open();
-                SqlCommand cmd = new SqlCommand ("select Foto_PlanoMecanicoSell  from PR_mEstandarSellado where IdEstandarSellado = @Id");
+                SqlCommand cmd = new SqlCommand ("select Foto_PlanoMecanicoSell  from PR_mEstandarSellado where IdEstandarSellado ='" + videstandarsellado + "'", ConexionSql);
                 SqlDataAdapter dp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet("Foto_PlanoMecanicoSell");
                 dp.Fill(ds, "Foto_PlanoMecanicoSell");

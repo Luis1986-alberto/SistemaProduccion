@@ -30,9 +30,9 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_RegistroEstandar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -389,11 +389,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label41 = new System.Windows.Forms.Label();
             this.cmd_tiposello = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.txt_cantidadPistas = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.rb_FinalPosicionSello = new System.Windows.Forms.RadioButton();
             this.rb_InicioPosicionSello = new System.Windows.Forms.RadioButton();
             this.label108 = new System.Windows.Forms.Label();
-            this.nud_cantpistas = new System.Windows.Forms.NumericUpDown();
             this.label42 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label107 = new System.Windows.Forms.Label();
@@ -496,12 +496,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diseño_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Cbo_FiltroTipoProduccion = new System.Windows.Forms.ComboBox();
             this.cbo_FiltroCliente = new System.Windows.Forms.ComboBox();
@@ -510,6 +504,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Chk_FiltroRango = new System.Windows.Forms.CheckBox();
             this.chk_FiltroTipoEstandar = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diseño_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -580,7 +581,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel26.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_cantpistas)).BeginInit();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_largo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Ancho)).BeginInit();
@@ -720,6 +720,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Previo.Text = "&Previo";
             this.tls_Previo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Previo.ToolTipText = "Previo de datos antes de imprimir";
+            this.tls_Previo.Click += new System.EventHandler(this.tls_Previo_Click);
             // 
             // tls_Separador3
             // 
@@ -781,6 +782,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Primero.Text = "Pri&mero";
             this.tls_Primero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Primero.ToolTipText = "Primer registro";
+            this.tls_Primero.Click += new System.EventHandler(this.tls_Primero_Click);
             // 
             // tls_Anterior
             // 
@@ -791,6 +793,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Anterior.Text = "An&terior";
             this.tls_Anterior.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Anterior.ToolTipText = "Anterior registro";
+            this.tls_Anterior.Click += new System.EventHandler(this.tls_Anterior_Click);
             // 
             // tls_Siguiente
             // 
@@ -801,6 +804,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Siguiente.Text = "&Siguiente";
             this.tls_Siguiente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Siguiente.ToolTipText = "Siguiente registro";
+            this.tls_Siguiente.Click += new System.EventHandler(this.tls_Siguiente_Click);
             // 
             // tls_Ultimo
             // 
@@ -811,6 +815,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Ultimo.Text = "&Ultimo";
             this.tls_Ultimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Ultimo.ToolTipText = "Ultimo registro";
+            this.tls_Ultimo.Click += new System.EventHandler(this.tls_Ultimo_Click);
             // 
             // tbc_Mnt
             // 
@@ -1682,7 +1687,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label84.BackColor = System.Drawing.Color.White;
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.Red;
-            this.label84.Location = new System.Drawing.Point(3, -3);
+            this.label84.Location = new System.Drawing.Point(-2, -3);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(134, 13);
             this.label84.TabIndex = 142;
@@ -2901,7 +2906,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel21.Controls.Add(this.Img_Arte);
             this.panel21.Location = new System.Drawing.Point(821, 46);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(390, 411);
+            this.panel21.Size = new System.Drawing.Size(390, 414);
             this.panel21.TabIndex = 117;
             // 
             // txt_direccionarte
@@ -4864,16 +4869,24 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.panel24.BackColor = System.Drawing.Color.SkyBlue;
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel24.Controls.Add(this.txt_cantidadPistas);
             this.panel24.Controls.Add(this.label26);
             this.panel24.Controls.Add(this.rb_FinalPosicionSello);
             this.panel24.Controls.Add(this.rb_InicioPosicionSello);
             this.panel24.Controls.Add(this.label108);
-            this.panel24.Controls.Add(this.nud_cantpistas);
             this.panel24.Controls.Add(this.label42);
             this.panel24.Location = new System.Drawing.Point(3, 80);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(393, 44);
             this.panel24.TabIndex = 167;
+            // 
+            // txt_cantidadPistas
+            // 
+            this.txt_cantidadPistas.Location = new System.Drawing.Point(109, 11);
+            this.txt_cantidadPistas.Name = "txt_cantidadPistas";
+            this.txt_cantidadPistas.Size = new System.Drawing.Size(43, 20);
+            this.txt_cantidadPistas.TabIndex = 168;
+            this.txt_cantidadPistas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cantidadPistas_KeyPress);
             // 
             // label26
             // 
@@ -4921,15 +4934,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label108.Size = new System.Drawing.Size(10, 13);
             this.label108.TabIndex = 108;
             this.label108.Text = ":";
-            // 
-            // nud_cantpistas
-            // 
-            this.nud_cantpistas.Location = new System.Drawing.Point(109, 11);
-            this.nud_cantpistas.Name = "nud_cantpistas";
-            this.nud_cantpistas.Size = new System.Drawing.Size(55, 20);
-            this.nud_cantpistas.TabIndex = 164;
-            this.nud_cantpistas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nud_cantpistas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_cantpistas_KeyPress);
             // 
             // label42
             // 
@@ -6143,14 +6147,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dgv_Mnt.AllowUserToAddRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
             this.dgv_Mnt.BackgroundColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Mnt.ColumnHeadersHeight = 35;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdEstandar,
@@ -6159,83 +6163,29 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Codigo_Estandar,
             this.Descripcion_Estandar,
             this.Diseño_Estandar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Mnt.Location = new System.Drawing.Point(0, 48);
             this.dgv_Mnt.Name = "dgv_Mnt";
             this.dgv_Mnt.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Mnt.RowHeadersWidth = 51;
             this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Mnt.Size = new System.Drawing.Size(1216, 463);
             this.dgv_Mnt.TabIndex = 4;
-            // 
-            // IdEstandar
-            // 
-            this.IdEstandar.DataPropertyName = "IdEstandar";
-            this.IdEstandar.HeaderText = "IdEstandar";
-            this.IdEstandar.MinimumWidth = 6;
-            this.IdEstandar.Name = "IdEstandar";
-            this.IdEstandar.ReadOnly = true;
-            this.IdEstandar.Width = 80;
-            // 
-            // Fecha_Creacion
-            // 
-            this.Fecha_Creacion.DataPropertyName = "Fecha_Creado";
-            this.Fecha_Creacion.HeaderText = "Fecha Creacion";
-            this.Fecha_Creacion.MinimumWidth = 6;
-            this.Fecha_Creacion.Name = "Fecha_Creacion";
-            this.Fecha_Creacion.ReadOnly = true;
-            this.Fecha_Creacion.Width = 80;
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Cliente";
-            this.Razon_Social.MinimumWidth = 6;
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 250;
-            // 
-            // Codigo_Estandar
-            // 
-            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
-            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
-            this.Codigo_Estandar.MinimumWidth = 6;
-            this.Codigo_Estandar.Name = "Codigo_Estandar";
-            this.Codigo_Estandar.ReadOnly = true;
-            this.Codigo_Estandar.Width = 125;
-            // 
-            // Descripcion_Estandar
-            // 
-            this.Descripcion_Estandar.DataPropertyName = "Descripcion";
-            this.Descripcion_Estandar.HeaderText = "Descripcion Estandar";
-            this.Descripcion_Estandar.MinimumWidth = 6;
-            this.Descripcion_Estandar.Name = "Descripcion_Estandar";
-            this.Descripcion_Estandar.ReadOnly = true;
-            this.Descripcion_Estandar.Width = 350;
-            // 
-            // Diseño_Estandar
-            // 
-            this.Diseño_Estandar.DataPropertyName = "Diseño";
-            this.Diseño_Estandar.HeaderText = "Diseño Estandar";
-            this.Diseño_Estandar.MinimumWidth = 6;
-            this.Diseño_Estandar.Name = "Diseño_Estandar";
-            this.Diseño_Estandar.ReadOnly = true;
-            this.Diseño_Estandar.Width = 250;
             // 
             // panel1
             // 
@@ -6324,6 +6274,64 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroCliente.Text = "Cliente";
             this.chk_FiltroCliente.UseVisualStyleBackColor = true;
             this.chk_FiltroCliente.CheckedChanged += new System.EventHandler(this.chk_FiltroCliente_CheckedChanged);
+            // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
+            // 
+            // IdEstandar
+            // 
+            this.IdEstandar.DataPropertyName = "IdEstandar";
+            this.IdEstandar.HeaderText = "IdEstandar";
+            this.IdEstandar.MinimumWidth = 6;
+            this.IdEstandar.Name = "IdEstandar";
+            this.IdEstandar.ReadOnly = true;
+            this.IdEstandar.Width = 80;
+            // 
+            // Fecha_Creacion
+            // 
+            this.Fecha_Creacion.DataPropertyName = "Fecha_Creado";
+            this.Fecha_Creacion.HeaderText = "Fecha Creacion";
+            this.Fecha_Creacion.MinimumWidth = 6;
+            this.Fecha_Creacion.Name = "Fecha_Creacion";
+            this.Fecha_Creacion.ReadOnly = true;
+            this.Fecha_Creacion.Width = 80;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Cliente";
+            this.Razon_Social.MinimumWidth = 6;
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 250;
+            // 
+            // Codigo_Estandar
+            // 
+            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
+            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
+            this.Codigo_Estandar.MinimumWidth = 6;
+            this.Codigo_Estandar.Name = "Codigo_Estandar";
+            this.Codigo_Estandar.ReadOnly = true;
+            this.Codigo_Estandar.Width = 125;
+            // 
+            // Descripcion_Estandar
+            // 
+            this.Descripcion_Estandar.DataPropertyName = "Descripcion";
+            this.Descripcion_Estandar.HeaderText = "Descripcion Estandar";
+            this.Descripcion_Estandar.MinimumWidth = 6;
+            this.Descripcion_Estandar.Name = "Descripcion_Estandar";
+            this.Descripcion_Estandar.ReadOnly = true;
+            this.Descripcion_Estandar.Width = 350;
+            // 
+            // Diseño_Estandar
+            // 
+            this.Diseño_Estandar.DataPropertyName = "Diseño";
+            this.Diseño_Estandar.HeaderText = "Diseño Estandar";
+            this.Diseño_Estandar.MinimumWidth = 6;
+            this.Diseño_Estandar.Name = "Diseño_Estandar";
+            this.Diseño_Estandar.ReadOnly = true;
+            this.Diseño_Estandar.Width = 280;
             // 
             // Frm_RegistroEstandar
             // 
@@ -6439,7 +6447,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel25.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_cantpistas)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_largo)).EndInit();
@@ -6704,7 +6711,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Button cmd_tiposello;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.NumericUpDown nud_cantpistas;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label label107;
@@ -6946,16 +6952,18 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.CheckBox chk_Retira;
         private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.RadioButton rb_FinalPosicionSello;
+        private System.Windows.Forms.RadioButton rb_InicioPosicionSello;
+        private System.Windows.Forms.NumericUpDown nud_PaquetesXCaja;
+        private System.Windows.Forms.TextBox txt_cantidadPistas;
+        private System.Drawing.Printing.PrintDocument PrintDocument;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEstandar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Creacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Estandar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion_Estandar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diseño_Estandar;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.RadioButton rb_FinalPosicionSello;
-        private System.Windows.Forms.RadioButton rb_InicioPosicionSello;
-        private System.Windows.Forms.NumericUpDown nud_PaquetesXCaja;
     }
 }

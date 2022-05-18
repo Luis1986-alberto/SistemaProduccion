@@ -123,7 +123,6 @@ namespace Capa_Presentacion.Formularios
             {
                 foreach (DataGridViewRow row in grid.Rows)
                 {
-
                     if (row.Cells[Columna].Value.ToString() == TextoABuscar)
                     {
                         row.Selected = true;
@@ -137,14 +136,12 @@ namespace Capa_Presentacion.Formularios
         private void btn_Siguiente_Click(object sender, EventArgs e)
         {
             var bln_Resultado = BuscarLINQ(txt_Buscar.Text.ToString().ToUpper(), str_Nombre_Campo.ToUpper(), rGrilla);
-
             if (bln_Resultado == true) { rGrilla.FirstDisplayedScrollingRowIndex = rGrilla.SelectedRows[0].Index; }
         }
 
         private void txt_Buscar_TextChanged(object sender, EventArgs e)
         {
             var bln_Resultado = BuscarLINQ(txt_Buscar.Text.ToString().ToUpper(), str_Nombre_Campo.ToUpper(), rGrilla);
-
             if (bln_Resultado == true) { rGrilla.FirstDisplayedScrollingRowIndex = rGrilla.SelectedRows[0].Index; }
         }
     }
