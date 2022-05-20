@@ -678,6 +678,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         public void Limpiar_Controles()
         {
+            Chk_MostrarImagen.Checked = false;
             txt_DescripcionEstandar.Text = "";
             txt_CodigoEstandar.Text = "";
             txt_CodigoBarrasEstandar.Text = "";
@@ -770,6 +771,10 @@ namespace Capa_Presentacion.Formularios.Produccion
             chk_EtiquetaFardo.Checked = false;
             chk_etiquetacaja.Checked = false;
             chk_etiquetapaquete.Checked = false;
+            Chk_Perforaciones.Checked = false;
+            chk_Pestaña.Checked = false;
+            chk_solapa.Checked = false;
+            chk_refilesellado.Checked = false;
             nud_medidafuellesell.Value = 0;
             nud_cantperforaciones.Value = 0;
             nud_diametroperforacion.Value = 0;
@@ -783,6 +788,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             txt_pesomillar.Text = "0.00";           
             txt_notasellado.Text = "";
             txt_DireccionubicacionPlanosellado.Text = "";
+
+            
+            Img_Producto.Image = null;
+            Img_PlanoExtrusion.Image = null;
+            Img_Arte.Image = null;
+            img_PlanoMecanicoSellado.Image = null;
         }
 
         private void Cbo_Procesos_SelectedIndexChanged(object sender, EventArgs e)
