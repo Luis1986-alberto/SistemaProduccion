@@ -158,7 +158,7 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        private long Actualizar_imagen(long videstandarimp, PictureBox Imagen)
+        private Int32 Actualizar_imagen(long videstandarimp, PictureBox Imagen)
         {
             try
             {

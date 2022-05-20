@@ -1341,6 +1341,21 @@ namespace Capa_Presentacion.Formularios.Produccion
                 e.HasMorePages = true;
         }
 
+        private void tls_Buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tls_OrdenASC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tls_OrdenDsc_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void chk_FiltroCliente_CheckedChanged(object sender, EventArgs e)
         {
             cbo_FiltroCliente.Enabled = chk_FiltroCliente.Checked;

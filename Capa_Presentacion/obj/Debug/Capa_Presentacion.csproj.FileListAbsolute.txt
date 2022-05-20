@@ -571,14 +571,9 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\Sql
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe.config
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.pdb
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\AxShockwaveFlashObjects.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\ComboBoxMultiColumns.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportSource.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\CrystalDecisions.Shared.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\CrystalDecisions.Windows.Forms.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Design.dll

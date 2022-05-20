@@ -30,9 +30,9 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_RegistroEstandar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -496,6 +496,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
+            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diseño_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Cbo_FiltroTipoProduccion = new System.Windows.Forms.ComboBox();
             this.cbo_FiltroCliente = new System.Windows.Forms.ComboBox();
@@ -505,12 +511,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroTipoEstandar = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
             this.PrintDocument = new System.Drawing.Printing.PrintDocument();
-            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diseño_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -736,6 +736,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Buscar.Text = "&Buscar";
             this.tls_Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Buscar.ToolTipText = "Buscar datos";
+            this.tls_Buscar.Click += new System.EventHandler(this.tls_Buscar_Click);
             // 
             // tls_OrdenASC
             // 
@@ -746,6 +747,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_OrdenASC.Text = "A&sc";
             this.tls_OrdenASC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_OrdenASC.ToolTipText = "Ordenar Ascendente";
+            this.tls_OrdenASC.Click += new System.EventHandler(this.tls_OrdenASC_Click);
             // 
             // tls_OrdenDsc
             // 
@@ -756,6 +758,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_OrdenDsc.Text = "D&esc";
             this.tls_OrdenDsc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_OrdenDsc.ToolTipText = "Ordenar Descendente";
+            this.tls_OrdenDsc.Click += new System.EventHandler(this.tls_OrdenDsc_Click);
             // 
             // tls_Separador4
             // 
@@ -6147,14 +6150,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dgv_Mnt.AllowUserToAddRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
             this.dgv_Mnt.BackgroundColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_Mnt.ColumnHeadersHeight = 35;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdEstandar,
@@ -6163,29 +6166,83 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Codigo_Estandar,
             this.Descripcion_Estandar,
             this.Diseño_Estandar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Mnt.Location = new System.Drawing.Point(0, 48);
             this.dgv_Mnt.Name = "dgv_Mnt";
             this.dgv_Mnt.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_Mnt.RowHeadersWidth = 51;
             this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Mnt.Size = new System.Drawing.Size(1216, 463);
             this.dgv_Mnt.TabIndex = 4;
+            // 
+            // IdEstandar
+            // 
+            this.IdEstandar.DataPropertyName = "IdEstandar";
+            this.IdEstandar.HeaderText = "IdEstandar";
+            this.IdEstandar.MinimumWidth = 6;
+            this.IdEstandar.Name = "IdEstandar";
+            this.IdEstandar.ReadOnly = true;
+            this.IdEstandar.Width = 80;
+            // 
+            // Fecha_Creacion
+            // 
+            this.Fecha_Creacion.DataPropertyName = "Fecha_Creado";
+            this.Fecha_Creacion.HeaderText = "Fecha Creacion";
+            this.Fecha_Creacion.MinimumWidth = 6;
+            this.Fecha_Creacion.Name = "Fecha_Creacion";
+            this.Fecha_Creacion.ReadOnly = true;
+            this.Fecha_Creacion.Width = 80;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Cliente";
+            this.Razon_Social.MinimumWidth = 6;
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 250;
+            // 
+            // Codigo_Estandar
+            // 
+            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
+            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
+            this.Codigo_Estandar.MinimumWidth = 6;
+            this.Codigo_Estandar.Name = "Codigo_Estandar";
+            this.Codigo_Estandar.ReadOnly = true;
+            this.Codigo_Estandar.Width = 125;
+            // 
+            // Descripcion_Estandar
+            // 
+            this.Descripcion_Estandar.DataPropertyName = "Descripcion";
+            this.Descripcion_Estandar.HeaderText = "Descripcion Estandar";
+            this.Descripcion_Estandar.MinimumWidth = 6;
+            this.Descripcion_Estandar.Name = "Descripcion_Estandar";
+            this.Descripcion_Estandar.ReadOnly = true;
+            this.Descripcion_Estandar.Width = 350;
+            // 
+            // Diseño_Estandar
+            // 
+            this.Diseño_Estandar.DataPropertyName = "Diseño";
+            this.Diseño_Estandar.HeaderText = "Diseño Estandar";
+            this.Diseño_Estandar.MinimumWidth = 6;
+            this.Diseño_Estandar.Name = "Diseño_Estandar";
+            this.Diseño_Estandar.ReadOnly = true;
+            this.Diseño_Estandar.Width = 280;
             // 
             // panel1
             // 
@@ -6278,60 +6335,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             // PrintDocument
             // 
             this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
-            // IdEstandar
-            // 
-            this.IdEstandar.DataPropertyName = "IdEstandar";
-            this.IdEstandar.HeaderText = "IdEstandar";
-            this.IdEstandar.MinimumWidth = 6;
-            this.IdEstandar.Name = "IdEstandar";
-            this.IdEstandar.ReadOnly = true;
-            this.IdEstandar.Width = 80;
-            // 
-            // Fecha_Creacion
-            // 
-            this.Fecha_Creacion.DataPropertyName = "Fecha_Creado";
-            this.Fecha_Creacion.HeaderText = "Fecha Creacion";
-            this.Fecha_Creacion.MinimumWidth = 6;
-            this.Fecha_Creacion.Name = "Fecha_Creacion";
-            this.Fecha_Creacion.ReadOnly = true;
-            this.Fecha_Creacion.Width = 80;
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Cliente";
-            this.Razon_Social.MinimumWidth = 6;
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 250;
-            // 
-            // Codigo_Estandar
-            // 
-            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
-            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
-            this.Codigo_Estandar.MinimumWidth = 6;
-            this.Codigo_Estandar.Name = "Codigo_Estandar";
-            this.Codigo_Estandar.ReadOnly = true;
-            this.Codigo_Estandar.Width = 125;
-            // 
-            // Descripcion_Estandar
-            // 
-            this.Descripcion_Estandar.DataPropertyName = "Descripcion";
-            this.Descripcion_Estandar.HeaderText = "Descripcion Estandar";
-            this.Descripcion_Estandar.MinimumWidth = 6;
-            this.Descripcion_Estandar.Name = "Descripcion_Estandar";
-            this.Descripcion_Estandar.ReadOnly = true;
-            this.Descripcion_Estandar.Width = 350;
-            // 
-            // Diseño_Estandar
-            // 
-            this.Diseño_Estandar.DataPropertyName = "Diseño";
-            this.Diseño_Estandar.HeaderText = "Diseño Estandar";
-            this.Diseño_Estandar.MinimumWidth = 6;
-            this.Diseño_Estandar.Name = "Diseño_Estandar";
-            this.Diseño_Estandar.ReadOnly = true;
-            this.Diseño_Estandar.Width = 280;
             // 
             // Frm_RegistroEstandar
             // 
