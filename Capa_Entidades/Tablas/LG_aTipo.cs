@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -17,9 +13,9 @@ namespace Capa_Entidades.Tablas
 
 
         public LG_aTipo()
-        {   }
+        { }
 
-        public LG_aTipo(Int32 idtipo, string nombre_tipo, string idusuariopc, DateTime fecha_servidor, string codigo_tipo, string idusuario )
+        public LG_aTipo(Int32 idtipo, string nombre_tipo, string idusuariopc, DateTime fecha_servidor, string codigo_tipo, string idusuario)
         {
             this.IdTipo = idtipo;
             this.Nombre_Tipo = nombre_tipo;

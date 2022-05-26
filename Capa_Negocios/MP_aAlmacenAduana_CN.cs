@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -16,16 +14,16 @@ namespace Capa_Negocios
         { get { return MP_aAlmacenAduana_CN._Instancia; } }
 
 
-        public List<MP_aAlmacenAduana>Lista_AlmacenesAduana()
+        public List<MP_aAlmacenAduana> Lista_AlmacenesAduana()
         { return MP_aAlmacenAduana_CD._Instancia.Lista_AlmacenAduanero().ToList(); }
 
-        public IEnumerable<MP_aAlmacenAduana>TraerPorId(Int32 idalmacenaduana)
+        public IEnumerable<MP_aAlmacenAduana> TraerPorId(Int32 idalmacenaduana)
         { return MP_aAlmacenAduana_CD._Instancia.Traer_AgenteAduaneroPorId(idalmacenaduana); }
 
-        public IEnumerable<MP_aAlmacenAduana>Buscar_Nombre(string nombrealmacen)
+        public IEnumerable<MP_aAlmacenAduana> Buscar_Nombre(string nombrealmacen)
         {
             var lista = MP_aAlmacenAduana_CD._Instancia.Lista_AlmacenAduanero();
-            return from ALM in lista where ALM.Nombre_AlmacenAduana == nombrealmacen select ALM; 
+            return from ALM in lista where ALM.Nombre_AlmacenAduana == nombrealmacen select ALM;
         }
 
         public string Agregar(MP_aAlmacenAduana almacenaduana)

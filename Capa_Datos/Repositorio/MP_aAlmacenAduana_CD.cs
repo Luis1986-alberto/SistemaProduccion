@@ -56,7 +56,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into MP_aAlmacenAduana (Nombre_AlmacenAduana ) values (@nombre_almacenaduana)";
-                    conexionSQL.Execute(sqlinsert, new {nombre_almacenaduana = almacenaduana.Nombre_AlmacenAduana});
+                    conexionSQL.Execute(sqlinsert, new { nombre_almacenaduana = almacenaduana.Nombre_AlmacenAduana });
                     return "PROCESADO";
                 }
             }
@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update MP_aAlmacenAduana set Nombre_AlmacenAduana =  @nombre_almacenaduana  where IdAlmacenAduana = @id ";
-                    conexionSQL.Execute(sqlupdate, new {id = almacenaduana.IdAlmacenAduana, nombre_almacenaduana = almacenaduana.Nombre_AlmacenAduana});
+                    conexionSQL.Execute(sqlupdate, new { id = almacenaduana.IdAlmacenAduana, nombre_almacenaduana = almacenaduana.Nombre_AlmacenAduana });
                     return "PROCESADO";
                 }
             }

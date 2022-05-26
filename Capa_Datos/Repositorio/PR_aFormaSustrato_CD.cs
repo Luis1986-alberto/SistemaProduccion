@@ -56,7 +56,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aFormaSustrato (Descripcion_Forma) values(@descripcion_forma)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion_forma = formasustrato.Descripcion_Forma});
+                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion_forma = formasustrato.Descripcion_Forma });
                     return "PROCESADO";
                 }
             }
@@ -94,7 +94,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
 
     }
 }

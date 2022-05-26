@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -15,7 +12,7 @@ namespace Capa_Datos.Repositorio
         public Inicio principal = new Inicio();
         public string cadenaconexion = "";
 
-        public static  PR_aNivelUsuario_CD Instancia
+        public static PR_aNivelUsuario_CD Instancia
         { get { return PR_aNivelUsuario_CD._Instancia; } }
 
         public PR_aNivelUsuario_CD()
@@ -35,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
         public IEnumerable<PR_aNivelUsuario> Lista_TraerNivelUsuarioPorId(Int32 idnivelusuario)

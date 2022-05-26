@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -13,7 +9,7 @@ namespace Capa_Entidades.Tablas
         public string Direccion_Predial { get; set; }
 
         public LG_aInmueble()
-        {   }
+        { }
 
         public LG_aInmueble(Int32 idinmueble, string codigo_predio, string direccion_predial)
         {

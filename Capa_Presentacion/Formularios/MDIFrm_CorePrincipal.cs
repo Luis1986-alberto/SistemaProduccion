@@ -1,19 +1,11 @@
 ﻿using Capa_Presentacion.Formularios.Logistica;
 using Capa_Presentacion.Formularios.Produccion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Capa_Presentacion.Formularios
 {
-    public partial class MDIFrm_Produccion : Form
+    public partial class MDIFrm_CorePrincipal : Form
     {
         public string IdUsuario { get; set; }
         public string Contraseña { get; set; }
@@ -21,12 +13,12 @@ namespace Capa_Presentacion.Formularios
         public string Servidor { get; set; }
         public string PC_Usuario { get; set; }
 
-        public MDIFrm_Produccion()
+        public MDIFrm_CorePrincipal()
         {
             InitializeComponent();
             tim_Reloj.Enabled = true;
         }
-        
+
         public void TraerDatosIniciales()
         {
             stb_Usuario.Text = IdUsuario;
@@ -75,7 +67,7 @@ namespace Capa_Presentacion.Formularios
         }
         private void MDIFrm_Principal_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         #region Configuracion
@@ -101,7 +93,6 @@ namespace Capa_Presentacion.Formularios
 
             Frm_Usuario fUsuario = new Frm_Usuario();
             fUsuario.MdiParent = this;
-
             fUsuario.FormClosing += new FormClosingEventHandler(Frm_Usuario_FormClosing);
             fUsuario.Show();
         }
@@ -112,8 +103,11 @@ namespace Capa_Presentacion.Formularios
 
         private void mnu_Mes_Click(object sender, EventArgs e)
         {
-            
-
+            this.mnu_Mes.Enabled = false;
+            Frm_Mes mes = new Frm_Mes();
+            mes.MdiParent = this;
+            mes.FormClosing += new FormClosingEventHandler(Frm_Mes_FormClosing);
+            mes.Show();
         }
 
         private void Frm_Mes_FormClosing(object sender, FormClosingEventArgs e)
@@ -122,7 +116,7 @@ namespace Capa_Presentacion.Formularios
         }
         #endregion
 
-       
+
         #region Produccion
         private void mnu_TipoAsa_Click(object sender, EventArgs e)
         {
@@ -214,7 +208,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Empaquetado.Enabled = true;
         }
 
-       
+
 
         private void mnu_EmpresaEtiqueta_Click(object sender, EventArgs e)
         {
@@ -321,7 +315,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Rodillos.Enabled = true;
         }
 
-        
+
 
         private void mnu_TipoProduccion_Click(object sender, EventArgs e)
         {
@@ -398,7 +392,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoTinta.Enabled = true;
         }
 
-       
+
         private void mnu_TipoTrabajador_Click(object sender, EventArgs e)
         {
             this.mnu_TipoTrabajador.Enabled = false;
@@ -548,7 +542,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void mnu_Salir_Click(object sender, EventArgs e)
-        {  }
+        { }
 
         private void mnu_TipoLaminacion_Click(object sender, EventArgs e)
         {
@@ -591,7 +585,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoMaterialExtruir.Enabled = true;
         }
 
-        
+
         private void mnu_EstadoOrdenProduccion_Click(object sender, EventArgs e)
         {
             this.mnu_EstadoOrdenProduccion.Enabled = false;
@@ -785,7 +779,7 @@ namespace Capa_Presentacion.Formularios
 
         private void Frm_CodigoEvento_FormClosing(object sender, EventArgs e)
         { mnu_CodigoEvento.Enabled = true; }
-       
+
         private void mnu_EstadoMaquina_Click(object sender, EventArgs e)
         {
             this.mnu_EstadoMaquina.Enabled = false;
@@ -889,7 +883,7 @@ namespace Capa_Presentacion.Formularios
         private void Frm_TipoProcesoCorte_FormClosing(object sender, EventArgs e)
         { this.mnu_TipoProcesoCorte.Enabled = true; }
 
-        
+
 
         private void mnu_grupoProduccion_Click(object sender, EventArgs e)
         {
@@ -989,7 +983,7 @@ namespace Capa_Presentacion.Formularios
         private void mnu_Prioridad_Click(object sender, EventArgs e)
         {
             this.mnu_Prioridad.Enabled = false;
-            Frm_Prioridad prioridad = new  Frm_Prioridad();
+            Frm_Prioridad prioridad = new Frm_Prioridad();
             prioridad.MdiParent = this;
             prioridad.FormClosing += new FormClosingEventHandler(Frm_Prioridad_FormClosing);
             prioridad.Show();
@@ -1212,6 +1206,21 @@ namespace Capa_Presentacion.Formularios
 
         private void Frm_Proveedores_FormClosing(object sender, EventArgs e)
         { this.mnu_RegistroProveedores.Enabled = true; }
+
+        private void mnu_Periodo_Click(object sender, EventArgs e)
+        {
+            this.mnu_Periodo.Enabled = false;
+            Frm_Periodo Periodo = new Frm_Periodo();
+            Periodo.MdiParent = this;
+            Periodo.FormClosing += new FormClosingEventHandler(Frm_Periodo_FormClosing);
+            Periodo.Show();
+        }
+
+        private void Frm_Periodo_FormClosing(object sender, EventArgs e)
+        { this.mnu_Periodo.Enabled = true; }
+
+
+
 
     }
 }

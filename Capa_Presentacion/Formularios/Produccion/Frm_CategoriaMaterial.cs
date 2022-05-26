@@ -251,7 +251,7 @@ namespace Capa_Presentacion.Formularios
             if (more == true)
                 e.HasMorePages = true;
         }
-               
+
         private void Estado_Toolbar(Boolean vEditarForm, Boolean vUnloadForm = true)
         {
             tls_Agregar.Enabled = (vUnloadForm) ? !vEditarForm : false;

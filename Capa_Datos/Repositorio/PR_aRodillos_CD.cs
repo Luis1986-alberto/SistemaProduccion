@@ -21,19 +21,19 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aRodillos>Lista_Rodillos()
-        {        
+        public IEnumerable<PR_aRodillos> Lista_Rodillos()
+        {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdRodillo, Descripcion from  PR_aRodillos";
                     return conexionsql.Query<PR_aRodillos>(sql);
                 }
-               
+
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}             
+            { throw new Exception("Error al listar", ex); }
         }
         public IEnumerable<PR_aRodillos> Traer_PorIdRodillo(Int32 idrodillo)
         {
@@ -91,7 +91,7 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-        
+
 
     }
 }

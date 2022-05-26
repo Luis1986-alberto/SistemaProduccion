@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -76,7 +73,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoTrabajoMaquina set Descripcion_TipoServicio = @descripcion_tiposervicio where IdTrabajoMaquina = @id ";
-                    ConexionSQL.Execute(sqlupdate, new {id = tipotrabajomaquina.IdTrabajoMaquina, descripcion_tiposervicio = tipotrabajomaquina.Descripcion_TrabajoMaquina });
+                    ConexionSQL.Execute(sqlupdate, new { id = tipotrabajomaquina.IdTrabajoMaquina, descripcion_tiposervicio = tipotrabajomaquina.Descripcion_TrabajoMaquina });
                     return "PROCESADO";
                 }
             }
@@ -96,7 +93,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
         public IEnumerable<LG_aTipoTrabajoMaquina> FiltroPorunCampo(IPredicate predicado)

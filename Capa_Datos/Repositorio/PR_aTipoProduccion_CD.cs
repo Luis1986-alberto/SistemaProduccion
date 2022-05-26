@@ -71,10 +71,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aTipoProduccion set Detalle_TipoProduccion = @descripcion_tipoproduccion, Siglas_TipoProduccion = @sigla_tipoproduccion where IdTipoProduccion = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new {  id = tipoproduccion.IdTipoProduccion, 
-                                                                descripcion_tipoproduccion = tipoproduccion.Detalle_TipoProduccion, 
-                                                                sigla_tipoproduccion = tipoproduccion.Siglas_TipoProduccion 
-                                                              });
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        id = tipoproduccion.IdTipoProduccion,
+                        descripcion_tipoproduccion = tipoproduccion.Detalle_TipoProduccion,
+                        sigla_tipoproduccion = tipoproduccion.Siglas_TipoProduccion
+                    });
                     return "PROCESADO";
                 }
             }
@@ -97,6 +98,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

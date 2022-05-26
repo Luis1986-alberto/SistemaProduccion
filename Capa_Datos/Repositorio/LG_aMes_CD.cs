@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -61,8 +58,8 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sqlinsert = "insert into LG_aLinea (Mes) values (@Mes )";
-                    conexionsql.ExecuteScalar(sqlinsert, new {mes = mes.Mes});
+                    var sqlinsert = "insert into LG_aMes (Mes) values (@Mes )";
+                    conexionsql.ExecuteScalar(sqlinsert, new { mes = mes.Mes });
                     return "PROCESADO";
                 }
             }
@@ -76,7 +73,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update LG_aMes set  mes = @mes where IdMes = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new {id = mes.IdMes, mes = mes.Mes});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = mes.IdMes, mes = mes.Mes });
                     return "PROCESADO";
                 }
             }

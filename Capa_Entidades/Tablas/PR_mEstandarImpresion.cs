@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -21,18 +17,18 @@ namespace Capa_Entidades.Tablas
         public byte IdUnidadBandas { get; set; }
         public byte Numero_Pistas { get; set; }
         public string Flag_CodigoBarra { get; set; }
-        public string Flag_Agua { get; set; }       
+        public string Flag_Agua { get; set; }
         public string Flag_Calor { get; set; }
         public decimal Calor_C { get; set; }
-        public string Flag_Congelamiento { get; set; }       
+        public string Flag_Congelamiento { get; set; }
         public decimal Congelamiento_C { get; set; }
-        public string Flag_Detergente { get; set; }        
-        public string Flag_Frote { get; set; }        
+        public string Flag_Detergente { get; set; }
+        public string Flag_Frote { get; set; }
         public string Flag_Grasa { get; set; }
         public string Flag_UV { get; set; }
         public string Flag_Otros { get; set; }
         public string Nota_Otros { get; set; }
-        public string Flag_DueñoClisseEmpresaCliente { get; set; }        
+        public string Flag_DueñoClisseEmpresaCliente { get; set; }
         public int Numero_Clisse { get; set; }
         public string Flag_ColorMuestraPantone { get; set; }
         public byte Numero_Colores { get; set; }
@@ -41,11 +37,11 @@ namespace Capa_Entidades.Tablas
         public string Nota_NombreColores2 { get; set; }
         public string Flag_DevolucionClisse { get; set; }
         public string Nota_DevolucionClisse { get; set; }
-        public string Flag_ImpresionInternaExterna { get; set; }        
+        public string Flag_ImpresionInternaExterna { get; set; }
         public byte Numero_Negativos { get; set; }
         public string Nota_Negativos { get; set; }
         public string Flag_TiraRetira { get; set; }
-        public string Flag_Embobinado1 { get; set; }              
+        public string Flag_Embobinado1 { get; set; }
         public string Flag_Embobinado2 { get; set; }
         public string Flag_Embobinado3 { get; set; }
         public string Flag_Embobinado4 { get; set; }
@@ -57,9 +53,9 @@ namespace Capa_Entidades.Tablas
         public byte IdPosicionTaca { get; set; }
         public decimal Medida_AnchoTaca { get; set; }
         public decimal Medida_LargoTaca { get; set; }
-        public byte IdUnidadTaca { get; set; }        
+        public byte IdUnidadTaca { get; set; }
         public decimal Medida_EspesorClisse { get; set; }
-        public byte IdUnidadEspesorClisse { get; set; }       
+        public byte IdUnidadEspesorClisse { get; set; }
         public decimal Gramaje_Tinta { get; set; }
         public string Ruta_FotoPlanoMecanicoIMP { get; set; }
         public byte[] Foto_PlanoMecanicoIMP { get; set; }

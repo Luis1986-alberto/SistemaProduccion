@@ -98,7 +98,7 @@
     <Compile Include="PR_aAdhesivo_CN.cs" />
     <Compile Include="PR_aArea_CN.cs" />
     <Compile Include="PR_aAsa_CN.cs" />
-    <Compile Include="PR_aAño_CN.cs" />
+    <Compile Include="LG_aAño_CN.cs" />
     <Compile Include="PR_aCargoTrabajador_CN.cs" />
     <Compile Include="PR_aCarreta_CN.cs" />
     <Compile Include="PR_mEstandarExtrusion_CN.cs" />

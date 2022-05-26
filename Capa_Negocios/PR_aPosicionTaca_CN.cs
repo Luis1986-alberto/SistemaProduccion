@@ -1,10 +1,7 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -15,15 +12,15 @@ namespace Capa_Negocios
         public static PR_aPosicionTaca_CN Instancia
         { get { return PR_aPosicionTaca_CN._Instancia; } }
 
-        public List<PR_aPosicionTaca>Lista_PosicionTaca()
+        public List<PR_aPosicionTaca> Lista_PosicionTaca()
         { return PR_aPosicionTaca_CD._Instancia.Lista_PosicionTaca().ToList(); }
 
-        public List<PR_aPosicionTaca>Lista_TraerPorId(byte idposiciontaca) 
+        public List<PR_aPosicionTaca> Lista_TraerPorId(byte idposiciontaca)
         { return PR_aPosicionTaca_CD._Instancia.Traer_PosicionTacaPorID(idposiciontaca).ToList(); }
 
         public IEnumerable<PR_aPosicionTaca> Buscar_PosicionTaca(string posiciontaca)
         {
-            var lista= PR_aPosicionTaca_CD._Instancia.Lista_PosicionTaca().ToList();
+            var lista = PR_aPosicionTaca_CD._Instancia.Lista_PosicionTaca().ToList();
             return from buscar in lista where buscar.Posicion_Taca == posiciontaca select buscar;
         }
 

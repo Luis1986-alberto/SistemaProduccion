@@ -56,11 +56,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aEtiquetadoras (Codigo_Etiquetadora, Marca_Etiquetadora, Modelo_Etiquetadora ) values(@codigo_etiquetadoras, @marca_etiquetadora, @modelo_etiquetadora)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { 
-                                                                codigo_etiquetadoras = etiquetadoras.Codigo_Etiquetadora,
-                                                                marca_etiquetadora = etiquetadoras.Marca_Etiquetadora,
-                                                                modelo_etiquetadora = etiquetadoras.Modelo_Etiquetadora
-                                                             });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        codigo_etiquetadoras = etiquetadoras.Codigo_Etiquetadora,
+                        marca_etiquetadora = etiquetadoras.Marca_Etiquetadora,
+                        modelo_etiquetadora = etiquetadoras.Modelo_Etiquetadora
+                    });
                     return "PROCESADO";
                 }
             }
@@ -76,11 +76,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update PR_aEtiquetadoras set Codigo_Etiquetadora = @codigo_etiquetadoras, Marca_Etiquetadora = @marca_etiquetadora, Modelo_Etiquetadora = modelo_etiquetadora where IdEtiquetadora = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = etiquetadoras.IdEtiquetadora,
-                                                                codigo_etiquetadoras = etiquetadoras.Codigo_Etiquetadora,
-                                                                marca_etiquetadora = etiquetadoras.Marca_Etiquetadora,
-                                                                modelo_etiquetadora = etiquetadoras.Modelo_Etiquetadora
-                                                            });
+                        id = etiquetadoras.IdEtiquetadora,
+                        codigo_etiquetadoras = etiquetadoras.Codigo_Etiquetadora,
+                        marca_etiquetadora = etiquetadoras.Marca_Etiquetadora,
+                        modelo_etiquetadora = etiquetadoras.Modelo_Etiquetadora
+                    });
                     return "PROCESADO";
                 }
             }
@@ -103,6 +103,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

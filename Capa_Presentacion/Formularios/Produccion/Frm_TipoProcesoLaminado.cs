@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -70,7 +67,7 @@ namespace Capa_Presentacion.Formularios
             txt_IdTipoProcesoLaminado.Text = "0";
             txt_Nombre_TipoProcesoLaminado.Focus();
         }
-        
+
 
         private void tls_Modificar_Click(object sender, EventArgs e)
         {
@@ -90,7 +87,7 @@ namespace Capa_Presentacion.Formularios
             txt_Nombre_TipoProcesoLaminado.Enabled = true;
             txt_Nombre_TipoProcesoLaminado.Focus();
         }
-        
+
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
@@ -175,7 +172,7 @@ namespace Capa_Presentacion.Formularios
             { PrintDocument.Print(); }
         }
 
-       
+
         private void tls_Previo_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
@@ -252,7 +249,7 @@ namespace Capa_Presentacion.Formularios
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdTipoProcesoLaminado"].Value.ToString()));
         }
-               
+
         private void tls_Ultimo_Click(object sender, EventArgs e)
         {
             if (dgv_Mnt.Rows.Count == 0) { return; }

@@ -56,9 +56,10 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aSubFamilia_Produccion (Descripcion_SubFamiliaProd, Observacion) values (@descripcion_subfamiliaProd, @observacion)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion_subfamiliaProd = subfamiliaproduccion.Descripcion_SubFamiliaProd,
-                                                               observacion = subfamiliaproduccion.Observacion
-                                                             });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        descripcion_subfamiliaProd = subfamiliaproduccion.Descripcion_SubFamiliaProd,
+                        observacion = subfamiliaproduccion.Observacion
+                    });
                     return "PROCESADO";
                 }
             }
@@ -73,10 +74,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aSubFamilia_Produccion set Descripcion_SubFamiliaProd = @descripcion_subfamiliaProd, Observacion = @observacion  where IdSubFamiliaProd = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = subfamiliaproduccion.IdSubFamiliaProd,
-                                                               descripcion_subfamiliaProd = subfamiliaproduccion.Descripcion_SubFamiliaProd,
-                                                               observacion = subfamiliaproduccion.Observacion
-                                                              });
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        id = subfamiliaproduccion.IdSubFamiliaProd,
+                        descripcion_subfamiliaProd = subfamiliaproduccion.Descripcion_SubFamiliaProd,
+                        observacion = subfamiliaproduccion.Observacion
+                    });
                     return "PROCESADO";
                 }
             }

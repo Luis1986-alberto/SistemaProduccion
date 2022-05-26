@@ -94,7 +94,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
 
     }
 }

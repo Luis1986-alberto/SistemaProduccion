@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -104,11 +101,11 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
-           if( MessageBox.Show("Esta seguro que desea eliminar"," ELIMINAR REGISTRO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro que desea eliminar", " ELIMINAR REGISTRO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = PR_aTipoMaterialExtruir_CN.Instancia.Eliminar_TipoLaminacion(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdTipoMaterialExtruir"].ToString()));
-                if(rpta == "PROCESADO") { MessageBox.Show("Se Elimino un registro", "ELIMINAR REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                else { MessageBox.Show(rpta, "ERROR INESPERADO", MessageBoxButtons.OK, MessageBoxIcon.Error);}
+                if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino un registro", "ELIMINAR REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                else { MessageBox.Show(rpta, "ERROR INESPERADO", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             Cargar_Datos();
 
@@ -208,7 +205,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        {Cargar_Datos();}
+        { Cargar_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
@@ -231,7 +228,7 @@ namespace Capa_Presentacion.Formularios
             if (SelectIndex == 0) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
-            SelectIndex --;
+            SelectIndex--;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdTipoMaterialExtruir"].Value.ToString()));
         }
@@ -245,7 +242,7 @@ namespace Capa_Presentacion.Formularios
             if (dgv_Mnt.Rows.Count - 1 == SelectIndex) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
-            SelectIndex ++;
+            SelectIndex++;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdTipoMaterialExtruir"].Value.ToString()));
         }

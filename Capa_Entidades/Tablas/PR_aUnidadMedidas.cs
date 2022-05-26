@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aUnidadMedidas
     {
@@ -19,7 +13,7 @@ namespace Capa_Entidades.Tablas
         public string Flag_Espesor { get => _Flag_Espesor; set => _Flag_Espesor = value; }
 
         public PR_aUnidadMedidas()
-        {  }
+        { }
 
         public PR_aUnidadMedidas(byte idUnidadMedida, string sigla_Unidad, string nombre_Unidad, string flag_Espesor)
         {

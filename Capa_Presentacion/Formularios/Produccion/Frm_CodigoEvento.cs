@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -55,7 +52,7 @@ namespace Capa_Presentacion.Formularios
             var result = PR_aCodigoEvento_CN._Instancia.TraerID(idcodigoevento);
             foreach (var i in result)
             {
-                txt_IdCodigoEvento .Text = i.IdCodigoEvento.ToString();
+                txt_IdCodigoEvento.Text = i.IdCodigoEvento.ToString();
                 txt_descripcionevento.Text = i.Descripcion.ToString();
                 txt_codigoevento.Text = i.Codigo_Evento.ToString();
                 RB_EventoColaborador.Checked = (i.Flag_EventoColaborador == "1") ? true : false;
@@ -89,7 +86,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.SelectTab(0);
             bln_Editar = true;
             bln_Nuevo = false;
-           
+
             Habilitarcontroles(true);
             Estado_Toolbar(true);
             txt_descripcionevento.Focus();
@@ -122,9 +119,9 @@ namespace Capa_Presentacion.Formularios
                 IdCodigoEvento = byte.Parse(txt_IdCodigoEvento.Text),
                 Descripcion = txt_descripcionevento.Text,
                 Codigo_Evento = txt_codigoevento.Text,
-                Flag_EventoColaborador = (RB_EventoColaborador.Checked ==true)?"1":"0",
-                Flag_EventoMaquina = (Rb_EventoMaquina.Checked == true)?"1":"0",
-                Flag_EventoMaterial = (RB_EventoMaterial.Checked == true)?"1":"0",
+                Flag_EventoColaborador = (RB_EventoColaborador.Checked == true) ? "1" : "0",
+                Flag_EventoMaquina = (Rb_EventoMaquina.Checked == true) ? "1" : "0",
+                Flag_EventoMaterial = (RB_EventoMaterial.Checked == true) ? "1" : "0",
                 IdLocal = byte.Parse(cbo_local.SelectedValue.ToString()),
                 IdArea = byte.Parse(cbo_area.SelectedValue.ToString()),
                 IdUsuario = SystemInformation.UserName,

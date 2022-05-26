@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aEspesorTuco
     {
@@ -20,7 +14,7 @@ namespace Capa_Entidades.Tablas
 
         public virtual string Sigla_Unidad { get; set; }
 
-       public PR_aEspesorTuco()
+        public PR_aEspesorTuco()
         { }
 
         public PR_aEspesorTuco(byte idEspesorTuco, decimal medida_EspesorTuco, byte idUnidadEspesorTuco)

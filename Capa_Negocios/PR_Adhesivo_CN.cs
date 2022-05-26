@@ -1,10 +1,7 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -21,7 +18,7 @@ namespace Capa_Negocios
         public IEnumerable<PR_aAdhesivo> TraerPorId(byte idadhesivo)
         { return PR_aAdhesivo_CD.Instancia.Traer_AdhesivoPorId(idadhesivo); }
 
-        public IEnumerable<PR_aAdhesivo>Buscar_descripcion(string descripcion)
+        public IEnumerable<PR_aAdhesivo> Buscar_descripcion(string descripcion)
         {
             var lista = PR_aAdhesivo_CD.Instancia.Lista_adhesivos();
             return from buscar in lista where buscar.Descripcion_Adhesivo == descripcion select buscar;

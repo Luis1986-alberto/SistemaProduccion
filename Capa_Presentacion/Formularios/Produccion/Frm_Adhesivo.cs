@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -50,7 +47,7 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(byte idadhesivo)
         {
             var datos = PR_aAdhesivo_CN.Instancia.TraerID(idadhesivo);
-            foreach(var i in datos)
+            foreach (var i in datos)
             {
                 txt_IdAdhesivo.Text = i.IdAdhesivo.ToString();
                 txt_Adhesivo.Text = i.Descripcion_Adhesivo.ToString();
@@ -100,10 +97,10 @@ namespace Capa_Presentacion.Formularios
                 return;
             }
 
-            if(MessageBox.Show("Esta Seguro de eliminar este Registro","Eliminar Registro",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro de eliminar este Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 rpta = PR_aAdhesivo_CN.Instancia.Eliminar_Adhesivo(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAdhesivo"].Value.ToString()));
-                if (rpta== "PROCESADO"){ MessageBox.Show("Se Elimino el Registro", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information);}
+                if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino el Registro", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show(rpta, "Error al Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             Cargar_Datos();
@@ -122,7 +119,7 @@ namespace Capa_Presentacion.Formularios
             if (bln_Nuevo) rpta = PR_aAdhesivo_CN.Instancia.Agregar_Adhesivos(datos);
             if (bln_Editar) rpta = PR_aAdhesivo_CN.Instancia.Actualizar_Adhesivo(datos);
 
-            if(rpta =="PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (bln_Nuevo) { MessageBox.Show("Se agrego un nuevo Registro", "AGREGAR REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show("Se Actualizo el Registro", "ACTUALIZAR REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -136,7 +133,7 @@ namespace Capa_Presentacion.Formularios
 
                 tbc_Mnt.SelectTab(1);
             }
-            else { MessageBox.Show(rpta, "ERROR AL INGRESAR", MessageBoxButtons.OK, MessageBoxIcon.Error);}
+            else { MessageBox.Show(rpta, "ERROR AL INGRESAR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
             Cargar_Datos();
@@ -208,7 +205,7 @@ namespace Capa_Presentacion.Formularios
             dgv_Mnt.DataSource = Listado_Ordenado;
         }
 
-        private void tls_Refrescar_Click(object sender, EventArgs e) =>  Cargar_Datos();
+        private void tls_Refrescar_Click(object sender, EventArgs e) => Cargar_Datos();
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
@@ -231,7 +228,7 @@ namespace Capa_Presentacion.Formularios
             if (SelectIndex == 0) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
-            SelectIndex --;
+            SelectIndex--;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAdhesivo"].Value.ToString()));
         }
@@ -245,7 +242,7 @@ namespace Capa_Presentacion.Formularios
             if (dgv_Mnt.Rows.Count - 1 == SelectIndex) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
-            SelectIndex ++;
+            SelectIndex++;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAdhesivo"].Value.ToString()));
         }

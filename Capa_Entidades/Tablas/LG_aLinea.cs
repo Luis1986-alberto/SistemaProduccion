@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -16,7 +12,7 @@ namespace Capa_Entidades.Tablas
         public string IdUsuario { get; set; }
 
         public LG_aLinea()
-        {   }
+        { }
 
         public LG_aLinea(Int32 idlinea, string nombre_linea, string codigo_linea)
         {

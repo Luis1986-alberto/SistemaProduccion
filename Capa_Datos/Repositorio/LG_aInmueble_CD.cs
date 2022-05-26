@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -24,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aInmueble>Lista_Inmuebles()
+        public IEnumerable<LG_aInmueble> Lista_Inmuebles()
         {
             try
             {
@@ -35,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al listar ", Ex);}
+            { throw new Exception("Error al listar ", Ex); }
         }
 
         public LG_aInmueble TraerIdInmueble(Int32 idinmueble)
@@ -59,7 +56,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into LG_aInmueble (Codigo_Predio, Direccion_Predial) values (@codigo_predio, @direccion_predial)";
-                    conexionsql.ExecuteScalar(sqlinsert, new {codigo_predio = inmueble.Codigo_Predio, direccion_predial = inmueble.Direccion_Predial});
+                    conexionsql.ExecuteScalar(sqlinsert, new { codigo_predio = inmueble.Codigo_Predio, direccion_predial = inmueble.Direccion_Predial });
                     return "PROCESADO";
                 }
             }
@@ -74,9 +71,9 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Update LG_aInmueble set Codigo_Predio = @codigo_predio, Direccion_Predial = @direccion_predial where IdInmueble = @id ";
                     conexionsql.ExecuteScalar(sqlinsert, new {
-                                                                id = inmueble.IdInmueble, ncodigo_predio = inmueble.Codigo_Predio, 
-                                                                direccion_predial = inmueble.Direccion_Predial
-                                                             });
+                        id = inmueble.IdInmueble, ncodigo_predio = inmueble.Codigo_Predio,
+                        direccion_predial = inmueble.Direccion_Predial
+                    });
                     return "PROCESADO";
                 }
             }

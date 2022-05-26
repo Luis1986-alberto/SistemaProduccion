@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -108,7 +105,7 @@ namespace Capa_Presentacion.Formularios
 
             if (MessageBox.Show("Esta Seguro Eliminar el Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               string rpta = PR_aMarcaMaquina_CN._Instancia.Eliminar_MarcaMaquina(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdMarcaMaquina"].Value.ToString()));
+                string rpta = PR_aMarcaMaquina_CN._Instancia.Eliminar_MarcaMaquina(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdMarcaMaquina"].Value.ToString()));
                 if (rpta == "PROCESADO") { MessageBox.Show("Se elimino el registro", "Eliminar Registro"); }
                 else { MessageBox.Show(rpta); }
             }

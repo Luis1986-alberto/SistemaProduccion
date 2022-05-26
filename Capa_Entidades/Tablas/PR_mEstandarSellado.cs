@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -17,7 +14,7 @@ namespace Capa_Entidades.Tablas
         public byte IdTipoSello { get; set; }
         public decimal Ancho { get; set; }
         public decimal Largo { get; set; }
-        public string Flag_Posicion_Sello { get; set; }        
+        public string Flag_Posicion_Sello { get; set; }
         public short UnidadxPaquete { get; set; }
         public byte PaquetexCaja { get; set; }
         public byte IdUnidadLargo { get; set; }
@@ -28,7 +25,7 @@ namespace Capa_Entidades.Tablas
         public string Flag_Etiqueta_Caja { get; set; }
         public decimal Peso_Promedio_Fardo { get; set; }
         public decimal Medida_Solapa { get; set; }
-        public byte IdUnidadSolapa { get; set; }  
+        public byte IdUnidadSolapa { get; set; }
         public string Flag_Refile { get; set; }
         public decimal Medida_Refile { get; set; }
         public byte IdUnidadRefile { get; set; }
@@ -38,14 +35,14 @@ namespace Capa_Entidades.Tablas
         public byte IdUnidadPestaña { get; set; }
         public byte IdTipoFuelle { get; set; }
         public decimal Medida_Fuelle { get; set; }
-        public byte IdUnidadFuelle { get; set; }        
-        public string Flag_Perforaciones { get; set; }             
+        public byte IdUnidadFuelle { get; set; }
+        public string Flag_Perforaciones { get; set; }
         public byte Numero_Pistas { get; set; }
         public byte Numero_Perforaciones { get; set; }
         public decimal Medida_Perforaciones { get; set; }
         public byte IdUnidadPerforaciones { get; set; }
         public string Flag_Etiqueta_Fardo { get; set; }
-        public string Nota_Sellado { get; set; }            
+        public string Nota_Sellado { get; set; }
         public decimal Peso_Promedio_Millar { get; set; }
         public decimal Peso_Promedio_Paquete { get; set; }
         public decimal Peso_Tuco { get; set; }
@@ -58,7 +55,7 @@ namespace Capa_Entidades.Tablas
         { }
 
         public PR_mEstandarSellado(Int32 _idestandar)
-        {this.IdEstandar = _idestandar;}
+        { this.IdEstandar = _idestandar; }
 
 
 

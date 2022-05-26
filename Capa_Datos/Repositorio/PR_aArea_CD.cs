@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdArea, Nombre_Area from PR_aArea";
                     return conexionsql.Query<PR_aArea>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("error al listar", ex); }
         }
 
@@ -39,17 +39,17 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdArea, Nombre_Area from PR_aArea where IdArea = @id";
                     return conexionsql.Query<PR_aArea>(sql, new { id = idarea });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
-        public string Agregar_Area(PR_aArea aArea )
+        public string Agregar_Area(PR_aArea aArea)
         {
             try
             {
@@ -60,8 +60,8 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex )
-            { throw new Exception("Error asl agregar", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error asl agregar", ex); }
         }
 
         public string Actualizar_Area(PR_aArea aArea)
@@ -75,8 +75,8 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception ("Error al Actualizar", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al Actualizar", ex); }
         }
 
         public string Eliminar_Area(Int32 idarea)
@@ -90,11 +90,11 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception ("Error al Eliminar",ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
 
     }
 }

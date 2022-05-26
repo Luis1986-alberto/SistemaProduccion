@@ -57,10 +57,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into PR_aFamilia_Produccion (Descripcion_Familia, Observacion, Orden_Gerencia ) values(@descripcion_familia, @observacion, @orden_gerencia)";
                     conexionsql.ExecuteScalar(sqlinsert, new {
-                                                                descripcion_familia = afamiliaproduccion.Descripcion_Familia,
-                                                                observacion = afamiliaproduccion.Observacion,
-                                                                orden_gerencia = afamiliaproduccion.Orden_Gerencia,
-                                                                });
+                        descripcion_familia = afamiliaproduccion.Descripcion_Familia,
+                        observacion = afamiliaproduccion.Observacion,
+                        orden_gerencia = afamiliaproduccion.Orden_Gerencia,
+                    });
                     return "PROCESADO";
                 }
             }
@@ -74,14 +74,14 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sqlupdate = "Update PR_aFamilia_Produccion set Descripcion_Familia = @descripcion_familia, Observacion = @observacion, orden_gerencia = @Orden_Gerencia " + 
+                    var sqlupdate = "Update PR_aFamilia_Produccion set Descripcion_Familia = @descripcion_familia, Observacion = @observacion, orden_gerencia = @Orden_Gerencia " +
                                     " where IdFamiliaProd = @id ";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = afamiliaproduccion.IdFamiliaProd,
-                                                                descripcion_familia = afamiliaproduccion.Descripcion_Familia,
-                                                                observacion = afamiliaproduccion.Observacion,
-                                                                orden_gerencia = afamiliaproduccion.Orden_Gerencia,
-                                                            });
+                        id = afamiliaproduccion.IdFamiliaProd,
+                        descripcion_familia = afamiliaproduccion.Descripcion_Familia,
+                        observacion = afamiliaproduccion.Observacion,
+                        orden_gerencia = afamiliaproduccion.Orden_Gerencia,
+                    });
                     return "PROCESADO";
                 }
             }
@@ -104,6 +104,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

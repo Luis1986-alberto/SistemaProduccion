@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEmpaquetado, Descripcion from PR_aEmpaquetado";
                     return conexionsql.Query<PR_aEmpaquetado>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al listar", ex); }
         }
 
@@ -39,13 +39,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEmpaquetado, Descripcion from PR_aEmpaquetado where IdEmpaquetado = @id";
                     return conexionsql.Query<PR_aEmpaquetado>(sql, new { id = idempaquetado });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -53,44 +53,44 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into PR_aEmpaquetado (Descripcion) values (@Descripcion)";
-                    conexionsql.Execute(sqlinsert, new {descripcion = empaquetado.Descripcion });
+                    conexionsql.Execute(sqlinsert, new { descripcion = empaquetado.Descripcion });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al inserta", ex); }
+            catch(Exception ex) { throw new Exception("Error al inserta", ex); }
         }
 
         public string Actualizar_Empaquetado(PR_aEmpaquetado empaquetado)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aEmpaquetado set Descripcion = @descripcion where IdEmpaquetado = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = empaquetado.IdEmpaquetado, descripcion = empaquetado.Descripcion});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = empaquetado.IdEmpaquetado, descripcion = empaquetado.Descripcion });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
         }
 
         public string Eliminar_Empaquetador(Int32 idempaquetado)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aEmpaquetado where IdEmpaquetado = @idempaquetado";
                     conexionsql.ExecuteScalar(sqldelete, new { idempaquetado = idempaquetado });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
         }
 
-        
+
     }
 }

@@ -11,14 +11,14 @@ namespace Capa_Negocios
         public static readonly MP_aPropiedadesMaterial_CN _Instancia = new MP_aPropiedadesMaterial_CN();
 
         public static MP_aPropiedadesMaterial_CN Instacnia
-        {get { return MP_aPropiedadesMaterial_CN._Instancia; }}
+        { get { return MP_aPropiedadesMaterial_CN._Instancia; } }
 
 
         public List<MP_aPropiedadesMaterial> Lista_PropiedadMaterial()
         { return MP_aPropiedadMaterial_CD._Instancia.Lista_PropiedadMaterial().ToList(); }
 
         public MP_aPropiedadesMaterial TraerPorID(Int32 idpropiedadmaterial)
-        {return MP_aPropiedadMaterial_CD._Instancia.TraerPorIdPropiedadMaterial(idpropiedadmaterial); }
+        { return MP_aPropiedadMaterial_CD._Instancia.TraerPorIdPropiedadMaterial(idpropiedadmaterial); }
 
         public IEnumerable<MP_aPropiedadesMaterial> FiltrarPorDescripcion(string descripcion)
         {
@@ -39,7 +39,7 @@ namespace Capa_Negocios
         }
 
         public string Eliminar(Int32 idpropiedadmaterial)
-        {return MP_aPropiedadMaterial_CD._Instancia.Eliminar(idpropiedadmaterial);}
+        { return MP_aPropiedadMaterial_CD._Instancia.Eliminar(idpropiedadmaterial); }
 
     }
 }

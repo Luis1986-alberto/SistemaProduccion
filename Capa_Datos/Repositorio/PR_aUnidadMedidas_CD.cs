@@ -56,11 +56,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aUnidadMedidas (Nombre_Unidad, Sigla_Unidad, Flag_Espesor ) values(@nombre_unidad, @sigla_unidad, @flag_espesor)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { 
-                                                                nombre_unidad = unidadmedida.Nombre_Unidad,
-                                                                sigla_unidad = unidadmedida.Sigla_Unidad,
-                                                                flag_espesor = unidadmedida.Flag_Espesor
-                                                            });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        nombre_unidad = unidadmedida.Nombre_Unidad,
+                        sigla_unidad = unidadmedida.Sigla_Unidad,
+                        flag_espesor = unidadmedida.Flag_Espesor
+                    });
                     return "PROCESADO";
                 }
             }
@@ -76,11 +76,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update PR_aUnidadMedidas set Nombre_Unidad = @nombre_unidad, Sigla_Unidad = @sigla_unidad, Flag_Espesor = flag_espesor where IdUnidadMedida = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = unidadmedida.IdUnidadMedida,
-                                                                nombre_unidad = unidadmedida.Nombre_Unidad,
-                                                                sigla_unidad = unidadmedida.Sigla_Unidad,
-                                                                flag_espesor = unidadmedida.Flag_Espesor
-                        });
+                        id = unidadmedida.IdUnidadMedida,
+                        nombre_unidad = unidadmedida.Nombre_Unidad,
+                        sigla_unidad = unidadmedida.Sigla_Unidad,
+                        flag_espesor = unidadmedida.Flag_Espesor
+                    });
                     return "PROCESADO";
                 }
             }

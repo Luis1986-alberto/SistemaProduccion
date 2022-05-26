@@ -29,7 +29,7 @@ namespace Capa_Presentacion.Formularios.Logistica
             tbc_Mnt.SelectTab(1);
             Cargar_Datos();
             tbc_Mnt.Selecting += new TabControlCancelEventHandler(tbc_Mnt_Selecting);
-            
+
         }
 
         private void tbc_Mnt_Selecting(object sender, TabControlCancelEventArgs e)
@@ -49,7 +49,7 @@ namespace Capa_Presentacion.Formularios.Logistica
 
         private void Entrada_Datos(int idtipoingreso)
         {
-            var result = LG_aCondicionPago_CN._Instancia.TraerPorID(idtipoingreso);            
+            var result = LG_aCondicionPago_CN._Instancia.TraerPorID(idtipoingreso);
             txt_IdCondicionPago.Text = result.IdCondicionPago.ToString();
             Txt_Nombre_Condicion_Pago.Text = result.Nombre_Condicion_Pago.ToString();
         }
@@ -154,7 +154,7 @@ namespace Capa_Presentacion.Formularios.Logistica
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-            if (SetupThePrinting()) {PrintDocument.Print();}
+            if (SetupThePrinting()) { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)

@@ -4,9 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Datos.Repositorio
@@ -27,7 +24,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public List<PR_mEstandar>Listar_Estandar(PR_mEstandar omestandarindustriales, string flag_cliente, string flag_tipoproduccion, 
+        public List<PR_mEstandar> Listar_Estandar(PR_mEstandar omestandarindustriales, string flag_cliente, string flag_tipoproduccion,
                                                                 string flag_rango, DateTime fech_inicio, DateTime fech_final)
         {
             List<PR_mEstandar> lista_estandares = null;
@@ -54,6 +51,7 @@ namespace Capa_Datos.Repositorio
                     {
                         PR_mEstandar t = new PR_mEstandar();
                         t.IdEstandar = Int32.Parse(dr["IdEstandar"].ToString());
+                        t.Nombre_CondicionProceso = dr["Nombre_CondicionProceso"].ToString();
                         t.IdCliente = Int32.Parse(dr["IdCliente"].ToString());
                         t.Razon_Social = dr["Razon_Social"].ToString();
                         t.IdProcesos = byte.Parse(dr["IdProcesos"].ToString());
@@ -65,7 +63,6 @@ namespace Capa_Datos.Repositorio
                         t.IdCondicionProceso = byte.Parse(dr["IdCondicionProceso"].ToString());
                         t.Ruta_Producto = dr["Ruta_Producto"].ToString();
                         t.Fecha_Creado = DateTime.Parse(dr["Fecha_Creado"].ToString());
-
                         lista_estandares.Add(t);
                     }
                     dr.Close();
@@ -74,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public PR_mEstandar TraerPorID(Int32 idestandar)
@@ -97,7 +94,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Traer Por Id", Ex);}
+            { throw new Exception("Error al Traer Por Id", Ex); }
         }
 
         public void Descargar_Imagen(PictureBox imagen, long idestandar)
@@ -175,7 +172,7 @@ namespace Capa_Datos.Repositorio
                 Actualizar_imagen(OutPutId, Foto_Producto);
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Procesad", Ex);}
+            { throw new Exception("Error al Procesad", Ex); }
             return OutPutId;
         }
 

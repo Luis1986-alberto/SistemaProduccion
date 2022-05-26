@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -34,7 +30,7 @@ namespace Capa_Entidades.Tablas
         public Nullable<decimal> Medida_Fuelle { get; set; }
         public string Nota_Otros { get; set; }
         public Nullable<decimal> Medida_Manga { get; set; }
-       
+
         public Nullable<byte> IdUnidadFuelle { get; set; }
         public string Nota_Tratado { get; set; }
         public Nullable<byte> IdUnidadManga { get; set; }
@@ -68,7 +64,7 @@ namespace Capa_Entidades.Tablas
         public Nullable<decimal> Gap_Extrusion { get; set; }
         public Nullable<decimal> Dynas_Extrusion { get; set; }
 
-        public byte  IdUnidadMedidaPesoTuco {get;set;}
+        public byte IdUnidadMedidaPesoTuco { get; set; }
         public byte IdTipoTratado { get; set; }
         public byte IdTipoMaterialExtruir { get; set; }
         public byte IdFormaSustrato { get; set; }

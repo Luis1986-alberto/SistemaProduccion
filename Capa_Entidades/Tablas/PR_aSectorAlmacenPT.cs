@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aSectorAlmacenPT
     {
@@ -15,7 +9,7 @@ namespace Capa_Entidades.Tablas
         public string Codigo_Sector { get => _Codigo_Sector; set => _Codigo_Sector = value; }
 
         public PR_aSectorAlmacenPT()
-        {   }
+        { }
 
         public PR_aSectorAlmacenPT(byte idSectorAlmacenPT, string codigo_Sector)
         {

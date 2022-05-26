@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -119,7 +116,7 @@ namespace Capa_Presentacion.Formularios
                 Estado_Toolbar(false);
                 Nud_CapacidadMezcladora.Enabled = false;
                 txt_Nombremezcladora.Enabled = false;
-               
+
                 tbc_Mnt.SelectTab(1);
             }
             else { MessageBox.Show(rpta, "ERROR AL INGRESAR", MessageBoxButtons.OK, MessageBoxIcon.Error); }

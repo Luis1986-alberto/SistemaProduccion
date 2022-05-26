@@ -49,14 +49,14 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
-        public string Agregar_TipoSalida(LG_aTipoSalida  tiposalidapt)
+        public string Agregar_TipoSalida(LG_aTipoSalida tiposalidapt)
         {
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into LG_aTipoSalida (Nombre_TipoSalida) values (@nombre_tiposalidapt)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { nombre_tiposalidapt = tiposalidapt.Nombre_TipoSalida});
+                    conexionsql.ExecuteScalar(sqlinsert, new { nombre_tiposalidapt = tiposalidapt.Nombre_TipoSalida });
                     return "PROCESADO";
                 }
             }
@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoSalida set Nombre_TipoSalida = @nombre_tiposalidatp where IdTipoSalida = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = tiposalidapt.IdTipoSalida, nombre_tiposalidatp = tiposalidapt.Nombre_TipoSalida});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = tiposalidapt.IdTipoSalida, nombre_tiposalidatp = tiposalidapt.Nombre_TipoSalida });
                     return "PROCESADO";
                 }
             }
@@ -94,7 +94,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
 
     }
 }

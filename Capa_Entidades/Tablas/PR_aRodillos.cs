@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aRodillos
     {
-        public byte IdRodillo { get;  set; }
-        public string   Descripcion { get; set; }
+        public byte IdRodillo { get; set; }
+        public string Descripcion { get; set; }
 
         public PR_aRodillos()
         { }

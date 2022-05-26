@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -126,7 +123,7 @@ namespace Capa_Presentacion.Formularios
             if (Verificar_Datos() == false) { return; }
 
             if (bln_Nuevo) { rpta = PR_aTipoFuelle_CN._Instancia.Agregar_TipoFuelle(datos); }
-            if (bln_Editar) { rpta =PR_aTipoFuelle_CN._Instancia.Actualizar_TipoFuelle(datos); }
+            if (bln_Editar) { rpta = PR_aTipoFuelle_CN._Instancia.Actualizar_TipoFuelle(datos); }
 
             if (rpta == "PROCESADO")
             {
@@ -143,7 +140,7 @@ namespace Capa_Presentacion.Formularios
                 tbc_Mnt.SelectTab(1);
             }
             else { MessageBox.Show(rpta, "error Inesperado"); }
-            
+
             Cargar_Datos();
         }
 
@@ -162,7 +159,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)

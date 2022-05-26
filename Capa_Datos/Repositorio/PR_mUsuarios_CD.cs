@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -60,8 +57,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into PR_mUsuarios (IdUsuario, Apellidos, Contraseña, Flag_Activo, IdNivelUsuario) value " +
                                     " (@idusuario, @apellidos, @contraseña, @flag_activo, @idnivelusuario) ";
-                    ConexionSQL.Execute(sqlinsert, new { idusuario  = usuario.IdUsuario, apelidos = usuario.Apellidos, contraseña = usuario.Contraseña,
-                                                         flag_activo = usuario.Flag_Activo, idnivelusuario = usuario.IdNivelUsuario });
+                    ConexionSQL.Execute(sqlinsert, new {
+                        idusuario = usuario.IdUsuario, apelidos = usuario.Apellidos, contraseña = usuario.Contraseña,
+                        flag_activo = usuario.Flag_Activo, idnivelusuario = usuario.IdNivelUsuario
+                    });
                     return "PROCESADO";
                 }
             }
@@ -77,9 +76,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update PR_mUsuarios set IdUsuario = @idusuario, Apellidos = @apellidos, Contraseñas = @contraseñas, " +
                                     " Flag_Activo = @flag_activo, IdNivelUsuario = @idnivelusuario where IdUsuario = @id ";
-                    ConexionSQL.ExecuteScalar(sqlupdate, new {idusuario = usuario.IdUsuario, apelidos = usuario.Apellidos, contraseña = usuario.Contraseña,
-                                                              flag_activo = usuario.Flag_Activo, idnivelusuario = usuario.IdNivelUsuario
-                                                             });
+                    ConexionSQL.ExecuteScalar(sqlupdate, new {
+                        idusuario = usuario.IdUsuario, apelidos = usuario.Apellidos, contraseña = usuario.Contraseña,
+                        flag_activo = usuario.Flag_Activo, idnivelusuario = usuario.IdNivelUsuario
+                    });
                     return "PROCESADO";
                 }
             }

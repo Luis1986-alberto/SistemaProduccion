@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -88,7 +85,7 @@ namespace Capa_Presentacion.Formularios
             Estado_Toolbar(bln_Nuevo);
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_IdProcesos.Text = "0";
-            
+
             txt_Procesos.Enabled = true;
             HabilitarControles(true);
             Limpiar();
@@ -142,13 +139,13 @@ namespace Capa_Presentacion.Formularios
             {
                 IdProcesos = byte.Parse(txt_IdProcesos.Text),
                 Secuencia_Procesos = txt_Procesos.Text,
-                Flag_Extrusion = byte.Parse(Chk_FlagExtrusion.Checked ==true ? "1":"0"),
-                Flag_Impresion = byte.Parse(Chk_FlagImpresion.Checked == true ? "1" :"0"),
-                Flag_Sellado =  byte.Parse(Chk_FlagSellado.Checked == true ? "1":"0"),
+                Flag_Extrusion = byte.Parse(Chk_FlagExtrusion.Checked == true ? "1" : "0"),
+                Flag_Impresion = byte.Parse(Chk_FlagImpresion.Checked == true ? "1" : "0"),
+                Flag_Sellado = byte.Parse(Chk_FlagSellado.Checked == true ? "1" : "0"),
                 Flag_Doblado = byte.Parse(Chk_FlagDoblado.Checked == true ? "1" : "0"),
-                Flag_Corte = byte.Parse(Chk_FlagCorte.Checked == true ? "1":"0"),
-                Flag_Laminado = byte.Parse(Chk_FlagLaminado.Checked == true ? "1":"0"),
-                
+                Flag_Corte = byte.Parse(Chk_FlagCorte.Checked == true ? "1" : "0"),
+                Flag_Laminado = byte.Parse(Chk_FlagLaminado.Checked == true ? "1" : "0"),
+
             };
 
             if (Verificar_Datos() == false) { return; }
@@ -192,7 +189,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)

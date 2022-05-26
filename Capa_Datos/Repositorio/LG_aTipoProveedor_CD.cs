@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -26,7 +23,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aTipoProveedor>Lista_TipoProveedor()
+        public IEnumerable<LG_aTipoProveedor> Lista_TipoProveedor()
         {
             try
             {
@@ -37,7 +34,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("ERROR AL LISTAR", Ex);}
+            { throw new Exception("ERROR AL LISTAR", Ex); }
         }
 
         public LG_aTipoProveedor TraerPorIdTipoProveedor(Int32 idtipoproveedor)
@@ -66,7 +63,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("ERROR AL AGREGAR", ex);}
+            { throw new Exception("ERROR AL AGREGAR", ex); }
         }
 
         public string Actualizar_TipoProveedor(LG_aTipoProveedor tipoproveedor)
@@ -76,7 +73,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoProveedor set Tipo_Proveedor =  @tipo_proveedor where IdTipoProveedor = @id";
-                    ConexionSQL.Execute(sqlupdate, new {id = tipoproveedor.IdTipoProveedor, tipo_proveedor = tipoproveedor.Tipo_Proveedor });
+                    ConexionSQL.Execute(sqlupdate, new { id = tipoproveedor.IdTipoProveedor, tipo_proveedor = tipoproveedor.Tipo_Proveedor });
                     return "PROCESADO";
                 }
             }

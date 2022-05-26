@@ -21,18 +21,18 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aClaseServicioMaquina>Lista_ClaseServicioMaquina()
+        public IEnumerable<LG_aClaseServicioMaquina> Lista_ClaseServicioMaquina()
         {
             try
             {
-                using (var ConexionSQL = new SqlConnection(cadenaconexion))
+                using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sql = "Select IdClaseServicioMaquina, Descripcion_ClaseServicio from LG_aClaseServicioMaquina ";
                     return ConexionSQL.Query<LG_aClaseServicioMaquina>(sql);
                 }
             }
             catch(Exception ex)
-            {throw new Exception("error al Listar", ex);}
+            { throw new Exception("error al Listar", ex); }
         }
 
         public LG_aClaseServicioMaquina TraerPorIdClaseServicioMaquina(Int32 idclaseserviciomaquina)
@@ -61,7 +61,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Agregar", ex);}
+            { throw new Exception("Error al Agregar", ex); }
         }
 
 
@@ -77,7 +77,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Actualizar", Ex);}
+            { throw new Exception("Error al Actualizar", Ex); }
         }
 
 
@@ -93,7 +93,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al eliminar", ex);}
+            { throw new Exception("Error al eliminar", ex); }
         }
 
     }

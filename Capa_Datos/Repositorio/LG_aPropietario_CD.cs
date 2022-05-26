@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -26,7 +23,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aPropietario>Lista_Propietarios()
+        public IEnumerable<LG_aPropietario> Lista_Propietarios()
         {
             try
             {
@@ -37,7 +34,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public LG_aPropietario TraerPorIdPropietario(Int32 idpropietario)
@@ -51,7 +48,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al traer por Id", Ex);}
+            { throw new Exception("Error al traer por Id", Ex); }
         }
 
         public string Agregar_Propietario(LG_aPropietario propietario)
@@ -62,11 +59,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into LG_aPropietario (Nombre_Completo) values (@nombre_completo)";
                     ConexionSQL.Execute(sqlinsert, new { nombre_completo = propietario.Nombre_Completo });
-                    return "PROCESADO"; 
+                    return "PROCESADO";
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Agregar", Ex);}
+            { throw new Exception("Error al Agregar", Ex); }
         }
 
         public string Actualizar_Propietario(LG_aPropietario propietario)
@@ -81,7 +78,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Actualizar", Ex);}
+            { throw new Exception("Error al Actualizar", Ex); }
         }
 
         public String Eliminar_Propietario(Int32 idpropietario)
@@ -96,7 +93,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
         public IEnumerable<LG_aPropietario> FiltroPorunCampo(IPredicate predicado)

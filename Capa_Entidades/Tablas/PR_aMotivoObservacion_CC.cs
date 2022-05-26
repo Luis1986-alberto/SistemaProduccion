@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aMotivoObservacion_CC
     {
@@ -16,7 +10,7 @@ namespace Capa_Entidades.Tablas
 
         public PR_aMotivoObservacion_CC()
         { }
-        
+
         public PR_aMotivoObservacion_CC(byte idMotivoObservacion_CC, string motivo_Observacion_CC)
         {
             _IdMotivoObservacion_CC = idMotivoObservacion_CC;

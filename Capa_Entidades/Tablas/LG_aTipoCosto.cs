@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -17,7 +13,7 @@ namespace Capa_Entidades.Tablas
 
 
         public LG_aTipoCosto()
-        {   }
+        { }
 
         public LG_aTipoCosto(byte idtipocosto, string nombre_tipocosto, string codigo_tipocosto, DateTime fecha_servidor, string idusuario_pc, string idusuario)
         {

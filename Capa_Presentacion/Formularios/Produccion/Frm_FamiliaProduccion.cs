@@ -148,7 +148,7 @@ namespace Capa_Presentacion.Formularios
 
             Cargar_Datos();
         }
-        
+
         private void tls_Deshacer_Click(object sender, EventArgs e)
         {
             bln_Editar = false;

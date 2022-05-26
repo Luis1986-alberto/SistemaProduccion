@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios.Produccion
@@ -28,7 +25,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void Frm_ImpresoraVSRodillo_Load(object sender, EventArgs e)
-        {   
+        {
             tbc_Mnt.SelectTab(1);
             Cbo_Maquina.DataSource = PR_mMaquina_CN._Instancia.Lista_Maquinas();
             Cbo_Rodillo.DataSource = PR_aRodillo_CN._Instancia.Lista_Rodillos();
@@ -58,7 +55,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             {
                 txt_IdImpresora.Text = i.IdImpresora.ToString();
                 Cbo_Maquina.SelectedValue = i.IdMaquina;
-                Cbo_Rodillo.SelectedValue= i.IdRodillo;
+                Cbo_Rodillo.SelectedValue = i.IdRodillo;
             }
         }
         private void tls_Agregar_Click(object sender, EventArgs e)
@@ -101,7 +98,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             Cbo_Maquina.Enabled = true;
             Cbo_Rodillo.Enabled = true;
-            Estado_Toolbar(true);            
+            Estado_Toolbar(true);
         }
 
         private void tls_Eliminar_Click(object sender, EventArgs e)

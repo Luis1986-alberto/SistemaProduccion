@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -64,9 +61,9 @@ namespace Capa_Datos.Repositorio
                     var sqlinsert = "insert into LG_aLinea (Nombre_Linea, Codigo_Linea, IdUsuario_PC,  IdUsuario) values " +
                                                             "(@nombre_linea, @codigo_linea, @idusuario_pc, @idusuario)";
                     conexionsql.ExecuteScalar(sqlinsert, new {
-                                                                nombre_linea = linea.Nombre_Linea, codigo_linea = linea.Codigo_Linea,
-                                                                idusuario_pc = Environment.UserName, idusuario = linea.IdUsuario
-                                                            });
+                        nombre_linea = linea.Nombre_Linea, codigo_linea = linea.Codigo_Linea,
+                        idusuario_pc = Environment.UserName, idusuario = linea.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
@@ -82,9 +79,9 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "update LG_aLinea set  Nombre_Linea = @nombre_linea, Codigo_Linea = @codigo_linea, IdUsuario_PC = @idusuario_pc, " +
                                     " IdUsuario = @idusuario  where IdLinea = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = linea.IdLinea, nombre_linea = linea.Nombre_Linea, codigo_linea = linea.Codigo_Linea,
-                                                                idusuario_pc = Environment.UserName, idusuario = linea.IdUsuario
-                                                            });
+                        id = linea.IdLinea, nombre_linea = linea.Nombre_Linea, codigo_linea = linea.Codigo_Linea,
+                        idusuario_pc = Environment.UserName, idusuario = linea.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
@@ -105,7 +102,7 @@ namespace Capa_Datos.Repositorio
             catch(Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
         }
 
-        public IEnumerable<LG_aLinea>FiltroPorunCampo(IPredicate predicado)
+        public IEnumerable<LG_aLinea> FiltroPorunCampo(IPredicate predicado)
         {
             var ConexionSQL = new SqlConnection(cadenaconexion);
             ConexionSQL.Open();

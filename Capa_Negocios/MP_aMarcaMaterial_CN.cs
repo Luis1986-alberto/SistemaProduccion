@@ -13,10 +13,10 @@ namespace Capa_Negocios
         public static MP_aMarcaMaterial_CN Instancia
         { get { return MP_aMarcaMaterial_CN._Instancia; } }
 
-        public IEnumerable<MP_aMarcaMaterial>Listar_MarcaMaterial()
+        public IEnumerable<MP_aMarcaMaterial> Listar_MarcaMaterial()
         { return MP_aMarcaMaterial_CD._Instancia.Lista_MarcaMaterial().ToList(); }
 
-        public IEnumerable<MP_aMarcaMaterial>TraerPorID(Int32 idmarcamaterial)
+        public IEnumerable<MP_aMarcaMaterial> TraerPorID(Int32 idmarcamaterial)
         { return MP_aMarcaMaterial_CD._Instancia.Traer_MarcaMaterialPorId(idmarcamaterial); }
 
         public IEnumerable<MP_aMarcaMaterial> Buscar_Descripcion(string descripcion)
@@ -25,7 +25,7 @@ namespace Capa_Negocios
             return from MAR in lista where MAR.Descripcion == descripcion select MAR;
         }
 
-        public string Agregar (MP_aMarcaMaterial marcamaterial)
+        public string Agregar(MP_aMarcaMaterial marcamaterial)
         {
             if (Buscar_Descripcion(marcamaterial.Descripcion).Count() > 0) return "YA EXISTE ESTA MARCA REGISTRADA";
             return MP_aMarcaMaterial_CD._Instancia.Agregar_MarcaMaterial(marcamaterial);

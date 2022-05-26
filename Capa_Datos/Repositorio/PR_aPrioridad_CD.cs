@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aPrioridad set Descripcion_Prioridad = @descripcion_prioridad where IdPrioridad = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = prioridad.IdPrioridad, descripcion_prioridad = prioridad.Descripcion_Prioridad});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = prioridad.IdPrioridad, descripcion_prioridad = prioridad.Descripcion_Prioridad });
                     return "PROCESADO";
                 }
             }
@@ -94,6 +94,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-      
+
     }
 }

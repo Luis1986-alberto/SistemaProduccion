@@ -13,7 +13,7 @@ namespace Capa_Datos.Repositorio
         private string cadenaconexion = "";
 
         public static PR_aCarreta_CD Instancia
-        {get{ return PR_aCarreta_CD._Instancia; } }
+        { get { return PR_aCarreta_CD._Instancia; } }
 
         public PR_aCarreta_CD()
         {
@@ -21,31 +21,31 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aCarreta>Lista_carretas()
+        public IEnumerable<PR_aCarreta> Lista_carretas()
         {
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCarreta, Pesos_Kilos from PR_aCarreta";
-                   return conexionsql.Query<PR_aCarreta>(sql);
+                    return conexionsql.Query<PR_aCarreta>(sql);
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al listar", ex); }
         }
 
         public IEnumerable<PR_aCarreta> Traer_CarretaPorId(Int32 idcarreta)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCarreta, Pesos_Kilos from PR_aCarreta where IdCarreta = @id";
                     return conexionsql.Query<PR_aCarreta>(sql, new { id = idcarreta });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -60,40 +60,40 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al agregar la carreta", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al agregar la carreta", ex); }
         }
 
         public string Actualizar_Carretas(PR_aCarreta carreta)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Update PR_aCarreta set Pesos_Kilos = @peso_kilos where IdCarreta =@idcarreta";
-                    conexionsql.ExecuteScalar(sqlinsert, new {idcarreta = carreta.IdCarreta,  peso_kilos = carreta.Pesos_Kilos });
+                    conexionsql.ExecuteScalar(sqlinsert, new { idcarreta = carreta.IdCarreta, peso_kilos = carreta.Pesos_Kilos });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al actualizar la carreta", ex); }
         }
 
-        public string Eliminar_Carretas(Int32  idcarreta)
+        public string Eliminar_Carretas(Int32 idcarreta)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "delete PR_aCarreta where IdCarreta =@id";
                     conexionsql.ExecuteScalar(sqlinsert, new { id = idcarreta });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al actualizar la carreta", ex); }
         }
 
-       
+
     }
 }

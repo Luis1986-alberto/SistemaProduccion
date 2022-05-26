@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -24,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aPosicionTaca>Lista_PosicionTaca()
+        public IEnumerable<PR_aPosicionTaca> Lista_PosicionTaca()
         {
             try
             {
@@ -35,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
         public IEnumerable<PR_aPosicionTaca> Traer_PosicionTacaPorID(byte idposiciontaca)
@@ -64,7 +61,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al agregar", ex);}
+            { throw new Exception("Error al agregar", ex); }
         }
 
         public String Actualizar_PosicionTaca(PR_aPosicionTaca posiciontaca)
@@ -74,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aPosicionTaca set Posicion_Taca = @posicion_taca where IdPosicionTaca = @id";
-                    conexionsql.Execute(sqlupdate, new {id = posiciontaca.IdPosicionTaca, posicion_taca = posiciontaca.Posicion_Taca });
+                    conexionsql.Execute(sqlupdate, new { id = posiciontaca.IdPosicionTaca, posicion_taca = posiciontaca.Posicion_Taca });
                     return "PROCESADO";
                 }
             }
@@ -89,7 +86,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aPosicionTaca where IdPosicionTaca = @id";
-                    conexionsql.Execute(sqldelete, new { id = idposiciontaca});
+                    conexionsql.Execute(sqldelete, new { id = idposiciontaca });
                     return "PROCESADO";
                 }
             }

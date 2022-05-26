@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aPrioridad
     {
@@ -15,8 +9,8 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_Prioridad { get => _Descripcion_Prioridad; set => _Descripcion_Prioridad = value; }
 
         public PR_aPrioridad()
-        {   }
-        
+        { }
+
         public PR_aPrioridad(byte idPrioridad, string descripcion_Prioridad)
         {
             _IdPrioridad = idPrioridad;

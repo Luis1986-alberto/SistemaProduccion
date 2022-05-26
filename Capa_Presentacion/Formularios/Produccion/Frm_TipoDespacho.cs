@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -122,7 +119,7 @@ namespace Capa_Presentacion.Formularios
             if (Verificar_Datos() == false) { return; }
             if (Nuevo) rpta = PR_aTipoEstadoDespacho_CN.Instancia.Agregar_TipoDespacho(datos);
             if (Editar) rpta = PR_aTipoEstadoDespacho_CN.Instancia.Actualizar_TipoDespacho(datos);
-            
+
 
             if (rpta == "PROCESADO")
             {

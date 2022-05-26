@@ -21,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aCargoTrabajador>Lista_cargotrabajador()
+        public IEnumerable<PR_aCargoTrabajador> Lista_cargotrabajador()
         {
             try
             {
@@ -32,21 +32,21 @@ namespace Capa_Datos.Repositorio
                     return conexionsql.Query<PR_aCargoTrabajador>(sql);
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al eliminar ", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al eliminar ", ex); }
         }
 
         public IEnumerable<PR_aCargoTrabajador> Traer_CargotrabajadorPorId(Int32 idcargotrabajador)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCargoTrabajador, Nombre_CargoTrabajador from PR_aCargoTrabajador where IdCargoTrabajador = @id";
                     return conexionsql.Query<PR_aCargoTrabajador>(sql, new { id = idcargotrabajador });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -61,8 +61,8 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al agregar ", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al agregar ", ex); }
         }
 
         public string Actualizar_CargoTrabajador(PR_aCargoTrabajador cargotrabajador)
@@ -76,8 +76,8 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al Actualizar", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al Actualizar", ex); }
         }
 
         public string Eliminar_CargoTrabajador(Int32 idcargotrabajador)
@@ -91,8 +91,8 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al eliminar", ex);}
+            catch(Exception ex)
+            { throw new Exception("Error al eliminar", ex); }
         }
 
 

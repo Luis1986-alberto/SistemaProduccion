@@ -69,7 +69,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqledit = "update PR_aMarcaMaterial set Descripcion = @descripcion, Abreviatura_MarcaMaterial = abreviatura_marcamaterial where IdMarcaMaterial = @id";
-                    conexionsql.ExecuteScalar(sqledit, new {id = amarcamaterial.IdMarcaMaterial, descripcion = amarcamaterial.Descripcion, abreviatura_marcamaterial = amarcamaterial.Abreviatura_MarcaMaterial });
+                    conexionsql.ExecuteScalar(sqledit, new { id = amarcamaterial.IdMarcaMaterial, descripcion = amarcamaterial.Descripcion, abreviatura_marcamaterial = amarcamaterial.Abreviatura_MarcaMaterial });
                     return "PROCESADO";
                 }
             }
@@ -90,6 +90,6 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-        
+
     }
 }

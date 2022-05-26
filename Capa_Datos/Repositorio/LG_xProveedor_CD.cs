@@ -1,13 +1,8 @@
 ﻿using Capa_Entidades.Tablas;
 using Dapper;
-using DapperExtensions;
-using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -30,7 +25,7 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                 List<LG_xProveedor> lst_proveedores = null;
+                List<LG_xProveedor> lst_proveedores = null;
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     ConexionSQL.Open();
@@ -78,11 +73,11 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception ("error al Traer por ID", Ex);}
-           
+            { throw new Exception("error al Traer por ID", Ex); }
+
         }
 
-        public string Agregar_Proveedor ( LG_xProveedor proveedor)
+        public string Agregar_Proveedor(LG_xProveedor proveedor)
         {
             try
             {
@@ -93,25 +88,25 @@ namespace Capa_Datos.Repositorio
                                     " (@razon_social_proveedor, @ruc_proveedor, @telefono1_proveedor, @telefono2_proveedor, @pagina_web_proveedor, @direccion_proveedor, @correo_proveedor, " +
                                     " @contacto_proveedor, @telefono_contacto, @correo_contacto, @nota, @celular1_proveedor, @idtipoproveedor)";
                     ConexionSQL.ExecuteScalar(sqlinsert, new {
-                                                        razon_social_proveedor = proveedor.Razon_Social_Proveedor,
-                                                        ruc_proveedor = proveedor.RUC_Proveedor,
-                                                        telefono1_proveedor = proveedor.Telefono1_Proveedor,
-                                                        telefono2_proveedor = proveedor.Telefono2_Proveedor,
-                                                        pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
-                                                        direccion_proveedor = proveedor.Direccion_Proveedor,
-                                                        correo_proveedor = proveedor.Correo_Proveedor,
-                                                        contacto_proveedor = proveedor.Contacto_Proveedor,
-                                                        telefono_contacto = proveedor.Telefono_Contacto,
-                                                        correo_contacto = proveedor.Correo_Contacto,
-                                                        nota = proveedor.Nota,
-                                                        celular1_proveedor = proveedor.Celular1_Proveedor,
-                                                        idtipoproveedor = proveedor.IdTipoProveedor,
-                                                    });
-                        return "PROCESADO";
+                                                                razon_social_proveedor = proveedor.Razon_Social_Proveedor,
+                                                                ruc_proveedor = proveedor.RUC_Proveedor,
+                                                                telefono1_proveedor = proveedor.Telefono1_Proveedor,
+                                                                telefono2_proveedor = proveedor.Telefono2_Proveedor,
+                                                                pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
+                                                                direccion_proveedor = proveedor.Direccion_Proveedor,
+                                                                correo_proveedor = proveedor.Correo_Proveedor,
+                                                                contacto_proveedor = proveedor.Contacto_Proveedor,
+                                                                telefono_contacto = proveedor.Telefono_Contacto,
+                                                                correo_contacto = proveedor.Correo_Contacto,
+                                                                nota = proveedor.Nota,
+                                                                celular1_proveedor = proveedor.Celular1_Proveedor,
+                                                                idtipoproveedor = proveedor.IdTipoProveedor,
+                                                            });
+                    return "PROCESADO";
                 }
             }
             catch(Exception eX)
-            {throw new Exception("Error al Agregar", eX);}
+            { throw new Exception("Error al Agregar", eX); }
         }
 
         public string Actualizar_Proveedor(LG_xProveedor proveedor)
@@ -120,11 +115,11 @@ namespace Capa_Datos.Repositorio
             {
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
-                    var sqlinsert = "Update LG_xProveedor set Razon_Social_Proveedor = @razon_social_proveedor, RUC_Proveedor = @ruc_proveedor, Telefono1_Proveedor = @telefono1_proveedor, " +
+                    var sqlupdate = "Update LG_xProveedor set Razon_Social_Proveedor = @razon_social_proveedor, RUC_Proveedor = @ruc_proveedor, Telefono1_Proveedor = @telefono1_proveedor, " +
                                     " Telefono2_Proveedor = @telefono2_proveedor, Pagina_Web_Proveedor = @pagina_web_proveedor, Direccion_Proveedor = @direccion_proveedor, Correo_Proveedor = @correo_proveedor, " +
                                     " Contacto_Proveedor = @contacto_proveedor, Telefono_Contacto = @telefono_contacto, Correo_Contacto = @correo_contacto, Nota = @nota, Celular1_Proveedor = @celular1_proveedor," +
-                                    " IdTipoProveedor  = @idtipoproveedor where  IdProveedor = @id"; 
-                    ConexionSQL.Execute(sqlinsert, new {
+                                    " IdTipoProveedor  = @idtipoproveedor where  IdProveedor = @id";
+                    ConexionSQL.Execute(sqlupdate, new {
                                                             id = proveedor.IdProveedor,
                                                             razon_social_proveedor = proveedor.Razon_Social_Proveedor,
                                                             ruc_proveedor = proveedor.RUC_Proveedor,
@@ -159,10 +154,10 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
-        
+
 
 
     }

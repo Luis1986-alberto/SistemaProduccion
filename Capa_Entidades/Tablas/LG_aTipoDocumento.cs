@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class LG_aTipoDocumento
     {
@@ -15,7 +9,7 @@ namespace Capa_Entidades.Tablas
 
 
         public LG_aTipoDocumento()
-        {   }
+        { }
 
         public LG_aTipoDocumento(byte idtipodocumento, string nombre_tipodocumento, string sigla_tipodocumeto, string alias_tipodocumento)
         {

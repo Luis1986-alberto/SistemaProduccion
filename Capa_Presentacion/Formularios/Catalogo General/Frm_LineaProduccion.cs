@@ -61,7 +61,7 @@ namespace Capa_Presentacion.Formularios
 
             tbc_Mnt.SelectTab(0);
             Estado_Toolbar(bln_Nuevo);
-            
+
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_IdLineaProduccion.Text = "0";
             txt_LineaProduccion.Text = "";

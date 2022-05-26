@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -69,10 +66,10 @@ namespace Capa_Presentacion.Formularios
         {
             if (dgv_Mnt.RowCount > 0)
             {
-                if (bln_Editar) 
+                if (bln_Editar)
                 {
                     tbc_Mnt.SelectTab(0);
-                    Entrada_Datos(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCliente"].Value.ToString())); 
+                    Entrada_Datos(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCliente"].Value.ToString()));
                 }
             }
         }
@@ -96,7 +93,7 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(int IdCliente)
         {
             var Repositorio = PR_mClientes_CN._Instancia.TraerIdCliente(IdCliente);
-            foreach(var Registro in Repositorio) 
+            foreach (var Registro in Repositorio)
             {
                 txt_IdCliente.Text = Registro.IdCliente.ToString();
                 txt_Razon_Social.Text = Registro.Razon_Social.ToString();
@@ -168,7 +165,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             tbc_Mnt.SelectTab(0);
 
-            if (MessageBox.Show("Esta seguro eliminar el registro","Eliminar Registro",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
+            if (MessageBox.Show("Esta seguro eliminar el registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int IdCliente = PR_mClientes_CN._Instancia.Eliminar_Cliente(int.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCliente"].Value.ToString()));
 
@@ -220,13 +217,13 @@ namespace Capa_Presentacion.Formularios
                 dgv_Mnt.ClearSelection();
 
                 foreach (DataGridViewRow row in dgv_Mnt.Rows)
-                if (row.Cells["IdCliente"].Value.ToString() == int_OutPutId.ToString()) { row.Selected = true; }  
+                    if (row.Cells["IdCliente"].Value.ToString() == int_OutPutId.ToString()) { row.Selected = true; }
 
                 dgv_Mnt.FirstDisplayedScrollingRowIndex = dgv_Mnt.SelectedRows[0].Index;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error Inesperado",MessageBoxButtons.OK,MessageBoxIcon.Error );
+                MessageBox.Show(ex.Message, "Error Inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Carga_Datos();
             }
         }
@@ -258,7 +255,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        {Carga_Datos();}
+        { Carga_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {

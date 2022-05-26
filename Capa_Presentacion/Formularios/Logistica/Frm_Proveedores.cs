@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios.Logistica
@@ -139,9 +136,9 @@ namespace Capa_Presentacion.Formularios.Logistica
             if (Verificar_Datos() == false) { return; }
 
             if (bln_Nuevo) { result = LG_xProveedor_CN._Instancia.Agregar_Proveedor(datos); }
-            if (bln_Editar){ result = LG_xProveedor_CN._Instancia.Actualizar_Proveedor(datos); }
+            if (bln_Editar) { result = LG_xProveedor_CN._Instancia.Actualizar_Proveedor(datos); }
 
-            if(result == "PROCESADO")
+            if (result == "PROCESADO")
             {
                 if (bln_Nuevo)
                 { MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -156,7 +153,7 @@ namespace Capa_Presentacion.Formularios.Logistica
                 tbc_Mnt.SelectTab(1);
                 Cargar_Datos();
             }
-            else { MessageBox.Show(result, "Error al Guardar", MessageBoxButtons.OK,MessageBoxIcon.Error); }
+            else { MessageBox.Show(result, "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void tls_Deshacer_Click(object sender, EventArgs e)
@@ -328,7 +325,7 @@ namespace Capa_Presentacion.Formularios.Logistica
                 return false;
             }
             else { ErrorIcono.Clear(); }
-            
+
             if (Txt_RUC.Text == string.Empty)
             {
                 MessageBox.Show("Ingrese RUC ", "Ingreso de datos", MessageBoxButtons.OK);

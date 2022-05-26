@@ -29,7 +29,6 @@ namespace Capa_Datos.Repositorio
             {
                 try
                 {
-
                     ConexionSql.Open();
 
                     SqlCommand cmd = new SqlCommand("PRs_Clientes", ConexionSql);
@@ -58,17 +57,14 @@ namespace Capa_Datos.Repositorio
                         Entidad.Numero_Telefono2 = Datos["Numero_Telefono2"].ToString();
                         Entidad.Numero_Celular1 = Datos["Numero_Celular1"].ToString();
                         Entidad.Numero_Celular2 = Datos["Numero_Celular2"].ToString();
-                        Entidad.Nombre_TipoRubro  = Datos["Nombre_TipoRubro"].ToString();
+                        Entidad.Nombre_TipoRubro = Datos["Nombre_TipoRubro"].ToString();
 
                         Listado_Clientes.Add(Entidad);
                     }
-
                     return Listado_Clientes;
-
-                   
                 }
                 catch(Exception ex)
-                {throw new Exception("Err al listar", ex); }                
+                { throw new Exception("Err al listar", ex); }
             }
         }
 
@@ -114,7 +110,7 @@ namespace Capa_Datos.Repositorio
 
                 catch(Exception ex)
                 { throw new Exception("Err al listar", ex); }
-                
+
             }
         }
 
@@ -192,6 +188,6 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        
+
     }
 }

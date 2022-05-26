@@ -2,9 +2,6 @@
 using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Negocios
@@ -41,7 +38,7 @@ namespace Capa_Negocios
         }
 
         public string Eliminar(Int32 idmaquina)
-        {   
+        {
             return PR_mMaquina_CD._Instancia.Eliminar(idmaquina);
         }
 

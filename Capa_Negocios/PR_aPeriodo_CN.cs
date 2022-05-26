@@ -21,7 +21,7 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_aPeriodo> Buscar_NombrePeriodo(string nombreperiodo)
         {
-           var lista = PR_aPeriodo_CD._Instancia.Lista_Periodos().ToList();
+            var lista = PR_aPeriodo_CD._Instancia.Lista_Periodos().ToList();
             return from buscar in lista where buscar.Nombre_Periodo == nombreperiodo select buscar;
         }
 

@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -101,8 +98,8 @@ namespace Capa_Presentacion.Formularios
             if (MessageBox.Show("Esta Seguro de eliminar este Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string rpta = PR_aAdhesivo_CN.Instancia.Eliminar_Adhesivo(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAdhesivo"].Value.ToString()));
-                if ( rpta == "PROCESADO") { MessageBox.Show("Se Elimino el Registro", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                else { MessageBox.Show(rpta, "Error al Eliminar", MessageBoxButtons.OK,MessageBoxIcon.Error); }
+                if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino el Registro", "Eliminar registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                else { MessageBox.Show(rpta, "Error al Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             Cargar_Datos();
         }
@@ -206,7 +203,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        { Cargar_Datos();}
+        { Cargar_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {

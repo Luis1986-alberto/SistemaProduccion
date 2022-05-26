@@ -38,9 +38,9 @@ namespace Capa_Presentacion.Formularios
         private void Carga_Datos()
         {
 
-            List<PR_aAño> Listado = PR_aAño_CN._Instancia.Lista_Años();
+            List<LG_aAño> Listado = LG_aAño_CN._Instancia.Lista_Años();
 
-            SortableBindingList<PR_aAño> ListadoAños = new SortableBindingList<PR_aAño>(Listado);
+            SortableBindingList<LG_aAño> ListadoAños = new SortableBindingList<LG_aAño>(Listado);
 
             dgv_Mnt.DataSource = ListadoAños;
 
@@ -51,12 +51,12 @@ namespace Capa_Presentacion.Formularios
         {
             if (dgv_Mnt.RowCount == 0) { return; }
 
-            if (!bln_Editar)  { Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAño"].Value.ToString()));}
+            if (!bln_Editar) { Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAño"].Value.ToString())); }
         }
 
         private void Entrada_Datos(byte vIdAño)
         {
-            var Repositorio = PR_aAño_CN._Instancia.TraerID(vIdAño);
+            var Repositorio = LG_aAño_CN._Instancia.TraerID(vIdAño);
 
             foreach (var Registro in Repositorio)
             {
@@ -96,7 +96,7 @@ namespace Capa_Presentacion.Formularios
                 txt_Año.Focus();
             }
             else
-            {MessageBox.Show("No hay registro para modificar", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);}
+            { MessageBox.Show("No hay registro para modificar", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
 
         }
 
@@ -111,7 +111,7 @@ namespace Capa_Presentacion.Formularios
 
                     if (MessageBox.Show("Esta seguro de eliminar el registro ?", "Ventana de eliminación de registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        str_OutPutId = PR_aAño_CN._Instancia.Eliminar_Año(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAño"].Value.ToString()));
+                        str_OutPutId = LG_aAño_CN._Instancia.Eliminar_Año(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdAño"].Value.ToString()));
 
                         Carga_Datos();
 
@@ -140,7 +140,7 @@ namespace Capa_Presentacion.Formularios
         {
             try
             {
-                var Datos = new PR_aAño
+                var Datos = new LG_aAño
                 {
                     IdAño = byte.Parse(txt_IdAño.Text),
                     Año = Int32.Parse(txt_Año.Text.ToUpper().Trim()),
@@ -148,29 +148,26 @@ namespace Capa_Presentacion.Formularios
 
                 if (Verificar_Datos() == false) { return; }
 
-                if (bln_Nuevo) { str_Mensaje = PR_aAño_CN._Instancia.Agregar_Año(Datos); }
-                if (bln_Editar) { str_Mensaje = PR_aAño_CN._Instancia.Actualizar_Año(Datos); }
+                if (bln_Nuevo) { str_Mensaje = LG_aAño_CN._Instancia.Agregar_Año(Datos); }
+                if (bln_Editar) { str_Mensaje = LG_aAño_CN._Instancia.Actualizar_Año(Datos); }
 
                 if (str_Mensaje == "PROCESADO")
                 {
-                    if (bln_Nuevo) 
-                    {MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);}
-                    else { MessageBox.Show("Se Actualizo el registro", "Actualizar Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                    if (bln_Nuevo)
+                    { MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                    else { MessageBox.Show("Se Actualizo el registro", "Actualizar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
 
                     bln_Editar = false;
                     bln_Nuevo = false;
 
-                    Estado_Toolbar(bln_Editar);
+                    Estado_Toolbar(false);
 
                     tbc_Mnt.SelectTab(1);
                     tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
-
                     HabilitarControles(false);
                     Carga_Datos();
 
                     dgv_Mnt.ClearSelection();
-
-                    
                 }
                 else
                 {
@@ -180,7 +177,7 @@ namespace Capa_Presentacion.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Mensaje Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Mensaje Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Carga_Datos();
             }
         }
@@ -276,7 +273,7 @@ namespace Capa_Presentacion.Formularios
         {
             str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
 
-            var Listado_Ordenado = (from Años in PR_aAño_CN._Instancia.Lista_Años().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
+            var Listado_Ordenado = (from Años in LG_aAño_CN._Instancia.Lista_Años().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
                                     select Años).ToList();
 
             dgv_Mnt.DataSource = Listado_Ordenado;
@@ -286,7 +283,7 @@ namespace Capa_Presentacion.Formularios
         {
             str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
 
-            var Listado_Ordenado = (from Años in PR_aAño_CN._Instancia.Lista_Años().OrderByDescending(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
+            var Listado_Ordenado = (from Años in LG_aAño_CN._Instancia.Lista_Años().OrderByDescending(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
                                     select Años).ToList();
 
             dgv_Mnt.DataSource = Listado_Ordenado;

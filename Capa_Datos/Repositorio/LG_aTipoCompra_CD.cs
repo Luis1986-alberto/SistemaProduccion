@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -76,7 +73,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoCompra set Descripcion_TipoCompra = @descripcion_tipocompra where IdTipoCompra = @id ";
-                    ConexionSql.Execute(sqlupdate, new { id = tipocompra.IdTipoCompra, descripcion_tipocompra = tipocompra.Descripcion_TipoCompra});
+                    ConexionSql.Execute(sqlupdate, new { id = tipocompra.IdTipoCompra, descripcion_tipocompra = tipocompra.Descripcion_TipoCompra });
                     return "PROCESADO";
                 }
             }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aCarreta
     {
@@ -15,7 +9,7 @@ namespace Capa_Entidades.Tablas
         public decimal Pesos_Kilos { get => _Pesos_Kilos; set => _Pesos_Kilos = value; }
 
         public PR_aCarreta()
-        {   }
+        { }
 
         public PR_aCarreta(byte idCarreta, decimal pesos_Kilos)
         {

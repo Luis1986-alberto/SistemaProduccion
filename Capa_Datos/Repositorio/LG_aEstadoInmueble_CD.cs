@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -25,7 +22,7 @@ namespace Capa_Datos.Repositorio
         }
 
 
-        public IEnumerable<LG_aEstadoInmueble>Lista_estadoInmueble()
+        public IEnumerable<LG_aEstadoInmueble> Lista_estadoInmueble()
         {
             try
             {
@@ -36,7 +33,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al listar", Ex);}
+            { throw new Exception("Error al listar", Ex); }
         }
 
 
@@ -61,7 +58,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into LG_aEstadoInmueble (Estado_Inmueble) values (@estado_inmueble)";
-                    conexionsql.ExecuteScalar(sqlinsert, new {estado_inmueble = estadoinmueble.Estado_Inmueble});
+                    conexionsql.ExecuteScalar(sqlinsert, new { estado_inmueble = estadoinmueble.Estado_Inmueble });
                     return "PROCESADO";
                 }
             }
@@ -75,7 +72,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update LG_aEstadoInmueble set  Estado_Inmueble = @estado_inmueble where IdEstadoInmueble = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new {id = estadoinmueble.IdEstadoInmueble, estado_inmueble = estadoinmueble.Estado_Inmueble});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = estadoinmueble.IdEstadoInmueble, estado_inmueble = estadoinmueble.Estado_Inmueble });
                     return "PROCESADO";
                 }
             }

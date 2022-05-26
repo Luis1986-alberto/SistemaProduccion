@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -26,7 +23,7 @@ namespace Capa_Presentacion.Formularios
         {
             InitializeComponent();
         }
-                
+
         private void Frm_Color_Load(object sender, EventArgs e)
         {
             tbc_Mnt.SelectTab(1);
@@ -146,7 +143,7 @@ namespace Capa_Presentacion.Formularios
                 tbc_Mnt.SelectTab(1);
             }
             else { MessageBox.Show(rpta, "error Inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-           
+
             Cargar_Datos();
         }
 
@@ -259,7 +256,7 @@ namespace Capa_Presentacion.Formularios
             if (dgv_Mnt.Rows.Count - 1 == SelectIndex) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
-            SelectIndex = SelectIndex ++;
+            SelectIndex = SelectIndex++;
 
             Entrada_Datos(int.Parse(dgv_Mnt.SelectedRows[0].Cells["IdColor"].Value.ToString()));
         }

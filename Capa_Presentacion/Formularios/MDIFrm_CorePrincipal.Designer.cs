@@ -1,7 +1,7 @@
 ﻿
 namespace Capa_Presentacion.Formularios
 {
-    partial class MDIFrm_Produccion
+    partial class MDIFrm_CorePrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,7 +30,7 @@ namespace Capa_Presentacion.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIFrm_Produccion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIFrm_CorePrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_RegistroEstandar = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,6 +167,7 @@ namespace Capa_Presentacion.Formularios
             this.stb_PC_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tim_Reloj = new System.Windows.Forms.Timer(this.components);
+            this.mnu_Periodo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -243,7 +244,8 @@ namespace Capa_Presentacion.Formularios
             // 
             this.mnu_CierreProducciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_Año,
-            this.mnu_Mes});
+            this.mnu_Mes,
+            this.mnu_Periodo});
             this.mnu_CierreProducciones.Name = "mnu_CierreProducciones";
             this.mnu_CierreProducciones.Size = new System.Drawing.Size(207, 22);
             this.mnu_CierreProducciones.Text = "Cierre de Producciones";
@@ -251,14 +253,14 @@ namespace Capa_Presentacion.Formularios
             // mnu_Año
             // 
             this.mnu_Año.Name = "mnu_Año";
-            this.mnu_Año.Size = new System.Drawing.Size(96, 22);
+            this.mnu_Año.Size = new System.Drawing.Size(180, 22);
             this.mnu_Año.Text = "Año";
             this.mnu_Año.Click += new System.EventHandler(this.mnu_Año_Click);
             // 
             // mnu_Mes
             // 
             this.mnu_Mes.Name = "mnu_Mes";
-            this.mnu_Mes.Size = new System.Drawing.Size(96, 22);
+            this.mnu_Mes.Size = new System.Drawing.Size(180, 22);
             this.mnu_Mes.Text = "Mes";
             this.mnu_Mes.Click += new System.EventHandler(this.mnu_Mes_Click);
             // 
@@ -273,7 +275,7 @@ namespace Capa_Presentacion.Formularios
             // mnu_Usuarios
             // 
             this.mnu_Usuarios.Name = "mnu_Usuarios";
-            this.mnu_Usuarios.Size = new System.Drawing.Size(119, 22);
+            this.mnu_Usuarios.Size = new System.Drawing.Size(180, 22);
             this.mnu_Usuarios.Text = "Usuarios";
             this.mnu_Usuarios.Click += new System.EventHandler(this.mnu_Usuarios_Click);
             // 
@@ -1245,7 +1247,14 @@ namespace Capa_Presentacion.Formularios
             // 
             this.tim_Reloj.Tick += new System.EventHandler(this.tim_Reloj_Tick);
             // 
-            // MDIFrm_Produccion
+            // mnu_Periodo
+            // 
+            this.mnu_Periodo.Name = "mnu_Periodo";
+            this.mnu_Periodo.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Periodo.Text = "Periodo";
+            this.mnu_Periodo.Click += new System.EventHandler(this.mnu_Periodo_Click);
+            // 
+            // MDIFrm_CorePrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1256,9 +1265,9 @@ namespace Capa_Presentacion.Formularios
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Name = "MDIFrm_Produccion";
+            this.Name = "MDIFrm_CorePrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Módulo de Producción";
+            this.Text = "Módulo de Core Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDIFrm_Principal_Load);
             this.menuStrip.ResumeLayout(false);
@@ -1408,6 +1417,7 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.ToolStripMenuItem proveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnu_TipoProveedor;
         private System.Windows.Forms.ToolStripMenuItem mnu_RegistroProveedores;
+        private System.Windows.Forms.ToolStripMenuItem mnu_Periodo;
     }
 }
 

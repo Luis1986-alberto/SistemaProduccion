@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -35,7 +31,7 @@ namespace Capa_Entidades.Tablas
         public PR_aCodigoEvento()
         { }
 
-        public PR_aCodigoEvento(byte idCodigoEvento, string codigo_Evento, string descripcion, string flag_EventoMaquina, string flag_EventoColaborador, 
+        public PR_aCodigoEvento(byte idCodigoEvento, string codigo_Evento, string descripcion, string flag_EventoMaquina, string flag_EventoColaborador,
                                 string flag_EventoMaterial, string idUsuario, DateTime fecha_Servidor, byte idArea, byte idLocal)
         {
             _IdCodigoEvento = idCodigoEvento;

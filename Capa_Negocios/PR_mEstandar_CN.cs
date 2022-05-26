@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Negocios
@@ -20,21 +18,21 @@ namespace Capa_Negocios
                                                                   string flag_rango, DateTime fecha_inicio, DateTime fecha_final)
         { return PR_mEstandar_CD._Instancia.Listar_Estandar(mEstandaresIndustriales, flag_clientes, flag_tipoproduccion, flag_rango, fecha_inicio, fecha_final).ToList(); }
 
-        public PR_mEstandar TraerIdEstandar(Int32 idestabdar)
+        public PR_mEstandar TraerIdEstandar(Int32 idestandar)
         {
-            return PR_mEstandar_CD._Instancia.TraerPorID(idestabdar);
+            return PR_mEstandar_CD._Instancia.TraerPorID(idestandar);
         }
 
-        public string Agregar_Estandar(PR_mEstandar mestandar, PictureBox Foto_Producto, PR_mEstandarExtrusion mextrusion, PictureBox fotoarteextr, 
-                                       PR_mEstandarImpresion mimpresion, PictureBox fotoarteimp, PR_mEstandarSellado msellado, PictureBox fotoplanosell )
+        public string Agregar_Estandar(PR_mEstandar mestandar, PictureBox Foto_Producto, PR_mEstandarExtrusion mextrusion, PictureBox fotoarteextr,
+                                       PR_mEstandarImpresion mimpresion, PictureBox fotoarteimp, PR_mEstandarSellado msellado, PictureBox fotoplanosell)
         {
             string rptaextr, rptaimp, rptasell = "";
             Int32 idestandar = PR_mEstandar_CD._Instancia.Procesar_Estandar(mestandar, "I", Foto_Producto);
-            if(mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, idestandar, "I", fotoarteextr); 
-            if(mimpresion !=null) rptaimp = PR_mEstandarImpresion_CD._Instancia.EstandarImpresion_Procesar(mimpresion, idestandar, "I", fotoarteimp);
+            if (mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, idestandar, "I", fotoarteextr);
+            if (mimpresion != null) rptaimp = PR_mEstandarImpresion_CD._Instancia.EstandarImpresion_Procesar(mimpresion, idestandar, "I", fotoarteimp);
             if (msellado != null) rptasell = PR_mEstandarSellado_CD._Instancia.EstandarSellado_Procesar(msellado, idestandar, "I", fotoplanosell);
 
-            return "PROCESADO";        
+            return "PROCESADO";
         }
 
         public string Actualizar_estandar(PR_mEstandar mestandar, PictureBox Foto_Producto, PR_mEstandarExtrusion mextrusion, PictureBox fotoarteextr,
@@ -42,7 +40,7 @@ namespace Capa_Negocios
         {
             string rptaextr, rptaimp, rptasell = "";
             PR_mEstandar_CD._Instancia.Procesar_Estandar(mestandar, "U", Foto_Producto);
-            if (mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, mestandar.IdEstandar, "U", fotoarteextr); 
+            if (mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, mestandar.IdEstandar, "U", fotoarteextr);
             if (mimpresion != null) rptaimp = PR_mEstandarImpresion_CD._Instancia.EstandarImpresion_Procesar(mimpresion, mestandar.IdEstandar, "I", fotoarteimp);
             if (msellado != null) rptasell = PR_mEstandarSellado_CD._Instancia.EstandarSellado_Procesar(msellado, mestandar.IdEstandar, "U", fotoplanosell);
 

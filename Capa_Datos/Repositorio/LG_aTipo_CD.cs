@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -62,8 +59,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into LG_aTipo (Nombre_Tipo, Codigo_Tipo, IdUsuario, IdUsuario_PC ) values " +
                                     " (@nombre_tipo, @codigo_tipo, @idusuario, @idusuario_pc)";
-                    ConexionSQL.Execute(sqlinsert, new { nombre_tipo = tipo.Nombre_Tipo, codigo_tipo = tipo.Codigo_Tipo, idusuario = tipo.IdUsuario,
-                                                         idusuario_pc = Environment.UserName});
+                    ConexionSQL.Execute(sqlinsert, new {
+                        nombre_tipo = tipo.Nombre_Tipo, codigo_tipo = tipo.Codigo_Tipo, idusuario = tipo.IdUsuario,
+                        idusuario_pc = Environment.UserName
+                    });
                     return "PROCESADO";
                 }
             }
@@ -79,9 +78,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update LG_aTipo set Nombre_Tipo = @nombre_tipo, Codigo_Tipo = @codigo_tipo, IdUsuario = @idusuario, IdUsuario_PC = @idusuario_pc" +
                                      " where IdTipo = @id )";
-                    ConexionSQL.Execute(sqlupdate, new { id = tipo.IdTipo, nombre_tipo = tipo.Nombre_Tipo, codigo_tipo = tipo.Codigo_Tipo,
-                                                        idusuario = tipo.IdUsuario, idusuario_pc = Environment.UserName
-                                                       });
+                    ConexionSQL.Execute(sqlupdate, new {
+                        id = tipo.IdTipo, nombre_tipo = tipo.Nombre_Tipo, codigo_tipo = tipo.Codigo_Tipo,
+                        idusuario = tipo.IdUsuario, idusuario_pc = Environment.UserName
+                    });
                     return "PROCESADO";
                 }
             }

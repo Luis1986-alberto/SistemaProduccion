@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -109,7 +106,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into PR_xLocalArea (IdLocal, IdArea) values (@idlocal, @idarea)";
-                    conexionsql.Execute(sqlinsert, new { idlocal = localarea.IdLocal, idarea = localarea.IdArea});
+                    conexionsql.Execute(sqlinsert, new { idlocal = localarea.IdLocal, idarea = localarea.IdArea });
                     return "PROCESADO";
                 }
             }
@@ -126,7 +123,7 @@ namespace Capa_Datos.Repositorio
                     conexionsql.ExecuteScalar(sqledit, new {
                         id = localarea.IdLocalArea,
                         idlocal = localarea.IdLocal,
-                        idarea = localarea.IdArea, 
+                        idarea = localarea.IdArea,
                     });
                     return "PROCESADO";
                 }
@@ -138,7 +135,7 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_xLocalArea where IdLocalArea = @id";
                     conexionsql.ExecuteScalar(sqldelete, new { id = id });

@@ -1,19 +1,15 @@
-﻿using Capa_Datos.Interface;
-using Capa_Entidades.Tablas;
+﻿using Capa_Entidades.Tablas;
 using Dapper;
 using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Datos.Repositorio
 {
-    public class PR_mMaquina_CD 
+    public class PR_mMaquina_CD
     {
         public static readonly PR_mMaquina_CD _Instancia = new PR_mMaquina_CD();
         private Inicio principal = new Inicio();
@@ -46,10 +42,10 @@ namespace Capa_Datos.Repositorio
                 SqlDataReader dr = cmd.ExecuteReader();
                 lista_Maquinas = new List<PR_mMaquina>();
 
-               while(dr.Read())
+                while(dr.Read())
                 {
                     PR_mMaquina t = new PR_mMaquina();
-                    t.IdMaquina = short.Parse(dr["IdMaquina"].ToString());                    
+                    t.IdMaquina = short.Parse(dr["IdMaquina"].ToString());
                     t.Alias_Maquina = dr["Alias_Maquina"].ToString();
                     t.Codigo_Maquina = dr["Codigo_Maquina"].ToString();
                     t.Fecha_Compra = DateTime.Parse(dr["Fecha_compra"].ToString());
@@ -71,7 +67,7 @@ namespace Capa_Datos.Repositorio
                     t.Produccion_Metros = decimal.Parse(dr["Produccion_metros"].ToString());
                     t.Ruta_Imagen = dr["Ruta_Imagen"].ToString();
                     t.Serie_Maquina = dr["Serie_Maquina"].ToString();
-                    t.Tiempo_Horas = decimal.Parse(dr["Tiempo_Horas"].ToString());                    
+                    t.Tiempo_Horas = decimal.Parse(dr["Tiempo_Horas"].ToString());
                     lista_Maquinas.Add(t);
                 }
             }
@@ -86,7 +82,7 @@ namespace Capa_Datos.Repositorio
                 ConexionSQL.Open();
                 SqlCommand cmd = new SqlCommand("select * from PR_mMaquina ", ConexionSQL);
                 cmd.CommandType = System.Data.CommandType.Text;
-               
+
                 SqlDataReader dr = cmd.ExecuteReader();
                 lista_Maquinas = new List<PR_mMaquina>();
 
@@ -113,7 +109,7 @@ namespace Capa_Datos.Repositorio
                     t.Produccion_Metros = decimal.Parse(dr["Produccion_metros"].ToString());
                     t.Ruta_Imagen = dr["Ruta_Imagen"].ToString();
                     t.Serie_Maquina = dr["Serie_Maquina"].ToString();
-                    t.Tiempo_Horas = decimal.Parse(dr["Tiempo_Horas"].ToString());                    
+                    t.Tiempo_Horas = decimal.Parse(dr["Tiempo_Horas"].ToString());
                     lista_Maquinas.Add(t);
                 }
             }
@@ -129,17 +125,17 @@ namespace Capa_Datos.Repositorio
                                 "IdEstadoMaquina, IdProveedor, IdTipoMaquina) values (@idmarcamaquina, @modelo_maquina, @serie_maquina, @alias_maquina, " +
                                 "@numero_maximo_op, @idempresa, @idusuario, @ruta_imagen, @fecha_compra, @idaño_fabricacion, @procedencia, @produccion_kg, @produccion_metros, " +
                                 "@tiempo_horas, @flag_operativo, @flag_baja, @codigo_maquina, @idestadomaquina,  @idproveedor, @IdTipoMaquina) SELECT SCOPE_IDENTITY()";
-                int id = Convert.ToInt32( ConexionSQL.ExecuteScalar(sqlinsert, new {
-                                                        idmarcamaquina = entidad.IdMarcaMaquina, modelo_maquina = entidad.Modelo_Maquina, 
-                                                        serie_maquina = entidad.Serie_Maquina, alias_maquina = entidad.Alias_Maquina,
-                                                        numero_maximo_OP = entidad.Numero_Maximo_OP, idempresa = entidad.IdEmpresa, idusuario = entidad.IdUsuario,
-                                                        ruta_imagen = entidad.Ruta_Imagen, fecha_compra = entidad.Fecha_Compra, idaño_fabricacion = entidad.IdAño_Fabricacion,
-                                                        procedencia = entidad.Procedencia, produccion_KG = entidad.Produccion_Kg, produccion_metros = entidad.Produccion_Metros,
-                                                        tiempo_horas = entidad.Tiempo_Horas, flag_operativo = entidad.Flag_Operativo, flag_baja = entidad.Flag_Baja,
-                                                        codigo_maquina = entidad.Codigo_Maquina, idEstadomaquina = entidad.IdEstadoMaquina,
-                                                        idproveedor = entidad.IdProveedor, IdTipoMaquina = entidad.IdTipoMaquina
-                                                    }));
-               
+                int id = Convert.ToInt32(ConexionSQL.ExecuteScalar(sqlinsert, new {
+                    idmarcamaquina = entidad.IdMarcaMaquina, modelo_maquina = entidad.Modelo_Maquina,
+                    serie_maquina = entidad.Serie_Maquina, alias_maquina = entidad.Alias_Maquina,
+                    numero_maximo_OP = entidad.Numero_Maximo_OP, idempresa = entidad.IdEmpresa, idusuario = entidad.IdUsuario,
+                    ruta_imagen = entidad.Ruta_Imagen, fecha_compra = entidad.Fecha_Compra, idaño_fabricacion = entidad.IdAño_Fabricacion,
+                    procedencia = entidad.Procedencia, produccion_KG = entidad.Produccion_Kg, produccion_metros = entidad.Produccion_Metros,
+                    tiempo_horas = entidad.Tiempo_Horas, flag_operativo = entidad.Flag_Operativo, flag_baja = entidad.Flag_Baja,
+                    codigo_maquina = entidad.Codigo_Maquina, idEstadomaquina = entidad.IdEstadoMaquina,
+                    idproveedor = entidad.IdProveedor, IdTipoMaquina = entidad.IdTipoMaquina
+                }));
+
                 Actualizar_imagen(id, imagen);
                 return "PROCESADO";
             }
@@ -155,16 +151,16 @@ namespace Capa_Datos.Repositorio
                                 " Tiempo_Horas = @tiempo_horas, Flag_Operativo =  @flag_operativo, Flag_Baja = @flag_baja, Codigo_Maquina = @codigo_maquina, " +
                                 "IdEstadoMaquina = @idestadomaquina, IdProveedor = @idproveedor, IdTipoMaquina = @IdTipoMaquina where idmaquina = @id ";
                 ConexionSQL.Execute(sqlinsert, new {
-                                                        id = entidad.IdMaquina,
-                                                        idmarcamaquina = entidad.IdMarcaMaquina, modelo_maquina = entidad.Modelo_Maquina,
-                                                        serie_maquina = entidad.Serie_Maquina, alias_maquina = entidad.Alias_Maquina,
-                                                        numero_maximo_OP = entidad.Numero_Maximo_OP, idempresa = entidad.IdEmpresa, idusuario = entidad.IdUsuario,
-                                                        ruta_imagen = entidad.Ruta_Imagen, fecha_compra = entidad.Fecha_Compra, idaño_fabricacion = entidad.IdAño_Fabricacion,
-                                                        procedencia = entidad.Procedencia, produccion_KG = entidad.Produccion_Kg, produccion_metros = entidad.Produccion_Metros,
-                                                        tiempo_horas = entidad.Tiempo_Horas, flag_operativo = entidad.Flag_Operativo, flag_baja = entidad.Flag_Baja,
-                                                        codigo_maquina = entidad.Codigo_Maquina, IdEstadomaquina = entidad.IdEstadoMaquina, 
-                                                        idproveedor = entidad.IdProveedor, IdTipoMaquina = entidad.IdTipoMaquina
-                                                    });
+                    id = entidad.IdMaquina,
+                    idmarcamaquina = entidad.IdMarcaMaquina, modelo_maquina = entidad.Modelo_Maquina,
+                    serie_maquina = entidad.Serie_Maquina, alias_maquina = entidad.Alias_Maquina,
+                    numero_maximo_OP = entidad.Numero_Maximo_OP, idempresa = entidad.IdEmpresa, idusuario = entidad.IdUsuario,
+                    ruta_imagen = entidad.Ruta_Imagen, fecha_compra = entidad.Fecha_Compra, idaño_fabricacion = entidad.IdAño_Fabricacion,
+                    procedencia = entidad.Procedencia, produccion_KG = entidad.Produccion_Kg, produccion_metros = entidad.Produccion_Metros,
+                    tiempo_horas = entidad.Tiempo_Horas, flag_operativo = entidad.Flag_Operativo, flag_baja = entidad.Flag_Baja,
+                    codigo_maquina = entidad.Codigo_Maquina, IdEstadomaquina = entidad.IdEstadoMaquina,
+                    idproveedor = entidad.IdProveedor, IdTipoMaquina = entidad.IdTipoMaquina
+                });
                 Actualizar_imagen(entidad.IdMaquina, imagen);
                 return "PROCESADO";
             }
@@ -182,8 +178,8 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception ("Error al Eliminar", ex) ;}
-            
+            { throw new Exception("Error al Eliminar", ex); }
+
         }
 
         public IEnumerable<PR_mMaquina> TraerPorId(Int32 idmaquina)
@@ -200,7 +196,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception ("Error al Traer por ID", Ex);}
+            { throw new Exception("Error al Traer por ID", Ex); }
         }
 
         public IEnumerable<PR_mMaquina> FiltroPorUnCampo(IPredicate predicado)
@@ -229,7 +225,7 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        private long Actualizar_imagen( long vidmaquina, PictureBox Imagen)
+        private long Actualizar_imagen(long vidmaquina, PictureBox Imagen)
         {
             try
             {

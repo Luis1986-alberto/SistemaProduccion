@@ -1,10 +1,8 @@
-﻿using Capa_Entidades.Tablas;
-using Capa_Datos.Repositorio;
+﻿using Capa_Datos.Repositorio;
+using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -15,10 +13,10 @@ namespace Capa_Negocios
         public static MP_aCategoriaMaterial_CN _Instancia
         { get { return MP_aCategoriaMaterial_CN.Instancia; } }
 
-        public List<MP_aCategoriaMaterial>Lista_CategoriaMaterial()
+        public List<MP_aCategoriaMaterial> Lista_CategoriaMaterial()
         { return MP_aCategoriaMaterial_CD.Intancia.Lista_CategoriaMaterial().ToList(); }
 
-        public IEnumerable<MP_aCategoriaMaterial>TraerPorID(Int32 idcategoriamaterial)
+        public IEnumerable<MP_aCategoriaMaterial> TraerPorID(Int32 idcategoriamaterial)
         { return MP_aCategoriaMaterial_CD.Intancia.Traer_CategoriaMaterialPorId(idcategoriamaterial); }
 
         public IEnumerable<MP_aCategoriaMaterial> Buscar_NombreCategoria(string nombrecategoria)
@@ -39,8 +37,8 @@ namespace Capa_Negocios
             return MP_aCategoriaMaterial_CD._Intancia.Actualizar_CategoriaMaterial(categoriamaterial);
         }
 
-        public string Eliminar( Int32 idcategoriamaterial)
-        {   
+        public string Eliminar(Int32 idcategoriamaterial)
+        {
             return MP_aCategoriaMaterial_CD._Intancia.Eliminar_CategoriaMaterial(idcategoriamaterial);
         }
 

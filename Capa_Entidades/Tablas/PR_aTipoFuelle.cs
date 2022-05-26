@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aTipoFuelle
     {
@@ -15,7 +9,7 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_TipoFuelle { get => _Descripcion_TipoFuelle; set => _Descripcion_TipoFuelle = value; }
 
         public PR_aTipoFuelle()
-        {   }
+        { }
 
         public PR_aTipoFuelle(byte idTipoFuelle, string descripcion_TipoFuelle)
         {

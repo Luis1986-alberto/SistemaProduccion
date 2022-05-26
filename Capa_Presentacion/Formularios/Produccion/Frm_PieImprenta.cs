@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -161,7 +158,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
@@ -202,7 +199,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        {Cargar_Datos();}
+        { Cargar_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
@@ -317,6 +314,6 @@ namespace Capa_Presentacion.Formularios
             return true;
         }
 
-        
+
     }
 }

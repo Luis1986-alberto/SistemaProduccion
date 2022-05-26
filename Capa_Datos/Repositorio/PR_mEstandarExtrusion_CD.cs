@@ -1,12 +1,8 @@
 ﻿using Capa_Entidades.Tablas;
 using Dapper;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Datos.Repositorio
@@ -27,7 +23,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public  string EstandartExtrusion_Procesar(PR_mEstandarExtrusion mEstandarExtrusion, Int32 idestandar, string accion,  PictureBox Plano_extrusion )
+        public string EstandartExtrusion_Procesar(PR_mEstandarExtrusion mEstandarExtrusion, Int32 idestandar, string accion, PictureBox Plano_extrusion)
         {
             try
             {
@@ -48,7 +44,7 @@ namespace Capa_Datos.Repositorio
                     cmd.Parameters.AddWithValue("@Flag_Impresion", mEstandarExtrusion.Flag_Impresion);
                     cmd.Parameters.AddWithValue("@Flag_Refile", mEstandarExtrusion.Flag_Refile);
                     cmd.Parameters.AddWithValue("@Flag_MasLineal", mEstandarExtrusion.Flag_MasLineal);
-                    cmd.Parameters.AddWithValue("@Medida_Refile", mEstandarExtrusion.Medida_Refile);                    
+                    cmd.Parameters.AddWithValue("@Medida_Refile", mEstandarExtrusion.Medida_Refile);
                     cmd.Parameters.AddWithValue("@IdUnidadRefile", mEstandarExtrusion.IdUnidadRefile);
                     cmd.Parameters.AddWithValue("@Flag_Termocontraible", mEstandarExtrusion.Flag_Termocontraible);
                     cmd.Parameters.AddWithValue("@Flag_Gofrado", mEstandarExtrusion.Flag_Gofrado);
@@ -94,7 +90,7 @@ namespace Capa_Datos.Repositorio
                 return "PROCESADO";
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Procesar Estandart Extrusion", Ex);}
+            { throw new Exception("Error al Procesar Estandart Extrusion", Ex); }
         }
 
         public PR_mEstandarExtrusion TraerPorID(Int32 idestandarextrusion)
@@ -159,12 +155,12 @@ namespace Capa_Datos.Repositorio
             return 1;
         }
 
-        
+
         public String Eliminar_EstandarExtrusion(Int32 idEstandar)
         {
             try
             {
-                using (var ConexionSql = new SqlConnection(cadenaconexion))
+                using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "Delete PR_mEstandarExtrusion where IdEstandar = @Id";
 
@@ -173,7 +169,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception ("Error al Eliminar" + idEstandar, Ex );}
+            { throw new Exception("Error al Eliminar" + idEstandar, Ex); }
         }
 
     }

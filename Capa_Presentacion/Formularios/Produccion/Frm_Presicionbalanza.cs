@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -137,7 +134,7 @@ namespace Capa_Presentacion.Formularios
 
         private bool Verificar_Datos()
         {
-            if (Nud_Precision_Balanza.Value ==0)
+            if (Nud_Precision_Balanza.Value == 0)
             {
                 MessageBox.Show("Ingrese el Nombre Estado", "Ingreso de datos", MessageBoxButtons.OK);
                 ErrorIcono.SetError(Nud_Precision_Balanza, "Ingrese Presicion Balanza ");

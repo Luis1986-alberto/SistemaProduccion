@@ -54,7 +54,7 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(byte id)
         {
             var result = PR_aTipoMaterialLaminado_CN.Instancia.TraerPorID(id);
-            foreach(var i in result)
+            foreach (var i in result)
             {
                 txt_IdTipoLaminacion.Text = i.IdTipoMaterialLaminado.ToString();
                 txt_TipoLaminacion.Text = i.Descripcion.ToString();
@@ -79,7 +79,7 @@ namespace Capa_Presentacion.Formularios
             txt_TipoLaminacion.Text = "";
             txt_OrdenGerencia.Text = "0";
             txt_GramajeLineal.Text = "000.000";
-            
+
             Estado_Toolbar(bln_Nuevo);
             txt_TipoLaminacion.Focus();
         }
@@ -220,7 +220,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        {Cargar_Datos(); }
+        { Cargar_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {

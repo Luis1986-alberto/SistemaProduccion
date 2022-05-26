@@ -1,10 +1,7 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -13,13 +10,12 @@ namespace Capa_Negocios
         public static readonly PR_mClientes_CN _Instancia = new PR_mClientes_CN();
 
         public static PR_mClientes_CN Instancia
-        { get { return PR_mClientes_CN._Instancia;} }
+        { get { return PR_mClientes_CN._Instancia; } }
 
         public List<PR_mClientes> Lista_Clientes()
-        { return PR_mClientes_CD._Instancia.Lista_Clientes().ToList();}
+        { return PR_mClientes_CD._Instancia.Lista_Clientes().ToList(); }
 
         public IEnumerable<PR_mClientes> TraerIdCliente(int IdCliente)
-        //{ return PR_mClientes_CD._Instancia.TraerIdCliente(IdCliente);}
         {
             return (from Clientes in PR_mClientes_CD._Instancia.Lista_Clientes().ToList()
                     where Clientes.IdCliente == IdCliente

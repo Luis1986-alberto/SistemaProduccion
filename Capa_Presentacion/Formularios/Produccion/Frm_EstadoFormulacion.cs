@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -33,7 +30,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.Selecting += new TabControlCancelEventHandler(tbc_Mnt_Selecting);
         }
 
-        private void tbc_Mnt_Selecting (object sender, TabControlCancelEventArgs e)
+        private void tbc_Mnt_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if (dgv_Mnt.SelectedRows.Count > 0)
             { Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstadoFormulacion"].Value.ToString())); }
@@ -85,16 +82,16 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
-            if(dgv_Mnt.RowCount == 0) { MessageBox.Show("No existe Registros a Eliminar", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            if (dgv_Mnt.RowCount == 0) { MessageBox.Show("No existe Registros a Eliminar", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
 
-            if(MessageBox.Show("Esta Seguro de Eliminar", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro de Eliminar", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = PR_aEstadoFormulacion_CN._Instancia.Eliminar_EstadoFormulacion(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstadoFormulacion"].Value.ToString()));
 
                 if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino el Registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                else { MessageBox.Show(rpta, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error); }                
+                else { MessageBox.Show(rpta, "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            Cargar_Datos();         
+            Cargar_Datos();
         }
 
         private void tls_Grabar_Click(object sender, EventArgs e)
@@ -112,10 +109,10 @@ namespace Capa_Presentacion.Formularios
             if (Nuevo) rpta = PR_aEstadoFormulacion_CN._Instancia.Agregar_EstadoCalificacion(datos);
             if (editar) rpta = PR_aEstadoFormulacion_CN._Instancia.Actualizar_EstadoFormulacion(datos);
 
-            if(rpta == "PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (Nuevo) { MessageBox.Show("Se Agrego un Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                else { MessageBox.Show("Se Actualizo el Registro", "Actualizacion registro", MessageBoxButtons.OK, MessageBoxIcon.Information);}
+                else { MessageBox.Show("Se Actualizo el Registro", "Actualizacion registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             }
             else { MessageBox.Show(rpta, "Error al Procesar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
@@ -123,7 +120,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.SelectTab(1);
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
             Estado_Toolbar(false);
-            Cargar_Datos(); 
+            Cargar_Datos();
         }
 
         private void tls_Deshacer_Click(object sender, EventArgs e)
@@ -139,7 +136,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-            if(SetupThePrinting())
+            if (SetupThePrinting())
             { PrintDocument.Print(); }
         }
 
@@ -237,7 +234,7 @@ namespace Capa_Presentacion.Formularios
 
         private bool verificardatos()
         {
-            if(txt_NombreEstadoformulacion.Text.Trim() == string.Empty)
+            if (txt_NombreEstadoformulacion.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Faltan Alfunos Datos", "Mensaje Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ErrorIcono.SetError(txt_NombreEstadoformulacion, "Ingrese Estado Formulacion");

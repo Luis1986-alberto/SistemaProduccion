@@ -57,7 +57,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aEtiqueta (Descripcion, Orden_Sistemas) values(@descripcion, @orden_sistemas)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion = aetiqueta.Descripcion, orden_sistemas = aetiqueta.Orden_Sistemas});
+                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion = aetiqueta.Descripcion, orden_sistemas = aetiqueta.Orden_Sistemas });
                     return "PROCESADO";
                 }
             }
@@ -95,6 +95,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

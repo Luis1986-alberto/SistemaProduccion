@@ -20,7 +20,7 @@ namespace Capa_Negocios
         { return PR_aFormaEmpaquetado_CD._Instancia.Traer_FormaEmpaquetadoPorId(id); }
         public IEnumerable<PR_aFormaEmpaquetado> Buscar_DetalleEmpaquetado(string detalleempaquetado)
         {
-           var lista = PR_aFormaEmpaquetado_CD._Instancia.Lista_FormaEmpaquetado().ToList();
+            var lista = PR_aFormaEmpaquetado_CD._Instancia.Lista_FormaEmpaquetado().ToList();
             return from buscar in lista where buscar.Detalle_Empaquetado == detalleempaquetado select buscar;
         }
 

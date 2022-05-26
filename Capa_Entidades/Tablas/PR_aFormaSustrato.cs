@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aFormaSustrato
     {
         public byte IdFormaSustrato { get; set; }
         public string Descripcion_Forma { get; set; }
 
-        
+
 
         public PR_aFormaSustrato()
         { }

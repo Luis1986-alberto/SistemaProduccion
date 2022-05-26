@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -69,7 +66,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_IdEstado.Text = "0";
             txt_NombreEstado.Text = "";
-           
+
             txt_NombreEstado.Enabled = true;
             txt_NombreEstado.Focus();
         }
@@ -119,7 +116,7 @@ namespace Capa_Presentacion.Formularios
             var datos = new PR_aEstado()
             {
                 IdEstado = byte.Parse(txt_IdEstado.Text),
-                Nombre_Estado = txt_NombreEstado.Text,               
+                Nombre_Estado = txt_NombreEstado.Text,
             };
 
             if (Verificar_Datos() == false) { return; }

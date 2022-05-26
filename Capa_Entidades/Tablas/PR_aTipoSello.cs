@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aTipoSello
     {
@@ -12,7 +6,7 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_TipoSello { get; set; }
 
         public PR_aTipoSello()
-        {  }
+        { }
 
         public PR_aTipoSello(byte idTipoSello, string descripcion_TipoSello)
         {

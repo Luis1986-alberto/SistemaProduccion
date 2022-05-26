@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -87,7 +84,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Esta Seguro que desea eliminar", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro que desea eliminar", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = PR_aEspesorTuco_CN._Instancia.Eliminar_EspesorTuco(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEspesorTuco"].Value.ToString()));
                 if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino con Exito", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -100,12 +97,12 @@ namespace Capa_Presentacion.Formularios
         {
             string rpta = "";
             var datos = new PR_aEspesorTuco
-                                            {
-                                                IdEspesorTuco = byte.Parse(txt_IdEspesorTuco.Text),
-                                                Medida_EspesorTuco = decimal.Parse(Nud_EspesorTuco.Value.ToString()),
-                                                IdUnidadEspesorTuco = byte.Parse(Cbo_UnidadMedida.SelectedValue.ToString()),
-                                            };
-            if (bln_Nuevo) {  rpta = PR_aEspesorTuco_CN._Instancia.Agregar_EspesorTuco(datos); }
+            {
+                IdEspesorTuco = byte.Parse(txt_IdEspesorTuco.Text),
+                Medida_EspesorTuco = decimal.Parse(Nud_EspesorTuco.Value.ToString()),
+                IdUnidadEspesorTuco = byte.Parse(Cbo_UnidadMedida.SelectedValue.ToString()),
+            };
+            if (bln_Nuevo) { rpta = PR_aEspesorTuco_CN._Instancia.Agregar_EspesorTuco(datos); }
             if (bln_Editar) { rpta = PR_aEspesorTuco_CN._Instancia.Actualizar_EspesorTuco(datos); }
 
             if (rpta == "PROCESADO")
@@ -183,7 +180,7 @@ namespace Capa_Presentacion.Formularios
             dgv_Mnt.DataSource = Listado_Ordenado;
         }
 
-        private void tls_Refrescar_Click(object sender, EventArgs e) =>  Cargar_Datos(); 
+        private void tls_Refrescar_Click(object sender, EventArgs e) => Cargar_Datos();
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {

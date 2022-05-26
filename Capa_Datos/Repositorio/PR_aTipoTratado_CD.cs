@@ -21,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aTipoTratado>Lista_TipoTratado()
+        public IEnumerable<PR_aTipoTratado> Lista_TipoTratado()
         {
             try
             {
@@ -34,14 +34,14 @@ namespace Capa_Datos.Repositorio
             catch(Exception ex) { throw new Exception("Error al listar", ex); }
         }
 
-        public IEnumerable<PR_aTipoTratado>Lista_TipoTratadoPorId(Int32 idtipotratado)
+        public IEnumerable<PR_aTipoTratado> Lista_TipoTratadoPorId(Int32 idtipotratado)
         {
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = " select IdTipoTratado, Tipo_Tratado From PR_aTipoTratado where IdTipoTratado = @id ";
-                    return conexionsql.Query<PR_aTipoTratado>(sql, new { id = idtipotratado } );
+                    return conexionsql.Query<PR_aTipoTratado>(sql, new { id = idtipotratado });
                 }
             }
             catch(Exception ex) { throw new Exception("Error al listar", ex); }
@@ -93,6 +93,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

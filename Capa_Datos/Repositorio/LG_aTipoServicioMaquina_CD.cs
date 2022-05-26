@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -24,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aTipoServicioMaquina>Lista_ServicioMaquina()
+        public IEnumerable<LG_aTipoServicioMaquina> Lista_ServicioMaquina()
         {
             try
             {
@@ -35,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("ERROR AL LISTAR", Ex);}
+            { throw new Exception("ERROR AL LISTAR", Ex); }
         }
 
         public LG_aTipoServicioMaquina TraerPorIdServicioMaquina(Int32 idserviciomaquina)
@@ -64,7 +61,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Agregar", ex);}
+            { throw new Exception("Error al Agregar", ex); }
         }
 
         public string Actualizar_ServicioMaquina(LG_aTipoServicioMaquina tiposerviciomaquina)
@@ -74,8 +71,10 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoServicioMaquina set Descripcion_TipoServicio = @descripcion_tiposervicio where IdTipoServicio = @id ";
-                    ConexionSQL.Execute(sqlupdate, new {id = tiposerviciomaquina.IdTipoServicio,
-                                                        descripcion_tiposervicio = tiposerviciomaquina.Descripcion_TipoServicio });
+                    ConexionSQL.Execute(sqlupdate, new {
+                        id = tiposerviciomaquina.IdTipoServicio,
+                        descripcion_tiposervicio = tiposerviciomaquina.Descripcion_TipoServicio
+                    });
                     return "PROCESADO";
                 }
             }
@@ -90,7 +89,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "Delete LG_aTipoServicioMaquina where IdTipoServicio = @id ";
-                    ConexionSQL.Execute(sqldelete, new { id =idtiposerviciomaquina });
+                    ConexionSQL.Execute(sqldelete, new { id = idtiposerviciomaquina });
                     return "PROCESADO";
                 }
             }

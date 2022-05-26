@@ -53,7 +53,7 @@ namespace Capa_Presentacion.Formularios
             {
                 txt_IdIGV.Text = i.IdIGV.ToString();
                 Nud_PorcentajeIGV.Value = i.Porcentaje;
-                Chk_Activo.Checked = (i.Flag_Activo ==1)?true:false;
+                Chk_Activo.Checked = (i.Flag_Activo == 1) ? true : false;
             }
         }
 
@@ -120,7 +120,7 @@ namespace Capa_Presentacion.Formularios
             {
                 IdIGV = byte.Parse(txt_IdIGV.Text),
                 Porcentaje = decimal.Parse(Nud_PorcentajeIGV.Text),
-                Flag_Activo = byte.Parse((Chk_Activo.Checked == true) ? "1" :"0"),
+                Flag_Activo = byte.Parse((Chk_Activo.Checked == true) ? "1" : "0"),
             };
 
             if (Verificar_Datos() == false) { return; }

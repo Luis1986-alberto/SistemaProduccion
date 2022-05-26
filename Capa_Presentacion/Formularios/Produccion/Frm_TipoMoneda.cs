@@ -112,7 +112,7 @@ namespace Capa_Presentacion.Formularios
             if (bln_Nuevo) rpta = PR_aTipoMoneda_CN._Instancia.Agregar_TipoMoneda(datos);
             if (bln_Editar) rpta = PR_aTipoMoneda_CN._Instancia.Actualizar_TipoMoneda(datos);
 
-            if(rpta =="PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (bln_Nuevo) { MessageBox.Show("Se Agrego un Nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 if (bln_Editar) { MessageBox.Show("Se Actualizo el Registro", "Actualizar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -161,12 +161,12 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            { PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
         {
-            if(SetupThePrinting())
+            if (SetupThePrinting())
             {
                 PrintPreviewDialog MyPrintPreviewDialog = new PrintPreviewDialog();
                 MyPrintPreviewDialog.Document = PrintDocument;

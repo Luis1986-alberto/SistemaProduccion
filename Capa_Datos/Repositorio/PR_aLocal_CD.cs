@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 namespace Capa_Datos.Repositorio
 {
     public class PR_aLocal_CD
-    {   
+    {
         public static readonly PR_aLocal_CD _Instancia = new PR_aLocal_CD();
         private Inicio principal = new Inicio();
         private string cadenaconexion = "";
@@ -55,10 +55,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into PR_aLocal (Nombre_Local, Abreviatura_Local, Nave) values (@nombre_local, @abreviatura_local, @nave)";
-                    conexionsql.Execute(sqlinsert, new { nombre_local = alocal.Nombre_Local,
-                                                               abreviatura_local = alocal.Abreviatura_Local,
-                                                               nave = alocal.Nave
-                                                              });
+                    conexionsql.Execute(sqlinsert, new {
+                        nombre_local = alocal.Nombre_Local,
+                        abreviatura_local = alocal.Abreviatura_Local,
+                        nave = alocal.Nave
+                    });
                     return "PROCESADO";
                 }
             }
@@ -72,12 +73,13 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqledit = "update PR_aLocal set Nombre_Local = @nombre_local, Abreviatura_Local = @abreviatura_local, Nave = @nave where IdLocal = @id";
-                    conexionsql.ExecuteScalar(sqledit, new {    id = alocal.IdLocal,
-                                                                nombre_local = alocal.Nombre_Local,
-                                                                abreviatura_local = alocal.Abreviatura_Local,
-                                                                nave = alocal.Nave
-                                                            });
-               
+                    conexionsql.ExecuteScalar(sqledit, new {
+                        id = alocal.IdLocal,
+                        nombre_local = alocal.Nombre_Local,
+                        abreviatura_local = alocal.Abreviatura_Local,
+                        nave = alocal.Nave
+                    });
+
                     return "PROCESADO";
                 }
             }
@@ -98,6 +100,6 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-       
+
     }
 }

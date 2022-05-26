@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aGrupo_Produccion set Descripcion_GrupoProd = @descripcion_grupoprod where IdGrupoProd = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = grupo_produccion.IdGrupoProd, descripcion_grupoprod = grupo_produccion.Descripcion_GrupoProd});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = grupo_produccion.IdGrupoProd, descripcion_grupoprod = grupo_produccion.Descripcion_GrupoProd });
                     return "PROCESADO";
                 }
             }
@@ -94,6 +94,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

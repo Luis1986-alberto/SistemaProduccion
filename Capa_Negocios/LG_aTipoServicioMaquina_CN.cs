@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -39,7 +37,7 @@ namespace Capa_Negocios
             return LG_aTipoServicioMaquina_CD._Instancia.Actualizar_ServicioMaquina(tiposerviciomaq);
         }
 
-        public string Eliminar (Int32 idtiposerviciomaq)
+        public string Eliminar(Int32 idtiposerviciomaq)
         { return LG_aTipoServicioMaquina_CD._Instancia.Eliminar_ServicioMaquina(idtiposerviciomaq); }
 
 

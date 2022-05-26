@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -16,13 +14,13 @@ namespace Capa_Negocios
         { get { return MP_aBanco_CN._Instancia; } }
 
 
-        public List<MP_aBanco>Lista_Bancos()
+        public List<MP_aBanco> Lista_Bancos()
         { return MP_aBanco_CD._Instancia.Lista_Bancos().ToList(); }
 
-        public IEnumerable<MP_aBanco>TraerPorId(Int32 idbanco)
+        public IEnumerable<MP_aBanco> TraerPorId(Int32 idbanco)
         { return MP_aBanco_CD._Instancia.Traer_BancoPorId(idbanco); }
 
-        public IEnumerable<MP_aBanco>Buscar_NombreBanco(string nombrebanco)
+        public IEnumerable<MP_aBanco> Buscar_NombreBanco(string nombrebanco)
         {
             var lista = MP_aBanco_CD._Instancia.Lista_Bancos();
             return from BAN in lista where BAN.Nombre_Banco == nombrebanco select BAN;

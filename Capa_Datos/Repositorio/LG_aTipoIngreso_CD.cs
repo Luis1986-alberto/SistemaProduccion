@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoIngreso set Nombre_TipoIngreso = @nombre_tipoingreso where IdTipoIngreso = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = tipoingreso.IdTipoIngreso, nombre_tipoingreso = tipoingreso.Nombre_TipoIngreso});
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = tipoingreso.IdTipoIngreso, nombre_tipoingreso = tipoingreso.Nombre_TipoIngreso });
                     return "PROCESADO";
                 }
             }
@@ -94,6 +94,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEstado, Nombre_estado from PR_aEstado";
                     return conexionsql.Query<PR_aEstado>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("error al listar", ex); }
         }
 
@@ -39,13 +39,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEstado, Nombre_estado from PR_aEstado where IdEstado = @id";
                     return conexionsql.Query<PR_aEstado>(sql, new { id = idestado });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -53,14 +53,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aEstado (Nombre_estado) values(@nombre_estado)";
                     conexionsql.ExecuteScalar(sqlinsert, new { nombre_estado = aestado.Nombre_Estado });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error asl agregar", ex); }
         }
 
@@ -68,14 +68,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aEstado set Nombre_estado = @nombre_estado where IdEstado = @idestado";
                     conexionsql.ExecuteScalar(sqlupdate, new { idestado = aestado.IdEstado, nombre_estado = aestado.Nombre_Estado });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Actualizar", ex); }
         }
 
@@ -83,17 +83,17 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aEstado where IdEstado = @idestado";
                     conexionsql.ExecuteScalar(sqldelete, new { idestado = idestado });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-      
+
     }
 }

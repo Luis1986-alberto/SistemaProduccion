@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -14,8 +11,8 @@ namespace Capa_Datos.Repositorio
         public static readonly LG_aFormaPago_CD _Instancia = new LG_aFormaPago_CD();
         private Inicio principal = new Inicio();
         private string cadenaconexion;
-        
-        public static LG_aFormaPago_CD Instancia 
+
+        public static LG_aFormaPago_CD Instancia
         { get { return LG_aFormaPago_CD._Instancia; } }
 
 
@@ -60,7 +57,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into LG_aFormaPago (Nombre_FormaPago, Dias) values (@nombre_formapago, @dias)";
-                    conexionsql.ExecuteScalar(sqlinsert, new {nombre_formapago = formapago.Nombre_FormaPago, dias = formapago.Dias});
+                    conexionsql.ExecuteScalar(sqlinsert, new { nombre_formapago = formapago.Nombre_FormaPago, dias = formapago.Dias });
                     return "PROCESADO";
                 }
             }
@@ -74,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Update LG_aFormaPago set Nombre_FormaPago = @nombre_formapago, Dias = @dias where IdFormaPago = @id ";
-                    conexionsql.ExecuteScalar(sqlinsert, new {id = formapago.IdFormaPago, nombre_formapago = formapago.Nombre_FormaPago, dias = formapago.Dias });
+                    conexionsql.ExecuteScalar(sqlinsert, new { id = formapago.IdFormaPago, nombre_formapago = formapago.Nombre_FormaPago, dias = formapago.Dias });
                     return "PROCESADO";
                 }
             }

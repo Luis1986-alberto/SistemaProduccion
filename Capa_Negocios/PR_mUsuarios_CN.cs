@@ -1,10 +1,7 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -28,7 +25,7 @@ namespace Capa_Negocios
 
         public string Agregar_Usuario(PR_mUsuarios usuarios)
         {
-            if (PR_mUsuarios_CD.Instancia.Lista_Usuarios().Count() > 0) return "YA EXISTE ESTE USUARIO";            
+            if (PR_mUsuarios_CD.Instancia.Lista_Usuarios().Count() > 0) return "YA EXISTE ESTE USUARIO";
             return PR_mUsuarios_CD._Instancia.Agregar_Usuario(usuarios);
         }
 

@@ -56,10 +56,11 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aSubMenu (Detalle_SubMenu, Orden_SubMenu, SubMenu ) values(@detalle_submenu, @orden_submenu, @submenu)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { detalle_submenu = submenu.Detalle_SubMenu,
-                                                                orden_submenu = submenu.Orden_SubMenu,
-                                                                submenu = submenu.SubMenu
-                                                             });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        detalle_submenu = submenu.Detalle_SubMenu,
+                        orden_submenu = submenu.Orden_SubMenu,
+                        submenu = submenu.SubMenu
+                    });
                     return "PROCESADO";
                 }
             }
@@ -75,11 +76,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update PR_aSubMenu set Detalle_SubMenu = @detalle_submenu, Orden_SubMenu = @orden_submenu, SubMenu = @submenu where IdSubMenu = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = submenu.IdSubMenu,
-                                                                detalle_submenu = submenu.Detalle_SubMenu,
-                                                                orden_submenu = submenu.Orden_SubMenu,
-                                                                submenu = submenu.SubMenu
-                                                            });
+                        id = submenu.IdSubMenu,
+                        detalle_submenu = submenu.Detalle_SubMenu,
+                        orden_submenu = submenu.Orden_SubMenu,
+                        submenu = submenu.SubMenu
+                    });
                     return "PROCESADO";
                 }
             }
@@ -102,6 +103,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

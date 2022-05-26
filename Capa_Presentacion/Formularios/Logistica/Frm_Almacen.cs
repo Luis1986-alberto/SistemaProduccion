@@ -27,7 +27,7 @@ namespace Capa_Presentacion.Formularios
         {
             tbc_Mnt.SelectTab(1);
             Cbo_Empresa.DataSource = PR_aEmpresa_CN._Instancia.Lista_Empresas();
-         
+
             Cargar_Datos();
             tbc_Mnt.Selecting += new TabControlCancelEventHandler(tbc_Mnt_Selecting);
         }

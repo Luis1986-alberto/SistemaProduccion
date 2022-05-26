@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -24,7 +21,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<PR_aTipoRubro>Lista_TipoRubros()
+        public IEnumerable<PR_aTipoRubro> Lista_TipoRubros()
         {
             try
             {
@@ -36,10 +33,10 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
-        public IEnumerable<PR_aTipoRubro>Traer_TipoRubrosPorId(byte idtiporubro)
+        public IEnumerable<PR_aTipoRubro> Traer_TipoRubrosPorId(byte idtiporubro)
         {
             try
             {
@@ -60,9 +57,9 @@ namespace Capa_Datos.Repositorio
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
-                {   
+                {
                     var sqlinsert = "Insert Into PR_aTipoRubro (Nombre_TipoRubro) values (@nombre_tiporubro)";
-                    conexionsql.Execute(sqlinsert, new { nombre_tiporubro = tiporubro.Nombre_TipoRubro});
+                    conexionsql.Execute(sqlinsert, new { nombre_tiporubro = tiporubro.Nombre_TipoRubro });
                     return "PROCESADO";
                 }
             }
@@ -97,7 +94,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            { throw new Exception("Error al eliminar", ex);}
+            { throw new Exception("Error al eliminar", ex); }
         }
 
 

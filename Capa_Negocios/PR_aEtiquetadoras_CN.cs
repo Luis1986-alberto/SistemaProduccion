@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -13,15 +11,15 @@ namespace Capa_Negocios
         public static readonly PR_aEtiquetadoras_CN _Instancia = new PR_aEtiquetadoras_CN();
 
         public static PR_aEtiquetadoras_CN Instancia
-        { get { return PR_aEtiquetadoras_CN._Instancia; }  }
+        { get { return PR_aEtiquetadoras_CN._Instancia; } }
 
         public List<PR_aEtiquetadoras> Lista_Etiquetadoras()
-        {return PR_aEtiquetadoras_CD.Intancia.Lista_Etiquetadoras().ToList();}
+        { return PR_aEtiquetadoras_CD.Intancia.Lista_Etiquetadoras().ToList(); }
 
         public IEnumerable<PR_aEtiquetadoras> traerPorId(byte idetiquetadora)
         { return PR_aEtiquetadoras_CD.Intancia.Traer_EtiquetadoraPorId(idetiquetadora); }
 
-        public IEnumerable<PR_aEtiquetadoras> Buscar_Codigo( string codigo)
+        public IEnumerable<PR_aEtiquetadoras> Buscar_Codigo(string codigo)
         {
             var lista = PR_aEtiquetadoras_CD.Intancia.Lista_Etiquetadoras();
             return from lstet in lista where lstet.Codigo_Etiquetadora == codigo select lstet;

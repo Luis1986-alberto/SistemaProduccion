@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aTipoMaterialExtruir set Descripcion_MaterialExtruir = @descripcion_materialextruir, Abreviatura = @abreviatura where IdTipoMaterialExtruir = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new {id = tipomaterialextruir.IdTipoMaterialExtruir, descripcion_materialextruir = tipomaterialextruir.Descripcion_MaterialExtruir, abreviatura = tipomaterialextruir.Abreviatura });
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = tipomaterialextruir.IdTipoMaterialExtruir, descripcion_materialextruir = tipomaterialextruir.Descripcion_MaterialExtruir, abreviatura = tipomaterialextruir.Abreviatura });
                     return "PROCESADO";
                 }
             }

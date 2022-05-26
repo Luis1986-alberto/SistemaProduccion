@@ -5,8 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -17,7 +15,7 @@ namespace Capa_Negocios
         public static LG_aMes_CN Instancia
         { get { return LG_aMes_CN._Instancia; } }
 
-        public IEnumerable<LG_aMes>Lista_Mes()
+        public IEnumerable<LG_aMes> Lista_Mes()
         { return LG_aMes_CD._Instancia.Lista_Mes(); }
 
         public LG_aMes traerPorID(int idmes)

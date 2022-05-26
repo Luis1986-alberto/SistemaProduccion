@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -23,7 +19,7 @@ namespace Capa_Entidades.Tablas
         public string Pais { get => _Pais; set => _Pais = value; }
 
         public PR_aFabricanteMaterial()
-        {  }
+        { }
 
         public PR_aFabricanteMaterial(int idFabricanteMaterial, string razon_Social, string direccion, string numero_RUC, string numero_Telefono, string pais)
         {

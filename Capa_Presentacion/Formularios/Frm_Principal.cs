@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -15,7 +9,7 @@ namespace Capa_Presentacion.Formularios
         public Frm_Principal()
         {
             InitializeComponent();
-           this.Closing += new CancelEventHandler(Frm_Principal_Closing);
+            this.Closing += new CancelEventHandler(Frm_Principal_Closing);
         }
 
         void Frm_Principal_Closing(object sender, CancelEventArgs e)
@@ -25,12 +19,12 @@ namespace Capa_Presentacion.Formularios
 
         private void cmd_Produccion_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cmd_CorePrincipal_Click(object sender, EventArgs e)
         {
-            MDIFrm_Produccion produccion = new MDIFrm_Produccion();
+            MDIFrm_CorePrincipal produccion = new MDIFrm_CorePrincipal();
             produccion.ShowDialog();
 
         }

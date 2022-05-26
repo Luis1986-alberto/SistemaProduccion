@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -35,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Listar", ex); }
+            { throw new Exception("Error al Listar", ex); }
         }
 
         public MP_aTipoMaterial TipoMaterialPorId(Int32 idtipomaterial)
@@ -49,10 +46,10 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Traer Por Id",ex) ;}
+            { throw new Exception("Error al Traer Por Id", ex); }
         }
 
-        public string Agregar_TipoMaterial(MP_aTipoMaterial tipomaterial )
+        public string Agregar_TipoMaterial(MP_aTipoMaterial tipomaterial)
         {
             try
             {
@@ -60,16 +57,16 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlInsert = "Insert Into MP_aTipoMaterial (Descripcion, Abreviatura, Orden_Gerencia, Codigo_Sustrato) values (@descripcion, @abreviatura, @orden_gerencia, @codigo_sustrato)";
                     conexionSQl.Execute(sqlInsert, new {
-                                                            descripcion = tipomaterial.Descripcion,
-                                                            abreviatura = tipomaterial.Abreviatura,
-                                                            orden_gerencia = tipomaterial.Orden_Gerencia,
-                                                            codigo_sustrato = tipomaterial.Codigo_Sustrato
-                                                        });
+                        descripcion = tipomaterial.Descripcion,
+                        abreviatura = tipomaterial.Abreviatura,
+                        orden_gerencia = tipomaterial.Orden_Gerencia,
+                        codigo_sustrato = tipomaterial.Codigo_Sustrato
+                    });
                     return "PROCESADO";
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Agregar", ex);}
+            { throw new Exception("Error al Agregar", ex); }
         }
 
         public string Actualizar_TipoMaterial(MP_aTipoMaterial tipomaterial)
@@ -80,17 +77,17 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlupdate = "Update MP_aTipoMaterial set Descripcion = @descripcion, Abreviatura = @abreviatura, Orden_Gerencia = @orden_gerencia, Codigo_Sustrato = @codigo_sustrato where IdTipoMaterial = @id";
                     conexionSQL.ExecuteScalar(sqlupdate, new {
-                                                                id = tipomaterial.IdTipoMaterial,
-                                                                descripcion = tipomaterial.Descripcion,
-                                                                abreviatura = tipomaterial.Abreviatura,
-                                                                orden_gerencia = tipomaterial.Orden_Gerencia,
-                                                                codigo_sustrato = tipomaterial.Codigo_Sustrato
-                                                            });
+                        id = tipomaterial.IdTipoMaterial,
+                        descripcion = tipomaterial.Descripcion,
+                        abreviatura = tipomaterial.Abreviatura,
+                        orden_gerencia = tipomaterial.Orden_Gerencia,
+                        codigo_sustrato = tipomaterial.Codigo_Sustrato
+                    });
                     return "PROCESADO";
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Actualizar", ex);}
+            { throw new Exception("Error al Actualizar", ex); }
         }
 
         public string Eliminar_TipoMaterial(Int32 idtipomaterial)
@@ -105,7 +102,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Eliminar", ex);}
+            { throw new Exception("Error al Eliminar", ex); }
         }
 
     }

@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -16,7 +13,7 @@ namespace Capa_Datos.Repositorio
         private string cadenaconexion;
 
         private static LG_aGrupo_CD Instancia
-        { get { return LG_aGrupo_CD._Instancia;} }
+        { get { return LG_aGrupo_CD._Instancia; } }
 
         public LG_aGrupo_CD()
         {
@@ -25,7 +22,7 @@ namespace Capa_Datos.Repositorio
         }
 
 
-        public IEnumerable<LG_aGrupo>Lista_Grupos()
+        public IEnumerable<LG_aGrupo> Lista_Grupos()
         {
             try
             {
@@ -36,7 +33,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
         public LG_aGrupo TraerPorIdGrupos(Int32 idgrupo)
@@ -61,9 +58,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "insert into LG_aGrupo (Nombre_Grupo, Codigo_Grupo, IdUsuario_PC, IdUsuario ) values " +
                         "                                 (@nombre_grupo, @codigo_grupo, @idusuario_pc, @idusuario)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { nombre_grupo = grupos.Nombre_Grupo, codigo_grupo = grupos.Codigo_Grupo,
-                                                               idusuario_pc = Environment.UserName, idusuario = grupos.IdUsuario
-                                                             });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        nombre_grupo = grupos.Nombre_Grupo, codigo_grupo = grupos.Codigo_Grupo,
+                        idusuario_pc = Environment.UserName, idusuario = grupos.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
@@ -78,9 +76,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Update LG_aGrupo set Nombre_Grupo = @nombre_grupo, Codigo_grupo = @codigo_grupo, IdUsuario_PC = @idusuario_pc, " +
                                     " idusuario = @idusuario where IdGrupo = @id ";
-                    conexionsql.ExecuteScalar(sqlinsert, new { id = grupos.IdGrupo, nombre_grupo = grupos.Nombre_Grupo, codigo_grupo = grupos.Codigo_Grupo,
-                                                               idusuario_pc = Environment.UserName, idusuario = grupos.IdUsuario
-                                                              });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        id = grupos.IdGrupo, nombre_grupo = grupos.Nombre_Grupo, codigo_grupo = grupos.Codigo_Grupo,
+                        idusuario_pc = Environment.UserName, idusuario = grupos.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }

@@ -95,6 +95,7 @@
     <Compile Include="Repositorio\LG_aTipoTrabajoMaquina_CD.cs" />
     <Compile Include="Repositorio\LG_aTipo_CD.cs" />
     <Compile Include="Repositorio\LG_aUbicacionInmueble_CD.cs" />
+    <Compile Include="Repositorio\LG_xPeriodo_CD.cs" />
     <Compile Include="Repositorio\LG_xProveedor_CD.cs" />
     <Compile Include="Repositorio\MP_aAgenteAduanero_CD.cs" />
     <Compile Include="Repositorio\MP_aAlmacenAduana_CD.cs" />
@@ -114,7 +115,7 @@
     <Compile Include="Repositorio\PR_aAdhesivo_CD.cs" />
     <Compile Include="Repositorio\PR_aArea_CD.cs" />
     <Compile Include="Repositorio\PR_aAsa_CD.cs" />
-    <Compile Include="Repositorio\PR_aAño_CD.cs" />
+    <Compile Include="Repositorio\LG_aAño_CD.cs" />
     <Compile Include="Repositorio\PR_aCargoTrabajador_CD.cs" />
     <Compile Include="Repositorio\PR_aCarreta_CD.cs" />
     <Compile Include="Repositorio\PR_aCodigoEvento_CD.cs" />

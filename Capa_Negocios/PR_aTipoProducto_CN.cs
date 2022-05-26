@@ -21,7 +21,7 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_aTipoProducto> Buscar_NombreTipoProducto(string nombretipoproducto)
         {
-           var lista = PR_aTipoProducto_CD._Instancia.Lista_TipoProducto().ToList();
+            var lista = PR_aTipoProducto_CD._Instancia.Lista_TipoProducto().ToList();
             return from buscar in lista where buscar.Nombre_TipoProducto == nombretipoproducto select buscar;
         }
 

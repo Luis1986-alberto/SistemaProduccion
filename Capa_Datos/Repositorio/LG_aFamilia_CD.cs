@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -61,11 +58,12 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "insert into LG_aFamilia (Nombre_Familia, Codigo_Familia, IdUsuario_PC,  IdUsuario) values " +
                                                             "(@nombre_familia, @codigo_familia, @idusuario_pc, @idusuario)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { nombre_familia = familia.Nombre_Familia,
-                                                                codigo_familia = familia.Codigo_Familia,
-                                                                idusuario_pc = Environment.UserName,
-                                                                idusuario = familia.IdUsuario
-                                                              });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        nombre_familia = familia.Nombre_Familia,
+                        codigo_familia = familia.Codigo_Familia,
+                        idusuario_pc = Environment.UserName,
+                        idusuario = familia.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
@@ -81,12 +79,12 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "update LG_aFamilia set  Nombre_Familia = @nombre_familia, Codigo_Familia = @codigo_familia, IdUsuario_PC = @idusuario_pc, " +
                                     " IdUsuario = @idusuario  where IdFamilia = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = familia.IdFamilia,
-                                                                nombre_familia = familia.Nombre_Familia,
-                                                                codigo_familia = familia.Codigo_Familia,
-                                                                idusuario_pc = Environment.UserName,
-                                                                idusuario = familia.IdUsuario
-                                                            });
+                        id = familia.IdFamilia,
+                        nombre_familia = familia.Nombre_Familia,
+                        codigo_familia = familia.Codigo_Familia,
+                        idusuario_pc = Environment.UserName,
+                        idusuario = familia.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }

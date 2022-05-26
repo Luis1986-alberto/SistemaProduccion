@@ -50,7 +50,7 @@ namespace Capa_Presentacion.Formularios
         {
             var datos = PR_aEtiquetadoras_CN._Instancia.traerPorId(IdEtiquetadora);
 
-            foreach(var i in datos)
+            foreach (var i in datos)
             {
                 txt_IdEtiquetadora.Text = i.IdEtiquetadora.ToString();
                 txt_MarcaEtiquetadora.Text = i.Marca_Etiquetadora.ToString();
@@ -83,7 +83,7 @@ namespace Capa_Presentacion.Formularios
             bln_Editar = true;
 
             tbc_Mnt.SelectTab(0);
-            
+
             txt_CodigoEtiquetadora.Enabled = true;
             txt_MarcaEtiquetadora.Enabled = true;
             txt_ModeloEtiquetadora.Enabled = true;
@@ -98,7 +98,7 @@ namespace Capa_Presentacion.Formularios
                 return;
             }
 
-            if (MessageBox.Show("Esta Seguro de Eliminar","Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro de Eliminar", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = PR_aEtiquetadoras_CN._Instancia.Eliminar_Etiquetadora(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEtiquetadora"].Value.ToString()));
                 if (rpta == "PROCESADO") MessageBox.Show("Se Elimino Con Exito", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -124,7 +124,7 @@ namespace Capa_Presentacion.Formularios
             if (bln_Nuevo) { rpta = PR_aEtiquetadoras_CN._Instancia.Agregar_Etiquetadora(datos); }
             if (bln_Editar) { rpta = PR_aEtiquetadoras_CN._Instancia.Actualizar_Etiquetadora(datos); }
 
-            if(rpta == "PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (bln_Nuevo) { MessageBox.Show("Se Agrego UN Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show("Se Actualiso un Registro", "Actualizacion Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -319,6 +319,6 @@ namespace Capa_Presentacion.Formularios
             return true;
         }
 
-       
+
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class LG_aTipoCompra
     {
@@ -12,7 +6,7 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_TipoCompra { get; set; }
 
         public LG_aTipoCompra()
-        {   }
+        { }
 
         public LG_aTipoCompra(byte idtipocompra, string descripcion_tipocompra)
         {

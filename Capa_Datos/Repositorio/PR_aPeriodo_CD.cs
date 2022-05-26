@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aPeriodo set Nombre_Periodo = @nombre_periodo, Flag_Activo = @Flag_activo where IdPeriodo = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new {id = periodo.IdPeriodo, nombre_periodo = periodo.Nombre_Periodo, flag_activo = periodo.Flag_Activo });
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = periodo.IdPeriodo, nombre_periodo = periodo.Nombre_Periodo, flag_activo = periodo.Flag_Activo });
                     return "PROCESADO";
                 }
             }
@@ -94,6 +94,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

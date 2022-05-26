@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -12,7 +8,7 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_TrabajoMaquina { get; set; }
 
         public LG_aTipoTrabajoMaquina()
-        {   }
+        { }
 
         public LG_aTipoTrabajoMaquina(Int32 idtrabajomaquina, string descripcion_trabajomaquina)
         {

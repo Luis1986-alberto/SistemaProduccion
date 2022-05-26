@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -13,9 +9,9 @@ namespace Capa_Entidades.Tablas
         public Int16 Dias { get; set; }
 
         public LG_aFormaPago()
-        {  }
+        { }
 
-        public LG_aFormaPago(byte idformapago, string nombre_formapago, Int16 dias )
+        public LG_aFormaPago(byte idformapago, string nombre_formapago, Int16 dias)
         {
             this.IdFormaPago = idformapago;
             this.Nombre_FormaPago = nombre_formapago;

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aColor
     {
         public byte IdColor { get; set; }
         public string Nombre_Color { get; set; }
-        public string Codigo_Color {get; set;}
+        public string Codigo_Color { get; set; }
 
-        
+
 
         public PR_aColor()
         { }

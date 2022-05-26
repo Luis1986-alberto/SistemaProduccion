@@ -81,6 +81,18 @@
     <Compile Include="Clases\SortableBindingList.cs" />
     <Compile Include="Clases\Validar_Campos.cs" />
     <Compile Include="Clases\Variables_Globales.cs" />
+    <Compile Include="Formularios\Frm_Mes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Mes.Designer.cs">
+      <DependentUpon>Frm_Mes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Periodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Periodo.Designer.cs">
+      <DependentUpon>Frm_Periodo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Logistica\Frm_CondicionPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -585,11 +597,11 @@
     <Compile Include="Formularios\Frm_Usuario.Designer.cs">
       <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\MDIFrm_Produccion.cs">
+    <Compile Include="Formularios\MDIFrm_CorePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\MDIFrm_Produccion.Designer.cs">
-      <DependentUpon>MDIFrm_Produccion.cs</DependentUpon>
+    <Compile Include="Formularios\MDIFrm_CorePrincipal.Designer.cs">
+      <DependentUpon>MDIFrm_CorePrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -599,6 +611,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\Frm_Mes.resx">
+      <DependentUpon>Frm_Mes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Periodo.resx">
+      <DependentUpon>Frm_Periodo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Logistica\Frm_CondicionPago.resx">
       <DependentUpon>Frm_CondicionPago.cs</DependentUpon>
     </EmbeddedResource>
@@ -851,8 +869,8 @@
     <EmbeddedResource Include="Formularios\Frm_Usuario.resx">
       <DependentUpon>Frm_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\MDIFrm_Produccion.resx">
-      <DependentUpon>MDIFrm_Produccion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\MDIFrm_CorePrincipal.resx">
+      <DependentUpon>MDIFrm_CorePrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

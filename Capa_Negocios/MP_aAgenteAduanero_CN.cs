@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -15,14 +13,14 @@ namespace Capa_Negocios
         public static MP_aAgenteAduanero_CN _Instancia
         { get { return MP_aAgenteAduanero_CN.Instancia; } }
 
-        public List<MP_aAgenteAduanero>Lista_AgenteAduanero()
+        public List<MP_aAgenteAduanero> Lista_AgenteAduanero()
         { return MP_aAgenteAduanero_CD.Instancia.Lista_AgenteAduanero().ToList(); }
 
-        public List<MP_aAgenteAduanero>TraerPorId(Int32 idagenteaduanero)
+        public List<MP_aAgenteAduanero> TraerPorId(Int32 idagenteaduanero)
         { return MP_aAgenteAduanero_CD.Instancia.Traer_AgenteAduaneroPorId(idagenteaduanero).ToList(); }
 
 
-        public IEnumerable<MP_aAgenteAduanero>Buscar_RazonSocialAgente(string razonsocialagente)
+        public IEnumerable<MP_aAgenteAduanero> Buscar_RazonSocialAgente(string razonsocialagente)
         {
             var lista = MP_aAgenteAduanero_CD.Instancia.Lista_AgenteAduanero();
             return from AD in lista where AD.Razon_Social_Agente == razonsocialagente select AD;
@@ -47,7 +45,7 @@ namespace Capa_Negocios
         }
 
         public string Eliminar(Int32 idagenteaduanero)
-        {   
+        {
             return MP_aAgenteAduanero_CD._instancia.Eliminar_AgenteAduanero(idagenteaduanero);
         }
 

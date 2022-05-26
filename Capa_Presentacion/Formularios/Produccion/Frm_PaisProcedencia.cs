@@ -1,16 +1,4 @@
-﻿using Capa_Entidades.Tablas;
-using Capa_Negocios;
-using Capa_Presentacion.Clases;
-using Capa_Presentacion.Framework.ComponetModel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -160,12 +148,12 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tls_Buscar_Click(object sender, EventArgs e)
@@ -254,7 +242,7 @@ namespace Capa_Presentacion.Formularios
 
         private void PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-           
+
         }
 
         private void Estado_Toolbar(Boolean vEditarForm, Boolean vUnloadForm = true)

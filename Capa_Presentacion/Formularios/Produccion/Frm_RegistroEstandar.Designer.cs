@@ -30,9 +30,8 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_RegistroEstandar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -496,21 +495,22 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Creacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diseño_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Cbo_FiltroTipoProduccion = new System.Windows.Forms.ComboBox();
             this.cbo_FiltroCliente = new System.Windows.Forms.ComboBox();
+            this.Cbo_FiltroTipoProduccion = new System.Windows.Forms.ComboBox();
             this.Dtp_FechaFinal = new System.Windows.Forms.DateTimePicker();
             this.Dtp_FechaInicial = new System.Windows.Forms.DateTimePicker();
             this.Chk_FiltroRango = new System.Windows.Forms.CheckBox();
             this.chk_FiltroTipoEstandar = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
             this.PrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_CondicionProceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diseño = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -2550,7 +2550,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_GramajeTotal
             // 
-            this.txt_GramajeTotal.Location = new System.Drawing.Point(319, 134);
+            this.txt_GramajeTotal.Location = new System.Drawing.Point(319, 138);
             this.txt_GramajeTotal.Name = "txt_GramajeTotal";
             this.txt_GramajeTotal.Size = new System.Drawing.Size(72, 20);
             this.txt_GramajeTotal.TabIndex = 71;
@@ -2589,7 +2589,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_GramajeLineal
             // 
-            this.txt_GramajeLineal.Location = new System.Drawing.Point(121, 134);
+            this.txt_GramajeLineal.Location = new System.Drawing.Point(121, 138);
             this.txt_GramajeLineal.Name = "txt_GramajeLineal";
             this.txt_GramajeLineal.Size = new System.Drawing.Size(69, 20);
             this.txt_GramajeLineal.TabIndex = 70;
@@ -2621,7 +2621,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label152.AutoSize = true;
             this.label152.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label152.ForeColor = System.Drawing.Color.Black;
-            this.label152.Location = new System.Drawing.Point(90, 141);
+            this.label152.Location = new System.Drawing.Point(98, 141);
             this.label152.Name = "label152";
             this.label152.Size = new System.Drawing.Size(10, 13);
             this.label152.TabIndex = 131;
@@ -6148,108 +6148,43 @@ namespace Capa_Presentacion.Formularios.Produccion
             // dgv_Mnt
             // 
             this.dgv_Mnt.AllowUserToAddRows = false;
+            this.dgv_Mnt.AllowUserToDeleteRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
-            this.dgv_Mnt.BackgroundColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_Mnt.ColumnHeadersHeight = 35;
+            this.dgv_Mnt.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            this.dgv_Mnt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Mnt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Mnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdEstandar,
-            this.Fecha_Creacion,
-            this.Razon_Social,
+            this.Nombre_CondicionProceso,
+            this.Fecha_Creado,
             this.Codigo_Estandar,
-            this.Descripcion_Estandar,
-            this.Diseño_Estandar});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_Mnt.Location = new System.Drawing.Point(0, 48);
+            this.Razon_Social,
+            this.Descripcion,
+            this.Diseño});
+            this.dgv_Mnt.Location = new System.Drawing.Point(0, 52);
+            this.dgv_Mnt.MultiSelect = false;
             this.dgv_Mnt.Name = "dgv_Mnt";
-            this.dgv_Mnt.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgv_Mnt.RowHeadersWidth = 51;
             this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Mnt.Size = new System.Drawing.Size(1216, 463);
-            this.dgv_Mnt.TabIndex = 4;
-            // 
-            // IdEstandar
-            // 
-            this.IdEstandar.DataPropertyName = "IdEstandar";
-            this.IdEstandar.HeaderText = "IdEstandar";
-            this.IdEstandar.MinimumWidth = 6;
-            this.IdEstandar.Name = "IdEstandar";
-            this.IdEstandar.ReadOnly = true;
-            this.IdEstandar.Width = 80;
-            // 
-            // Fecha_Creacion
-            // 
-            this.Fecha_Creacion.DataPropertyName = "Fecha_Creado";
-            this.Fecha_Creacion.HeaderText = "Fecha Creacion";
-            this.Fecha_Creacion.MinimumWidth = 6;
-            this.Fecha_Creacion.Name = "Fecha_Creacion";
-            this.Fecha_Creacion.ReadOnly = true;
-            this.Fecha_Creacion.Width = 80;
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Cliente";
-            this.Razon_Social.MinimumWidth = 6;
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 250;
-            // 
-            // Codigo_Estandar
-            // 
-            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
-            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
-            this.Codigo_Estandar.MinimumWidth = 6;
-            this.Codigo_Estandar.Name = "Codigo_Estandar";
-            this.Codigo_Estandar.ReadOnly = true;
-            this.Codigo_Estandar.Width = 125;
-            // 
-            // Descripcion_Estandar
-            // 
-            this.Descripcion_Estandar.DataPropertyName = "Descripcion";
-            this.Descripcion_Estandar.HeaderText = "Descripcion Estandar";
-            this.Descripcion_Estandar.MinimumWidth = 6;
-            this.Descripcion_Estandar.Name = "Descripcion_Estandar";
-            this.Descripcion_Estandar.ReadOnly = true;
-            this.Descripcion_Estandar.Width = 350;
-            // 
-            // Diseño_Estandar
-            // 
-            this.Diseño_Estandar.DataPropertyName = "Diseño";
-            this.Diseño_Estandar.HeaderText = "Diseño Estandar";
-            this.Diseño_Estandar.MinimumWidth = 6;
-            this.Diseño_Estandar.Name = "Diseño_Estandar";
-            this.Diseño_Estandar.ReadOnly = true;
-            this.Diseño_Estandar.Width = 280;
+            this.dgv_Mnt.ShowCellErrors = false;
+            this.dgv_Mnt.Size = new System.Drawing.Size(1218, 459);
+            this.dgv_Mnt.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Ivory;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Cbo_FiltroTipoProduccion);
             this.panel1.Controls.Add(this.cbo_FiltroCliente);
+            this.panel1.Controls.Add(this.Cbo_FiltroTipoProduccion);
             this.panel1.Controls.Add(this.Dtp_FechaFinal);
             this.panel1.Controls.Add(this.Dtp_FechaInicial);
             this.panel1.Controls.Add(this.Chk_FiltroRango);
@@ -6259,6 +6194,18 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1213, 43);
             this.panel1.TabIndex = 1;
+            // 
+            // cbo_FiltroCliente
+            // 
+            this.cbo_FiltroCliente.DisplayMember = "Razon_Social";
+            this.cbo_FiltroCliente.Enabled = false;
+            this.cbo_FiltroCliente.FormattingEnabled = true;
+            this.cbo_FiltroCliente.Location = new System.Drawing.Point(67, 11);
+            this.cbo_FiltroCliente.Name = "cbo_FiltroCliente";
+            this.cbo_FiltroCliente.Size = new System.Drawing.Size(396, 21);
+            this.cbo_FiltroCliente.TabIndex = 14;
+            this.cbo_FiltroCliente.ValueMember = "IdCliente";
+            this.cbo_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbo_FiltroCliente_SelectedIndexChanged);
             // 
             // Cbo_FiltroTipoProduccion
             // 
@@ -6270,17 +6217,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Cbo_FiltroTipoProduccion.Size = new System.Drawing.Size(190, 21);
             this.Cbo_FiltroTipoProduccion.TabIndex = 13;
             this.Cbo_FiltroTipoProduccion.ValueMember = "IdTipoProduccion";
-            // 
-            // cbo_FiltroCliente
-            // 
-            this.cbo_FiltroCliente.DisplayMember = "Razon_Social";
-            this.cbo_FiltroCliente.Enabled = false;
-            this.cbo_FiltroCliente.FormattingEnabled = true;
-            this.cbo_FiltroCliente.Location = new System.Drawing.Point(67, 9);
-            this.cbo_FiltroCliente.Name = "cbo_FiltroCliente";
-            this.cbo_FiltroCliente.Size = new System.Drawing.Size(390, 21);
-            this.cbo_FiltroCliente.TabIndex = 12;
-            this.cbo_FiltroCliente.ValueMember = "IdCliente";
+            this.Cbo_FiltroTipoProduccion.SelectedIndexChanged += new System.EventHandler(this.Cbo_FiltroTipoProduccion_SelectedIndexChanged);
             // 
             // Dtp_FechaFinal
             // 
@@ -6289,6 +6226,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Dtp_FechaFinal.Name = "Dtp_FechaFinal";
             this.Dtp_FechaFinal.Size = new System.Drawing.Size(97, 20);
             this.Dtp_FechaFinal.TabIndex = 11;
+            this.Dtp_FechaFinal.ValueChanged += new System.EventHandler(this.Dtp_FechaFinal_ValueChanged);
             // 
             // Dtp_FechaInicial
             // 
@@ -6298,6 +6236,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Dtp_FechaInicial.Name = "Dtp_FechaInicial";
             this.Dtp_FechaInicial.Size = new System.Drawing.Size(96, 20);
             this.Dtp_FechaInicial.TabIndex = 10;
+            this.Dtp_FechaInicial.ValueChanged += new System.EventHandler(this.Dtp_FechaInicial_ValueChanged);
             // 
             // Chk_FiltroRango
             // 
@@ -6335,6 +6274,60 @@ namespace Capa_Presentacion.Formularios.Produccion
             // PrintDocument
             // 
             this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
+            // 
+            // IdEstandar
+            // 
+            this.IdEstandar.DataPropertyName = "IdEstandar";
+            this.IdEstandar.HeaderText = "Id";
+            this.IdEstandar.Name = "IdEstandar";
+            this.IdEstandar.ReadOnly = true;
+            this.IdEstandar.Width = 80;
+            // 
+            // Nombre_CondicionProceso
+            // 
+            this.Nombre_CondicionProceso.DataPropertyName = "Nombre_CondicionProceso";
+            this.Nombre_CondicionProceso.HeaderText = "Condicion Proceso";
+            this.Nombre_CondicionProceso.Name = "Nombre_CondicionProceso";
+            // 
+            // Fecha_Creado
+            // 
+            this.Fecha_Creado.DataPropertyName = "Fecha_Creado";
+            this.Fecha_Creado.HeaderText = "Fecha Creado";
+            this.Fecha_Creado.Name = "Fecha_Creado";
+            this.Fecha_Creado.ReadOnly = true;
+            this.Fecha_Creado.Width = 90;
+            // 
+            // Codigo_Estandar
+            // 
+            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
+            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
+            this.Codigo_Estandar.Name = "Codigo_Estandar";
+            this.Codigo_Estandar.ReadOnly = true;
+            this.Codigo_Estandar.Width = 130;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Razon Social";
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 280;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 380;
+            // 
+            // Diseño
+            // 
+            this.Diseño.DataPropertyName = "Diseño";
+            this.Diseño.HeaderText = "Diseño";
+            this.Diseño.Name = "Diseño";
+            this.Diseño.ReadOnly = true;
+            this.Diseño.Width = 180;
             // 
             // Frm_RegistroEstandar
             // 
@@ -6814,10 +6807,8 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage tbp_Listado;
-        private System.Windows.Forms.DataGridView dgv_Mnt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox Cbo_FiltroTipoProduccion;
-        private System.Windows.Forms.ComboBox cbo_FiltroCliente;
         private System.Windows.Forms.DateTimePicker Dtp_FechaFinal;
         private System.Windows.Forms.DateTimePicker Dtp_FechaInicial;
         private System.Windows.Forms.CheckBox Chk_FiltroRango;
@@ -6962,11 +6953,14 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.NumericUpDown nud_PaquetesXCaja;
         private System.Windows.Forms.TextBox txt_cantidadPistas;
         private System.Drawing.Printing.PrintDocument PrintDocument;
+        private System.Windows.Forms.DataGridView dgv_Mnt;
+        private System.Windows.Forms.ComboBox cbo_FiltroCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdEstandar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Creacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_CondicionProceso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Creado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_Estandar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion_Estandar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diseño_Estandar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diseño;
     }
 }

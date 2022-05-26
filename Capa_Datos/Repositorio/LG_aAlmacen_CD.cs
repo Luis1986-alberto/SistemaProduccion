@@ -32,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 {
                     conexionsql.Open();
                     SqlCommand cmd = new SqlCommand("select ALM.IdAlmacen, ALM.Nombre_Almacen, ALM.Sigla_Almacen, ALM.IdEmpresa, EMP.Nombre_Empresa from LG_aAlmacen as ALM inner join PR_aEmpresa as EMP" +
-                                                     " on ALM.IdEmpresa = EMP.IdEmpresa", conexionsql) ;
+                                                     " on ALM.IdEmpresa = EMP.IdEmpresa", conexionsql);
                     cmd.CommandType = System.Data.CommandType.Text;
                     SqlDataReader dr = cmd.ExecuteReader();
                     Lst_Almacenes = new List<LG_aAlmacen>();
@@ -47,7 +47,7 @@ namespace Capa_Datos.Repositorio
                         t.Nombre_Empresa = dr["Nombre_Empresa"].ToString();
                         Lst_Almacenes.Add(t);
                     }
-                    return Lst_Almacenes;                   
+                    return Lst_Almacenes;
                 }
             }
             catch(Exception Ex)
@@ -89,13 +89,12 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqledit = "update LG_aAlmacen set Nombre_Almacen = @nombre_almacen, Sigla_Almacen = @sigla_almacen, IdEmpresa = @idempresa  where IdAlmacen = @idalmacen";
-                    conexionsql.ExecuteScalar(sqledit, new 
-                                                            {
-                                                                id = almacen.IdAlmacen,
-                                                                nombre_almacen = almacen.Nombre_Almacen,
-                                                                sigla_almacen = almacen.Sigla_Almacen,
-                                                                idempresa = almacen.IdEmpresa,
-                                                            });
+                    conexionsql.ExecuteScalar(sqledit, new {
+                        id = almacen.IdAlmacen,
+                        nombre_almacen = almacen.Nombre_Almacen,
+                        sigla_almacen = almacen.Sigla_Almacen,
+                        idempresa = almacen.IdEmpresa,
+                    });
                     return "PROCESADO";
                 }
             }
@@ -116,7 +115,7 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-       public IEnumerable<LG_aAlmacen>FiltrarporUnCampo(IPredicate predicate)
+        public IEnumerable<LG_aAlmacen> FiltrarporUnCampo(IPredicate predicate)
         {
             var ConexionSQL = new SqlConnection(cadenaconexion);
             ConexionSQL.Open();

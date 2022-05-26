@@ -68,6 +68,7 @@
     <Compile Include="Tablas\LG_aTipoTrabajoMaquina.cs" />
     <Compile Include="Tablas\LG_aUbicacionInmueble.cs" />
     <Compile Include="Tablas\LG_aUnidad.cs" />
+    <Compile Include="Tablas\LG_xPeriodo.cs" />
     <Compile Include="Tablas\LG_xProveedor.cs" />
     <Compile Include="Tablas\MP_aAgenteAduanero.cs" />
     <Compile Include="Tablas\MP_aAlmacenAduana.cs" />
@@ -82,7 +83,7 @@
     <Compile Include="Tablas\PR_aAdhesivo.cs" />
     <Compile Include="Tablas\PR_aArea.cs" />
     <Compile Include="Tablas\PR_aAsa.cs" />
-    <Compile Include="Tablas\PR_aAño.cs" />
+    <Compile Include="Tablas\LG_aAño.cs" />
     <Compile Include="Tablas\PR_aCargoTrabajador.cs" />
     <Compile Include="Tablas\PR_aCarreta.cs" />
     <Compile Include="Tablas\PR_aCodigoEvento.cs" />

@@ -1,51 +1,88 @@
-﻿    using DapperExtensions.Predicate;
+﻿using DapperExtensions;
+using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Capa_Datos.Interface
 {
     public class RepositorioBase<T> : IRepositori<T> where T : class
     {
         private Inicio principal = new Inicio();
-        private string cadenaConexion;
+        private string CadenaConexion;
 
         public RepositorioBase()
         {
             principal.LeerConfiguracion();
-            cadenaConexion = principal.CadenaConexion;
+            CadenaConexion = principal.CadenaConexion;
         }
 
-        public string Actualizar(T entidad)
+        public bool Actualizar(T entidad)
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.Update(entidad);
+                conexionSql.Close();
+                return result;
+            }
         }
 
-        public string Agregar(T entidad)
+        public int Agregar(T entidad)
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.Insert(entidad);
+                conexionSql.Close();
+                return result;
+            }
         }
 
-        public string Eliminar(int id)
+        public bool Eliminar(T entidad)
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.Delete(entidad);
+                conexionSql.Close();
+                return result;
+            }
         }
 
         public IEnumerable<T> FiltroPorUnCampo(IPredicate predicado)
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.GetList<T>(predicado);
+                conexionSql.Close();
+                return result;
+            }
         }
 
         public IEnumerable<T> Listar()
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.GetList<T>();
+                conexionSql.Close();
+                return result;
+            }
         }
 
         public T TraerPorId(int id)
         {
-            throw new NotImplementedException();
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.Get<T>(id);
+                conexionSql.Close();
+                return result;
+            }
         }
+
+
     }
 }

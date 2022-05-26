@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios.Produccion
@@ -29,14 +30,14 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void Frm_RegistroEstandar_Load(object sender, EventArgs e)
-        {   
+        {
             tbc_Mnt.SelectTab(1);
             tc_procesos.TabPages["Tbp_Extrusion"].Enabled = false;
             tc_procesos.TabPages["Tbp_Impresion"].Enabled = false;
-            tc_procesos.TabPages["Tbp_Sellado"].Enabled   = false;
-            tc_procesos.TabPages["Tbp_Laminado"].Enabled  = false;
-            tc_procesos.TabPages["Tbp_Doblado"].Enabled   = false;
-            tc_procesos.TabPages["Tbp_Corte"].Enabled     = false;
+            tc_procesos.TabPages["Tbp_Sellado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Laminado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Doblado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Corte"].Enabled = false;
             Cargar_Combos();
             Cargar_Datos();
             tbc_Mnt.Selecting += new TabControlCancelEventHandler(tbc_Mnt_Selecting);
@@ -65,7 +66,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void Cargar_Combos()
         {
             cbo_FiltroCliente.DataSource = PR_mClientes_CN._Instancia.Lista_Clientes();
-            Cbo_Cliente.DataSource = PR_mClientes_CN._Instancia.Lista_Clientes();            
+            Cbo_Cliente.DataSource = PR_mClientes_CN._Instancia.Lista_Clientes();
             Cbo_CondicionProcesos.DataSource = PR_aCondicionProceso_CN._Instancia.Lista_CondicionProceso();
             Cbo_Procesos.DataSource = PR_aProcesos_CN._Instancia.Lista_Procesos();
             Cbo_TipoProduccion.DataSource = PR_aTipoProduccion_CN._Instancia.Lista_TipoProduccion();
@@ -107,14 +108,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             Cbo_Fuellesellado.DataSource = PR_aTipoFuelle_CN._Instancia.Lista_TipoFuelle();
             cbo_UMfuellesellado.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
             cbo_umperforaciones.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
-            cbo_umpestaña.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();           
+            cbo_umpestaña.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
             cbo_umsolapa.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
             cbo_umrefilesellado.DataSource = PR_aUnidadMedidas_CN._Instancia.Lista_UnidadMedida();
 
             //// standart Laminado//
-           
+
             //// standart Doblado//
-            
+
             //// standart Corte//
 
         }
@@ -126,13 +127,11 @@ namespace Capa_Presentacion.Formularios.Produccion
                 IdCliente = Int32.Parse(cbo_FiltroCliente.SelectedValue.ToString()),
                 IdTipoProduccion = byte.Parse(Cbo_FiltroTipoProduccion.SelectedValue.ToString()),
             };
-            List<PR_mEstandar> Listado = PR_mEstandar_CN._Instancia.Lista_Estandares(datos, (chk_FiltroTipoEstandar.Checked == true) ? "1" : "0", (chk_FiltroCliente.Checked == true) ? "1" : "0",
-                                                                                           (Chk_FiltroRango.Checked == true) ? "1" : "0", Dtp_FechaInicial.Value, Dtp_FechaFinal.Value);
-            SortableBindingList<PR_mEstandar> Lst_Estandares = new SortableBindingList<PR_mEstandar>(Listado);
-
+            Lst_Estandares = PR_mEstandar_CN._Instancia.Lista_Estandares(datos, (chk_FiltroTipoEstandar.Checked == true) ? "1" : "0", (chk_FiltroCliente.Checked == true) ? "1" : "0",
+                                                                                            (Chk_FiltroRango.Checked == true) ? "1" : "0", Dtp_FechaInicial.Value, Dtp_FechaFinal.Value);
+            SortableBindingList<PR_mEstandar> lista = new SortableBindingList<PR_mEstandar>(Lst_Estandares);
             dgv_Mnt.AutoGenerateColumns = false;
-            dgv_Mnt.DataSource = Lst_Estandares;
-
+            dgv_Mnt.DataSource = lista;
         }
 
         private void tbc_Mnt_Selecting(object sender, TabControlCancelEventArgs e)
@@ -144,7 +143,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void Entrada_Datos(Int32 idestandar)
         {
             Limpiar_Controles();
-            var i = PR_mEstandar_CN._Instancia.TraerIdEstandar(idestandar);            
+            var i = PR_mEstandar_CN._Instancia.TraerIdEstandar(idestandar);
             txt_IdEstandar.Text = i.IdEstandar.ToString();
             Cbo_Cliente.SelectedValue = i.IdCliente;
             txt_DescripcionEstandar.Text = i.Descripcion;
@@ -166,7 +165,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             txt_diseño.Text = i.Diseño;
 
             //Extrusion
-            if(idextrusion > 0)
+            if (idextrusion > 0)
             {
                 var extr = PR_mEstandarExtrusion_CN._Instancia.TraerPorID(idextrusion);
                 Cbo_UsoProducto.SelectedValue = extr.IdUsoProducto;
@@ -210,11 +209,11 @@ namespace Capa_Presentacion.Formularios.Produccion
                 txt_GramajeTotal.Text = extr.Gramaje_Total.ToString();
                 nud_Diametrocabezal.Value = extr.Diametro_Cabezal.Value;
                 nud_Gapextrusion.Value = extr.Gap_Extrusion.Value;
-                txt_direccionPlanoExtrusion.Text = extr.Ruta_FotoPlanoMecanicoExtr;               
+                txt_direccionPlanoExtrusion.Text = extr.Ruta_FotoPlanoMecanicoExtr;
             }
 
             //Impresion
-            if(idimpresion > 0)
+            if (idimpresion > 0)
             {
                 var imp = PR_mEstandarImpresion_CN._Instancia.TraerPorId(idimpresion);
                 nud_numerorepiticiones.Value = imp.Numero_Repeticiones;
@@ -225,7 +224,7 @@ namespace Capa_Presentacion.Formularios.Produccion
                 Cbo_unidadmedidabandas.SelectedValue = imp.IdUnidadBandas;
                 nud_numeronegativo.Value = imp.Numero_Negativos;
                 nud_numeroclises.Value = imp.Numero_Clisse;
-                chk_codigobarras.Checked = (imp.Flag_CodigoBarra =="1")?true:false;
+                chk_codigobarras.Checked = (imp.Flag_CodigoBarra == "1") ? true : false;
                 nud_numeropistas.Value = imp.Numero_Pistas;
                 txt_EspesorClisse.Text = imp.Medida_EspesorClisse.ToString();
                 cbo_IdUMespesorclisse.SelectedValue = imp.IdUnidadEspesorClisse;
@@ -246,14 +245,14 @@ namespace Capa_Presentacion.Formularios.Produccion
                 rb_sentido7.Checked = (imp.Flag_Embobinado7 == "1") ? true : false;
                 rb_sentido8.Checked = (imp.Flag_Embobinado8 == "1") ? true : false;
                 cbm_Impresora.SelectedValue = imp.IdImpresora;
-                chk_flagPieImprenta.Checked = (imp.Flag_PieImprenta == "1")?true:false;
+                chk_flagPieImprenta.Checked = (imp.Flag_PieImprenta == "1") ? true : false;
                 Rb_ImpresionInterna.Checked = (imp.Flag_ImpresionInternaExterna == "0") ? true : false;
                 Rb_ImpresionExterna.Checked = (imp.Flag_ImpresionInternaExterna == "1") ? true : false;
                 txt_EspesorClisse.Text = imp.Medida_EspesorClisse.ToString();
                 rb_empresa.Checked = (imp.Flag_DueñoClisseEmpresaCliente == "E") ? true : false;
                 rb_cliente.Checked = (imp.Flag_DueñoClisseEmpresaCliente == "C") ? true : false;
                 txt_obsnegativos.Text = imp.Nota_Negativos;
-                chk_flagagua.Checked = (imp.Flag_Agua == "1")?true:false;
+                chk_flagagua.Checked = (imp.Flag_Agua == "1") ? true : false;
                 chk_flagdetergente.Checked = (imp.Flag_Detergente == "1") ? true : false;
                 chk_flagcalor.Checked = (imp.Flag_Calor == "1") ? true : false;
                 txt_GradosCalor.Text = imp.Calor_C.ToString();
@@ -272,15 +271,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             }
 
             // Sellado
-            if(idsellado > 0)
+            if (idsellado > 0)
             {
                 var sell = PR_mEstandarSellado_CN._Instancia.TraerPor_Id(idsellado);
                 nud_Ancho.Value = sell.Ancho;
                 nud_largo.Value = sell.Largo;
                 cbo_unidadmedidabolsa.SelectedValue = sell.IdUnidadLargo;
                 txt_cantidadPistas.Text = sell.Numero_Pistas.ToString();
-                rb_InicioPosicionSello.Checked = (sell.Flag_Posicion_Sello == "1")? true : false;
-                rb_FinalPosicionSello.Checked = (sell.Flag_Posicion_Sello == "0")? true : false;
+                rb_InicioPosicionSello.Checked = (sell.Flag_Posicion_Sello == "1") ? true : false;
+                rb_FinalPosicionSello.Checked = (sell.Flag_Posicion_Sello == "0") ? true : false;
                 cbo_tiposello.SelectedValue = sell.IdTipoSello;
                 cbo_tipotroquel.SelectedValue = sell.IdTroquel;
                 cbo_tipoasa.SelectedValue = sell.IdAsa;
@@ -332,13 +331,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             }
 
             var datos = PR_mEstandar_CN._Instancia.TraerIdEstandar(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["idestandar"].Value.ToString()));
-            
+
             if (datos.Flag_GeneradoOP == "1")
             {
-                MessageBox.Show("Existe Ordenes de Produccion", "Error al Modificar ",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Existe Ordenes de Produccion", "Error al Modificar ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             bln_Editar = true;
             bln_Nuevo = false;
 
@@ -364,11 +363,11 @@ namespace Capa_Presentacion.Formularios.Produccion
                 return;
             }
 
-            if(MessageBox.Show("Esta Seguro de Eliminar el Registro", "ELIMINAR ESTANDART N°   " + dgv_Mnt.SelectedRows[0].Cells["IdEstandar"].Value.ToString(),
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro de Eliminar el Registro", "ELIMINAR ESTANDART N°   " + dgv_Mnt.SelectedRows[0].Cells["IdEstandar"].Value.ToString(),
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-               string rpta = PR_mEstandar_CN._Instancia.Eliminar_Estandar(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstandar"].Value.ToString()));
-                
+                string rpta = PR_mEstandar_CN._Instancia.Eliminar_Estandar(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstandar"].Value.ToString()));
+
                 Cargar_Datos();
                 tbc_Mnt.SelectTab(1);
                 tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
@@ -377,7 +376,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         private void tls_Grabar_Click(object sender, EventArgs e)
         {
-            string rpta = "";           
+            string rpta = "";
 
             var estadart = new PR_mEstandar
             {
@@ -575,25 +574,25 @@ namespace Capa_Presentacion.Formularios.Produccion
                 };
             }
 
-           if(tc_procesos.TabPages["Tbp_Laminado"].Enabled == true)
+            if (tc_procesos.TabPages["Tbp_Laminado"].Enabled == true)
             {
 
             }
 
-           if (tc_procesos.TabPages["Tbp_Doblado"].Enabled == true)
+            if (tc_procesos.TabPages["Tbp_Doblado"].Enabled == true)
             {
 
             }
-            if(tc_procesos.TabPages["Tbp_Corte"].Enabled == true)
+            if (tc_procesos.TabPages["Tbp_Corte"].Enabled == true)
             {
 
             }
-            
-            if (bln_Nuevo)  rpta = PR_mEstandar_CN._Instancia.Agregar_Estandar(estadart, Img_Producto, mestextrusion, Img_PlanoExtrusion, mestimpresion, Img_Arte, 
-                                                                                mestsellado, img_PlanoMecanicoSellado);
+
+            if (bln_Nuevo) rpta = PR_mEstandar_CN._Instancia.Agregar_Estandar(estadart, Img_Producto, mestextrusion, Img_PlanoExtrusion, mestimpresion, Img_Arte,
+                                                                               mestsellado, img_PlanoMecanicoSellado);
             if (bln_Editar) rpta = PR_mEstandar_CN._Instancia.Actualizar_estandar(estadart, Img_Producto, mestextrusion, Img_PlanoExtrusion, mestimpresion, Img_Arte,
                                                                                 mestsellado, img_PlanoMecanicoSellado);
-           if(rpta == "PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (bln_Nuevo)
                 { MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -605,13 +604,13 @@ namespace Capa_Presentacion.Formularios.Produccion
                 Estado_Toolbar(bln_Editar);
                 tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
                 HabilitarControles(false);
-                
-                tc_procesos.TabPages["Tbp_Extrusion"].Enabled =  false;
-                tc_procesos.TabPages["Tbp_Impresion"].Enabled =  false;
-                tc_procesos.TabPages["Tbp_Sellado"].Enabled =  false;
+
+                tc_procesos.TabPages["Tbp_Extrusion"].Enabled = false;
+                tc_procesos.TabPages["Tbp_Impresion"].Enabled = false;
+                tc_procesos.TabPages["Tbp_Sellado"].Enabled = false;
                 tc_procesos.TabPages["Tbp_Laminado"].Enabled = false;
-                tc_procesos.TabPages["Tbp_Doblado"].Enabled =  false;
-                tc_procesos.TabPages["Tbp_Corte"].Enabled =  false;
+                tc_procesos.TabPages["Tbp_Doblado"].Enabled = false;
+                tc_procesos.TabPages["Tbp_Corte"].Enabled = false;
                 tbc_Mnt.SelectTab(1);
             }
             else { MessageBox.Show(rpta, "error Inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -631,12 +630,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             HabilitarControles(false);
             Limpiar_Controles();
 
-            tc_procesos.TabPages["Tbp_Extrusion"].Enabled =  false;
-            tc_procesos.TabPages["Tbp_Impresion"].Enabled =  false;
-            tc_procesos.TabPages["Tbp_Sellado"].Enabled   =  false;
-            tc_procesos.TabPages["Tbp_Laminado"].Enabled  = false;
-            tc_procesos.TabPages["Tbp_Doblado"].Enabled   = false;
-            tc_procesos.TabPages["Tbp_Corte"].Enabled     = false;
+            tc_procesos.TabPages["Tbp_Extrusion"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Impresion"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Sellado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Laminado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Doblado"].Enabled = false;
+            tc_procesos.TabPages["Tbp_Corte"].Enabled = false;
         }
 
         private void Estado_Toolbar(Boolean vEditarForm, Boolean vUnloadForm = true)
@@ -685,7 +684,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             Txt_RutaProducto.Text = "";
             Dtp_FechaCreacion.Value = DateTime.Now;
             nud_diametroSolicitado.Value = decimal.Parse("0.00");
-            
+
             //EXTRUSION
             Txt_ColorSustrato.Text = "";
             Txt_DiseñoTratado.Text = "";
@@ -725,6 +724,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             nud_numerobandas.Value = 0;
             txt_medidabandas.Text = "0.00";
             nud_numeronegativo.Value = 0;
+            nud_numeropistas.Value = 0;
             nud_numeroclises.Value = 0;
             nud_cantcolortira.Value = 0;
             nud_cantcolorretira.Value = 0;
@@ -758,7 +758,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             nud_largotaca.Value = 0;
             nud_anchotaca.Value = 0;
             txt_notaimpresion.Text = "";
-            txt_direccionarte.Text = "";            
+            txt_direccionarte.Text = "";
 
             //SELLADO
             nud_Ancho.Value = 0;
@@ -785,11 +785,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             txt_pesoenvase.Text = "0.00";
             txt_pesocajafardo.Text = "0.00";
             txt_pesopaquete.Text = "0.00";
-            txt_pesomillar.Text = "0.00";           
+            txt_pesomillar.Text = "0.00";
             txt_notasellado.Text = "";
             txt_DireccionubicacionPlanosellado.Text = "";
-
-            
             Img_Producto.Image = null;
             Img_PlanoExtrusion.Image = null;
             Img_Arte.Image = null;
@@ -912,7 +910,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         private void cmd_tipotinta_Click(object sender, EventArgs e)
         {
-            Frm_TipoTinta tipotinta = new  Frm_TipoTinta();
+            Frm_TipoTinta tipotinta = new Frm_TipoTinta();
             tipotinta.ShowDialog();
             cbo_tipotinta.DataSource = PR_aTipoTinta_CN._Instancia.Lista_TipoTinta();
         }
@@ -1032,14 +1030,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             if (bln_Nuevo == false)
             {
                 if (Chk_MostrarImagen.Checked == true)
-                { 
+                {
                     PR_mEstandar_CN._Instancia.Descargar_ImagenProducto(Img_Producto, Int32.Parse(txt_IdEstandar.Text));
                     if (idextrusion > 0) PR_mEstandarExtrusion_CN._Instancia.Descargar_ImagenProducto(Img_PlanoExtrusion, idextrusion);
                     if (idimpresion > 0) PR_mEstandarImpresion_CN._Instancia.Descargar_ImagenProducto(Img_Arte, idimpresion);
                     if (idsellado > 0) PR_mEstandarSellado_CN._Instancia.Descargar_ImagenProducto(img_PlanoMecanicoSellado, idsellado);
-
                 }
-            }           
+            }
         }
 
         private void Chk_Fuelle_CheckedChanged(object sender, EventArgs e)
@@ -1105,10 +1102,10 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void chk_flagcongelamiento_CheckedChanged(object sender, EventArgs e)
-        {txt_GradosCongelamiento.Enabled = chk_flagcongelamiento.Checked;}
+        { txt_GradosCongelamiento.Enabled = chk_flagcongelamiento.Checked; }
 
         private void chk_flagotros_CheckedChanged(object sender, EventArgs e)
-        {txt_otrostintasresistentes.Enabled = chk_flagotros.Checked;}
+        { txt_otrostintasresistentes.Enabled = chk_flagotros.Checked; }
 
         private void cmd_UsoProducto_Click(object sender, EventArgs e)
         {
@@ -1118,7 +1115,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void chk_flagcalor_CheckedChanged(object sender, EventArgs e)
-        {txt_GradosCalor.Enabled = chk_flagcalor.Checked;}
+        { txt_GradosCalor.Enabled = chk_flagcalor.Checked; }
 
         private void cmd_diametroSolicitado_Click(object sender, EventArgs e)
         {
@@ -1150,7 +1147,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void tls_Refrescar_Click(object sender, EventArgs e) => Cargar_Datos();
 
         private void cbm_Impresora_SelectedIndexChanged(object sender, EventArgs e)
-        {txt_rodillo.Text = ((Capa_Entidades.Tablas.PR_mImpresora)cbm_Impresora.SelectedItem).Descripcion;}
+        { txt_rodillo.Text = ((Capa_Entidades.Tablas.PR_mImpresora)cbm_Impresora.SelectedItem).Descripcion; }
 
         private void chk_Retira_CheckedChanged(object sender, EventArgs e)
         {
@@ -1159,7 +1156,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void chk_flagPieImprenta_CheckedChanged(object sender, EventArgs e)
-        {cbo_pieimprenta.Enabled = chk_flagPieImprenta.Checked;}
+        { cbo_pieimprenta.Enabled = chk_flagPieImprenta.Checked; }
 
         private void chk_FlagTaca_CheckedChanged(object sender, EventArgs e)
         {
@@ -1188,7 +1185,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             Img_Arte.Image = null;
             txt_direccionarte.Text = "";
         }
-              
+
         private void Chk_Perforaciones_CheckedChanged(object sender, EventArgs e)
         {
             nud_cantperforaciones.Enabled = Chk_Perforaciones.Checked;
@@ -1242,7 +1239,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void txt_Unidadporpaquete_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
         private void txt_cantmillaresXcajafardo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_Ancho_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
-        private void nud_largo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);        
+        private void nud_largo_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_medidafuellesell_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_cantperforaciones_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.SoloNumeros(e);
         private void nud_diametroperforacion_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
@@ -1270,7 +1267,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void nud_anchotaca_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_medidafuelle_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_medidarefile_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
-        private void nud_medidaanchobobina_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);       
+        private void nud_medidaanchobobina_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_medidaTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_DiametroTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
         private void nud_PesoTuco_KeyPress(object sender, KeyPressEventArgs e) => Validar_Campos.NumerosDecimales(e);
@@ -1333,7 +1330,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             if (SetupThePrinting())
             {
                 PrintPreviewDialog MyPrintPreviewDialog = new PrintPreviewDialog();
-                MyPrintPreviewDialog.Document = PrintDocument;              
+                MyPrintPreviewDialog.Document = PrintDocument;
+                (MyPrintPreviewDialog as Form).WindowState = FormWindowState.Maximized;
                 MyPrintPreviewDialog.ShowDialog();
             }
         }
@@ -1346,7 +1344,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
-        {           
+        {
             bool more = dgr_Visor_Grilla.DrawDataGridView(e.Graphics);
             if (more == true)
                 e.HasMorePages = true;
@@ -1354,18 +1352,29 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         private void tls_Buscar_Click(object sender, EventArgs e)
         {
-
+            Frm_Buscar fBuscar = new Frm_Buscar();
+            fBuscar.Configurar(ref dgv_Mnt, dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name);
+            fBuscar.ShowDialog();
         }
 
         private void tls_OrdenASC_Click(object sender, EventArgs e)
         {
-
+            str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
+            var Listado_Ordenado = (from ordenar in Lst_Estandares.OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
+                                    select ordenar).ToList();
+            dgv_Mnt.DataSource = Listado_Ordenado;
         }
 
         private void tls_OrdenDsc_Click(object sender, EventArgs e)
         {
-
+            str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
+            var Listado_Ordenado = (from ordenar in Lst_Estandares.OrderByDescending(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
+                                    select ordenar).ToList();
+            dgv_Mnt.DataSource = Listado_Ordenado;
         }
+
+        private void Cbo_FiltroTipoProduccion_SelectedIndexChanged(object sender, EventArgs e) => Cargar_Datos();
+        private void Dtp_FechaInicial_ValueChanged(object sender, EventArgs e) => Cargar_Datos();
 
         private void chk_FiltroCliente_CheckedChanged(object sender, EventArgs e)
         {
@@ -1373,6 +1382,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             Cargar_Datos();
         }
 
+        private void cbo_FiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chk_FiltroCliente.Checked == true) Cargar_Datos();
+        }
+
+        private void Dtp_FechaFinal_ValueChanged(object sender, EventArgs e) => Cargar_Datos();
+        
         private void chk_FiltroTipoEstandar_CheckedChanged(object sender, EventArgs e)
         {
             Cbo_FiltroTipoProduccion.Enabled = chk_FiltroTipoEstandar.Checked;
@@ -1390,7 +1406,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             Frm_TipoFuelle tipofuelle = new Frm_TipoFuelle();
             tipofuelle.ShowDialog();
-            Cbo_Fuellesellado.DataSource = PR_aTipoFuelle_CN._Instancia.Lista_TipoFuelle();                 
+            Cbo_Fuellesellado.DataSource = PR_aTipoFuelle_CN._Instancia.Lista_TipoFuelle();
         }
 
         private bool SetupThePrinting()
@@ -1411,7 +1427,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             PrintDocument.PrinterSettings = MyPrintDialog.PrinterSettings;
             PrintDocument.DefaultPageSettings = MyPrintDialog.PrinterSettings.DefaultPageSettings;
             PrintDocument.DefaultPageSettings.Margins = new Margins(40, 40, 40, 40);
-
+            
             if (MessageBox.Show("Desea que el informe se centre en la página", "Estilo de Impresion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 dgr_Visor_Grilla = new DataGridViewPrinter(dgv_Mnt, PrintDocument, true, true, "Listado de Estandares", new Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, true);
             else

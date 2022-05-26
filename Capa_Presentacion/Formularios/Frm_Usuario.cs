@@ -14,7 +14,7 @@ namespace Capa_Presentacion.Formularios
     {
         DataGridViewPrinter dgr_Visor_Grilla;
         private bool bln_Nuevo = false;
-        private bool bln_Editar = false;  
+        private bool bln_Editar = false;
 
         public Frm_Usuario()
         {
@@ -68,12 +68,12 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(string vIdUsuario)
         {
             var i = PR_mUsuarios_CN._Instancia.TraerPorId(vIdUsuario);
-                txt_IdUsuario.Text = i.IdUsuario.ToString();
-                txt_Nombres.Text = i.Nombres.ToString();
-                txt_Contraseña.Text = i.Contraseña.ToString();
-                txt_apellido.Text = i.Apellidos;
-                chk_Flag_Activo.Checked = Convert.ToBoolean(byte.Parse(i.Flag_Activo.ToString()));
-            
+            txt_IdUsuario.Text = i.IdUsuario.ToString();
+            txt_Nombres.Text = i.Nombres.ToString();
+            txt_Contraseña.Text = i.Contraseña.ToString();
+            txt_apellido.Text = i.Apellidos;
+            chk_Flag_Activo.Checked = Convert.ToBoolean(byte.Parse(i.Flag_Activo.ToString()));
+
         }
 
         private void tls_Agregar_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace Capa_Presentacion.Formularios
             HabilitarControles(true);
             LimpiarControles();
             Estado_Toolbar(bln_Nuevo);
-            
+
             txt_IdUsuario.Focus();
         }
 
@@ -353,7 +353,7 @@ namespace Capa_Presentacion.Formularios
             chk_Flag_Activo.Enabled = vEnabled;
         }
         private void LimpiarControles()
-        {  
+        {
             txt_IdUsuario.Text = "";
             txt_Nombres.Text = "";
             txt_apellido.Text = "";

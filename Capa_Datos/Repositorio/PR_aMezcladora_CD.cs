@@ -70,7 +70,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqledit = "update PR_aMezcladora set Nombre_Mezcladora = @nombre_mezcladora, Capacidad_Mezcladora = @capacidad_mezclarora where IdMezcladora = @id";
-                    conexionsql.ExecuteScalar(sqledit, new {id = mezcladora.IdMezcladora, nombre_mezcladora = mezcladora.Nombre_Mezcladora, capacidad_mezclarora = mezcladora.Capacidad_Mezcladora });
+                    conexionsql.ExecuteScalar(sqledit, new { id = mezcladora.IdMezcladora, nombre_mezcladora = mezcladora.Nombre_Mezcladora, capacidad_mezclarora = mezcladora.Capacidad_Mezcladora });
                     return "PROCESADO";
                 }
             }
@@ -91,6 +91,6 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-        
+
     }
 }

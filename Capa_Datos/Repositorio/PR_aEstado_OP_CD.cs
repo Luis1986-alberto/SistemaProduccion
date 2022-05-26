@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEstado_OP, Descripcion_EstadoOP from PR_aEstado_OP";
                     return conexionsql.Query<PR_aEstado_OP>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("error al listar", ex); }
         }
 
@@ -39,13 +39,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEstado_OP, Descripcion_EstadoOP from PR_aEstado_OP where IdEstado_OP = @id";
                     return conexionsql.Query<PR_aEstado_OP>(sql, new { id = idestadoop });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -53,14 +53,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aEstado_OP (Descripcion_EstadoOP) values(@descripcion_estadoop)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion_estadoop = aEstado_op.Descripcion_EstadoOP});
+                    conexionsql.ExecuteScalar(sqlinsert, new { descripcion_estadoop = aEstado_op.Descripcion_EstadoOP });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error asl agregar", ex); }
         }
 
@@ -68,14 +68,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aEstado_OP set Descripcion_EstadoOP = @nombre_estado where IdEstado_OP = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new { id = aEstado_op.IdEstado_OP, nombre_estado = aEstado_op.Descripcion_EstadoOP });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Actualizar", ex); }
         }
 
@@ -83,17 +83,17 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aEstado_OP where IdEstado_OP = @id";
                     conexionsql.ExecuteScalar(sqldelete, new { id = idestadoop });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

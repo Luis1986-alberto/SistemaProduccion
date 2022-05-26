@@ -79,16 +79,16 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
-            if(dgv_Mnt.RowCount ==0)
+            if (dgv_Mnt.RowCount == 0)
             {
                 MessageBox.Show("No hay registro para Eliminar", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if(MessageBox.Show("Esta Seguro que desea Eliminar", "Eliminar Registro", MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro que desea Eliminar", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = PR_aEstadoMaquina_CN.Instancia.Eliminar_EstadoMaquina(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstadoMaquina"].Value.ToString()));
-                if (rpta == "PROCESADO") {MessageBox.Show("Se Elimino el registro","Eliminar Registro",MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show(rpta, "Error al Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             Cargar_Datos();
@@ -103,12 +103,12 @@ namespace Capa_Presentacion.Formularios
                 Nombre_Estado = txt_NombreEstado.Text,
             };
 
-            if(Verificar_Datos() == false) { return; }
+            if (Verificar_Datos() == false) { return; }
 
             if (Nuevo) rpta = PR_aEstadoMaquina_CN._Instancia.Agregar_EstadoMaquina(datos);
             if (editar) rpta = PR_aEstadoMaquina_CN._Instancia.Actualizar_EstadoMaquina(datos);
 
-            if(rpta =="PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (Nuevo)
                 { MessageBox.Show("Se Agrego un nuevo Registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -130,7 +130,7 @@ namespace Capa_Presentacion.Formularios
 
         private bool Verificar_Datos()
         {
-            if(txt_NombreEstado.Text == string.Empty)
+            if (txt_NombreEstado.Text == string.Empty)
             {
                 MessageBox.Show("Ingrese el Nombre Estado", "Ingreso de datos", MessageBoxButtons.OK);
                 txt_NombreEstado.Focus();
@@ -146,7 +146,7 @@ namespace Capa_Presentacion.Formularios
             editar = false;
             tbc_Mnt.SelectTab(1);
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
-            
+
             Estado_Toolbar(false);
             txt_NombreEstado.Enabled = false;
         }

@@ -52,7 +52,7 @@ namespace Capa_Presentacion.Formularios
             {
                 txt_IdEmpresa.Text = i.IdEmpresa.ToString();
                 txt_Nombre_Empresa.Text = i.Nombre_Empresa;
-                chk_Activo.Checked = (i.Flag_Activo ==1)?true:false;
+                chk_Activo.Checked = (i.Flag_Activo == 1) ? true : false;
                 txt_Ruc_Empresa.Text = i.RUC_Empresa;
                 txt_SiglaEmpresa.Text = i.Abreviatura_Empresa;
                 txt_DireccionEmpresa.Text = i.Direccion_Empresa;
@@ -93,7 +93,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.SelectTab(0);
 
             HabilitarControles(true);
-            
+
         }
 
         private void tls_Eliminar_Click(object sender, EventArgs e)
@@ -105,7 +105,7 @@ namespace Capa_Presentacion.Formularios
                 MessageBox.Show("No hay registro para Eliminar", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-          
+
 
             if (MessageBox.Show("Esta Seguro Eliminar el Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -123,15 +123,15 @@ namespace Capa_Presentacion.Formularios
             {
                 IdEmpresa = byte.Parse(txt_IdEmpresa.Text),
                 Nombre_Empresa = txt_Nombre_Empresa.Text,
-                Flag_Activo =byte.Parse( chk_Activo.Checked ==true? "1":"0"),
+                Flag_Activo = byte.Parse(chk_Activo.Checked == true ? "1" : "0"),
                 RUC_Empresa = txt_Ruc_Empresa.Text,
-                Abreviatura_Empresa =txt_SiglaEmpresa.Text,
-                Direccion_Empresa =  txt_DireccionEmpresa.Text,
+                Abreviatura_Empresa = txt_SiglaEmpresa.Text,
+                Direccion_Empresa = txt_DireccionEmpresa.Text,
                 Telefono1_Empresa = txt_telefono1.Text,
                 Telefono2_Empresa = txt_telefono2.Text,
                 Telefono3_Empresa = txt_telefono3.Text,
                 Ruta_Foto_Empresa = Txt_DireccionImagen.Text,
-        };
+            };
 
             if (Verificar_Datos() == false) { return; }
 
@@ -279,7 +279,7 @@ namespace Capa_Presentacion.Formularios
             if (more == true)
                 e.HasMorePages = true;
         }
-        
+
 
         private void HabilitarControles(Boolean vEnabled)
         {
@@ -291,7 +291,7 @@ namespace Capa_Presentacion.Formularios
             txt_telefono1.Enabled = vEnabled;
             txt_telefono2.Enabled = vEnabled;
             txt_telefono3.Enabled = vEnabled;
-           
+
         }
 
         private void LimpiarControles()
@@ -393,7 +393,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void Chk_MostrarImagen_CheckedChanged(object sender, EventArgs e)
-        { Descargar_Imagen();  }
+        { Descargar_Imagen(); }
         private void Descargar_Imagen()
         {
             if (bln_Nuevo == false)
@@ -401,7 +401,7 @@ namespace Capa_Presentacion.Formularios
                 Img_foto.Image = null;
                 if (Txt_DireccionImagen.Text == "") { return; }
                 if (Chk_MostrarImagen.Checked == true)
-                {PR_aEmpresa_CN._Instancia.Descargar_Imagen(Img_foto, Int32.Parse(txt_IdEmpresa.Text));}
+                { PR_aEmpresa_CN._Instancia.Descargar_Imagen(Img_foto, Int32.Parse(txt_IdEmpresa.Text)); }
             }
         }
 

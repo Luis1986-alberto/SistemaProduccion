@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -16,9 +12,9 @@ namespace Capa_Entidades.Tablas
         public Nullable<byte> IdNivelUsuario { get; set; }
 
         public PR_mUsuarios()
-        {   }
+        { }
 
 
     }
-    
+
 }

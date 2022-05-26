@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -37,7 +34,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public LG_aTipoCosto TraerPorIdTipoCosto(Int32 idtipocosto)
@@ -51,7 +48,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al traer por ID", Ex);}
+            { throw new Exception("Error al traer por ID", Ex); }
         }
 
         public string Agregar_TipoCosto(LG_aTipoCosto tipocosto)
@@ -63,36 +60,36 @@ namespace Capa_Datos.Repositorio
                     var sqlinsert = "Insert Into LG_aTipoCosto (Nombre_TipoCosto, Codigo_TipoCosto, IdUsuario_PC, IdUsuario ) values " +
                                     "(@nombre_tipocosto, @codigo_tipocosto, @idusuario_pc, @idusuario) ";
                     ConexionSQL.Execute(sqlinsert, new {
-                                                        nombre_tipocosto = tipocosto.Nombre_TipoCosto,
-                                                        codigo_tipocosto = tipocosto.Codigo_TipoCosto,
-                                                        idusuario_pc = Environment.UserName,
-                                                        idusuario = tipocosto.IdUsuario
-                                                        });
+                        nombre_tipocosto = tipocosto.Nombre_TipoCosto,
+                        codigo_tipocosto = tipocosto.Codigo_TipoCosto,
+                        idusuario_pc = Environment.UserName,
+                        idusuario = tipocosto.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Agregar", Ex);}
+            { throw new Exception("Error al Agregar", Ex); }
         }
 
         public string Actualizar_TipoCosto(LG_aTipoCosto tipocosto)
         {
             try
             {
-                using (var ConexionSql = new SqlConnection(cadenaconexion))
+                using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update LG_aTipoCosto set Nombre_TipoCosto = @nombre_tipocosto, Codigo_TipoCosto = @codigo_tipocosto, " +
                                     " IdUsuario_PC = @idusurio_pc, idusuario = @idusuario where IdTipoCosto = @id ";
                     ConexionSql.Execute(sqlupdate, new {
-                                                            id = tipocosto.IdTipoCosto, nombre_tipocosto = tipocosto.Nombre_TipoCosto,
-                                                            codigo_tipocosto = tipocosto.Codigo_TipoCosto, idusuario_pc = Environment.UserName,
-                                                            idusuario = tipocosto.IdUsuario
-                                                        });
+                        id = tipocosto.IdTipoCosto, nombre_tipocosto = tipocosto.Nombre_TipoCosto,
+                        codigo_tipocosto = tipocosto.Codigo_TipoCosto, idusuario_pc = Environment.UserName,
+                        idusuario = tipocosto.IdUsuario
+                    });
                     return "PROCESADO";
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Actualizar", Ex);}
+            { throw new Exception("Error al Actualizar", Ex); }
         }
 
         public string Eliminar_TipoCosto(Int32 idtipocosto)
@@ -107,7 +104,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
         public IEnumerable<LG_aTipoCosto> FiltroPorunCampo(IPredicate predicado)

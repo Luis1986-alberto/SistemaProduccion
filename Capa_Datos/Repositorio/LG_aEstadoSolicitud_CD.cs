@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -75,9 +72,10 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update LG_aEstadoSolicitud set  Descripcion_EstadoSolicitud = @descripcion_estadosolicitud where IdEstadoSolicitud = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = estadosolicitud.IdEstadoSolicitud, 
-                                                                descripcion_estadosolicitud = estadosolicitud.Descripcion_EstadoSolicitud
-                                                              });
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        id = estadosolicitud.IdEstadoSolicitud,
+                        descripcion_estadosolicitud = estadosolicitud.Descripcion_EstadoSolicitud
+                    });
                     return "PROCESADO";
                 }
             }

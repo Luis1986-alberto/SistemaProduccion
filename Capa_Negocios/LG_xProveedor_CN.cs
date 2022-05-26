@@ -1,12 +1,9 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
 using DapperExtensions;
-using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -57,7 +54,7 @@ namespace Capa_Negocios
         public string Eliminar_Proveedor(Int32 idproveedor)
         {
             var lista = PR_mMaquina_CD.Instancia.Listar();
-            if((from Buscar in lista where Buscar.IdProveedor == idproveedor select Buscar).Count() > 0 ) return "EXISTE MAQUINAS DE ESTE PROVEEDOR";
+            if ((from Buscar in lista where Buscar.IdProveedor == idproveedor select Buscar).Count() > 0) return "EXISTE MAQUINAS DE ESTE PROVEEDOR";
             return LG_xProveedor_CD._Instancia.Eliminar_Proveedor(idproveedor);
         }
 

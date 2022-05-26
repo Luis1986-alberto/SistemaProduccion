@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class LG_aCondicionCobranza_CD : IRepositori<LG_aCondicionCobranza>
+    public class LG_aCondicionCobranza_CD 
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion;
@@ -105,9 +105,9 @@ namespace Capa_Datos.Repositorio
                 var result = ConexionSQL.GetList<LG_aCondicionCobranza>(predicado);
                 ConexionSQL.Close();
                 return result;
-            }  
+            }
         }
 
-        
+
     }
 }

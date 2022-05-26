@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -110,7 +107,7 @@ namespace Capa_Presentacion.Formularios
             if (MessageBox.Show("Esta Seguro Eliminar el Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 rpta = PR_aEstadoOrdenProduccion_Programa_CN._Instancia.Eliminar_EstadoOPPrograma(int.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEstadoProcesoOrdenProduccion"].Value.ToString()));
-                if (rpta == "PROCESADO") { MessageBox.Show("Se elimino el registro", "Eliminar Registro",MessageBoxButtons.OK,MessageBoxIcon.Information); }
+                if (rpta == "PROCESADO") { MessageBox.Show("Se elimino el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show(rpta); }
             }
             Cargar_Datos();
@@ -222,7 +219,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
-            if(dgv_Mnt.Rows.Count == 0) { return; }
+            if (dgv_Mnt.Rows.Count == 0) { return; }
 
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[0].Selected = true;

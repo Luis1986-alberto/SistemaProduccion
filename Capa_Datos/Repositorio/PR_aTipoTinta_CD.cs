@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aTipoTinta set Descripcion_TipoTinta = @descripcion_tipotinta where IdTipoTinta = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new { id = tipotinta.IdTipoTinta, descripcion_tipotinta = tipotinta.Descripcion_TipoTinta });                    return "PROCESADO";
+                    conexionsql.ExecuteScalar(sqlupdate, new { id = tipotinta.IdTipoTinta, descripcion_tipotinta = tipotinta.Descripcion_TipoTinta }); return "PROCESADO";
                 }
             }
             catch(Exception ex)
@@ -93,6 +93,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

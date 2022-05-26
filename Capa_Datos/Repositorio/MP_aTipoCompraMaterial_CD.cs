@@ -6,12 +6,12 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class MP_aTipoCompraMaterial_CD 
+    public class MP_aTipoCompraMaterial_CD
     {
         public static readonly MP_aTipoCompraMaterial_CD _Instancia = new MP_aTipoCompraMaterial_CD();
         private Inicio principal = new Inicio();
         private string cadenaconexion = "";
-        
+
         private static MP_aTipoCompraMaterial_CD Instancia
         { get { return MP_aTipoCompraMaterial_CD._Instancia; } }
 
@@ -32,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public MP_aTipoCompraMaterial TraerPorIdTipoCompraMaterial(Int32 idtipocompramaterial)
@@ -46,7 +46,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Traer por Id", Ex);}
+            { throw new Exception("Error al Traer por Id", Ex); }
         }
 
         public String Agregar(MP_aTipoCompraMaterial tipocompramaterial)
@@ -61,7 +61,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Ingresar", Ex);}
+            { throw new Exception("Error al Ingresar", Ex); }
         }
 
         public String Actualizar(MP_aTipoCompraMaterial tipocompramaterial)
@@ -76,7 +76,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("ERROR AL ACTUALIZAR", Ex);}
+            { throw new Exception("ERROR AL ACTUALIZAR", Ex); }
         }
 
         public String Eliminar(Int32 idTipoCompraMaterial)
@@ -91,9 +91,9 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
-        
+
     }
 }

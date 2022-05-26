@@ -76,7 +76,7 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al Actualizar", Ex); }
         }
 
-        public string Eliminar_MarcaMaquina (Int32 idmarcamaquina)
+        public string Eliminar_MarcaMaquina(Int32 idmarcamaquina)
         {
             try
             {

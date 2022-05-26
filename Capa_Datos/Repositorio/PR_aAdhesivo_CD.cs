@@ -25,26 +25,26 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdAdhesivo, Descripcion_Adhesivo from  PR_aAdhesivo";
                     return conexionsql.Query<PR_aAdhesivo>(sql);
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al listar", Ex); }
         }
         public IEnumerable<PR_aAdhesivo> Traer_AdhesivoPorId(Int32 idadhesivo)
-        {   
+        {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdAdhesivo, Descripcion_Adhesivo from  PR_aAdhesivo where IdAdhesivo = @id";
                     return conexionsql.Query<PR_aAdhesivo>(sql, new { id = idadhesivo });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -59,21 +59,21 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch(Exception Ex){ throw new Exception("Error al Insertar", Ex); }
+            catch(Exception Ex) { throw new Exception("Error al Insertar", Ex); }
         }
 
         public string Actualizar_Adhesivo(PR_aAdhesivo aAdhesivo)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqledit = "update PR_aAdhesivo set Descripcion_Adhesivo = @descripcion_adhesivo where IdAdhesivo = @idadhesivo";
-                    conexionsql.ExecuteScalar(sqledit, new { descripcion_adhesivo = aAdhesivo.Descripcion_Adhesivo, idadhesivo = aAdhesivo.IdAdhesivo});
+                    conexionsql.ExecuteScalar(sqledit, new { descripcion_adhesivo = aAdhesivo.Descripcion_Adhesivo, idadhesivo = aAdhesivo.IdAdhesivo });
                     return "PROCESADO";
                 }
             }
-            catch (Exception Ex) { throw new Exception("Error al Actualizar", Ex); }
+            catch(Exception Ex) { throw new Exception("Error al Actualizar", Ex); }
         }
 
         public string Eliminar_Adhesivo(Int32 idadhesivo)
@@ -90,6 +90,6 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-        
+
     }
 }

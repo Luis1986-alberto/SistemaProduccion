@@ -21,7 +21,7 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_aTipoLaminacion> Buscar_TipoLaminacion(string detallelaminacion)
         {
-           var lista = PR_aTipoLaminacion_CD._Instancia.Lista_TipoLaminacion().ToList();
+            var lista = PR_aTipoLaminacion_CD._Instancia.Lista_TipoLaminacion().ToList();
             return from buscar in lista where buscar.Detalle_Laminacion == detallelaminacion select buscar;
         }
 

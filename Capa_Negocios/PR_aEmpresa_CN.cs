@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Negocios
@@ -44,8 +42,8 @@ namespace Capa_Negocios
         {
             var lista = LG_aAlmacen_CN._Instancia.Buscar_AlmacenPorEmpresa(idempresa);
             if (lista.Count() > 0) return "EXISTE ALMACENES REGISTRADOS EN ESTA EMPRESA";
-           
-            return PR_aEmpresa_CD._Instancia.Eliminar_Empresa(idempresa); 
+
+            return PR_aEmpresa_CD._Instancia.Eliminar_Empresa(idempresa);
         }
 
         public void Descargar_Imagen(PictureBox fotoempresa, Int32 idempresa)

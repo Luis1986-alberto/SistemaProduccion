@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -52,12 +49,12 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(byte Id)
         {
             var datos = MP_aTipoMaterial_CN._Instancia.traerPorID(Id);
-            
+
             txt_IdTipoMaterial.Text = datos.IdTipoMaterial.ToString();
             txt_Descripcion.Text = datos.Descripcion;
             txt_Abreviatura.Text = datos.Abreviatura;
             txt_CodigoSustrato.Text = datos.Codigo_Sustrato;
-            Nud_Orden_Gerencia.Value = datos.Orden_Gerencia;   
+            Nud_Orden_Gerencia.Value = datos.Orden_Gerencia;
         }
 
         private void tls_Agregar_Click(object sender, EventArgs e)

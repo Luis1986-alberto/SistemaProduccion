@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -12,7 +8,7 @@ namespace Capa_Entidades.Tablas
         public string Tipo_Proveedor { get; set; }
 
         public LG_aTipoProveedor()
-        {  }
+        { }
 
         public LG_aTipoProveedor(byte idtipoproveedor, string tipo_proveedor)
         {

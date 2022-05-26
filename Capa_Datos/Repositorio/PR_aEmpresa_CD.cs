@@ -27,28 +27,28 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionSql = new SqlConnection(cadenaconexion))
+                using(var conexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEmpresa, Nombre_Empresa, RUC_Empresa, Abreviatura_Empresa, Flag_Activo, Ruta_Foto_Empresa, Direccion_Empresa, Telefono1_Empresa, Telefono2_Empresa, Telefono3_Empresa from PR_aEmpresa";
                     return conexionSql.Query<PR_aEmpresa>(sql);
                 }
             }
-            catch (Exception ex)
-            {throw new Exception("Error al listar",ex);}
-            
+            catch(Exception ex)
+            { throw new Exception("Error al listar", ex); }
+
         }
 
         public IEnumerable<PR_aEmpresa> Traer_EmpresaPorId(Int32 idempresa)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEmpresa, Nombre_Empresa, RUC_Empresa, Abreviatura_Empresa, Flag_Activo, Ruta_Foto_Empresa, Direccion_Empresa, Telefono1_Empresa, Telefono2_Empresa, Telefono3_Empresa from PR_aEmpresa where IdEmpresa = @id";
                     return conexionsql.Query<PR_aEmpresa>(sql, new { id = idempresa });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -56,7 +56,7 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     conexionsql.Open();
                     SqlCommand cmd = new SqlCommand("insert into PR_aEmpresa ( Nombre_Empresa, RUC_Empresa, Abreviatura_Empresa, Flag_Activo, Ruta_Foto_Empresa, Direccion_Empresa, Telefono1_Empresa, Telefono2_Empresa, Telefono3_Empresa )" +
@@ -78,50 +78,49 @@ namespace Capa_Datos.Repositorio
                 }
                 return "PROCESADO";
             }
-            catch (Exception ex) { throw new Exception("Error al inserta", ex); }
+            catch(Exception ex) { throw new Exception("Error al inserta", ex); }
         }
 
         public string Actualizar_Empresa(PR_aEmpresa empresa, PictureBox fotoempresa)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update PR_aEmpresa set Nombre_Empresa = @nombre_empresa, RUC_Empresa = @ruc_empresa, Abreviatura_Empresa = @abreviatura_empresa, Flag_Activo = @flag_activo, " +
                                     " Ruta_Foto_Empresa = @ruta_foto_empresa, Direccion_Empresa = @direccion_empresa, Telefono1_Empresa = @telefono1_empresa, Telefono2_Empresa = @telefono2_empresa, Telefono3_Empresa = @telefono3_empresa  where IdEmpresa = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new
-                                                            {
-                                                                id = empresa.IdEmpresa,
-                                                                nombre_empresa = empresa.Nombre_Empresa,
-                                                                ruc_empresa = empresa.RUC_Empresa,
-                                                                abreviatura_empresa = empresa.Abreviatura_Empresa,
-                                                                flag_activo = empresa.Flag_Activo,
-                                                                ruta_foto_empresa = empresa.Ruta_Foto_Empresa,
-                                                                direccion_empresa = empresa.Direccion_Empresa,
-                                                                telefono1_empresa = empresa.Telefono1_Empresa,
-                                                                telefono2_empresa = empresa.Telefono2_Empresa,
-                                                                telefono3_empresa = empresa.Telefono3_Empresa
-                                                            });
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        id = empresa.IdEmpresa,
+                        nombre_empresa = empresa.Nombre_Empresa,
+                        ruc_empresa = empresa.RUC_Empresa,
+                        abreviatura_empresa = empresa.Abreviatura_Empresa,
+                        flag_activo = empresa.Flag_Activo,
+                        ruta_foto_empresa = empresa.Ruta_Foto_Empresa,
+                        direccion_empresa = empresa.Direccion_Empresa,
+                        telefono1_empresa = empresa.Telefono1_Empresa,
+                        telefono2_empresa = empresa.Telefono2_Empresa,
+                        telefono3_empresa = empresa.Telefono3_Empresa
+                    });
                     conexionsql.Close();
                     Actualizar_imagen(empresa.IdEmpresa, fotoempresa);
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
         }
 
         public string Eliminar_Empresa(Int32 idempresa)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aEmpresa where IdEmpresa = @idempresa";
                     conexionsql.ExecuteScalar(sqldelete, new { idempresa = idempresa });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
         }
 
         private long Actualizar_imagen(long vidempresa, PictureBox Imagen)

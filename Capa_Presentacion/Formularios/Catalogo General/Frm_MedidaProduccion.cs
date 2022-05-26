@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -68,13 +65,13 @@ namespace Capa_Presentacion.Formularios
 
             tbc_Mnt.SelectTab(0);
             Estado_Toolbar(bln_Nuevo);
-            
+
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_Descripcion_Medida.Enabled = true;
             Nud_Orden_Medida.Enabled = true;
             txt_IdMedidaProd.Text = "0";
             txt_Descripcion_Medida.Text = "";
-            Nud_Orden_Medida.Text = "";           
+            Nud_Orden_Medida.Text = "";
             txt_Descripcion_Medida.Focus();
         }
 
@@ -166,7 +163,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
             txt_Descripcion_Medida.Enabled = false;
             Nud_Orden_Medida.Enabled = false;
-            
+
             Estado_Toolbar(bln_Editar);
         }
 

@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class MP_aPropiedadMaterial_CD 
+    public class MP_aPropiedadMaterial_CD
     {
         public static readonly MP_aPropiedadMaterial_CD _Instancia = new MP_aPropiedadMaterial_CD();
         private Inicio principal = new Inicio();
@@ -32,7 +32,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public MP_aPropiedadesMaterial TraerPorIdPropiedadMaterial(Int32 idpropiedadmaterial)
@@ -46,9 +46,9 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Traer Por ID ", ex);}
+            { throw new Exception("Error al Traer Por ID ", ex); }
         }
-       
+
 
         public String Agregar(MP_aPropiedadesMaterial entity)
         {
@@ -62,7 +62,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            { throw new Exception("Error al Agregar", Ex);}
+            { throw new Exception("Error al Agregar", Ex); }
         }
 
         public String Actualizar(MP_aPropiedadesMaterial entity)
@@ -97,12 +97,12 @@ namespace Capa_Datos.Repositorio
 
             }
             catch(Exception EX)
-            {throw new Exception ("Error al Eliminar", EX);}
+            { throw new Exception("Error al Eliminar", EX); }
         }
 
-       
-       
-       
+
+
+
 
     }
 }

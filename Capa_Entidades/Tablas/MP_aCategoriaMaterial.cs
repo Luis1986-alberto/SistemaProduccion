@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class MP_aCategoriaMaterial
     {
@@ -12,9 +6,9 @@ namespace Capa_Entidades.Tablas
         public string Nombre_Categoria_Material { get; set; }
 
         public MP_aCategoriaMaterial()
-        {    }
+        { }
 
-        public MP_aCategoriaMaterial(byte idcategoriamaterial, string nombre_categoria_material )
+        public MP_aCategoriaMaterial(byte idcategoriamaterial, string nombre_categoria_material)
         {
             IdCategoriaMaterial = idcategoriamaterial;
             Nombre_Categoria_Material = nombre_categoria_material;

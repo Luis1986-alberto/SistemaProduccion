@@ -21,7 +21,7 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_aProcesos> Buscar_SecuenciaProcesos(string secuenciaproc)
         {
-           var lista = PR_aProcesos_CD._Instancia.Lista_Procesos().ToList();
+            var lista = PR_aProcesos_CD._Instancia.Lista_Procesos().ToList();
             return from buscar in lista where buscar.Secuencia_Procesos == secuenciaproc select buscar;
         }
 

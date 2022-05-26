@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class MP_aTipoMaterial
     {
@@ -15,7 +9,7 @@ namespace Capa_Entidades.Tablas
         public string Codigo_Sustrato { get; set; }
 
         public MP_aTipoMaterial()
-        {  }
+        { }
 
         public MP_aTipoMaterial(byte idtipomaterial, string descripcion, string abreviatura, byte orden_gerencia, string codigo_sustrato)
         {

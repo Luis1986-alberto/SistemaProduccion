@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aProcesos
     {
@@ -29,7 +23,7 @@ namespace Capa_Entidades.Tablas
         public PR_aProcesos()
         { }
 
-        public PR_aProcesos(byte idProcesos, string secuencia_Procesos, byte flag_Extrusion, byte flag_Impresion, byte flag_Sellado, byte flag_Corte, 
+        public PR_aProcesos(byte idProcesos, string secuencia_Procesos, byte flag_Extrusion, byte flag_Impresion, byte flag_Sellado, byte flag_Corte,
                             byte flag_Laminado, byte flag_Doblado)
         {
             _IdProcesos = idProcesos;

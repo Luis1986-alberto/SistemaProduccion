@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -35,11 +32,11 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
 
-        public IEnumerable<MP_aBanco>Traer_BancoPorId(Int32 idbanco)
+        public IEnumerable<MP_aBanco> Traer_BancoPorId(Int32 idbanco)
         {
             try
             {
@@ -50,7 +47,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Traer por Id", Ex);}
+            { throw new Exception("Error al Traer por Id", Ex); }
         }
 
         public string Agregar_Banco(MP_aBanco banco)
@@ -65,7 +62,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Agregar", Ex);}
+            { throw new Exception("Error al Agregar", Ex); }
         }
 
         public string Actualizar_Banco(MP_aBanco banco)
@@ -75,7 +72,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Insert into MP_aBanco set Nombre_Banco = @nombre_banco, Abreviatura_Banco = @abreviatura_banco where IdBanco = @id  ";
-                    ConexionSql.Execute(sqlupdate, new {id = banco.IdBanco, nombre_banco = banco.Nombre_Banco, abreviatura_banco = banco.Abreviatura_Banco });
+                    ConexionSql.Execute(sqlupdate, new { id = banco.IdBanco, nombre_banco = banco.Nombre_Banco, abreviatura_banco = banco.Abreviatura_Banco });
                     return "PROCESADO";
                 }
             }

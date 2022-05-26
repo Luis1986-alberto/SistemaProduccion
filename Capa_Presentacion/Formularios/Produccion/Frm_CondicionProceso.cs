@@ -169,7 +169,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
@@ -235,7 +235,7 @@ namespace Capa_Presentacion.Formularios
             if (SelectIndex == 0) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
-            SelectIndex = SelectIndex --;
+            SelectIndex = SelectIndex--;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCondicionProceso"].Value.ToString()));
         }

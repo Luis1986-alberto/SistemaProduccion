@@ -20,7 +20,7 @@ namespace Capa_Negocios
         { return PR_aGrupo_Produccion_CD.Instancia.Traer_GrupoProduccionPorId(id); }
         public IEnumerable<PR_aGrupo_Produccion> Buscar_DescripcionGrupoProd(string descGrupoprod)
         {
-           var lista = PR_aGrupo_Produccion_CD.Instancia.Lista_GrupoProduccion().ToList();
+            var lista = PR_aGrupo_Produccion_CD.Instancia.Lista_GrupoProduccion().ToList();
             return from buscar in lista where buscar.Descripcion_GrupoProd == descGrupoprod select buscar;
         }
 

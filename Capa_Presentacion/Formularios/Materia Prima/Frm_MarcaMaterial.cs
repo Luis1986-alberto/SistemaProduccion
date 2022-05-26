@@ -67,7 +67,7 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_IdMarcaMaterial.Text = "0";
             txt_Abreviatura_MarcaMaterial.Text = "";
-            txt_Descripcion_MarcaMaterial.Text = "";            
+            txt_Descripcion_MarcaMaterial.Text = "";
             txt_Descripcion_MarcaMaterial.Focus();
 
         }
@@ -315,7 +315,7 @@ namespace Capa_Presentacion.Formularios
             PrintDocument.DocumentName = "Reporte MarcaMaterial";
             PrintDocument.PrinterSettings = MyPrintDialog.PrinterSettings;
             PrintDocument.DefaultPageSettings = MyPrintDialog.PrinterSettings.DefaultPageSettings;
-            PrintDocument.DefaultPageSettings.Margins = new Margins(40, 40, 40, 40);            
+            PrintDocument.DefaultPageSettings.Margins = new Margins(40, 40, 40, 40);
 
             if (MessageBox.Show("Desea que el informe se centre en la página", "Estilo de Impresión", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 dgr_Visor_Grilla = new DataGridViewPrinter(dgv_Mnt, PrintDocument, true, true, "Listado de Marca Material", new Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, true);

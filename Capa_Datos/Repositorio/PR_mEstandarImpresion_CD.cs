@@ -101,7 +101,7 @@ namespace Capa_Datos.Repositorio
                 return "PROCESADO";
             }
             catch(Exception Ex)
-            {throw new Exception ("Error al procesar "+ accion +" "+ idestandar, Ex);}
+            { throw new Exception("Error al procesar " + accion + " " + idestandar, Ex); }
         }
 
         public PR_mEstandarImpresion TraerPorID(Int32 videstandarimp)
@@ -115,10 +115,10 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Traer Por ID", Ex);}
+            { throw new Exception("Error al Traer Por ID", Ex); }
         }
 
-        public string Eliminar_EstandarImpresion (Int32 videstandar)
+        public string Eliminar_EstandarImpresion(Int32 videstandar)
         {
             try
             {
@@ -184,6 +184,6 @@ namespace Capa_Datos.Repositorio
             return 1;
         }
 
-       
+
     }
 }

@@ -34,7 +34,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             Cbo_ProveedorMaquina.DataSource = LG_xProveedor_CN._Instancia.Lista_Proveedores();
             cbo_EmpresaCompra.DataSource = PR_aEmpresa_CN._Instancia.Lista_Empresas();
             cbo_FiltroEmpresa.DataSource = PR_aEmpresa_CN._Instancia.Lista_Empresas();
-            Cbo_AñoFabricacion.DataSource = PR_aAño_CN._Instancia.Lista_Años();
+            Cbo_AñoFabricacion.DataSource = LG_aAño_CN._Instancia.Lista_Años();
             cbo_EstadoMaquina.DataSource = PR_aEstadoMaquina_CN._Instancia.Lista_EstadoMaquina();
 
             Cargar_Datos();
@@ -429,7 +429,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             Frm_Año año = new Frm_Año();
             año.ShowDialog();
-            Cbo_AñoFabricacion.DataSource = PR_aAño_CN._Instancia.Lista_Años();
+            Cbo_AñoFabricacion.DataSource = LG_aAño_CN._Instancia.Lista_Años();
         }
 
         private void cmd_EmpresasCompra_Click(object sender, EventArgs e)

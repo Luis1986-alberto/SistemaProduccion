@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -20,7 +16,7 @@ namespace Capa_Entidades.Tablas
         private Int32 _IdDerivadoColor;
         private byte _IdLineaColor;
         private Int32 _IdMaterial;
-                
+
         public int IdEstandarColor { get => _IdEstandarColor; set => _IdEstandarColor = value; }
         public string Descripcion_EstandarColor { get => _Descripcion_EstandarColor; set => _Descripcion_EstandarColor = value; }
         public string Nota_EstandarColor { get => _Nota_EstandarColor; set => _Nota_EstandarColor = value; }
@@ -35,10 +31,10 @@ namespace Capa_Entidades.Tablas
         public int IdMaterial { get => _IdMaterial; set => _IdMaterial = value; }
 
         public PR_aEstandarColor()
-        {  }
+        { }
 
-        public PR_aEstandarColor(int idEstandarColor, string descripcion_EstandarColor, string nota_EstandarColor, byte[] foto_EstandarColor, 
-            string ruta_EstandarColor, string idUsuario, string idUsuario_PC, DateTime fecha_Servidor, byte idColor, int idDerivadoColor, 
+        public PR_aEstandarColor(int idEstandarColor, string descripcion_EstandarColor, string nota_EstandarColor, byte[] foto_EstandarColor,
+            string ruta_EstandarColor, string idUsuario, string idUsuario_PC, DateTime fecha_Servidor, byte idColor, int idDerivadoColor,
             byte idLineaColor, int idMaterial)
         {
             _IdEstandarColor = idEstandarColor;

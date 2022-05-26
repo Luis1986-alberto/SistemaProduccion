@@ -79,7 +79,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Actualizar", ex); }
         }
 
-        public string Eliminar_Semana (Int32 idsemana)
+        public string Eliminar_Semana(Int32 idsemana)
         {
             try
             {
@@ -94,6 +94,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

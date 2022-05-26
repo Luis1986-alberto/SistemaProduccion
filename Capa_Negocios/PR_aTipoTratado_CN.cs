@@ -22,7 +22,7 @@ namespace Capa_Negocios
         public IEnumerable<PR_aTipoTratado> Buscar_TipoTratado(string tipotratado)
         {
             var LST = PR_aTipoTratado_CD._Instancia.Lista_TipoTratado().ToList();
-            return from buscar in LST where buscar.Tipo_Tratado == tipotratado select buscar; 
+            return from buscar in LST where buscar.Tipo_Tratado == tipotratado select buscar;
         }
 
         public string Agregar_TipoTratado(PR_aTipoTratado tipotratado)

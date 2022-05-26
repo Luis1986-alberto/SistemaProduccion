@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aEtiquetadoras
     {
@@ -19,7 +13,7 @@ namespace Capa_Entidades.Tablas
         public string Codigo_Etiquetadora { get => _Codigo_Etiquetadora; set => _Codigo_Etiquetadora = value; }
 
         public PR_aEtiquetadoras()
-        {  }
+        { }
 
         public PR_aEtiquetadoras(byte idEtiquetadora, string marca_Etiquetadora, string modelo_Etiquetadora, string codigo_Etiquetadora)
         {

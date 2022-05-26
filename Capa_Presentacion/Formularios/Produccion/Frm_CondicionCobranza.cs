@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -53,10 +50,10 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(byte idcondicionpago)
         {
             var result = LG_aCondicionCobranza_CN._Instancia.TraerID(idcondicionpago);
-           
+
             TxtIdCondicionCobranza.Text = result.IdCondicionCobranza.ToString();
             TxtCondicion_Cobranza.Text = result.Condicion_Cobranza.ToString();
-           
+
         }
 
         private void tls_Agregar_Click(object sender, EventArgs e)
@@ -104,9 +101,9 @@ namespace Capa_Presentacion.Formularios
             }
 
             if (MessageBox.Show("Esta Seguro Eliminar el Registro", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {  
+            {
                 rpta = LG_aCondicionCobranza_CN._Instancia.Eliminar_CondicionCobranza(Int32.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCondicionCobranza"].Value.ToString()));
-                
+
                 if (rpta == "PROCESADO") { MessageBox.Show("Se elimino el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show(rpta); }
             }
@@ -171,7 +168,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
@@ -211,7 +208,7 @@ namespace Capa_Presentacion.Formularios
             dgv_Mnt.DataSource = Listado_Ordenado;
         }
 
-        private void tls_Refrescar_Click(object sender, EventArgs e)=> Cargar_Datos();
+        private void tls_Refrescar_Click(object sender, EventArgs e) => Cargar_Datos();
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
@@ -248,7 +245,7 @@ namespace Capa_Presentacion.Formularios
             if (dgv_Mnt.Rows.Count - 1 == SelectIndex) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
-            SelectIndex = SelectIndex ++;
+            SelectIndex = SelectIndex++;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCondicionCobranza"].Value.ToString()));
         }

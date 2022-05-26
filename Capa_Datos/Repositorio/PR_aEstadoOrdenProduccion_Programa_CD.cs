@@ -56,10 +56,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "insert into PR_aEstadoOrdenProduccion_Programa (EstadoOrdenProduccion_Programa, Sigla_EstadoOP_Programa ) valueS " +
                                                                                   " (@estadoordenproduccion, @sigla_estadoop_programa)";
-                    conexionsql.ExecuteScalar(sqlinsert, new 
-                                                            {   estadoordenproduccion = aestadoordenproduccion_programa.EstadoOrdenProduccion_Programa,
-                                                                sigla_estadoop_programa = aestadoordenproduccion_programa.Sigla_EstadoOP_Programa
-                                                            });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        estadoordenproduccion = aestadoordenproduccion_programa.EstadoOrdenProduccion_Programa,
+                        sigla_estadoop_programa = aestadoordenproduccion_programa.Sigla_EstadoOP_Programa
+                    });
                     return "PROCESADO";
                 }
             }
@@ -75,10 +75,10 @@ namespace Capa_Datos.Repositorio
                     var sqledit = "update PR_aEstadoOrdenProduccion_Programa set EstadoOrdenProduccion_Programa = @estadoordenproduccion, " +
                                   " Sigla_EstadoOP_Programa = @sigla_estadoop_programa where IdEstadoOrdenProduccion_Programa = @id";
                     conexionsql.ExecuteScalar(sqledit, new {
-                                                                id = aestadoordenproduccion_programa.IdEstadoOrdenProduccion_Programa,
-                                                                estadoordenproduccion = aestadoordenproduccion_programa.EstadoOrdenProduccion_Programa,
-                                                                sigla_estadoop_programa = aestadoordenproduccion_programa.Sigla_EstadoOP_Programa,    
-                                                           });
+                        id = aestadoordenproduccion_programa.IdEstadoOrdenProduccion_Programa,
+                        estadoordenproduccion = aestadoordenproduccion_programa.EstadoOrdenProduccion_Programa,
+                        sigla_estadoop_programa = aestadoordenproduccion_programa.Sigla_EstadoOP_Programa,
+                    });
                     return "PROCESADO";
                 }
             }
@@ -99,6 +99,6 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error al eliminar", Ex); }
         }
 
-        
+
     }
 }

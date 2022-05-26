@@ -22,7 +22,7 @@ namespace Capa_Negocios
         public IEnumerable<PR_aTipoProcesoCorte> Buscar_TipoProcesoCorte(string tipoprocesocorte)
         {
             var lista = PR_aTipoProcesoCorte_CD._Instancia.Lista_TipoProcesoCorte().ToList();
-            return from buscar in lista where buscar.Nombre_TipoProcesoCorte == tipoprocesocorte select buscar; 
+            return from buscar in lista where buscar.Nombre_TipoProcesoCorte == tipoprocesocorte select buscar;
         }
 
         public string Agregar_TipoProcesoCorte(PR_aTipoProcesoCorte tipoprocesocorte)

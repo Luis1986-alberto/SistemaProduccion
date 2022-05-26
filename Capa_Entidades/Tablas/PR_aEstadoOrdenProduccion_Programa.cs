@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class PR_aEstadoOrdenProduccion_Programa
     {
@@ -17,7 +11,7 @@ namespace Capa_Entidades.Tablas
         public string Sigla_EstadoOP_Programa { get => _Sigla_EstadoOP_Programa; set => _Sigla_EstadoOP_Programa = value; }
 
         public PR_aEstadoOrdenProduccion_Programa()
-        {  }
+        { }
 
         public PR_aEstadoOrdenProduccion_Programa(byte idEstadoOrdenProduccion_Programa, string estadoOrdenProduccion_Programa, string sigla_EstadoOP_Programa)
         {

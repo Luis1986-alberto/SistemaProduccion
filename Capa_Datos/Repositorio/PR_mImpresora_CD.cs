@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class PR_mImpresora_CD : IRepositori<PR_mImpresora>
+    public class PR_mImpresora_CD 
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion;
@@ -26,7 +26,7 @@ namespace Capa_Datos.Repositorio
 
         public String Agregar(PR_mImpresora entidad)
         {
-           using(var ConexionSQL = new SqlConnection(cadenaconexion))
+            using(var ConexionSQL = new SqlConnection(cadenaconexion))
             {
                 var sqlinsert = "Insert Into PR_mImpresora (IdMaquina, IdRodillo) values (@idmaquina, @idrodillo) ";
                 ConexionSQL.Execute(sqlinsert, new { idmaquina = entidad.IdMaquina, idrodillo = entidad.IdRodillo });
@@ -39,7 +39,7 @@ namespace Capa_Datos.Repositorio
             using(var ConexionSQL = new SqlConnection(cadenaconexion))
             {
                 var sqlinsert = "Update PR_mImpresora Set IdMaquina = @idmaquina, IdRodillo = @idrodillo where IdImpresora = @id ";
-                ConexionSQL.Execute(sqlinsert, new {id = entidad.IdImpresora,  idmaquina = entidad.IdMaquina, idrodillo = entidad.IdRodillo });
+                ConexionSQL.Execute(sqlinsert, new { id = entidad.IdImpresora, idmaquina = entidad.IdMaquina, idrodillo = entidad.IdRodillo });
                 return "PROCESADO";
             }
         }
@@ -84,9 +84,6 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        PR_mImpresora IRepositori<PR_mImpresora>.TraerPorId(Int32 id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

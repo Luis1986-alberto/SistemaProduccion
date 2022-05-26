@@ -59,14 +59,14 @@ namespace Capa_Datos.Repositorio
                     var sqlinsert = "Insert Into PR_aProcesos (Secuencia_Procesos, Flag_Extrusion, Flag_Impresion, Flag_Laminado, Flag_Sellado, Flag_Corte, Flag_Doblado) " +
                                     " values(@secuencia_procesos, @flag_extrusion, @flag_impresion, @flag_laminado, @flag_sellado, @flag_corte, @flag_doblado)";
                     conexionsql.ExecuteScalar(sqlinsert, new {
-                                                               secuencia_procesos = procesos.Secuencia_Procesos,
-                                                               flag_extrusion = procesos.Flag_Extrusion,
-                                                               flag_impresion = procesos.Flag_Impresion,
-                                                               flag_laminado = procesos.Flag_Laminado,
-                                                               flag_sellado = procesos.Flag_Sellado,
-                                                               flag_corte = procesos.Flag_Corte,
-                                                               flag_doblado = procesos.Flag_Doblado
-                                                            });
+                        secuencia_procesos = procesos.Secuencia_Procesos,
+                        flag_extrusion = procesos.Flag_Extrusion,
+                        flag_impresion = procesos.Flag_Impresion,
+                        flag_laminado = procesos.Flag_Laminado,
+                        flag_sellado = procesos.Flag_Sellado,
+                        flag_corte = procesos.Flag_Corte,
+                        flag_doblado = procesos.Flag_Doblado
+                    });
                     return "PROCESADO";
                 }
             }
@@ -83,15 +83,15 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "Update PR_aProcesos set Secuencia_Procesos = @secuencia_procesos, Flag_Extrusion = @flag_extrusion, Flag_Impresion = @flag_impresion, Flag_Laminado = @flag_laminado, " +
                                     " Flag_Sellado = @flag_sellado, Flag_Corte = @flag_corte, Flag_Doblado = @flag_doblado  where IdProcesos = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = procesos.IdProcesos,
-                                                                secuencia_procesos = procesos.Secuencia_Procesos,
-                                                                flag_extrusion = procesos.Flag_Extrusion,
-                                                                flag_impresion = procesos.Flag_Impresion,
-                                                                flag_laminado = procesos.Flag_Laminado,
-                                                                flag_sellado = procesos.Flag_Sellado,
-                                                                flag_corte = procesos.Flag_Corte,
-                                                                flag_doblado = procesos.Flag_Doblado
-                                                                });
+                        id = procesos.IdProcesos,
+                        secuencia_procesos = procesos.Secuencia_Procesos,
+                        flag_extrusion = procesos.Flag_Extrusion,
+                        flag_impresion = procesos.Flag_Impresion,
+                        flag_laminado = procesos.Flag_Laminado,
+                        flag_sellado = procesos.Flag_Sellado,
+                        flag_corte = procesos.Flag_Corte,
+                        flag_doblado = procesos.Flag_Doblado
+                    });
                     return "PROCESADO";
                 }
             }
@@ -114,6 +114,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-        
+
     }
 }

@@ -57,11 +57,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into PR_aTipoMaterialLaminado (Descripcion, Abreviatura, Gramaje_Lineal, Orden_Gerencia) values(@descripcion, @abreviatura, @gramaje_lineal, @orden_gerencia)";
                     conexionsql.Execute(sqlinsert, new {
-                                                                descripcion = tipomateriallaminado.Descripcion,
-                                                                abreviatura = tipomateriallaminado.Abreviatura,
-                                                                gramaje_lineal = tipomateriallaminado.Gramaje_Lineal,
-                                                                orden_gerencia = tipomateriallaminado.Orden_Gerencia
-                                                             });
+                        descripcion = tipomateriallaminado.Descripcion,
+                        abreviatura = tipomateriallaminado.Abreviatura,
+                        gramaje_lineal = tipomateriallaminado.Gramaje_Lineal,
+                        orden_gerencia = tipomateriallaminado.Orden_Gerencia
+                    });
                     return "PROCESADO";
                 }
             }
@@ -78,12 +78,12 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "Update PR_aTipoMaterialLaminado set Descripcion = @descripcion, Abreviatura = @abreviatura, Gramaje_Lineal = @gramaje_lineal, " +
                                     " Orden_Gerencia = @orden_gerencia where IdTipoMaterialLaminado = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = tipomateriallaminado.IdTipoMaterialLaminado,
-                                                                descripcion = tipomateriallaminado.Descripcion,
-                                                                abreviatura = tipomateriallaminado.Abreviatura,
-                                                                gramaje_lineal = tipomateriallaminado.Gramaje_Lineal,
-                                                                orden_gerencia = tipomateriallaminado.Orden_Gerencia
-                                                            });
+                        id = tipomateriallaminado.IdTipoMaterialLaminado,
+                        descripcion = tipomateriallaminado.Descripcion,
+                        abreviatura = tipomateriallaminado.Abreviatura,
+                        gramaje_lineal = tipomateriallaminado.Gramaje_Lineal,
+                        orden_gerencia = tipomateriallaminado.Orden_Gerencia
+                    });
                     return "PROCESADO";
                 }
             }

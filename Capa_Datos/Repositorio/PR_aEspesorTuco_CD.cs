@@ -25,7 +25,7 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     conexionsql.Open();
                     SqlCommand cmd = new SqlCommand("select ET.IdEspesorTuco, ET.Medida_EspesorTuco, ET.IdUnidadEspesorTuco, UM.Sigla_Unidad from PR_aEspesorTuco as ET inner join PR_aUnidadMedidas as UM " +
@@ -46,7 +46,7 @@ namespace Capa_Datos.Repositorio
                     return lsta_EspesorTuco;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("error al listar", ex); }
         }
 
@@ -54,13 +54,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdEspesorTuco, Medida_EspesorTuco, IdUnidadEspesorTuco from PR_aEspesorTuco where IdEspesorTuco = @id";
                     return conexionsql.Query<PR_aEspesorTuco>(sql, new { id = idespesortuco });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -69,14 +69,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Insert Into PR_aEspesorTuco (Medida_EspesorTuco, IdUnidadEspesorTuco) values(@medida_espesortuco, @idunidadespesortuco)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { medida_espesortuco = espesortuco.Medida_EspesorTuco, idunidadespesortuco = espesortuco.IdUnidadEspesorTuco});
+                    conexionsql.ExecuteScalar(sqlinsert, new { medida_espesortuco = espesortuco.Medida_EspesorTuco, idunidadespesortuco = espesortuco.IdUnidadEspesorTuco });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error asl agregar", ex); }
         }
 
@@ -84,17 +84,18 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "Update PR_aEspesorTuco set Medida_EspesorTuco = @medida_espesortuco, IdUnidadEspesorTuco = @idunidadespesortuco where IdEspesorTuco = @idespesortuco";
-                    conexionsql.ExecuteScalar(sqlupdate, new {  idespesortuco = espesortuco.IdEspesorTuco,
-                                                                medida_espesortuco = espesortuco.Medida_EspesorTuco,
-                                                                idunidadespesortuco = espesortuco.IdUnidadEspesorTuco
-                                                              });
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        idespesortuco = espesortuco.IdEspesorTuco,
+                        medida_espesortuco = espesortuco.Medida_EspesorTuco,
+                        idunidadespesortuco = espesortuco.IdUnidadEspesorTuco
+                    });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Actualizar", ex); }
         }
 
@@ -102,14 +103,14 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aEspesorTuco where IdEspesorTuco = @idespesortuco";
                     conexionsql.ExecuteScalar(sqldelete, new { idespesortuco = idespesortuco });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al Eliminar", ex); }
         }
 

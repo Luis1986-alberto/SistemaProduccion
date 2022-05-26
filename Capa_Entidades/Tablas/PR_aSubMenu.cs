@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -19,7 +15,7 @@ namespace Capa_Entidades.Tablas
         public string Orden_SubMenu { get => _Orden_SubMenu; set => _Orden_SubMenu = value; }
 
         public PR_aSubMenu()
-        {   }
+        { }
 
         public PR_aSubMenu(int idSubMenu, string detalle_SubMenu, string subMenu, string orden_SubMenu)
         {

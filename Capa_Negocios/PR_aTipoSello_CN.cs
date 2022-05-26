@@ -21,7 +21,7 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_aTipoSello> Buscar_TipoSello(string tiposello)
         {
-           var lista = PR_aTipoSello_CD._Instancia.Lista_TipoSello().ToList();
+            var lista = PR_aTipoSello_CD._Instancia.Lista_TipoSello().ToList();
             return from buscar in lista where buscar.Descripcion_TipoSello == tiposello select buscar;
         }
 

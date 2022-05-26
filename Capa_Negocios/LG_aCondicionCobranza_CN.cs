@@ -1,7 +1,6 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
 using DapperExtensions;
-using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Linq;

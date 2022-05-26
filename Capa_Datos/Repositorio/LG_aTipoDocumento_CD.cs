@@ -5,9 +5,6 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -40,7 +37,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("ERror al Listar", Ex); }
         }
 
-        
+
         public LG_aTipoDocumento traerPorIdTipoDocumento(Int32 idtipodocumento)
         {
             try
@@ -63,10 +60,11 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into LG_aTipoDocumento (Nombre_TipoDocumento, Sigla_TipoDocumento, Alias_TipoDocumento) values " +
                               " (@nombre_tipodocumento, @sigla_TipoDocumento, @alias_tipodocumento) ";
-                    ConexionSQL.Execute(sqlinsert, new { nombre_tipodocumento = tipodocumento.Nombre_TipoDocumento,
-                                                         sigla_TipoDocumento = tipodocumento.Sigla_TipoDocumento,
-                                                         alias_tipodocumento = tipodocumento.Alias_TipoDocumento
-                                                       });
+                    ConexionSQL.Execute(sqlinsert, new {
+                        nombre_tipodocumento = tipodocumento.Nombre_TipoDocumento,
+                        sigla_TipoDocumento = tipodocumento.Sigla_TipoDocumento,
+                        alias_tipodocumento = tipodocumento.Alias_TipoDocumento
+                    });
                     return "PROCESADO";
                 }
             }
@@ -82,9 +80,10 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Update LG_aTipoDocumento set Nombre_TipoDocumento = @nombre_tipodocumento, Sigla_TipoDocumento = @sigla_TipoDocumento, " +
                                     "Alias_TipoDocumento = @alias_tipodocumento where IdTipoDocumento = @id";
-                    ConexionSQL.Execute(sqlinsert, new {id = td.IdTipoDocumento, nombre_tipodocumento = td.Nombre_TipoDocumento,
-                                                        sigla_TipoDocumento = td.Sigla_TipoDocumento, alias_tipodocumento = td.Alias_TipoDocumento
-                                                        });
+                    ConexionSQL.Execute(sqlinsert, new {
+                        id = td.IdTipoDocumento, nombre_tipodocumento = td.Nombre_TipoDocumento,
+                        sigla_TipoDocumento = td.Sigla_TipoDocumento, alias_tipodocumento = td.Alias_TipoDocumento
+                    });
                     return "PROCESADO";
                 }
             }
@@ -104,7 +103,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar", Ex);}
+            { throw new Exception("Error al Eliminar", Ex); }
         }
 
         public IEnumerable<LG_aTipoDocumento> FiltroPorunCampo(IPredicate predicado)

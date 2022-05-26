@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
     public class PR_mEstandar
-    {       
-        public Int32 IdEstandar { get; set; }               
+    {
+        public Int32 IdEstandar { get; set; }
         public Int32 IdCliente { get; set; }
         public byte IdProcesos { get; set; }
         public string Descripcion { get; set; }
@@ -40,8 +36,7 @@ namespace Capa_Entidades.Tablas
         public Nullable<byte> IdUnidadDiametroSolicitado { get; set; }
         public Nullable<byte> IdTipoProducto { get; set; }
         public Nullable<byte> IdCondicionProceso { get; set; }
-
-
+        public virtual string Nombre_CondicionProceso { get; set; }
         public virtual Int32 IdEstandarExtrusion { get; set; }
         public virtual Int32 IdEstandarSellado { get; set; }
         public virtual Int32 IdEstandarImpresion { get; set; }
@@ -52,6 +47,7 @@ namespace Capa_Entidades.Tablas
 
         public PR_mEstandar()
         { }
+
 
     }
 }

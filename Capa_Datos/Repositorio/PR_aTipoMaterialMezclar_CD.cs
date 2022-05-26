@@ -23,7 +23,7 @@ namespace Capa_Datos.Repositorio
 
         public IEnumerable<PR_aTipoMaterialMezclar> Lista_TipomaterialMezclar()
         {
-           List<PR_aTipoMaterialMezclar> lst_tipomaterial = null;
+            List<PR_aTipoMaterialMezclar> lst_tipomaterial = null;
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
@@ -52,7 +52,7 @@ namespace Capa_Datos.Repositorio
                 return lst_tipomaterial;
             }
             catch(Exception ex)
-            {throw new Exception ("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
         public IEnumerable<PR_aTipoMaterialMezclar> Traer_TipoMaterialMezclarPorId(Int32 idtipomaterialmez)
@@ -78,12 +78,13 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into PR_aTipoMaterialMezclar (Codigo_Sustrato, Descripcion_MaterialMezclar, Abreviatura, Orden_Gerencia, IdClaseMaterial) values " +
                                     " (@codigo_sustrato, @descripcion_materialmezclar, @abreviatura, orden_gerencia, idclasematerial)";
-                    conexionsql.ExecuteScalar(sqlinsert, new { codigo_sustrato = tipomaterialmezclar.Codigo_Sustrato,
-                                                               descripcion_materialmezclar = tipomaterialmezclar.Descripcion_MaterialMezclar,
-                                                               abreviatura = tipomaterialmezclar.Abreviatura,
-                                                               orden_gerencia = tipomaterialmezclar.Orden_Gerencia,
-                                                               idclasematerial = tipomaterialmezclar.IdClaseMaterial                                                          
-                                                            });
+                    conexionsql.ExecuteScalar(sqlinsert, new {
+                        codigo_sustrato = tipomaterialmezclar.Codigo_Sustrato,
+                        descripcion_materialmezclar = tipomaterialmezclar.Descripcion_MaterialMezclar,
+                        abreviatura = tipomaterialmezclar.Abreviatura,
+                        orden_gerencia = tipomaterialmezclar.Orden_Gerencia,
+                        idclasematerial = tipomaterialmezclar.IdClaseMaterial
+                    });
                     return "PROCESADO";
                 }
             }
@@ -100,13 +101,13 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "Update PR_aTipoMaterialMezclar set Codigo_Sustrato = codigo_sustrato,  Descripcion_MaterialMezclar = @descripcion_materialmezclar, " +
                                     " Abreviatura = @abreviatura, Orden_Gerencia = @ordengerencia, IdClaseMaterial = @IdClaseMaterial where IdTipoMaterialMezclar = @id";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = tipomaterialmezclar.IdTipoMaterialMezclar,
-                                                                codigo_sustrato = tipomaterialmezclar.Codigo_Sustrato,
-                                                                descripcion_materialmezclar = tipomaterialmezclar.Descripcion_MaterialMezclar,
-                                                                abreviatura = tipomaterialmezclar.Abreviatura,
-                                                                orden_gerencia = tipomaterialmezclar.Orden_Gerencia,
-                                                                idclasematerial = tipomaterialmezclar.IdClaseMaterial
-                                                            });
+                        id = tipomaterialmezclar.IdTipoMaterialMezclar,
+                        codigo_sustrato = tipomaterialmezclar.Codigo_Sustrato,
+                        descripcion_materialmezclar = tipomaterialmezclar.Descripcion_MaterialMezclar,
+                        abreviatura = tipomaterialmezclar.Abreviatura,
+                        orden_gerencia = tipomaterialmezclar.Orden_Gerencia,
+                        idclasematerial = tipomaterialmezclar.IdClaseMaterial
+                    });
                     return "PROCESADO";
                 }
             }

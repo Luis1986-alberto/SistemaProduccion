@@ -57,12 +57,12 @@ namespace Capa_Datos.Repositorio
                 {
                     var sqlinsert = "Insert Into PR_aFabricanteMaterial (Direccion, Numero_Ruc, numero_Telefonico, Razon_Social, Pais) values(@direccion, @numero_ruc, @numero_telefonico, razon_social, pais)";
                     conexionsql.ExecuteScalar(sqlinsert, new {
-                                                                direccion = fabricantematerial.Direccion, 
-                                                                numero_ruc= fabricantematerial.Numero_RUC,
-                                                                numero_telefono = fabricantematerial.Numero_Telefono,
-                                                                razon_social = fabricantematerial.Razon_Social,
-                                                                pais = fabricantematerial.Pais
-                                                              });
+                        direccion = fabricantematerial.Direccion,
+                        numero_ruc = fabricantematerial.Numero_RUC,
+                        numero_telefono = fabricantematerial.Numero_Telefono,
+                        razon_social = fabricantematerial.Razon_Social,
+                        pais = fabricantematerial.Pais
+                    });
                     return "PROCESADO";
                 }
             }
@@ -79,13 +79,13 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "Update PR_aFabricanteMaterial set Direccion = @direccion, Numero_Ruc = @numero_ruc, numero_Telefonico = @numero_telefonico, " +
                                     " Razon_Social = @razon_social, Pais = @pais where IdFabricanteMaterial = @id ";
                     conexionsql.ExecuteScalar(sqlupdate, new {
-                                                                id = fabricantematerial.IdFabricanteMaterial,
-                                                                direccion = fabricantematerial.Direccion,
-                                                                numero_ruc = fabricantematerial.Numero_RUC,
-                                                                numero_telefono = fabricantematerial.Numero_Telefono,
-                                                                razon_social = fabricantematerial.Razon_Social,
-                                                                pais = fabricantematerial.Pais
-                                                            });
+                        id = fabricantematerial.IdFabricanteMaterial,
+                        direccion = fabricantematerial.Direccion,
+                        numero_ruc = fabricantematerial.Numero_RUC,
+                        numero_telefono = fabricantematerial.Numero_Telefono,
+                        razon_social = fabricantematerial.Razon_Social,
+                        pais = fabricantematerial.Pais
+                    });
                     return "PROCESADO";
                 }
             }
@@ -108,6 +108,6 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Eliminar", ex); }
         }
 
-       
+
     }
 }

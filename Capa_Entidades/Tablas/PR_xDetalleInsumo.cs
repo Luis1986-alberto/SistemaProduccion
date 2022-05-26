@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -31,6 +27,6 @@ namespace Capa_Entidades.Tablas
         public virtual PR_aColor PR_aColor { get; set; }
         public virtual PR_mMateriales PR_mMateriales { get; set; }
         public virtual PR_xOrdenProduccionInd PR_xOrdenProduccionInd { get; set; }
-        
+
     }
 }

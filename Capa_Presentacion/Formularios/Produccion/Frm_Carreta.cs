@@ -37,7 +37,7 @@ namespace Capa_Presentacion.Formularios
         {
             if (dgv_Mnt.RowCount == 0) { return; }
 
-           { Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCarreta"].Value.ToString())); }
+            { Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdCarreta"].Value.ToString())); }
         }
 
         private void Cargar_Datos()
@@ -149,7 +149,7 @@ namespace Capa_Presentacion.Formularios
                 tbc_Mnt.SelectTab(1);
             }
             else { MessageBox.Show(rpta, "error Inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-            
+
             Cargar_Datos();
 
         }

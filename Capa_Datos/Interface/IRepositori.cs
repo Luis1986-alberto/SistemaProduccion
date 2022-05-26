@@ -3,18 +3,21 @@ using System.Collections.Generic;
 
 namespace Capa_Datos.Interface
 {
-    public interface IRepositori<T> where T :class
+    public interface IRepositori<T> where T : class
     {
-        string Agregar(T entidad);
 
-        string Actualizar(T entidad);
+        int Agregar(T entidad);
 
-        string Eliminar(int id);
+        bool Actualizar(T entidad);
+
+        bool Eliminar(T entidad);
 
         T TraerPorId(int id);
 
         IEnumerable<T> Listar();
 
         IEnumerable<T> FiltroPorUnCampo(IPredicate predicado);
+
+
     }
 }

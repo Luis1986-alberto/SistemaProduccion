@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdDerivadoColor, Nombre_DerivadoColor, Codigo_DerivadoColor from PR_aDerivadoColor";
                     return conexionsql.Query<PR_aDerivadoColor>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al listar", ex); }
         }
 
@@ -39,13 +39,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdDerivadoColor, Nombre_DerivadoColor, Codigo_DerivadoColor from PR_aDerivadoColor where IdDerivadoColor = @id";
                     return conexionsql.Query<PR_aDerivadoColor>(sql, new { id = idderivadocolor });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -53,29 +53,27 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into PR_aDerivadoColor (Nombre_DerivadoColor, Codigo_DerivadoColor) value (@nombre_derivadocolor, @codigo_derivadocolor)";
-                    conexionsql.ExecuteScalar(sqlinsert, new
-                    {
+                    conexionsql.ExecuteScalar(sqlinsert, new {
                         codigo_derivadocolor = derivadocolor.Codigo_DerivadoColor,
                         nombre_derivadocolor = derivadocolor.Nombre_DerivadoColor
                     });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al inserta", ex); }
+            catch(Exception ex) { throw new Exception("Error al inserta", ex); }
         }
 
         public string Actualizar_DerivadaColor(PR_aDerivadoColor derivadocolor)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update PR_aDerivadoColor set Nombre_DerivadoColor = nombre_derivadocolor, Codigo_DerivadoColor = @codigo_derivadocolor where IdDerivadoColor = @Idderivadocolor";
-                    conexionsql.ExecuteScalar(sqlupdate, new
-                    {
+                    conexionsql.ExecuteScalar(sqlupdate, new {
                         Idderivadocolor = derivadocolor.IdDerivadoColor,
                         codigo_derivadocolor = derivadocolor.Codigo_DerivadoColor,
                         nombre_derivadocolor = derivadocolor.Nombre_DerivadoColor,
@@ -84,23 +82,23 @@ namespace Capa_Datos.Repositorio
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
         }
 
         public string Eliminar_DerivadaColor(Int32 idderivadocolor)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "delete PR_aDerivadoColor where IdDerivadoColor = @Idderivadocolor";
                     conexionsql.ExecuteScalar(sqldelete, new { Idderivadocolor = idderivadocolor });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
         }
 
-        
+
     }
 }

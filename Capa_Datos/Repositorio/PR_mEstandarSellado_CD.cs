@@ -1,12 +1,8 @@
 ﻿using Capa_Entidades.Tablas;
 using Dapper;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Datos.Repositorio
@@ -15,11 +11,11 @@ namespace Capa_Datos.Repositorio
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion = "";
-        private Int32 OutPutId = 0; 
+        private Int32 OutPutId = 0;
         public static readonly PR_mEstandarSellado_CD _Instancia = new PR_mEstandarSellado_CD();
 
         public static PR_mEstandarSellado_CD Instancia
-        { get { return PR_mEstandarSellado_CD._Instancia;} }
+        { get { return PR_mEstandarSellado_CD._Instancia; } }
 
         public PR_mEstandarSellado_CD()
         {
@@ -28,11 +24,11 @@ namespace Capa_Datos.Repositorio
         }
 
 
-        public string EstandarSellado_Procesar  (PR_mEstandarSellado mestandarsellado, Int32 idestandar, string accion, PictureBox planomecanicosellado )
+        public string EstandarSellado_Procesar(PR_mEstandarSellado mestandarsellado, Int32 idestandar, string accion, PictureBox planomecanicosellado)
         {
             try
             {
-                using(var ConexionSql = new SqlConnection(cadenaconexion) )
+                using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     ConexionSql.Open();
                     SqlCommand cmd = new SqlCommand("PRt_EstandarSellado", ConexionSql);
@@ -64,18 +60,18 @@ namespace Capa_Datos.Repositorio
                     cmd.Parameters.AddWithValue("@Flag_Pestaña", mestandarsellado.Flag_Pestaña);
                     cmd.Parameters.AddWithValue("@Medida_Pestaña", mestandarsellado.Medida_Pestaña);
                     cmd.Parameters.AddWithValue("@Medida_Refile", mestandarsellado.Medida_Refile);
-                    cmd.Parameters.AddWithValue("@IdUnidadRefile", mestandarsellado.IdUnidadRefile);                
+                    cmd.Parameters.AddWithValue("@IdUnidadRefile", mestandarsellado.IdUnidadRefile);
                     cmd.Parameters.AddWithValue("@IdUnidadPestaña", mestandarsellado.IdUnidadPestaña);
                     cmd.Parameters.AddWithValue("@Flag_Perforaciones", mestandarsellado.Flag_Perforaciones);
                     cmd.Parameters.AddWithValue("@IdTipoFuelle", mestandarsellado.IdTipoFuelle);
                     cmd.Parameters.AddWithValue("@Medida_Fuelle", mestandarsellado.Medida_Fuelle);
-                    cmd.Parameters.AddWithValue("@IdUnidadFuelle", mestandarsellado.IdUnidadFuelle);                              
+                    cmd.Parameters.AddWithValue("@IdUnidadFuelle", mestandarsellado.IdUnidadFuelle);
                     cmd.Parameters.AddWithValue("@Numero_Pistas", mestandarsellado.Numero_Pistas);
                     cmd.Parameters.AddWithValue("@Numero_Perforaciones", mestandarsellado.Numero_Perforaciones);
                     cmd.Parameters.AddWithValue("@Medida_Perforaciones", mestandarsellado.Medida_Perforaciones);
                     cmd.Parameters.AddWithValue("@IdUnidadPerforaciones", mestandarsellado.IdUnidadPerforaciones);
                     cmd.Parameters.AddWithValue("@Flag_Etiqueta_Fardo", mestandarsellado.Flag_Etiqueta_Fardo);
-                    cmd.Parameters.AddWithValue("@Nota_Sellado", mestandarsellado.Nota_Sellado);        
+                    cmd.Parameters.AddWithValue("@Nota_Sellado", mestandarsellado.Nota_Sellado);
                     cmd.Parameters.AddWithValue("@Peso_Promedio_Fardo", mestandarsellado.Peso_Promedio_Fardo);
                     cmd.Parameters.AddWithValue("@Peso_Promedio_Millar", mestandarsellado.Peso_Promedio_Millar);
                     cmd.Parameters.AddWithValue("@Peso_promedio_Paquete", mestandarsellado.Peso_Promedio_Paquete);
@@ -111,7 +107,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Traer por Id" + videstandarsellado, Ex); }
         }
 
-        public string Eliminar_estandarSellado (Int32 videstandar)
+        public string Eliminar_estandarSellado(Int32 videstandar)
         {
             try
             {
@@ -123,7 +119,7 @@ namespace Capa_Datos.Repositorio
                 return "PROCESADO";
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Eliminar" + videstandar + " ",Ex);}
+            { throw new Exception("Error al Eliminar" + videstandar + " ", Ex); }
         }
 
         public void Descargar_Imagen(PictureBox imagen, Int32 videstandarsellado)
@@ -131,7 +127,7 @@ namespace Capa_Datos.Repositorio
             using(var ConexionSql = new SqlConnection(cadenaconexion))
             {
                 ConexionSql.Open();
-                SqlCommand cmd = new SqlCommand ("select Foto_PlanoMecanicoSell  from PR_mEstandarSellado where IdEstandarSellado ='" + videstandarsellado + "'", ConexionSql);
+                SqlCommand cmd = new SqlCommand("select Foto_PlanoMecanicoSell  from PR_mEstandarSellado where IdEstandarSellado ='" + videstandarsellado + "'", ConexionSql);
                 SqlDataAdapter dp = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet("Foto_PlanoMecanicoSell");
                 dp.Fill(ds, "Foto_PlanoMecanicoSell");
@@ -146,7 +142,7 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        public string Actualizar_Imagen (Int32 videstandarsellado, PictureBox imagen)
+        public string Actualizar_Imagen(Int32 videstandarsellado, PictureBox imagen)
         {
             try
             {
@@ -170,7 +166,7 @@ namespace Capa_Datos.Repositorio
                 return "PROCESADO";
             }
             catch(Exception Ex)
-            {throw new Exception ("Error al actualizar imagen " + videstandarsellado, Ex) ;}
+            { throw new Exception("Error al actualizar imagen " + videstandarsellado, Ex); }
         }
 
 

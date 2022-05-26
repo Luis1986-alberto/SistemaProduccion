@@ -4,13 +4,10 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -54,7 +51,7 @@ namespace Capa_Presentacion.Formularios
         private void Entrada_Datos(byte idtipolaminacion)
         {
             var datos = PR_aTipoLaminacion_CN.Instancia.TraerPorID(idtipolaminacion);
-            foreach(var i in datos)
+            foreach (var i in datos)
             {
                 txt_IdTipoLaminacion.Text = i.IdTipoLaminado.ToString();
                 txt_TipoLaminacion.Text = i.Detalle_Laminacion.ToString();
@@ -213,7 +210,7 @@ namespace Capa_Presentacion.Formularios
         }
 
         private void tls_Refrescar_Click(object sender, EventArgs e)
-        {Cargar_Datos();}
+        { Cargar_Datos(); }
 
         private void tls_Primero_Click(object sender, EventArgs e)
         {
@@ -236,7 +233,7 @@ namespace Capa_Presentacion.Formularios
             if (SelectIndex == 0) { return; }
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
-            SelectIndex = SelectIndex --;
+            SelectIndex = SelectIndex--;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdTipoLaminado"].Value.ToString()));
         }

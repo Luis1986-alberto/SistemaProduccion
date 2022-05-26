@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class MP_aCategoriaMaterial_CD 
+    public class MP_aCategoriaMaterial_CD
     {
         public static readonly MP_aCategoriaMaterial_CD _Intancia = new MP_aCategoriaMaterial_CD();
         public Inicio principal = new Inicio();
@@ -20,19 +20,19 @@ namespace Capa_Datos.Repositorio
             principal.LeerConfiguracion();
             cadenaconexion = principal.CadenaConexion;
         }
-                
+
         public IEnumerable<MP_aCategoriaMaterial> Lista_CategoriaMaterial()
         {
             try
             {
-                using(var conexionSQL =new  SqlConnection(cadenaconexion))
+                using(var conexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCategoriaMaterial, Nombre_Categoria_Material from MP_aCategoriaMaterial";
                     return conexionSQL.Query<MP_aCategoriaMaterial>(sql);
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al listar", ex);}
+            { throw new Exception("Error al listar", ex); }
         }
 
         public IEnumerable<MP_aCategoriaMaterial> Traer_CategoriaMaterialPorId(Int32 ididcategoriamaterial)
@@ -46,14 +46,14 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Errort al traer por ID", ex);}
+            { throw new Exception("Errort al traer por ID", ex); }
         }
 
         public string Agregar_CategoriaMaterial(MP_aCategoriaMaterial categoriamaterial)
         {
             try
             {
-                using(var conexionSQL = new SqlConnection(cadenaconexion) )
+                using(var conexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into MP_aCategoriaMaterial (Nombre_Categoria_Material) values (@nombre_categoria_material)";
                     conexionSQL.Execute(sqlinsert, new { nombre_categoria_material = categoriamaterial.Nombre_Categoria_Material });
@@ -61,7 +61,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception ex)
-            { throw new Exception ("Error al Agregar", ex);}
+            { throw new Exception("Error al Agregar", ex); }
         }
 
         public string Actualizar_CategoriaMaterial(MP_aCategoriaMaterial categoriamaterial)
@@ -71,7 +71,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update MP_aCategoriaMaterial set Nombre_Categoria_Material =  @nombre_categoria_material where IdCategoriaMaterial = @id ";
-                    conexionSQL.ExecuteScalar(sqlupdate, new { id = categoriamaterial.IdCategoriaMaterial, nombre_categoria_material = categoriamaterial.Nombre_Categoria_Material});
+                    conexionSQL.ExecuteScalar(sqlupdate, new { id = categoriamaterial.IdCategoriaMaterial, nombre_categoria_material = categoriamaterial.Nombre_Categoria_Material });
                     return "PROCESADO";
                 }
             }
@@ -97,5 +97,5 @@ namespace Capa_Datos.Repositorio
 
 
 
-    } 
+    }
 }

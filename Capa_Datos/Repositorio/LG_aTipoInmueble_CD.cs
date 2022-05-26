@@ -13,7 +13,7 @@ namespace Capa_Datos.Repositorio
         public static readonly LG_aTipoInmueble_CD _Instancia = new LG_aTipoInmueble_CD();
         private Inicio principal = new Inicio();
         private string cadenaconexion;
-        
+
         private static LG_aTipoInmueble_CD Instancia
         { get { return LG_aTipoInmueble_CD._Instancia; } }
 
@@ -23,7 +23,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = principal.CadenaConexion;
         }
 
-        public IEnumerable<LG_aTipoInmueble>Listar_TipoInmueble()
+        public IEnumerable<LG_aTipoInmueble> Listar_TipoInmueble()
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error aql llistar", Ex);}
+            { throw new Exception("Error aql llistar", Ex); }
         }
 
         public LG_aTipoInmueble TraerPorIdInmueble(Int32 idtipoinmueble)
@@ -63,7 +63,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Agregar", Ex);}
+            { throw new Exception("Error al Agregar", Ex); }
         }
 
         public string Actualizar_TipoInmueble(LG_aTipoInmueble tipoinmueble)
@@ -73,7 +73,7 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "Update LG_aTipoInmueble SET Tipo_Inmueble = @tipo_inmueble where IdTipoInmueble = @id";
-                    ConexionSQL.Execute(sqlinsert, new {id = tipoinmueble.IdTipoInmueble, tipo_inmueble = tipoinmueble.Tipo_Inmueble });
+                    ConexionSQL.Execute(sqlinsert, new { id = tipoinmueble.IdTipoInmueble, tipo_inmueble = tipoinmueble.Tipo_Inmueble });
                     return "PROCESADO";
                 }
             }
@@ -81,7 +81,7 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Agregar", Ex); }
         }
 
-        public string Eliminar_TipoInmueble(Int32  idtipoinmueble)
+        public string Eliminar_TipoInmueble(Int32 idtipoinmueble)
         {
             try
             {

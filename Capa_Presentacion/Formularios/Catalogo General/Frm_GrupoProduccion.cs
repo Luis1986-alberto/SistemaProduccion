@@ -58,7 +58,7 @@ namespace Capa_Presentacion.Formularios
             bln_Editar = false;
             bln_Nuevo = true;
             tbc_Mnt.SelectTab(0);
-            
+
             Estado_Toolbar(bln_Nuevo);
             txt_IdGrupoProd.Text = "0";
             txt_Descripcion_GrupoProd.Enabled = true;
@@ -154,7 +154,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
             if (SetupThePrinting())
-            {PrintDocument.Print();}
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
@@ -300,6 +300,6 @@ namespace Capa_Presentacion.Formularios
             return true;
         }
 
-        
+
     }
 }

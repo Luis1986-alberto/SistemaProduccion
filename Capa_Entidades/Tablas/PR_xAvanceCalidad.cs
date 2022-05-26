@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
-   public class PR_xAvanceCalidad
+    public class PR_xAvanceCalidad
     {
         public string Observacion_Ext { get; set; }
         public string Observacion_Sel { get; set; }

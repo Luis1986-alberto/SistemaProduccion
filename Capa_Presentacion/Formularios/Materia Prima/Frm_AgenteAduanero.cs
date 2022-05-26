@@ -4,14 +4,11 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Presentacion.Formularios
@@ -263,7 +260,7 @@ namespace Capa_Presentacion.Formularios
                 ErrorIcono.SetError(txt_Razon_Social_Agente, "Ingrese Razon Social");
                 return false;
             }
-            else {ErrorIcono.SetError(txt_Razon_Social_Agente, null);}
+            else { ErrorIcono.SetError(txt_Razon_Social_Agente, null); }
 
             if (txt_Direccion_Agente.Text.Trim() == "")
             {

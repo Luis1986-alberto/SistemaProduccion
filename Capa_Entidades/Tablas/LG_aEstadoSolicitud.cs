@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class LG_aEstadoSolicitud
     {
@@ -12,7 +6,7 @@ namespace Capa_Entidades.Tablas
         public string Descripcion_EstadoSolicitud { get; set; }
 
         public LG_aEstadoSolicitud()
-        {  }
+        { }
 
         public LG_aEstadoSolicitud(byte idestadosolicitud, string descripcion_estadosolicitud)
         {

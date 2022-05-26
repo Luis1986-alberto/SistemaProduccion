@@ -6,13 +6,10 @@ using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
-    public class LG_aUbicacionInmueble_CD : IRepositori<LG_aUbicacionInmueble>
+    public class LG_aUbicacionInmueble_CD 
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion;

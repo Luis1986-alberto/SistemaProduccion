@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Capa_Entidades.Tablas
 {
@@ -16,7 +12,7 @@ namespace Capa_Entidades.Tablas
         public short IdMaquina { get; set; }
         public byte IdRodillo { get; set; }
         public byte IdImpresora { get; set; }
-        public virtual string Alias_Maquina { get; set;}
+        public virtual string Alias_Maquina { get; set; }
         public virtual string Descripcion { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

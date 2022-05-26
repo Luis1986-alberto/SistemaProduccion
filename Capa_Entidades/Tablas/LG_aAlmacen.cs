@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Capa_Entidades.Tablas
+﻿namespace Capa_Entidades.Tablas
 {
     public class LG_aAlmacen
     {
@@ -12,12 +6,12 @@ namespace Capa_Entidades.Tablas
         public string Nombre_Almacen { get; set; }
         public string Sigla_Almacen { get; set; }
         public byte IdEmpresa { get; set; }
-        public virtual string Nombre_Empresa {get; set;}
+        public virtual string Nombre_Empresa { get; set; }
 
         public LG_aAlmacen()
         { }
 
-        public LG_aAlmacen(byte idalmacen, string nombre_almacen, string sigls_almacen, byte idempresa )
+        public LG_aAlmacen(byte idalmacen, string nombre_almacen, string sigls_almacen, byte idempresa)
         {
             IdAlmacen = idalmacen;
             Nombre_Almacen = nombre_almacen;

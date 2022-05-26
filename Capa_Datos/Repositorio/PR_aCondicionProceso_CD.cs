@@ -25,13 +25,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCondicionProceso, Nombre_CondicionProceso from PR_aCondicionProceso";
                     return conexionsql.Query<PR_aCondicionProceso>(sql);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             { throw new Exception("Error al listar", ex); }
         }
 
@@ -39,13 +39,13 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sql = "select IdCondicionProceso, Nombre_CondicionProceso from PR_aCondicionProceso where IdCondicionProceso = @id";
                     return conexionsql.Query<PR_aCondicionProceso>(sql, new { id = idcondicionproceso });
                 }
             }
-            catch (Exception Ex)
+            catch(Exception Ex)
             { throw new Exception("Error al Traer por ID", Ex); }
         }
 
@@ -53,49 +53,48 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlinsert = "insert into PR_aCondicionProceso (Nombre_CondicionProceso) values (@nombre_condicionproceso)";
                     conexionsql.Execute(sqlinsert, new { nombre_condicionproceso = condicionproceso.Nombre_CondicionProceso });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al inserta", ex); }
+            catch(Exception ex) { throw new Exception("Error al inserta", ex); }
         }
 
         public string Actualizar_CondicionProceso(PR_aCondicionProceso condicionproceso)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "update PR_aCondicionProceso set  Nombre_CondicionProceso = @nombre_condicionproceso where IdCondicionProceso = @id";
-                    conexionsql.ExecuteScalar(sqlupdate, new
-                                                            {
-                                                                id = condicionproceso.IdCondicionProceso,
-                                                                nombre_condicionproceso = condicionproceso.Nombre_CondicionProceso,
+                    conexionsql.ExecuteScalar(sqlupdate, new {
+                        id = condicionproceso.IdCondicionProceso,
+                        nombre_condicionproceso = condicionproceso.Nombre_CondicionProceso,
 
-                                                            });
+                    });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Actualizar", ex); }
         }
 
         public string Eliminar_CondicionProceso(Int32 idcondicionproceso)
         {
             try
             {
-                using (var conexionsql = new SqlConnection(cadenaconexion))
+                using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     var sqlupdate = "delete PR_aCondicionProceso where IdCondicionProceso = @idcondicionproceso";
                     conexionsql.ExecuteScalar(sqlupdate, new { idcondicionproceso = idcondicionproceso });
                     return "PROCESADO";
                 }
             }
-            catch (Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
+            catch(Exception ex) { throw new Exception("Error al momento de Eliminar", ex); }
         }
 
-        
+
     }
 }
