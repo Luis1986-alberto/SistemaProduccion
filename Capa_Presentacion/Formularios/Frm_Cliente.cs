@@ -39,7 +39,6 @@ namespace Capa_Presentacion.Formularios
 
         public Frm_Cliente()
         {
-
             InitializeComponent();
         }
 
@@ -129,8 +128,8 @@ namespace Capa_Presentacion.Formularios
             Estado_Toolbar(bln_Nuevo);
             Habilitar_Controles(true);
             Limpiar_Controles();
-            tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
 
+            tbc_Mnt.TabPages["tbp_Listado"].Enabled = false;
             txt_RUC_Empresa.Focus();
         }
 
@@ -150,7 +149,6 @@ namespace Capa_Presentacion.Formularios
             tbc_Mnt.SelectTab(0);
 
             Habilitar_Controles(true);
-
             txt_RUC_Empresa.Focus();
         }
 

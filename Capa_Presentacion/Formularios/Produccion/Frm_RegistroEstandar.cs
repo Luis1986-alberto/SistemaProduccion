@@ -1387,6 +1387,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             if (chk_FiltroCliente.Checked == true) Cargar_Datos();
         }
 
+        private void tls_Imprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Dtp_FechaFinal_ValueChanged(object sender, EventArgs e) => Cargar_Datos();
         
         private void chk_FiltroTipoEstandar_CheckedChanged(object sender, EventArgs e)

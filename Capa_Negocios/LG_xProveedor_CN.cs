@@ -14,7 +14,6 @@ namespace Capa_Negocios
         public static LG_xProveedor_CN Instancia
         { get { return LG_xProveedor_CN._Instancia; } }
 
-
         public List<LG_xProveedor> Lista_Proveedores()
         {
             return LG_xProveedor_CD.Instancia.Lista_Proveedores();

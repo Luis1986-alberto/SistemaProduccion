@@ -16,9 +16,7 @@ namespace Capa_Presentacion.Formularios
     {
         DataGridViewPrinter dgr_Visor_Grilla;
         private bool bln_Nuevo = false;
-        private bool bln_Editar = false;
-        private string str_OutPutId;
-        private string str_Mensaje;
+        private bool bln_Editar = false;      
         private string str_Campo;
 
         public Frm_Mes()
@@ -37,7 +35,6 @@ namespace Capa_Presentacion.Formularios
 
         private void Carga_Datos()
         {
-
             List<LG_aMes> Listado = LG_aMes_CN._Instancia.Lista_Mes().ToList();
 
             SortableBindingList<LG_aMes> ListadoAños = new SortableBindingList<LG_aMes>(Listado);
@@ -135,7 +132,7 @@ namespace Capa_Presentacion.Formularios
                 tbc_Mnt.SelectTab(1);
                 tbc_Mnt.TabPages["tbp_Listado"].Enabled = true;
             }
-            else { MessageBox.Show(str_Mensaje, "Mensaje Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else { MessageBox.Show(rpta, "Mensaje Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
         }
 
         private void tls_Deshacer_Click(object sender, EventArgs e)

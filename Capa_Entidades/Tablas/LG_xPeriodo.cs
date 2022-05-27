@@ -16,7 +16,7 @@ namespace Capa_Entidades.Tablas
         private DateTime _Fecha_Inicio;
         private DateTime _Fecha_Final;
 
-        public int IdPeriodo { get => _IdPeriodo; set => _IdPeriodo = value; }
+        public Int32 IdPeriodo { get => _IdPeriodo; set => _IdPeriodo = value; }
         public int IdAño { get => _IdAño; set => _IdAño = value; }
         public byte IdMes { get => _IdMes; set => _IdMes = value; }
         public byte Flag_Cerrado { get => _Flag_Cerrado; set => _Flag_Cerrado = value; }

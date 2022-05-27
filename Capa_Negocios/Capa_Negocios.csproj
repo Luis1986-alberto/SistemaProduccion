@@ -85,6 +85,7 @@
     <Compile Include="LG_aTipoTrabajoMaquina_CN.cs" />
     <Compile Include="LG_aTipo_CN.cs" />
     <Compile Include="LG_aUbicacionInmueble_CN.cs" />
+    <Compile Include="LG_xPeriodo_CN.cs" />
     <Compile Include="LG_xProveedor_CN.cs" />
     <Compile Include="MP_aAgenteAduanero_CN.cs" />
     <Compile Include="MP_aAlmacenAduana_CN.cs" />

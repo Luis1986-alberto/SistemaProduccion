@@ -495,6 +495,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
+            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_CondicionProceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diseño = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbo_FiltroCliente = new System.Windows.Forms.ComboBox();
             this.Cbo_FiltroTipoProduccion = new System.Windows.Forms.ComboBox();
@@ -504,13 +511,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroTipoEstandar = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
             this.PrintDocument = new System.Drawing.Printing.PrintDocument();
-            this.IdEstandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_CondicionProceso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo_Estandar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diseño = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -710,6 +710,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Imprimir.Text = "&Imprimir";
             this.tls_Imprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Imprimir.ToolTipText = "Imprimir datos";
+            this.tls_Imprimir.Click += new System.EventHandler(this.tls_Imprimir_Click);
             // 
             // tls_Previo
             // 
@@ -6179,6 +6180,60 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dgv_Mnt.Size = new System.Drawing.Size(1218, 459);
             this.dgv_Mnt.TabIndex = 2;
             // 
+            // IdEstandar
+            // 
+            this.IdEstandar.DataPropertyName = "IdEstandar";
+            this.IdEstandar.HeaderText = "Id";
+            this.IdEstandar.Name = "IdEstandar";
+            this.IdEstandar.ReadOnly = true;
+            this.IdEstandar.Width = 80;
+            // 
+            // Nombre_CondicionProceso
+            // 
+            this.Nombre_CondicionProceso.DataPropertyName = "Nombre_CondicionProceso";
+            this.Nombre_CondicionProceso.HeaderText = "Condicion Proceso";
+            this.Nombre_CondicionProceso.Name = "Nombre_CondicionProceso";
+            // 
+            // Fecha_Creado
+            // 
+            this.Fecha_Creado.DataPropertyName = "Fecha_Creado";
+            this.Fecha_Creado.HeaderText = "Fecha Creado";
+            this.Fecha_Creado.Name = "Fecha_Creado";
+            this.Fecha_Creado.ReadOnly = true;
+            this.Fecha_Creado.Width = 90;
+            // 
+            // Codigo_Estandar
+            // 
+            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
+            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
+            this.Codigo_Estandar.Name = "Codigo_Estandar";
+            this.Codigo_Estandar.ReadOnly = true;
+            this.Codigo_Estandar.Width = 130;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Razon Social";
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 280;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 380;
+            // 
+            // Diseño
+            // 
+            this.Diseño.DataPropertyName = "Diseño";
+            this.Diseño.HeaderText = "Diseño";
+            this.Diseño.Name = "Diseño";
+            this.Diseño.ReadOnly = true;
+            this.Diseño.Width = 180;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Ivory;
@@ -6274,60 +6329,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             // PrintDocument
             // 
             this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
-            // IdEstandar
-            // 
-            this.IdEstandar.DataPropertyName = "IdEstandar";
-            this.IdEstandar.HeaderText = "Id";
-            this.IdEstandar.Name = "IdEstandar";
-            this.IdEstandar.ReadOnly = true;
-            this.IdEstandar.Width = 80;
-            // 
-            // Nombre_CondicionProceso
-            // 
-            this.Nombre_CondicionProceso.DataPropertyName = "Nombre_CondicionProceso";
-            this.Nombre_CondicionProceso.HeaderText = "Condicion Proceso";
-            this.Nombre_CondicionProceso.Name = "Nombre_CondicionProceso";
-            // 
-            // Fecha_Creado
-            // 
-            this.Fecha_Creado.DataPropertyName = "Fecha_Creado";
-            this.Fecha_Creado.HeaderText = "Fecha Creado";
-            this.Fecha_Creado.Name = "Fecha_Creado";
-            this.Fecha_Creado.ReadOnly = true;
-            this.Fecha_Creado.Width = 90;
-            // 
-            // Codigo_Estandar
-            // 
-            this.Codigo_Estandar.DataPropertyName = "Codigo_Estandar";
-            this.Codigo_Estandar.HeaderText = "Codigo Estandar";
-            this.Codigo_Estandar.Name = "Codigo_Estandar";
-            this.Codigo_Estandar.ReadOnly = true;
-            this.Codigo_Estandar.Width = 130;
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Razon Social";
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 280;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 380;
-            // 
-            // Diseño
-            // 
-            this.Diseño.DataPropertyName = "Diseño";
-            this.Diseño.HeaderText = "Diseño";
-            this.Diseño.Name = "Diseño";
-            this.Diseño.ReadOnly = true;
-            this.Diseño.Width = 180;
             // 
             // Frm_RegistroEstandar
             // 

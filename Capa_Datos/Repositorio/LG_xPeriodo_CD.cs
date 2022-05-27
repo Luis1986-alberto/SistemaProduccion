@@ -120,5 +120,22 @@ namespace Capa_Datos.Repositorio
             { throw new Exception("Error al Actualizar", ex); }
         }
 
+        public string Eliminar_Periodo(Int32 idperiodo)
+        {
+            try
+            {
+                using (var SQLConexion = new SqlConnection(cadenaconexion))
+                {
+                    var sqldelete = "Delete LG_xPeriodo where IdPeriodo = @id";
+                    SQLConexion.ExecuteScalar<LG_xPeriodo>(sqldelete, new { id = idperiodo });
+                    return "PROCESADO";
+                }
+            }
+            catch(Exception ex)
+            { throw new Exception("Error al eliminar el registro", ex); }
+        }
+
+
+
     }
 }
