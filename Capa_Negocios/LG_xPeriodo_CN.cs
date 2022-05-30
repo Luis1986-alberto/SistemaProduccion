@@ -3,8 +3,6 @@ using Capa_Entidades.Tablas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Negocios
 {
@@ -15,7 +13,7 @@ namespace Capa_Negocios
         public static LG_xPeriodo_CN Instancia
         { get { return LG_xPeriodo_CN._Instancia; } }
 
-        public List<LG_xPeriodo>Lista_Periodo()
+        public List<LG_xPeriodo> Lista_Periodo()
         {
             return LG_xPeriodo_CD._Instacia.Lista_Periodo().ToList();
         }
@@ -27,10 +25,10 @@ namespace Capa_Negocios
 
         public LG_xPeriodo TraerPorPeriodo(string periodo)
         {
-           var lista = LG_xPeriodo_CD._Instacia.Lista_Periodo();
-            return lista.First(x => x.Nombre_Periodo == periodo);
+            var lista = LG_xPeriodo_CD._Instacia.Lista_Periodo();
+            return lista.FirstOrDefault(x => x.Nombre_Periodo == periodo);
         }
-        public string Agregar_Periodo (LG_xPeriodo periodo)
+        public string Agregar_Periodo(LG_xPeriodo periodo)
         {
             if (TraerPorPeriodo(periodo.Nombre_Periodo) != null) return "Existe el Periodo Registrado";
             else return LG_xPeriodo_CD._Instacia.Agregar_Periodo(periodo);

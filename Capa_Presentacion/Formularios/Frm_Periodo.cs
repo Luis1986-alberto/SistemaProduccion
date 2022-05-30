@@ -21,7 +21,7 @@ namespace Capa_Presentacion.Formularios
         public Frm_Periodo()
         {
             InitializeComponent();
-        }      
+        }
 
         private void Frm_Periodo_Load(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tbc_mnt_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (Dgv_Mnt.SelectedRows.Count> 0)
+            if (Dgv_Mnt.SelectedRows.Count > 0)
             {
                 Entrada_Datos(Int32.Parse(Dgv_Mnt.SelectedRows[0].Cells["IdPeriodo"].Value.ToString()));
             }
@@ -72,7 +72,8 @@ namespace Capa_Presentacion.Formularios
             tbc_mnt.SelectTab(0);
             Estado_Toolbar(true);
             tbc_mnt.TabPages["tbp_Listado"].Enabled = false;
-            txt_Periodo.Focus();       
+            txt_Periodo.Focus();
+            txt_IdPeriodo.Text = "0";
         }
 
         private void HabilitarControles(Boolean vestado)
@@ -90,7 +91,7 @@ namespace Capa_Presentacion.Formularios
             txt_Periodo.Text = "";
             Chk_Flagcerrado.Checked = false;
             dtp_FechaInicio.Value = DateTime.Now;
-            dtp_FechaFinal.Value =  DateTime.Now;
+            dtp_FechaFinal.Value = DateTime.Now;
         }
         private void Estado_Toolbar(Boolean vEditarForm, Boolean vUnloadForm = true)
         {
@@ -124,13 +125,13 @@ namespace Capa_Presentacion.Formularios
         private void tls_Eliminar_Click(object sender, EventArgs e)
         {
             if (Dgv_Mnt.Rows.Count == 0) return;
-            if(MessageBox.Show("Esta Seguro que desea eliminar el registro","ELIMINAR REGISTRO",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (MessageBox.Show("Esta Seguro que desea eliminar el registro", "ELIMINAR REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 string rpta = LG_xPeriodo_CN._Instancia.Eliminar_Periodo(Int32.Parse(Dgv_Mnt.SelectedRows[0].Cells["IdPeriodo"].ToString()));
 
-                if(rpta == "PROCESADO") { MessageBox.Show("Se Elimino el registro", "ELIMINAR REGISTRO", MessageBoxButtons.OK); }
+                if (rpta == "PROCESADO") { MessageBox.Show("Se Elimino el registro", "ELIMINAR REGISTRO", MessageBoxButtons.OK); }
                 else { MessageBox.Show(rpta, "ERROR ELIMINAR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                
+
                 Cargar_Datos();
                 tbc_mnt.SelectTab(1);
                 tbc_mnt.TabPages["tbp_Listado"].Enabled = true;
@@ -146,7 +147,7 @@ namespace Capa_Presentacion.Formularios
                 Nombre_Periodo = txt_Periodo.Text,
                 IdAño = int.Parse(cbo_años.SelectedValue.ToString()),
                 IdMes = byte.Parse(cbo_NombreMes.SelectedValue.ToString()),
-                Flag_Cerrado = byte.Parse((Chk_Flagcerrado.Checked == true)?"1":"0"),
+                Flag_Cerrado = byte.Parse((Chk_Flagcerrado.Checked == true) ? "1" : "0"),
                 Fecha_Inicio = DateTime.Parse(dtp_FechaInicio.Value.ToShortDateString()),
                 Fecha_Final = DateTime.Parse(dtp_FechaFinal.Value.ToShortDateString()),
             };
@@ -154,7 +155,7 @@ namespace Capa_Presentacion.Formularios
             if (bln_Nuevo) rpta = LG_xPeriodo_CN._Instancia.Agregar_Periodo(datos);
             else rpta = LG_xPeriodo_CN._Instancia.Actualizar_Periodo(datos);
 
-            if(rpta =="PROCESADO")
+            if (rpta == "PROCESADO")
             {
                 if (bln_Nuevo) { MessageBox.Show("Se Agrego Nuevo Registro", "AGREGAR REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
                 else { MessageBox.Show("Se Actualizo el Registro", "ACTUALIZA REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
@@ -179,7 +180,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)

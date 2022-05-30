@@ -564,15 +564,18 @@ D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.Repo
 D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\Sistemas\Sistema Produccion\Capa_Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.pdb
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Dapper.dll
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe.config
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.exe
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Sistema_Produccion.pdb
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Entidades.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\ComboBoxMultiColumns.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
@@ -580,12 +583,10 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\DapperExtensions.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\EnvDTE.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Slapper.dll
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Dapper.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Newtonsoft.Json.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\stdole.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
@@ -593,7 +594,6 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Microsoft.MSXML.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Entidades.pdb
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.pdb
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Negocios.dll.config
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\Capa_Datos.dll.config
@@ -640,6 +640,8 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\ru\Microsoft.ReportVie
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.AssemblyReference.cache
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Mes.resources
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Periodo.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_CondicionPago.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_EstadoInmueble.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Logistica.Frm_FormaPago.resources
@@ -724,12 +726,10 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UnidadMedida.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_UsoProducto.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Usuario.resources
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_CorePrincipal.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.cache
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CoreCompileInputs.cache
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.exe
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.pdb
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Periodo.resources
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.MDIFrm_CorePrincipal.resources
-D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Frm_Mes.resources

@@ -88,20 +88,20 @@ namespace Capa_Datos.Repositorio
                                     " (@razon_social_proveedor, @ruc_proveedor, @telefono1_proveedor, @telefono2_proveedor, @pagina_web_proveedor, @direccion_proveedor, @correo_proveedor, " +
                                     " @contacto_proveedor, @telefono_contacto, @correo_contacto, @nota, @celular1_proveedor, @idtipoproveedor)";
                     ConexionSQL.ExecuteScalar(sqlinsert, new {
-                                                                razon_social_proveedor = proveedor.Razon_Social_Proveedor,
-                                                                ruc_proveedor = proveedor.RUC_Proveedor,
-                                                                telefono1_proveedor = proveedor.Telefono1_Proveedor,
-                                                                telefono2_proveedor = proveedor.Telefono2_Proveedor,
-                                                                pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
-                                                                direccion_proveedor = proveedor.Direccion_Proveedor,
-                                                                correo_proveedor = proveedor.Correo_Proveedor,
-                                                                contacto_proveedor = proveedor.Contacto_Proveedor,
-                                                                telefono_contacto = proveedor.Telefono_Contacto,
-                                                                correo_contacto = proveedor.Correo_Contacto,
-                                                                nota = proveedor.Nota,
-                                                                celular1_proveedor = proveedor.Celular1_Proveedor,
-                                                                idtipoproveedor = proveedor.IdTipoProveedor,
-                                                            });
+                        razon_social_proveedor = proveedor.Razon_Social_Proveedor,
+                        ruc_proveedor = proveedor.RUC_Proveedor,
+                        telefono1_proveedor = proveedor.Telefono1_Proveedor,
+                        telefono2_proveedor = proveedor.Telefono2_Proveedor,
+                        pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
+                        direccion_proveedor = proveedor.Direccion_Proveedor,
+                        correo_proveedor = proveedor.Correo_Proveedor,
+                        contacto_proveedor = proveedor.Contacto_Proveedor,
+                        telefono_contacto = proveedor.Telefono_Contacto,
+                        correo_contacto = proveedor.Correo_Contacto,
+                        nota = proveedor.Nota,
+                        celular1_proveedor = proveedor.Celular1_Proveedor,
+                        idtipoproveedor = proveedor.IdTipoProveedor,
+                    });
                     return "PROCESADO";
                 }
             }
@@ -120,21 +120,21 @@ namespace Capa_Datos.Repositorio
                                     " Contacto_Proveedor = @contacto_proveedor, Telefono_Contacto = @telefono_contacto, Correo_Contacto = @correo_contacto, Nota = @nota, Celular1_Proveedor = @celular1_proveedor," +
                                     " IdTipoProveedor  = @idtipoproveedor where  IdProveedor = @id";
                     ConexionSQL.Execute(sqlupdate, new {
-                                                            id = proveedor.IdProveedor,
-                                                            razon_social_proveedor = proveedor.Razon_Social_Proveedor,
-                                                            ruc_proveedor = proveedor.RUC_Proveedor,
-                                                            telefono1_proveedor = proveedor.Telefono1_Proveedor,
-                                                            telefono2_proveedor = proveedor.Telefono2_Proveedor,
-                                                            pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
-                                                            direccion_proveedor = proveedor.Direccion_Proveedor,
-                                                            correo_proveedor = proveedor.Correo_Proveedor,
-                                                            contacto_proveedor = proveedor.Contacto_Proveedor,
-                                                            telefono_contacto = proveedor.Telefono_Contacto,
-                                                            correo_contacto = proveedor.Correo_Contacto,
-                                                            nota = proveedor.Nota,
-                                                            celular1_proveedor = proveedor.Celular1_Proveedor,
-                                                            idtipoproveedor = proveedor.IdTipoProveedor,
-                                                        });
+                        id = proveedor.IdProveedor,
+                        razon_social_proveedor = proveedor.Razon_Social_Proveedor,
+                        ruc_proveedor = proveedor.RUC_Proveedor,
+                        telefono1_proveedor = proveedor.Telefono1_Proveedor,
+                        telefono2_proveedor = proveedor.Telefono2_Proveedor,
+                        pagina_web_proveedor = proveedor.Pagina_Web_Proveedor,
+                        direccion_proveedor = proveedor.Direccion_Proveedor,
+                        correo_proveedor = proveedor.Correo_Proveedor,
+                        contacto_proveedor = proveedor.Contacto_Proveedor,
+                        telefono_contacto = proveedor.Telefono_Contacto,
+                        correo_contacto = proveedor.Correo_Contacto,
+                        nota = proveedor.Nota,
+                        celular1_proveedor = proveedor.Celular1_Proveedor,
+                        idtipoproveedor = proveedor.IdTipoProveedor,
+                    });
                     return "PROCESADO";
                 }
             }

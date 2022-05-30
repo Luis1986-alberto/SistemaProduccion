@@ -27,7 +27,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sql = "select IdAño, Año from PR_aAño";
+                    var sql = "select IdAño, Año from LG_aAño";
                     return conexionsql.Query<LG_aAño>(sql);
                 }
             }
@@ -40,7 +40,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sql = "select IdAño, Año from PR_aAño where IdAño = @id";
+                    var sql = "select IdAño, Año from LG_aAño where IdAño = @id";
                     return conexionsql.Query<LG_aAño>(sql, new { id = idaño });
                 }
             }
@@ -54,7 +54,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sqlinsert = "insert into PR_aAño (Año) values (@año)";
+                    var sqlinsert = "insert into LG_aAño (Año) values (@año)";
                     conexionsql.ExecuteScalar(sqlinsert, new { año = aAño.Año });
                     return "PROCESADO";
                 }
@@ -68,7 +68,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sqlupdate = "update PR_aAño set Año = @año where Idaño = @idaño";
+                    var sqlupdate = "update LG_aAño set Año = @año where Idaño = @idaño";
                     conexionsql.ExecuteScalar(sqlupdate, new { idaño = aAño.IdAño, año = aAño.Año });
                     return "PROCESADO";
                 }
@@ -82,7 +82,7 @@ namespace Capa_Datos.Repositorio
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
-                    var sqldelete = "delete PR_aAño where IdAño = @idaño";
+                    var sqldelete = "delete LG_aAño where IdAño = @idaño";
                     conexionsql.ExecuteScalar(sqldelete, new { idaño = idaño });
                     return "PROCESADO";
                 }

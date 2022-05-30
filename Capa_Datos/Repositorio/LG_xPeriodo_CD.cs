@@ -3,9 +3,6 @@ using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Datos.Repositorio
 {
@@ -25,7 +22,7 @@ namespace Capa_Datos.Repositorio
         }
 
 
-        public IEnumerable<LG_xPeriodo>Lista_Periodo()
+        public IEnumerable<LG_xPeriodo> Lista_Periodo()
         {
             try
             {
@@ -54,7 +51,7 @@ namespace Capa_Datos.Repositorio
                 }
             }
             catch(Exception Ex)
-            {throw new Exception("Error al Listar", Ex);}
+            { throw new Exception("Error al Listar", Ex); }
         }
 
         public LG_xPeriodo TraerPorIdPeriodo(Int32 idperiodo)
@@ -63,12 +60,12 @@ namespace Capa_Datos.Repositorio
             {
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
-                    var sql = "select * from LG_Periodo where IdPeriodo = @id";
+                    var sql = "select * from LG_xPeriodo where IdPeriodo = @id";
                     return ConexionSQL.QueryFirst<LG_xPeriodo>(sql, new { id = idperiodo });
                 }
             }
             catch(Exception ex)
-            {throw new Exception("Error al Traer Por Id", ex);}
+            { throw new Exception("Error al Traer Por Id", ex); }
         }
 
         public string Agregar_Periodo(LG_xPeriodo periodo)
@@ -103,14 +100,14 @@ namespace Capa_Datos.Repositorio
                     var sqlupdate = "Update LG_xPeriodo set Nombre_Periodo = @Nombre_Periodo, IdAño = @IdAño, IdMes = @IdMes, Flag_Cerrado = @Flag_Cerrado, " +
                                     " Fecha_Inicio = @Fecha_Inicio, Fecha_Final = @Fecha_Final where IdPeriodo = @Id ";
                     ConexionSql.ExecuteScalar(sqlupdate, new {
-                                                                Id = periodo.IdPeriodo,
-                                                                Nombre_Periodo = periodo.Nombre_Periodo,
-                                                                IdAño = periodo.IdAño,
-                                                                IdMes = periodo.IdMes,
-                                                                Flag_Cerrado = periodo.Flag_Cerrado,
-                                                                Fecha_Inicio = periodo.Fecha_Inicio,
-                                                                Fecha_Final = periodo.Fecha_Final,
-                                                            });
+                        Id = periodo.IdPeriodo,
+                        Nombre_Periodo = periodo.Nombre_Periodo,
+                        IdAño = periodo.IdAño,
+                        IdMes = periodo.IdMes,
+                        Flag_Cerrado = periodo.Flag_Cerrado,
+                        Fecha_Inicio = periodo.Fecha_Inicio,
+                        Fecha_Final = periodo.Fecha_Final,
+                    });
                     return "PROCESADO";
 
                 }
@@ -124,7 +121,7 @@ namespace Capa_Datos.Repositorio
         {
             try
             {
-                using (var SQLConexion = new SqlConnection(cadenaconexion))
+                using(var SQLConexion = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "Delete LG_xPeriodo where IdPeriodo = @id";
                     SQLConexion.ExecuteScalar<LG_xPeriodo>(sqldelete, new { id = idperiodo });

@@ -16,7 +16,7 @@ namespace Capa_Presentacion.Formularios
     {
         DataGridViewPrinter dgr_Visor_Grilla;
         private bool bln_Nuevo = false;
-        private bool bln_Editar = false;      
+        private bool bln_Editar = false;
         private string str_Campo;
 
         public Frm_Mes()
@@ -150,7 +150,7 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-            if(SetupThePrinting())
+            if (SetupThePrinting())
             {
                 PrintDocument.Print();
             }
@@ -178,7 +178,7 @@ namespace Capa_Presentacion.Formularios
         private void tls_OrdenASC_Click(object sender, EventArgs e)
         {
             str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
-            var Lista_Ordenado =( from meses in LG_aMes_CN._Instancia.Lista_Mes().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null)) 
+            var Lista_Ordenado = (from meses in LG_aMes_CN._Instancia.Lista_Mes().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
                                   select meses).ToList();
             dgv_Mnt.DataSource = Lista_Ordenado;
         }
@@ -198,7 +198,7 @@ namespace Capa_Presentacion.Formularios
             if (dgv_Mnt.RowCount == 0) return;
 
             dgv_Mnt.ClearSelection();
-            dgv_Mnt.Rows[0].Selected= true;
+            dgv_Mnt.Rows[0].Selected = true;
 
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdMes"].Value.ToString()));
             dgv_Mnt.FirstDisplayedScrollingRowIndex = dgv_Mnt.SelectedRows[0].Index;

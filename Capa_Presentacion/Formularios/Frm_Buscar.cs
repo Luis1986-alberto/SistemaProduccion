@@ -73,7 +73,9 @@ namespace Capa_Presentacion.Formularios
             {
                 IEnumerable<DataGridViewRow> obj = (from DataGridViewRow row in grid.Rows.Cast<DataGridViewRow>()
                                                     from DataGridViewCell cells in row.Cells
+#pragma warning disable CS0252 // Posible comparación de referencias no intencionada; para obtener una comparación de valores, convierta el lado de la izquierda en el tipo 'string'
                                                     where cells.OwningRow.Equals(row) && cells.Value == TextoABuscar
+#pragma warning restore CS0252 // Posible comparación de referencias no intencionada; para obtener una comparación de valores, convierta el lado de la izquierda en el tipo 'string'
                                                     select row);
                 if (obj.Any())
                 {
@@ -108,7 +110,9 @@ namespace Capa_Presentacion.Formularios
                 foreach (DataGridViewRow row in grid.Rows)
                 {
                     foreach (DataGridViewCell cell in row.Cells)
+#pragma warning disable CS0252 // Posible comparación de referencias no intencionada; para obtener una comparación de valores, convierta el lado de la izquierda en el tipo 'string'
                         if (cell.Value == TextoABuscar)
+#pragma warning restore CS0252 // Posible comparación de referencias no intencionada; para obtener una comparación de valores, convierta el lado de la izquierda en el tipo 'string'
                         {
                             row.Selected = true;
                             return true;

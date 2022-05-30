@@ -779,7 +779,9 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.Label lbl_Puntos_IdUsuario;
         private System.Windows.Forms.Label lbl_Codigo_Usuario;
         private System.Windows.Forms.Label lbl_Nombre_Usuario;
+#pragma warning disable CS0649 // El campo 'Frm_Usuario.txt_Nombre_Usuario' nunca se asigna y siempre tendrá el valor predeterminado null
         private System.Windows.Forms.TextBox txt_Nombre_Usuario;
+#pragma warning restore CS0649 // El campo 'Frm_Usuario.txt_Nombre_Usuario' nunca se asigna y siempre tendrá el valor predeterminado null
         private System.Windows.Forms.Label lbl_Puntos_Nombres;
         private System.Windows.Forms.Label lbl_Titulo;
         private System.Windows.Forms.TabPage tbp_Listado;

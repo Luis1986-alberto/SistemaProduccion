@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Entidades.Tablas
 {
@@ -29,7 +25,7 @@ namespace Capa_Entidades.Tablas
         public LG_xPeriodo()
         { }
 
-        public LG_xPeriodo(int idperiodo)
+        public LG_xPeriodo(Int32 idperiodo)
         {
             IdPeriodo = idperiodo;
         }

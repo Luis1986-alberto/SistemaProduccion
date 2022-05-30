@@ -1,5 +1,4 @@
-﻿using Capa_Datos.Interface;
-using Capa_Entidades.Tablas;
+﻿using Capa_Entidades.Tablas;
 using Dapper;
 using DapperExtensions;
 using DapperExtensions.Predicate;
@@ -9,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class PR_mImpresora_CD 
+    public class PR_mImpresora_CD
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion;
@@ -84,6 +83,6 @@ namespace Capa_Datos.Repositorio
             }
         }
 
-        
+
     }
 }

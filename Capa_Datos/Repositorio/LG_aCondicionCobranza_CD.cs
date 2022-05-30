@@ -1,5 +1,4 @@
-﻿using Capa_Datos.Interface;
-using Capa_Entidades.Tablas;
+﻿using Capa_Entidades.Tablas;
 using Dapper;
 using DapperExtensions;
 using DapperExtensions.Predicate;
@@ -9,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Datos.Repositorio
 {
-    public class LG_aCondicionCobranza_CD 
+    public class LG_aCondicionCobranza_CD
     {
         private Inicio principal = new Inicio();
         private string cadenaconexion;

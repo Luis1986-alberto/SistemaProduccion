@@ -21,8 +21,12 @@ namespace Capa_Presentacion.Formularios.Produccion
         private PR_mEstandarExtrusion mestextrusion = null;
         private PR_mEstandarImpresion mestimpresion = null;
         private PR_mEstandarSellado mestsellado = null;
+#pragma warning disable CS0414 // El campo 'Frm_RegistroEstandar.mestlaminado' está asignado pero su valor nunca se usa
         private PR_mEstandarLaminado mestlaminado = null;
+#pragma warning restore CS0414 // El campo 'Frm_RegistroEstandar.mestlaminado' está asignado pero su valor nunca se usa
+#pragma warning disable CS0414 // El campo 'Frm_RegistroEstandar.mestcorte' está asignado pero su valor nunca se usa
         private PR_mEstandarCorte mestcorte = null;
+#pragma warning restore CS0414 // El campo 'Frm_RegistroEstandar.mestcorte' está asignado pero su valor nunca se usa
 
         public Frm_RegistroEstandar()
         {
@@ -1393,7 +1397,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         }
 
         private void Dtp_FechaFinal_ValueChanged(object sender, EventArgs e) => Cargar_Datos();
-        
+
         private void chk_FiltroTipoEstandar_CheckedChanged(object sender, EventArgs e)
         {
             Cbo_FiltroTipoProduccion.Enabled = chk_FiltroTipoEstandar.Checked;
@@ -1432,7 +1436,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             PrintDocument.PrinterSettings = MyPrintDialog.PrinterSettings;
             PrintDocument.DefaultPageSettings = MyPrintDialog.PrinterSettings.DefaultPageSettings;
             PrintDocument.DefaultPageSettings.Margins = new Margins(40, 40, 40, 40);
-            
+
             if (MessageBox.Show("Desea que el informe se centre en la página", "Estilo de Impresion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 dgr_Visor_Grilla = new DataGridViewPrinter(dgv_Mnt, PrintDocument, true, true, "Listado de Estandares", new Font("Tahoma", 18, FontStyle.Bold, GraphicsUnit.Point), Color.Black, true);
             else

@@ -76,13 +76,13 @@ namespace Capa_Presentacion.Formularios
             this.lbl_Titulo = new System.Windows.Forms.Label();
             this.tbp_LIstado = new System.Windows.Forms.TabPage();
             this.Dgv_Mnt = new System.Windows.Forms.DataGridView();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.IdPeriodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Final = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.tls_Formulario.SuspendLayout();
             this.tbc_mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -380,6 +380,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // txt_Periodo
             // 
+            this.txt_Periodo.Enabled = false;
             this.txt_Periodo.Location = new System.Drawing.Point(257, 26);
             this.txt_Periodo.Name = "txt_Periodo";
             this.txt_Periodo.Size = new System.Drawing.Size(180, 20);
@@ -427,6 +428,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // dtp_FechaFinal
             // 
+            this.dtp_FechaFinal.Enabled = false;
             this.dtp_FechaFinal.Location = new System.Drawing.Point(257, 261);
             this.dtp_FechaFinal.Name = "dtp_FechaFinal";
             this.dtp_FechaFinal.Size = new System.Drawing.Size(224, 20);
@@ -454,6 +456,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // dtp_FechaInicio
             // 
+            this.dtp_FechaInicio.Enabled = false;
             this.dtp_FechaInicio.Location = new System.Drawing.Point(257, 215);
             this.dtp_FechaInicio.Name = "dtp_FechaInicio";
             this.dtp_FechaInicio.Size = new System.Drawing.Size(224, 20);
@@ -483,6 +486,7 @@ namespace Capa_Presentacion.Formularios
             // Chk_Flagcerrado
             // 
             this.Chk_Flagcerrado.AutoSize = true;
+            this.Chk_Flagcerrado.Enabled = false;
             this.Chk_Flagcerrado.Location = new System.Drawing.Point(257, 173);
             this.Chk_Flagcerrado.Name = "Chk_Flagcerrado";
             this.Chk_Flagcerrado.Size = new System.Drawing.Size(15, 14);
@@ -492,6 +496,7 @@ namespace Capa_Presentacion.Formularios
             // cbo_NombreMes
             // 
             this.cbo_NombreMes.DisplayMember = "Mes";
+            this.cbo_NombreMes.Enabled = false;
             this.cbo_NombreMes.FormattingEnabled = true;
             this.cbo_NombreMes.Location = new System.Drawing.Point(257, 126);
             this.cbo_NombreMes.Name = "cbo_NombreMes";
@@ -502,6 +507,7 @@ namespace Capa_Presentacion.Formularios
             // cbo_años
             // 
             this.cbo_años.DisplayMember = "Año";
+            this.cbo_años.Enabled = false;
             this.cbo_años.FormattingEnabled = true;
             this.cbo_años.Location = new System.Drawing.Point(257, 76);
             this.cbo_años.Name = "cbo_años";
@@ -578,6 +584,8 @@ namespace Capa_Presentacion.Formularios
             // 
             // Dgv_Mnt
             // 
+            this.Dgv_Mnt.AllowDrop = true;
+            this.Dgv_Mnt.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -595,7 +603,9 @@ namespace Capa_Presentacion.Formularios
             this.Fecha_Inicio,
             this.Fecha_Final});
             this.Dgv_Mnt.Location = new System.Drawing.Point(8, 30);
+            this.Dgv_Mnt.MultiSelect = false;
             this.Dgv_Mnt.Name = "Dgv_Mnt";
+            this.Dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Mnt.Size = new System.Drawing.Size(859, 319);
             this.Dgv_Mnt.TabIndex = 0;
             // 
@@ -614,7 +624,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // Mes
             // 
-            this.Mes.DataPropertyName = "Mrs";
+            this.Mes.DataPropertyName = "Mes";
             this.Mes.HeaderText = "Mes";
             this.Mes.Name = "Mes";
             this.Mes.Width = 150;
@@ -712,12 +722,12 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox Chk_Flagcerrado;
+        private System.Drawing.Printing.PrintDocument PrintDocument;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdPeriodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Periodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Final;
-        private System.Drawing.Printing.PrintDocument PrintDocument;
     }
 }
