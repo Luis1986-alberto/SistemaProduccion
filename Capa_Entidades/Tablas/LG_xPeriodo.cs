@@ -5,7 +5,7 @@ namespace Capa_Entidades.Tablas
     public class LG_xPeriodo
     {
         private Int32 _IdPeriodo;
-        private int _IdAño;
+        private byte _IdAño;
         private byte _IdMes;
         private byte _Flag_Cerrado;
         private string _Nombre_Periodo;
@@ -13,7 +13,7 @@ namespace Capa_Entidades.Tablas
         private DateTime _Fecha_Final;
 
         public Int32 IdPeriodo { get => _IdPeriodo; set => _IdPeriodo = value; }
-        public int IdAño { get => _IdAño; set => _IdAño = value; }
+        public byte IdAño { get => _IdAño; set => _IdAño = value; }
         public byte IdMes { get => _IdMes; set => _IdMes = value; }
         public byte Flag_Cerrado { get => _Flag_Cerrado; set => _Flag_Cerrado = value; }
         public string Nombre_Periodo { get => _Nombre_Periodo; set => _Nombre_Periodo = value; }
@@ -29,7 +29,7 @@ namespace Capa_Entidades.Tablas
         {
             IdPeriodo = idperiodo;
         }
-        public LG_xPeriodo(int idPeriodo, int idAño, byte idMes, byte flag_Cerrado, string nombre_Periodo, DateTime fecha_Inicio, DateTime fecha_Final)
+        public LG_xPeriodo(int idPeriodo, byte idAño, byte idMes, byte flag_Cerrado, string nombre_Periodo, DateTime fecha_Inicio, DateTime fecha_Final)
         {
             IdPeriodo = idPeriodo;
             IdAño = idAño;

@@ -36,8 +36,8 @@ namespace Capa_Negocios
 
         public string Actualizar_Periodo(LG_xPeriodo periodo)
         {
-            if (TraerPorPeriodo(periodo.Nombre_Periodo) != null) return "Existe el Periodo Registrado";
-            else return LG_xPeriodo_CD._Instacia.Actualizar_Periodo(periodo);
+           // if (TraerPorPeriodo(periodo.Nombre_Periodo) != null) return "Existe el Periodo Registrado";
+             return LG_xPeriodo_CD._Instacia.Actualizar_Periodo(periodo);
         }
 
         public string Eliminar_Periodo(Int32 idperiodo)

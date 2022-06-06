@@ -41,6 +41,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_CierreProducciones = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Año = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Mes = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Periodo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_ConfiguracionAcceso = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_Usuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.Logistica = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,7 +168,7 @@ namespace Capa_Presentacion.Formularios
             this.stb_PC_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tim_Reloj = new System.Windows.Forms.Timer(this.components);
-            this.mnu_Periodo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_RegistroPedido = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -198,7 +199,8 @@ namespace Capa_Presentacion.Formularios
             this.mnu_RegistroEstandar,
             this.mnu_registroClientes,
             this.mnu_RegistroMaquina,
-            this.mnu_RegistroTrabajadores});
+            this.mnu_RegistroTrabajadores,
+            this.mnu_RegistroPedido});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -253,16 +255,23 @@ namespace Capa_Presentacion.Formularios
             // mnu_Año
             // 
             this.mnu_Año.Name = "mnu_Año";
-            this.mnu_Año.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Año.Size = new System.Drawing.Size(115, 22);
             this.mnu_Año.Text = "Año";
             this.mnu_Año.Click += new System.EventHandler(this.mnu_Año_Click);
             // 
             // mnu_Mes
             // 
             this.mnu_Mes.Name = "mnu_Mes";
-            this.mnu_Mes.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Mes.Size = new System.Drawing.Size(115, 22);
             this.mnu_Mes.Text = "Mes";
             this.mnu_Mes.Click += new System.EventHandler(this.mnu_Mes_Click);
+            // 
+            // mnu_Periodo
+            // 
+            this.mnu_Periodo.Name = "mnu_Periodo";
+            this.mnu_Periodo.Size = new System.Drawing.Size(115, 22);
+            this.mnu_Periodo.Text = "Periodo";
+            this.mnu_Periodo.Click += new System.EventHandler(this.mnu_Periodo_Click);
             // 
             // mnu_ConfiguracionAcceso
             // 
@@ -275,7 +284,7 @@ namespace Capa_Presentacion.Formularios
             // mnu_Usuarios
             // 
             this.mnu_Usuarios.Name = "mnu_Usuarios";
-            this.mnu_Usuarios.Size = new System.Drawing.Size(180, 22);
+            this.mnu_Usuarios.Size = new System.Drawing.Size(119, 22);
             this.mnu_Usuarios.Text = "Usuarios";
             this.mnu_Usuarios.Click += new System.EventHandler(this.mnu_Usuarios_Click);
             // 
@@ -507,7 +516,7 @@ namespace Capa_Presentacion.Formularios
             this.Formulacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_EstadoFormulacion});
             this.Formulacion.Name = "Formulacion";
-            this.Formulacion.Size = new System.Drawing.Size(136, 22);
+            this.Formulacion.Size = new System.Drawing.Size(180, 22);
             this.Formulacion.Text = "Mezclado";
             // 
             // mnu_EstadoFormulacion
@@ -528,7 +537,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Tratado,
             this.mnu_EspesorTuco});
             this.Extrusion.Name = "Extrusion";
-            this.Extrusion.Size = new System.Drawing.Size(136, 22);
+            this.Extrusion.Size = new System.Drawing.Size(180, 22);
             this.Extrusion.Text = "Extrusión";
             // 
             // mnu_TipoMaterialExtruir
@@ -588,7 +597,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoProcesoLaminacion,
             this.mnu_TipoMaterialLaminado});
             this.Laminacion.Name = "Laminacion";
-            this.Laminacion.Size = new System.Drawing.Size(136, 22);
+            this.Laminacion.Size = new System.Drawing.Size(180, 22);
             this.Laminacion.Text = "Laminación";
             // 
             // mnu_AdhesivoLaminacion
@@ -627,7 +636,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Rodillos,
             this.mnu_TipoTinta});
             this.Impresion.Name = "Impresion";
-            this.Impresion.Size = new System.Drawing.Size(136, 22);
+            this.Impresion.Size = new System.Drawing.Size(180, 22);
             this.Impresion.Text = "Impresión";
             // 
             // mnu_PieImprenta
@@ -666,7 +675,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoSello,
             this.mnu_TipoTroquel});
             this.Sellado.Name = "Sellado";
-            this.Sellado.Size = new System.Drawing.Size(136, 22);
+            this.Sellado.Size = new System.Drawing.Size(180, 22);
             this.Sellado.Text = "Sellado";
             // 
             // mnu_TipoAsa
@@ -702,7 +711,7 @@ namespace Capa_Presentacion.Formularios
             this.Corte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_TipoProcesoCorte});
             this.Corte.Name = "Corte";
-            this.Corte.Size = new System.Drawing.Size(136, 22);
+            this.Corte.Size = new System.Drawing.Size(180, 22);
             this.Corte.Text = "Corte";
             // 
             // mnu_TipoProcesoCorte
@@ -717,7 +726,7 @@ namespace Capa_Presentacion.Formularios
             this.despachoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_TipoDespacho});
             this.despachoToolStripMenuItem.Name = "despachoToolStripMenuItem";
-            this.despachoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.despachoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.despachoToolStripMenuItem.Text = "Despacho";
             // 
             // mnu_TipoDespacho
@@ -745,7 +754,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_RegistroSemana,
             this.mnu_UsoProducto});
             this.Generales.Name = "Generales";
-            this.Generales.Size = new System.Drawing.Size(136, 22);
+            this.Generales.Size = new System.Drawing.Size(180, 22);
             this.Generales.Text = "Generales";
             // 
             // mnu_EmpresaEtiqueta
@@ -853,7 +862,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_IGV,
             this.mnu_TipoMoneda});
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(136, 22);
+            this.Pedidos.Size = new System.Drawing.Size(180, 22);
             this.Pedidos.Text = "Pedidos";
             // 
             // mnu_CondicionCobranza
@@ -886,7 +895,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_EstadoOrdenProduccion,
             this.mnu_Prioridad});
             this.OrdenProduccion.Name = "OrdenProduccion";
-            this.OrdenProduccion.Size = new System.Drawing.Size(136, 22);
+            this.OrdenProduccion.Size = new System.Drawing.Size(180, 22);
             this.OrdenProduccion.Text = "Producción";
             // 
             // mnu_EstadoProcesoOrdenProd
@@ -934,7 +943,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Area,
             this.mnu_Local});
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.empresaToolStripMenuItem.Text = "Empresa";
             // 
             // mnu_Empresas
@@ -988,41 +997,41 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Mezcladora,
             this.mnu_Impresora});
             this.Maquina.Name = "Maquina";
-            this.Maquina.Size = new System.Drawing.Size(136, 22);
+            this.Maquina.Size = new System.Drawing.Size(180, 22);
             this.Maquina.Text = "Maquina";
             // 
             // mnu_EstadoMaquina
             // 
             this.mnu_EstadoMaquina.Name = "mnu_EstadoMaquina";
-            this.mnu_EstadoMaquina.Size = new System.Drawing.Size(159, 22);
+            this.mnu_EstadoMaquina.Size = new System.Drawing.Size(180, 22);
             this.mnu_EstadoMaquina.Text = "Estado Maquina";
             this.mnu_EstadoMaquina.Click += new System.EventHandler(this.mnu_EstadoMaquina_Click);
             // 
             // mnu_TipoMaquina
             // 
             this.mnu_TipoMaquina.Name = "mnu_TipoMaquina";
-            this.mnu_TipoMaquina.Size = new System.Drawing.Size(159, 22);
+            this.mnu_TipoMaquina.Size = new System.Drawing.Size(180, 22);
             this.mnu_TipoMaquina.Text = "Tipo Maquina";
             this.mnu_TipoMaquina.Click += new System.EventHandler(this.mnu_TipoMaquina_Click);
             // 
             // mnu_MarcaMaquina
             // 
             this.mnu_MarcaMaquina.Name = "mnu_MarcaMaquina";
-            this.mnu_MarcaMaquina.Size = new System.Drawing.Size(159, 22);
+            this.mnu_MarcaMaquina.Size = new System.Drawing.Size(180, 22);
             this.mnu_MarcaMaquina.Text = "Marca Maquina";
             this.mnu_MarcaMaquina.Click += new System.EventHandler(this.mnu_MarcaMaquina_Click);
             // 
             // mnu_Mezcladora
             // 
             this.mnu_Mezcladora.Name = "mnu_Mezcladora";
-            this.mnu_Mezcladora.Size = new System.Drawing.Size(159, 22);
+            this.mnu_Mezcladora.Size = new System.Drawing.Size(180, 22);
             this.mnu_Mezcladora.Text = "Mezcladora";
             this.mnu_Mezcladora.Click += new System.EventHandler(this.mnu_Mezcladora_Click);
             // 
             // mnu_Impresora
             // 
             this.mnu_Impresora.Name = "mnu_Impresora";
-            this.mnu_Impresora.Size = new System.Drawing.Size(159, 22);
+            this.mnu_Impresora.Size = new System.Drawing.Size(180, 22);
             this.mnu_Impresora.Text = "Impresora";
             this.mnu_Impresora.Click += new System.EventHandler(this.mnu_Impresora_Click);
             // 
@@ -1247,12 +1256,11 @@ namespace Capa_Presentacion.Formularios
             // 
             this.tim_Reloj.Tick += new System.EventHandler(this.tim_Reloj_Tick);
             // 
-            // mnu_Periodo
+            // mnu_RegistroPedido
             // 
-            this.mnu_Periodo.Name = "mnu_Periodo";
-            this.mnu_Periodo.Size = new System.Drawing.Size(180, 22);
-            this.mnu_Periodo.Text = "Periodo";
-            this.mnu_Periodo.Click += new System.EventHandler(this.mnu_Periodo_Click);
+            this.mnu_RegistroPedido.Name = "mnu_RegistroPedido";
+            this.mnu_RegistroPedido.Size = new System.Drawing.Size(186, 22);
+            this.mnu_RegistroPedido.Text = "Registro Pedidos";
             // 
             // MDIFrm_CorePrincipal
             // 
@@ -1418,6 +1426,7 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.ToolStripMenuItem mnu_TipoProveedor;
         private System.Windows.Forms.ToolStripMenuItem mnu_RegistroProveedores;
         private System.Windows.Forms.ToolStripMenuItem mnu_Periodo;
+        private System.Windows.Forms.ToolStripMenuItem mnu_RegistroPedido;
     }
 }
 

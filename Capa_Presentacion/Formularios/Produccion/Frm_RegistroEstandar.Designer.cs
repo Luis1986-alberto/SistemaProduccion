@@ -949,6 +949,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.btnLimpiarImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiarImagen.BackgroundImage")));
             this.btnLimpiarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpiarImagen.Enabled = false;
             this.btnLimpiarImagen.Location = new System.Drawing.Point(57, 362);
             this.btnLimpiarImagen.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarImagen.Name = "btnLimpiarImagen";
@@ -961,6 +962,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.btnCargarImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCargarImagen.BackgroundImage")));
             this.btnCargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCargarImagen.Enabled = false;
             this.btnCargarImagen.Location = new System.Drawing.Point(8, 362);
             this.btnCargarImagen.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargarImagen.Name = "btnCargarImagen";
@@ -6257,7 +6259,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_FiltroCliente.FormattingEnabled = true;
             this.cbo_FiltroCliente.Location = new System.Drawing.Point(67, 11);
             this.cbo_FiltroCliente.Name = "cbo_FiltroCliente";
-            this.cbo_FiltroCliente.Size = new System.Drawing.Size(396, 21);
+            this.cbo_FiltroCliente.Size = new System.Drawing.Size(394, 21);
             this.cbo_FiltroCliente.TabIndex = 14;
             this.cbo_FiltroCliente.ValueMember = "IdCliente";
             this.cbo_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbo_FiltroCliente_SelectedIndexChanged);
@@ -6276,6 +6278,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // Dtp_FechaFinal
             // 
+            this.Dtp_FechaFinal.Enabled = false;
             this.Dtp_FechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaFinal.Location = new System.Drawing.Point(1023, 10);
             this.Dtp_FechaFinal.Name = "Dtp_FechaFinal";
@@ -6286,6 +6289,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // Dtp_FechaInicial
             // 
             this.Dtp_FechaInicial.CustomFormat = "\"dd mmm  yyyy\"";
+            this.Dtp_FechaInicial.Enabled = false;
             this.Dtp_FechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Dtp_FechaInicial.Location = new System.Drawing.Point(921, 10);
             this.Dtp_FechaInicial.Name = "Dtp_FechaInicial";

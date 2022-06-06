@@ -25,7 +25,7 @@ namespace Capa_Datos.Repositorio
         }
 
         public List<PR_mEstandar> Listar_Estandar(PR_mEstandar omestandarindustriales, string flag_cliente, string flag_tipoproduccion,
-                                                                string flag_rango, DateTime fech_inicio, DateTime fech_final)
+                                                  string flag_rango, DateTime fech_inicio, DateTime fech_final)
         {
             List<PR_mEstandar> lista_estandares = null;
             try
@@ -67,7 +67,6 @@ namespace Capa_Datos.Repositorio
                     }
                     dr.Close();
                     return lista_estandares;
-
                 }
             }
             catch(Exception Ex)

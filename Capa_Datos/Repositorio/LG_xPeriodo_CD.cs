@@ -38,13 +38,14 @@ namespace Capa_Datos.Repositorio
                     {
                         LG_xPeriodo t = new LG_xPeriodo();
                         t.IdPeriodo = Int32.Parse(dr["IdPeriodo"].ToString());
-                        t.IdAño = Int32.Parse(dr["IdAño"].ToString());
+                        t.IdAño = byte.Parse(dr["IdAño"].ToString());
                         t.IdMes = byte.Parse(dr["IdMes"].ToString());
                         t.Nombre_Periodo = dr["Nombre_Periodo"].ToString();
                         t.Flag_Cerrado = byte.Parse(dr["Flag_Cerrado"].ToString());
                         t.Fecha_Inicio = DateTime.Parse(dr["Fecha_Inicio"].ToString());
                         t.Fecha_Final = DateTime.Parse(dr["Fecha_Final"].ToString());
                         t.Mes = dr["Mes"].ToString();
+                        t.Año = int.Parse(dr["Año"].ToString());
                         lst_Periodo.Add(t);
                     }
                     return lst_Periodo;

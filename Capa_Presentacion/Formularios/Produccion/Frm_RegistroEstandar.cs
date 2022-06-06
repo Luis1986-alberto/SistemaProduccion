@@ -4,6 +4,7 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -128,11 +129,12 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             var datos = new PR_mEstandar
             {
-                IdCliente = Int32.Parse(cbo_FiltroCliente.SelectedValue.ToString()),
-                IdTipoProduccion = byte.Parse(Cbo_FiltroTipoProduccion.SelectedValue.ToString()),
+                IdCliente =    Int32.Parse(cbo_FiltroCliente.SelectedValue.ToString()),
+                IdTipoProduccion =  byte.Parse(Cbo_FiltroTipoProduccion.SelectedValue.ToString()),
             };
             Lst_Estandares = PR_mEstandar_CN._Instancia.Lista_Estandares(datos, (chk_FiltroTipoEstandar.Checked == true) ? "1" : "0", (chk_FiltroCliente.Checked == true) ? "1" : "0",
                                                                                             (Chk_FiltroRango.Checked == true) ? "1" : "0", Dtp_FechaInicial.Value, Dtp_FechaFinal.Value);
+            
             SortableBindingList<PR_mEstandar> lista = new SortableBindingList<PR_mEstandar>(Lst_Estandares);
             dgv_Mnt.AutoGenerateColumns = false;
             dgv_Mnt.DataSource = lista;
@@ -677,6 +679,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             Dtp_FechaCreacion.Enabled = vEstado;
             nud_diametroSolicitado.Enabled = vEstado;
             cbo_umdiametroSolicitado.Enabled = vEstado;
+            btnCargarImagen.Enabled = vEstado;
+            btnLimpiarImagen.Enabled = vEstado;
         }
 
         public void Limpiar_Controles()

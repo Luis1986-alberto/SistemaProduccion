@@ -11,11 +11,12 @@ namespace Capa_Entidades.Tablas
             this.PR_xPedidos_DetSustrato_LM = new HashSet<PR_xPedidos_DetSustrato_LM>();
         }
 
+        public Int32 IdNumeroPedido { get; set; }
         public string Numero_Pedido { get; set; }
         public string Numero_Orden_Compra { get; set; }
         public Nullable<decimal> IdEstandarIndustrial { get; set; }
         public Nullable<byte> IdEmpresa { get; set; }
-        public Nullable<byte> IdCondicionPago { get; set; }
+        public Nullable<byte> IdCondicionCobranza { get; set; }
         public Nullable<System.DateTime> Fecha_Pedido { get; set; }
         public Nullable<System.DateTime> Fecha_Entrega { get; set; }
         public Nullable<decimal> Cantidad_Kilos { get; set; }
@@ -51,8 +52,7 @@ namespace Capa_Entidades.Tablas
         public string Observacion_CD { get; set; }
         public string IdUsuario_CD { get; set; }
         public string IdUsuario_PC_CD { get; set; }
-        public Nullable<System.DateTime> Fecha_Servidor_CD { get; set; }
-        public decimal IdNumeroPedido { get; set; }
+        public Nullable<System.DateTime> Fecha_Servidor_CD { get; set; }        
         public Nullable<byte> IdCondicionProceso { get; set; }
         public Nullable<short> IdTrabajador { get; set; }
 
@@ -62,10 +62,13 @@ namespace Capa_Entidades.Tablas
         public virtual PR_mEstandar PR_mEstandar { get; set; }
         public virtual PR_mTrabajador PR_mTrabajador { get; set; }
         public virtual PR_mUsuarios PR_mUsuarios { get; set; }
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PR_xOrdenProduccionInd> PR_xOrdenProduccionInd { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PR_xPedidos_DetSustrato_LM> PR_xPedidos_DetSustrato_LM { get; set; }
         public virtual PR_xVentaProducto PR_xVentaProducto { get; set; }
+
     }
 }

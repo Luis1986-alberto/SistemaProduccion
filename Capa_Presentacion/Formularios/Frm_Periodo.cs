@@ -119,6 +119,7 @@ namespace Capa_Presentacion.Formularios
             Estado_Toolbar(true);
             HabilitarControles(true);
             tbc_mnt.TabPages["tbp_Listado"].Enabled = false;
+            tbc_mnt.SelectTab(0);
             txt_Periodo.Focus();
         }
 
@@ -145,7 +146,7 @@ namespace Capa_Presentacion.Formularios
             {
                 IdPeriodo = Int32.Parse(txt_IdPeriodo.Text),
                 Nombre_Periodo = txt_Periodo.Text,
-                IdAño = int.Parse(cbo_años.SelectedValue.ToString()),
+                IdAño = byte.Parse(cbo_años.SelectedValue.ToString()),
                 IdMes = byte.Parse(cbo_NombreMes.SelectedValue.ToString()),
                 Flag_Cerrado = byte.Parse((Chk_Flagcerrado.Checked == true) ? "1" : "0"),
                 Fecha_Inicio = DateTime.Parse(dtp_FechaInicio.Value.ToShortDateString()),
@@ -288,6 +289,11 @@ namespace Capa_Presentacion.Formularios
             return true;
         }
 
-
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            bool more = dgr_Visor_Grilla.DrawDataGridView(e.Graphics);
+            if (more == true)
+                e.HasMorePages = true;
+        }
     }
 }

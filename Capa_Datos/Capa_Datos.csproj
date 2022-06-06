@@ -186,6 +186,7 @@
     <Compile Include="Repositorio\PR_mMaquina_CD.cs" />
     <Compile Include="Repositorio\PR_mUsuarios_CD.cs" />
     <Compile Include="Repositorio\PR_xLocalArea_CD.cs" />
+    <Compile Include="Repositorio\PR_xPedidosIndustriales_CD.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidades\Capa_Entidades.csproj">

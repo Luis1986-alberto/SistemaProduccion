@@ -237,6 +237,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             {
                 PrintPreviewDialog MyPrintPreviewDialog = new PrintPreviewDialog();
                 MyPrintPreviewDialog.Document = PrintDocument;
+                (MyPrintPreviewDialog as Form).WindowState = FormWindowState.Maximized;
                 MyPrintPreviewDialog.ShowDialog();
             }
         }

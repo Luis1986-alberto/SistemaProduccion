@@ -333,7 +333,7 @@ namespace Capa_Presentacion.Formularios
             // txt_IdPeriodo
             // 
             this.txt_IdPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.txt_IdPeriodo.Location = new System.Drawing.Point(772, 14);
+            this.txt_IdPeriodo.Location = new System.Drawing.Point(772, 6);
             this.txt_IdPeriodo.Name = "txt_IdPeriodo";
             this.txt_IdPeriodo.ReadOnly = true;
             this.txt_IdPeriodo.Size = new System.Drawing.Size(71, 20);
@@ -343,9 +343,10 @@ namespace Capa_Presentacion.Formularios
             // lbl_IdAño_
             // 
             this.lbl_IdAño_.AutoSize = true;
+            this.lbl_IdAño_.BackColor = System.Drawing.Color.DimGray;
             this.lbl_IdAño_.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_IdAño_.ForeColor = System.Drawing.Color.Black;
-            this.lbl_IdAño_.Location = new System.Drawing.Point(707, 17);
+            this.lbl_IdAño_.ForeColor = System.Drawing.Color.White;
+            this.lbl_IdAño_.Location = new System.Drawing.Point(707, 9);
             this.lbl_IdAño_.Name = "lbl_IdAño_";
             this.lbl_IdAño_.Size = new System.Drawing.Size(58, 13);
             this.lbl_IdAño_.TabIndex = 15;
@@ -373,9 +374,9 @@ namespace Capa_Presentacion.Formularios
             this.png_Ingreso.Controls.Add(this.label2);
             this.png_Ingreso.Controls.Add(this.lbl_Puntos);
             this.png_Ingreso.Controls.Add(this.lbl_Mes);
-            this.png_Ingreso.Location = new System.Drawing.Point(8, 40);
+            this.png_Ingreso.Location = new System.Drawing.Point(8, 32);
             this.png_Ingreso.Name = "png_Ingreso";
-            this.png_Ingreso.Size = new System.Drawing.Size(859, 309);
+            this.png_Ingreso.Size = new System.Drawing.Size(859, 317);
             this.png_Ingreso.TabIndex = 14;
             // 
             // txt_Periodo
@@ -564,7 +565,7 @@ namespace Capa_Presentacion.Formularios
             this.lbl_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Titulo.Location = new System.Drawing.Point(8, 9);
+            this.lbl_Titulo.Location = new System.Drawing.Point(11, 3);
             this.lbl_Titulo.Name = "lbl_Titulo";
             this.lbl_Titulo.Size = new System.Drawing.Size(859, 26);
             this.lbl_Titulo.TabIndex = 13;
@@ -609,11 +610,16 @@ namespace Capa_Presentacion.Formularios
             this.Dgv_Mnt.Size = new System.Drawing.Size(859, 319);
             this.Dgv_Mnt.TabIndex = 0;
             // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
+            // 
             // IdPeriodo
             // 
             this.IdPeriodo.DataPropertyName = "IdPeriodo";
             this.IdPeriodo.HeaderText = "Id";
             this.IdPeriodo.Name = "IdPeriodo";
+            this.IdPeriodo.ReadOnly = true;
             this.IdPeriodo.Width = 70;
             // 
             // Año
@@ -621,12 +627,14 @@ namespace Capa_Presentacion.Formularios
             this.Año.DataPropertyName = "Año";
             this.Año.HeaderText = "Año";
             this.Año.Name = "Año";
+            this.Año.ReadOnly = true;
             // 
             // Mes
             // 
             this.Mes.DataPropertyName = "Mes";
             this.Mes.HeaderText = "Mes";
             this.Mes.Name = "Mes";
+            this.Mes.ReadOnly = true;
             this.Mes.Width = 150;
             // 
             // Nombre_Periodo
@@ -634,6 +642,7 @@ namespace Capa_Presentacion.Formularios
             this.Nombre_Periodo.DataPropertyName = "Nombre_Periodo";
             this.Nombre_Periodo.HeaderText = " Periodo";
             this.Nombre_Periodo.Name = "Nombre_Periodo";
+            this.Nombre_Periodo.ReadOnly = true;
             this.Nombre_Periodo.Width = 150;
             // 
             // Fecha_Inicio
@@ -641,6 +650,7 @@ namespace Capa_Presentacion.Formularios
             this.Fecha_Inicio.DataPropertyName = "Fecha_Inicio";
             this.Fecha_Inicio.HeaderText = "Fecha Inicio";
             this.Fecha_Inicio.Name = "Fecha_Inicio";
+            this.Fecha_Inicio.ReadOnly = true;
             this.Fecha_Inicio.Width = 150;
             // 
             // Fecha_Final
@@ -648,6 +658,7 @@ namespace Capa_Presentacion.Formularios
             this.Fecha_Final.DataPropertyName = "Fecha_Final";
             this.Fecha_Final.HeaderText = "Fecha Final";
             this.Fecha_Final.Name = "Fecha_Final";
+            this.Fecha_Final.ReadOnly = true;
             this.Fecha_Final.Width = 150;
             // 
             // Frm_Periodo
@@ -657,6 +668,8 @@ namespace Capa_Presentacion.Formularios
             this.ClientSize = new System.Drawing.Size(881, 450);
             this.Controls.Add(this.tbc_mnt);
             this.Controls.Add(this.tls_Formulario);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Periodo";
             this.Text = "Registro Periodo";
             this.Load += new System.EventHandler(this.Frm_Periodo_Load);
