@@ -165,6 +165,12 @@
     <Compile Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.Designer.cs">
       <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Pedidos.Designer.cs">
+      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Produccion\Frm_RegistroEstandar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -652,6 +658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.resx">
       <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Pedidos.resx">
+      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_RegistroEstandar.resx">
       <DependentUpon>Frm_RegistroEstandar.cs</DependentUpon>

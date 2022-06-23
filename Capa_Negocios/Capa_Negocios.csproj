@@ -175,6 +175,7 @@
     <Compile Include="PR_aTipoTroquel_CN.cs" />
     <Compile Include="PR_aUnidadMedidas_CN.cs" />
     <Compile Include="PR_aUsoProducto_CN.cs" />
+    <Compile Include="PR_xPedidos_CN.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

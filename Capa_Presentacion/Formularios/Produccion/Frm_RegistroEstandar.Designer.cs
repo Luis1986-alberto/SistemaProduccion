@@ -980,7 +980,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Txt_RutaProducto.Multiline = true;
             this.Txt_RutaProducto.Name = "Txt_RutaProducto";
             this.Txt_RutaProducto.ReadOnly = true;
-            this.Txt_RutaProducto.Size = new System.Drawing.Size(321, 45);
+            this.Txt_RutaProducto.Size = new System.Drawing.Size(307, 45);
             this.Txt_RutaProducto.TabIndex = 37;
             // 
             // Img_Producto
@@ -990,7 +990,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Img_Producto.InitialImage = null;
             this.Img_Producto.Location = new System.Drawing.Point(3, 13);
             this.Img_Producto.Name = "Img_Producto";
-            this.Img_Producto.Size = new System.Drawing.Size(425, 344);
+            this.Img_Producto.Size = new System.Drawing.Size(415, 344);
             this.Img_Producto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Img_Producto.TabIndex = 36;
             this.Img_Producto.TabStop = false;
@@ -1035,7 +1035,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.Cbo_Procesos);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(2, 232);
+            this.panel5.Location = new System.Drawing.Point(4, 232);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(771, 225);
             this.panel5.TabIndex = 86;
@@ -1366,7 +1366,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel4.Controls.Add(this.txt_DescripcionEstandar);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(2, 44);
+            this.panel4.Location = new System.Drawing.Point(4, 44);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(769, 163);
             this.panel4.TabIndex = 73;
@@ -6188,7 +6188,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.IdEstandar.HeaderText = "Id";
             this.IdEstandar.Name = "IdEstandar";
             this.IdEstandar.ReadOnly = true;
-            this.IdEstandar.Width = 80;
+            this.IdEstandar.Width = 70;
             // 
             // Nombre_CondicionProceso
             // 
@@ -6210,7 +6210,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Codigo_Estandar.HeaderText = "Codigo Estandar";
             this.Codigo_Estandar.Name = "Codigo_Estandar";
             this.Codigo_Estandar.ReadOnly = true;
-            this.Codigo_Estandar.Width = 130;
+            this.Codigo_Estandar.Width = 110;
             // 
             // Razon_Social
             // 
@@ -6218,7 +6218,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Razon_Social.HeaderText = "Razon Social";
             this.Razon_Social.Name = "Razon_Social";
             this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 280;
+            this.Razon_Social.Width = 260;
             // 
             // Descripcion
             // 
@@ -6226,7 +6226,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 380;
+            this.Descripcion.Width = 370;
             // 
             // Diseño
             // 

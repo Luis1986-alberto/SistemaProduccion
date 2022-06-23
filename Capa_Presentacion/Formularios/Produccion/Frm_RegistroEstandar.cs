@@ -22,12 +22,8 @@ namespace Capa_Presentacion.Formularios.Produccion
         private PR_mEstandarExtrusion mestextrusion = null;
         private PR_mEstandarImpresion mestimpresion = null;
         private PR_mEstandarSellado mestsellado = null;
-#pragma warning disable CS0414 // El campo 'Frm_RegistroEstandar.mestlaminado' está asignado pero su valor nunca se usa
         private PR_mEstandarLaminado mestlaminado = null;
-#pragma warning restore CS0414 // El campo 'Frm_RegistroEstandar.mestlaminado' está asignado pero su valor nunca se usa
-#pragma warning disable CS0414 // El campo 'Frm_RegistroEstandar.mestcorte' está asignado pero su valor nunca se usa
         private PR_mEstandarCorte mestcorte = null;
-#pragma warning restore CS0414 // El campo 'Frm_RegistroEstandar.mestcorte' está asignado pero su valor nunca se usa
 
         public Frm_RegistroEstandar()
         {
@@ -132,9 +128,14 @@ namespace Capa_Presentacion.Formularios.Produccion
                 IdCliente =    Int32.Parse(cbo_FiltroCliente.SelectedValue.ToString()),
                 IdTipoProduccion =  byte.Parse(Cbo_FiltroTipoProduccion.SelectedValue.ToString()),
             };
+            //Stopwatch timeMeasure = new Stopwatch();
+            //timeMeasure.Start();
             Lst_Estandares = PR_mEstandar_CN._Instancia.Lista_Estandares(datos, (chk_FiltroTipoEstandar.Checked == true) ? "1" : "0", (chk_FiltroCliente.Checked == true) ? "1" : "0",
                                                                                             (Chk_FiltroRango.Checked == true) ? "1" : "0", Dtp_FechaInicial.Value, Dtp_FechaFinal.Value);
-            
+            //int operacion = 10 / 4;
+            //timeMeasure.Stop();
+            // timeMeasure.Elapsed.TotalMilliseconds;
+
             SortableBindingList<PR_mEstandar> lista = new SortableBindingList<PR_mEstandar>(Lst_Estandares);
             dgv_Mnt.AutoGenerateColumns = false;
             dgv_Mnt.DataSource = lista;

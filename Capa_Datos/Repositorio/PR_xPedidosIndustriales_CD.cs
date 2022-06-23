@@ -1,4 +1,5 @@
 ﻿using Capa_Entidades.Tablas;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,8 +25,7 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = Principal.CadenaConexion;
         }
 
-
-        public List<PR_xPedidosIndustriales> Lista_Pedidos(PR_xPedidosIndustriales pedidos, string flag_cliente, Int32 idcliente, 
+        public List<PR_xPedidosIndustriales> Lista_Pedidos( string flag_cliente, Int32 idcliente, 
                                                                   string flag_rango, DateTime fecha_inicio, DateTime fecha_final)
         {
             List<PR_xPedidosIndustriales> lista_pedidos = null;
@@ -94,6 +94,84 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex)
             {throw new Exception("Error al Listar", Ex);}
         }
+
+        public PR_xPedidosIndustriales TraerPorId (Int32 idpedidos)
+        {
+            try
+            {
+                using(var ConexionSQL = new SqlConnection(cadenaconexion))
+                {
+                    ConexionSQL.Open();
+                    var sql = "select * from PR_xPedidosIndustriales as PED INNER JOIN PR_mEstandar as EST " +
+                              " on PED.IdEstandarIndustrial = EST.IdEstandar  where PED.IdNumeroPedido = @id ";
+
+                    return ConexionSQL.QueryFirst<PR_xPedidosIndustriales>(sql, new { id = idpedidos });
+                }
+            }
+            catch(Exception Ex)
+            {throw new Exception("Error al Traer por ID", Ex);}
+        }
+
+        public string Pedidos_Pedidos(PR_xPedidosIndustriales pedidos, char accion)
+        {
+            try
+            {
+                using(var ConexionSQL = new SqlConnection(cadenaconexion))
+                {
+                    ConexionSQL.Open();
+                    SqlCommand cmd = new SqlCommand("PRt_Pedidos", ConexionSQL);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@Accion", accion);
+                    cmd.Parameters.AddWithValue("@IdNumeroPedido", pedidos.IdNumeroPedido);
+                    cmd.Parameters.AddWithValue("@Numero_Pedido", pedidos.Numero_Pedido);
+                    cmd.Parameters.AddWithValue("@NUmero_Orden_Compra", pedidos.Numero_Orden_Compra);
+                    cmd.Parameters.AddWithValue("@IdestandarINdustrial", pedidos.IdEstandarIndustrial);
+                    cmd.Parameters.AddWithValue("@IdEmpresa", pedidos.IdEmpresa);
+                    cmd.Parameters.AddWithValue("@IdCondicionCobranza", pedidos.IdCondicionCobranza);
+                    cmd.Parameters.AddWithValue("@Fecha_Pedido", pedidos.Fecha_Pedido);
+                    cmd.Parameters.AddWithValue("@Cantidad_Kilos", pedidos.Cantidad_Kilos);
+                    cmd.Parameters.AddWithValue("@Merma", pedidos.Merma);
+                    cmd.Parameters.AddWithValue("@Porcentaje_Merma", pedidos.Porcentaje_Merma);
+                    cmd.Parameters.AddWithValue("@Total_Kilos", pedidos.Total_Kilos);
+                    cmd.Parameters.AddWithValue("@Flag_Ventasx", pedidos.Flag_Ventasx);
+                    cmd.Parameters.AddWithValue("@Cantidad_Millares", pedidos.Cantidad_Millares);
+                    cmd.Parameters.AddWithValue("@Precio_Kilo", pedidos.Precio_Kilo);
+                    cmd.Parameters.AddWithValue("@Precio_Millar", pedidos.Precio_Millar);
+                    cmd.Parameters.AddWithValue("@Reajuste_Precio_Kilo", pedidos.Reajuste_Precio_Kilo);
+                    cmd.Parameters.AddWithValue("@Reajuste_Precio_Millar", pedidos.Reajuste_Precio_Millar);
+                    cmd.Parameters.AddWithValue("@Flag_IGV", pedidos.Flag_IGV);
+                    cmd.Parameters.AddWithValue("@Flag_Incluido_Gastos", pedidos.Flag_Incluido_Gastos);
+                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaExtruida", pedidos.Flag_DestararBobinaExtruida);
+                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaImpresa", pedidos.Flag_DestararBobinaImpresa);
+                    cmd.Parameters.AddWithValue("@Flag_PesarxPaquete", pedidos.Flag_PesarxPaquete);
+                    cmd.Parameters.AddWithValue("@Flag_PesarxFardo", pedidos.Flag_PesarxFardo);
+                    cmd.Parameters.AddWithValue("@Flag_PesarxCaja", pedidos.Flag_PesarxCaja);
+                    cmd.Parameters.AddWithValue("@Flag_Comision", pedidos.Flag_Comision);
+                    cmd.Parameters.AddWithValue("@Nota_Pedido", pedidos.Nota_Pedido);
+                    cmd.Parameters.AddWithValue("@Flag_NuevoRepetidoHistorico", pedidos.Flag_NuevoRepetidoHistorico);
+                    cmd.Parameters.AddWithValue("@Flag_NoExisteEspecificacion", pedidos.Flag_NoExisteEspecificacion);
+                    cmd.Parameters.AddWithValue("@IdUsuario", pedidos.IdUsuario);
+                    cmd.Parameters.AddWithValue("@Pedido_General", pedidos.Pedido_General);
+                    cmd.Parameters.AddWithValue("@IdVentaProducto", pedidos.IdVentaProducto);
+                    cmd.Parameters.AddWithValue("@Nota", pedidos.Nota);
+                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaLaminado", pedidos.Flag_DestararBobinaLaminado);
+                    cmd.Parameters.AddWithValue("@Metros", pedidos.Metros);
+                    cmd.Parameters.AddWithValue("@Fecha_Orden_Compra", pedidos.Fecha_Orden_Compra);
+                    cmd.Parameters.AddWithValue("@IdCondicionProceso", pedidos.IdCondicionProceso);
+                    cmd.Parameters.AddWithValue("@IdTrabajador", pedidos.IdTrabajador);
+                    cmd.Parameters.AddWithValue("@Output_Id", 0);
+
+                    cmd.ExecuteNonQuery();
+                    ConexionSQL.Close();                    
+                }
+                return "PROCESADO";
+            }
+            catch(Exception Ex)
+            {throw new Exception("Error al agregar", Ex);}
+        }
+
+
 
 
     }

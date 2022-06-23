@@ -749,3 +749,4 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.cspr
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.CopyComplete
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.exe
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.pdb
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroPedidos.resources

@@ -1219,7 +1219,17 @@ namespace Capa_Presentacion.Formularios
         private void Frm_Periodo_FormClosing(object sender, EventArgs e)
         { this.mnu_Periodo.Enabled = true; }
 
+        private void mnu_RegistroPedido_Click(object sender, EventArgs e)
+        {
+            this.mnu_RegistroPedido.Enabled = false;
+            Frm_RegistroPedidos pedidos = new Frm_RegistroPedidos();
+            pedidos.MdiParent = this;
+            pedidos.FormClosing += new FormClosingEventHandler(Frm_Pedidos_FormClosing);
+            pedidos.Show();
+        }
 
+        private void Frm_Pedidos_FormClosing(object sender, EventArgs e)
+        { this.mnu_RegistroPedido.Enabled = true; }
 
 
     }
