@@ -66,6 +66,7 @@ namespace Capa_Presentacion.Formularios
             txt_Sigla.Text = "";
 
             txt_Tipo_Moneda.Enabled = true;
+            txt_Tipo_Moneda.Focus();
             txt_Sigla.Enabled = true;
             Estado_Toolbar(true);
         }

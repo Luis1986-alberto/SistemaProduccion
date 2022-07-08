@@ -585,6 +585,12 @@
     <Compile Include="Formularios\Produccion\Frm_TipoTroquel.Designer.cs">
       <DependentUpon>Frm_TipoTroquel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_TipoVenta.Designer.cs">
+      <DependentUpon>Frm_TipoVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Produccion\Frm_UnidadMedida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -868,6 +874,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_TipoTroquel.resx">
       <DependentUpon>Frm_TipoTroquel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_TipoVenta.resx">
+      <DependentUpon>Frm_TipoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_UnidadMedida.resx">
       <DependentUpon>Frm_UnidadMedida.cs</DependentUpon>

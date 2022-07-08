@@ -169,6 +169,7 @@ namespace Capa_Presentacion.Formularios
             this.stb_PC_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tim_Reloj = new System.Windows.Forms.Timer(this.components);
+            this.mnu_TipoVenta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -523,7 +524,7 @@ namespace Capa_Presentacion.Formularios
             this.Formulacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_EstadoFormulacion});
             this.Formulacion.Name = "Formulacion";
-            this.Formulacion.Size = new System.Drawing.Size(136, 22);
+            this.Formulacion.Size = new System.Drawing.Size(180, 22);
             this.Formulacion.Text = "Mezclado";
             // 
             // mnu_EstadoFormulacion
@@ -544,7 +545,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Tratado,
             this.mnu_EspesorTuco});
             this.Extrusion.Name = "Extrusion";
-            this.Extrusion.Size = new System.Drawing.Size(136, 22);
+            this.Extrusion.Size = new System.Drawing.Size(180, 22);
             this.Extrusion.Text = "Extrusión";
             // 
             // mnu_TipoMaterialExtruir
@@ -604,7 +605,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoProcesoLaminacion,
             this.mnu_TipoMaterialLaminado});
             this.Laminacion.Name = "Laminacion";
-            this.Laminacion.Size = new System.Drawing.Size(136, 22);
+            this.Laminacion.Size = new System.Drawing.Size(180, 22);
             this.Laminacion.Text = "Laminación";
             // 
             // mnu_AdhesivoLaminacion
@@ -643,7 +644,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Rodillos,
             this.mnu_TipoTinta});
             this.Impresion.Name = "Impresion";
-            this.Impresion.Size = new System.Drawing.Size(136, 22);
+            this.Impresion.Size = new System.Drawing.Size(180, 22);
             this.Impresion.Text = "Impresión";
             // 
             // mnu_PieImprenta
@@ -682,7 +683,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoSello,
             this.mnu_TipoTroquel});
             this.Sellado.Name = "Sellado";
-            this.Sellado.Size = new System.Drawing.Size(136, 22);
+            this.Sellado.Size = new System.Drawing.Size(180, 22);
             this.Sellado.Text = "Sellado";
             // 
             // mnu_TipoAsa
@@ -718,7 +719,7 @@ namespace Capa_Presentacion.Formularios
             this.Corte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_TipoProcesoCorte});
             this.Corte.Name = "Corte";
-            this.Corte.Size = new System.Drawing.Size(136, 22);
+            this.Corte.Size = new System.Drawing.Size(180, 22);
             this.Corte.Text = "Corte";
             // 
             // mnu_TipoProcesoCorte
@@ -733,7 +734,7 @@ namespace Capa_Presentacion.Formularios
             this.despachoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_TipoDespacho});
             this.despachoToolStripMenuItem.Name = "despachoToolStripMenuItem";
-            this.despachoToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.despachoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.despachoToolStripMenuItem.Text = "Despacho";
             // 
             // mnu_TipoDespacho
@@ -761,7 +762,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_RegistroSemana,
             this.mnu_UsoProducto});
             this.Generales.Name = "Generales";
-            this.Generales.Size = new System.Drawing.Size(136, 22);
+            this.Generales.Size = new System.Drawing.Size(180, 22);
             this.Generales.Text = "Generales";
             // 
             // mnu_EmpresaEtiqueta
@@ -867,9 +868,10 @@ namespace Capa_Presentacion.Formularios
             this.Pedidos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnu_CondicionCobranza,
             this.mnu_IGV,
-            this.mnu_TipoMoneda});
+            this.mnu_TipoMoneda,
+            this.mnu_TipoVenta});
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(136, 22);
+            this.Pedidos.Size = new System.Drawing.Size(180, 22);
             this.Pedidos.Text = "Pedidos";
             // 
             // mnu_CondicionCobranza
@@ -902,7 +904,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_EstadoOrdenProduccion,
             this.mnu_Prioridad});
             this.OrdenProduccion.Name = "OrdenProduccion";
-            this.OrdenProduccion.Size = new System.Drawing.Size(136, 22);
+            this.OrdenProduccion.Size = new System.Drawing.Size(180, 22);
             this.OrdenProduccion.Text = "Producción";
             // 
             // mnu_EstadoProcesoOrdenProd
@@ -950,7 +952,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Area,
             this.mnu_Local});
             this.empresaToolStripMenuItem.Name = "empresaToolStripMenuItem";
-            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.empresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.empresaToolStripMenuItem.Text = "Empresa";
             // 
             // mnu_Empresas
@@ -1004,7 +1006,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_Mezcladora,
             this.mnu_Impresora});
             this.Maquina.Name = "Maquina";
-            this.Maquina.Size = new System.Drawing.Size(136, 22);
+            this.Maquina.Size = new System.Drawing.Size(180, 22);
             this.Maquina.Text = "Maquina";
             // 
             // mnu_EstadoMaquina
@@ -1263,6 +1265,13 @@ namespace Capa_Presentacion.Formularios
             // 
             this.tim_Reloj.Tick += new System.EventHandler(this.tim_Reloj_Tick);
             // 
+            // mnu_TipoVenta
+            // 
+            this.mnu_TipoVenta.Name = "mnu_TipoVenta";
+            this.mnu_TipoVenta.Size = new System.Drawing.Size(182, 22);
+            this.mnu_TipoVenta.Text = "Tipo Venta";
+            this.mnu_TipoVenta.Click += new System.EventHandler(this.mnu_TipoVenta_Click);
+            // 
             // MDIFrm_CorePrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1428,6 +1437,7 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.ToolStripMenuItem mnu_RegistroProveedores;
         private System.Windows.Forms.ToolStripMenuItem mnu_Periodo;
         private System.Windows.Forms.ToolStripMenuItem mnu_RegistroPedido;
+        private System.Windows.Forms.ToolStripMenuItem mnu_TipoVenta;
     }
 }
 

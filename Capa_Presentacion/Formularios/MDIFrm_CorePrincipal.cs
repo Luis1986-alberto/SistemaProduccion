@@ -1231,6 +1231,19 @@ namespace Capa_Presentacion.Formularios
         private void Frm_Pedidos_FormClosing(object sender, EventArgs e)
         { this.mnu_RegistroPedido.Enabled = true; }
 
+        private void mnu_TipoVenta_Click(object sender, EventArgs e)
+        {
+            this.mnu_TipoVenta.Enabled = false;
+            Frm_TipoVenta tipoventas = new Frm_TipoVenta();
+            tipoventas.MdiParent = this;
+            tipoventas.FormClosing += new FormClosingEventHandler(Frm_TipoVenta_FormClosing);
+            tipoventas.Show();
+        }
+
+        private void Frm_TipoVenta_FormClosing(object sender, EventArgs e)
+        { this.mnu_TipoVenta.Enabled = true; }
+
+
 
     }
 }

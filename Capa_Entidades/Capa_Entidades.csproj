@@ -78,6 +78,7 @@
     <Compile Include="Tablas\MP_aTipoCompraMaterial.cs" />
     <Compile Include="Tablas\MP_aTipoMaterial.cs" />
     <Compile Include="Tablas\PR_aPosicionTaca.cs" />
+    <Compile Include="Tablas\PR_aSeVendePor.cs" />
     <Compile Include="Tablas\PR_aTipoRubro.cs" />
     <Compile Include="Tablas\PR_aTipoTratado.cs" />
     <Compile Include="Tablas\PR_aAdhesivo.cs" />
@@ -232,7 +233,7 @@
     <Compile Include="Tablas\PR_xProgramaSelladoInd.cs" />
     <Compile Include="Tablas\PR_xSalProdCom_PT.cs" />
     <Compile Include="Tablas\PR_xStockProdTerm_Comercial.cs" />
-    <Compile Include="Tablas\PR_xVentaProducto.cs" />
+    <Compile Include="Tablas\PR_aTipoVenta.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\" />

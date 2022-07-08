@@ -24,7 +24,7 @@ namespace Capa_Entidades.Tablas
         public Nullable<System.DateTime> Fecha_Servidor { get; set; }
         public Nullable<decimal> Porcentaje_Merma { get; set; }
         public Nullable<decimal> Total_Kilos { get; set; }
-        public string Flag_Ventasx { get; set; }
+        public byte IdSeVendePor { get; set; }
         public Nullable<decimal> Cantidad_Millares { get; set; }
         public Nullable<decimal> Precio_Kilo { get; set; }
         public Nullable<decimal> Precio_Millar { get; set; }
@@ -43,7 +43,7 @@ namespace Capa_Entidades.Tablas
         public string Flag_NoExisteEspecificacion { get; set; }
         public string IdUsuario { get; set; }
         public string Pedido_General { get; set; }
-        public Nullable<byte> IdVentaProducto { get; set; }
+        public Nullable<byte> IdTipoVenta{ get; set; }
         public string Nota { get; set; }
         public string Flag_DestararBobinaLaminado { get; set; }
         public string Flag_DestararBobinaCorte { get; set; }
@@ -55,7 +55,6 @@ namespace Capa_Entidades.Tablas
         public Nullable<System.DateTime> Fecha_Servidor_CD { get; set; }        
         public Nullable<byte> IdCondicionProceso { get; set; }
         public Nullable<short> IdTrabajador { get; set; }
-
         public virtual LG_aCondicionPago PR_aCondicionPago { get; set; }
         public virtual PR_aCondicionProceso PR_aCondicionProceso { get; set; }
         public virtual PR_aEmpresa PR_aEmpresa { get; set; }
@@ -68,7 +67,7 @@ namespace Capa_Entidades.Tablas
         public virtual ICollection<PR_xOrdenProduccionInd> PR_xOrdenProduccionInd { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PR_xPedidos_DetSustrato_LM> PR_xPedidos_DetSustrato_LM { get; set; }
-        public virtual PR_xVentaProducto PR_xVentaProducto { get; set; }
+        public virtual PR_aTipoVenta PR_xVentaProducto { get; set; }
 
     }
 }

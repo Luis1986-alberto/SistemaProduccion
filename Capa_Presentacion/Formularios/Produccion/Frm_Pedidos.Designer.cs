@@ -32,6 +32,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tbc_Mnt = new System.Windows.Forms.TabControl();
             this.tp_Detalle = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cbo_condicionproceso = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.txt_observacionpedido = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -41,6 +44,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.txt_notaventa = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -151,12 +156,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Anterior = new System.Windows.Forms.ToolStripButton();
             this.tls_Siguiente = new System.Windows.Forms.ToolStripButton();
             this.tls_Ultimo = new System.Windows.Forms.ToolStripButton();
-            this.cbo_condicionproceso = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
             this.cbo_condicioncobranza = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.tbc_Mnt.SuspendLayout();
             this.tp_Detalle.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -216,8 +216,41 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel5.Size = new System.Drawing.Size(380, 323);
             this.panel5.TabIndex = 89;
             // 
+            // cbo_condicionproceso
+            // 
+            this.cbo_condicionproceso.Enabled = false;
+            this.cbo_condicionproceso.FormattingEnabled = true;
+            this.cbo_condicionproceso.Location = new System.Drawing.Point(155, 164);
+            this.cbo_condicionproceso.Name = "cbo_condicionproceso";
+            this.cbo_condicionproceso.Size = new System.Drawing.Size(221, 21);
+            this.cbo_condicionproceso.TabIndex = 136;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(5, 167);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(93, 13);
+            this.label41.TabIndex = 135;
+            this.label41.Text = "CondicionProceso";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(118, 167);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(10, 13);
+            this.label42.TabIndex = 134;
+            this.label42.Text = ":";
+            // 
             // txt_observacionpedido
             // 
+            this.txt_observacionpedido.Enabled = false;
             this.txt_observacionpedido.Location = new System.Drawing.Point(8, 213);
             this.txt_observacionpedido.Multiline = true;
             this.txt_observacionpedido.Name = "txt_observacionpedido";
@@ -250,6 +283,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_gastosincluidos
             // 
             this.chk_gastosincluidos.AutoSize = true;
+            this.chk_gastosincluidos.Enabled = false;
             this.chk_gastosincluidos.Location = new System.Drawing.Point(129, 35);
             this.chk_gastosincluidos.Name = "chk_gastosincluidos";
             this.chk_gastosincluidos.Size = new System.Drawing.Size(104, 17);
@@ -260,6 +294,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_comisionventa
             // 
             this.chk_comisionventa.AutoSize = true;
+            this.chk_comisionventa.Enabled = false;
             this.chk_comisionventa.Location = new System.Drawing.Point(9, 36);
             this.chk_comisionventa.Name = "chk_comisionventa";
             this.chk_comisionventa.Size = new System.Drawing.Size(99, 17);
@@ -269,6 +304,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_vendedor
             // 
+            this.cbo_vendedor.Enabled = false;
             this.cbo_vendedor.FormattingEnabled = true;
             this.cbo_vendedor.Location = new System.Drawing.Point(155, 5);
             this.cbo_vendedor.Name = "cbo_vendedor";
@@ -330,8 +366,32 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.Size = new System.Drawing.Size(370, 323);
             this.panel3.TabIndex = 88;
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(5, 35);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(102, 13);
+            this.label44.TabIndex = 132;
+            this.label44.Text = "Condicion Cobranza";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(105, 35);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(10, 13);
+            this.label45.TabIndex = 131;
+            this.label45.Text = ":";
+            // 
             // txt_notaventa
             // 
+            this.txt_notaventa.Enabled = false;
             this.txt_notaventa.Location = new System.Drawing.Point(8, 213);
             this.txt_notaventa.Multiline = true;
             this.txt_notaventa.Name = "txt_notaventa";
@@ -374,6 +434,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_tipomoneda
             // 
+            this.cbo_tipomoneda.Enabled = false;
             this.cbo_tipomoneda.FormattingEnabled = true;
             this.cbo_tipomoneda.Location = new System.Drawing.Point(122, 163);
             this.cbo_tipomoneda.Name = "cbo_tipomoneda";
@@ -417,6 +478,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_preciomillar
             // 
+            this.txt_preciomillar.Enabled = false;
             this.txt_preciomillar.Location = new System.Drawing.Point(122, 137);
             this.txt_preciomillar.Name = "txt_preciomillar";
             this.txt_preciomillar.Size = new System.Drawing.Size(74, 20);
@@ -447,6 +509,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_preciokilo
             // 
+            this.txt_preciokilo.Enabled = false;
             this.txt_preciokilo.Location = new System.Drawing.Point(122, 111);
             this.txt_preciokilo.Name = "txt_preciokilo";
             this.txt_preciokilo.Size = new System.Drawing.Size(73, 20);
@@ -465,6 +528,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_sevendepor
             // 
+            this.cbo_sevendepor.Enabled = false;
             this.cbo_sevendepor.FormattingEnabled = true;
             this.cbo_sevendepor.Location = new System.Drawing.Point(122, 85);
             this.cbo_sevendepor.Name = "cbo_sevendepor";
@@ -496,11 +560,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_facturadopor
             // 
+            this.cbo_facturadopor.DisplayMember = "Nombre_Empresa";
+            this.cbo_facturadopor.Enabled = false;
             this.cbo_facturadopor.FormattingEnabled = true;
             this.cbo_facturadopor.Location = new System.Drawing.Point(122, 59);
             this.cbo_facturadopor.Name = "cbo_facturadopor";
             this.cbo_facturadopor.Size = new System.Drawing.Size(237, 21);
             this.cbo_facturadopor.TabIndex = 98;
+            this.cbo_facturadopor.ValueMember = "IdEmpresa";
             // 
             // label26
             // 
@@ -516,11 +583,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_tipoventa
             // 
+            this.cbo_tipoventa.DisplayMember = "TipoVenta";
+            this.cbo_tipoventa.Enabled = false;
             this.cbo_tipoventa.FormattingEnabled = true;
             this.cbo_tipoventa.Location = new System.Drawing.Point(122, 5);
             this.cbo_tipoventa.Name = "cbo_tipoventa";
             this.cbo_tipoventa.Size = new System.Drawing.Size(237, 21);
             this.cbo_tipoventa.TabIndex = 96;
+            this.cbo_tipoventa.ValueMember = "IdTipoVenta";
             // 
             // label23
             // 
@@ -678,6 +748,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_merma
             // 
+            this.txt_merma.Enabled = false;
             this.txt_merma.Location = new System.Drawing.Point(124, 252);
             this.txt_merma.Name = "txt_merma";
             this.txt_merma.Size = new System.Drawing.Size(74, 20);
@@ -686,6 +757,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_ventamillares
             // 
+            this.txt_ventamillares.Enabled = false;
             this.txt_ventamillares.Location = new System.Drawing.Point(302, 226);
             this.txt_ventamillares.Name = "txt_ventamillares";
             this.txt_ventamillares.Size = new System.Drawing.Size(65, 20);
@@ -693,6 +765,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_ventakilos
             // 
+            this.txt_ventakilos.Enabled = false;
             this.txt_ventakilos.Location = new System.Drawing.Point(124, 225);
             this.txt_ventakilos.Name = "txt_ventakilos";
             this.txt_ventakilos.Size = new System.Drawing.Size(74, 20);
@@ -702,6 +775,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // rb_ventamillares
             // 
             this.rb_ventamillares.AutoSize = true;
+            this.rb_ventamillares.Enabled = false;
             this.rb_ventamillares.Location = new System.Drawing.Point(205, 226);
             this.rb_ventamillares.Name = "rb_ventamillares";
             this.rb_ventamillares.Size = new System.Drawing.Size(91, 17);
@@ -713,6 +787,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // rb_ventasKilos
             // 
             this.rb_ventasKilos.AutoSize = true;
+            this.rb_ventasKilos.Enabled = false;
             this.rb_ventasKilos.Location = new System.Drawing.Point(9, 226);
             this.rb_ventasKilos.Name = "rb_ventasKilos";
             this.rb_ventasKilos.Size = new System.Drawing.Size(81, 17);
@@ -723,6 +798,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // dtp_fechaentrega
             // 
+            this.dtp_fechaentrega.Enabled = false;
             this.dtp_fechaentrega.Location = new System.Drawing.Point(149, 140);
             this.dtp_fechaentrega.Name = "dtp_fechaentrega";
             this.dtp_fechaentrega.Size = new System.Drawing.Size(200, 20);
@@ -753,6 +829,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_pedidogeneral
             // 
+            this.txt_pedidogeneral.Enabled = false;
             this.txt_pedidogeneral.Location = new System.Drawing.Point(149, 5);
             this.txt_pedidogeneral.Name = "txt_pedidogeneral";
             this.txt_pedidogeneral.Size = new System.Drawing.Size(141, 20);
@@ -784,6 +861,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_destararcorte
             // 
             this.chk_destararcorte.AutoSize = true;
+            this.chk_destararcorte.Enabled = false;
             this.chk_destararcorte.Location = new System.Drawing.Point(295, 193);
             this.chk_destararcorte.Name = "chk_destararcorte";
             this.chk_destararcorte.Size = new System.Drawing.Size(54, 17);
@@ -794,6 +872,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_destararlaminado
             // 
             this.chk_destararlaminado.AutoSize = true;
+            this.chk_destararlaminado.Enabled = false;
             this.chk_destararlaminado.Location = new System.Drawing.Point(195, 193);
             this.chk_destararlaminado.Name = "chk_destararlaminado";
             this.chk_destararlaminado.Size = new System.Drawing.Size(75, 17);
@@ -804,6 +883,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_destararimpresion
             // 
             this.chk_destararimpresion.AutoSize = true;
+            this.chk_destararimpresion.Enabled = false;
             this.chk_destararimpresion.Location = new System.Drawing.Point(99, 193);
             this.chk_destararimpresion.Name = "chk_destararimpresion";
             this.chk_destararimpresion.Size = new System.Drawing.Size(74, 17);
@@ -814,6 +894,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // chk_destararextrusion
             // 
             this.chk_destararextrusion.AutoSize = true;
+            this.chk_destararextrusion.Enabled = false;
             this.chk_destararextrusion.Location = new System.Drawing.Point(9, 193);
             this.chk_destararextrusion.Name = "chk_destararextrusion";
             this.chk_destararextrusion.Size = new System.Drawing.Size(72, 17);
@@ -835,6 +916,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // dtp_fechapedido
             // 
+            this.dtp_fechapedido.Enabled = false;
             this.dtp_fechapedido.Location = new System.Drawing.Point(149, 114);
             this.dtp_fechapedido.Name = "dtp_fechapedido";
             this.dtp_fechapedido.Size = new System.Drawing.Size(200, 20);
@@ -865,6 +947,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // dtp_fechaordencompra
             // 
+            this.dtp_fechaordencompra.Enabled = false;
             this.dtp_fechaordencompra.Location = new System.Drawing.Point(149, 85);
             this.dtp_fechaordencompra.Name = "dtp_fechaordencompra";
             this.dtp_fechaordencompra.Size = new System.Drawing.Size(200, 20);
@@ -895,6 +978,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_ordencompra
             // 
+            this.txt_ordencompra.Enabled = false;
             this.txt_ordencompra.Location = new System.Drawing.Point(149, 59);
             this.txt_ordencompra.Name = "txt_ordencompra";
             this.txt_ordencompra.Size = new System.Drawing.Size(141, 20);
@@ -925,6 +1009,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // txt_numeropedido
             // 
+            this.txt_numeropedido.Enabled = false;
             this.txt_numeropedido.Location = new System.Drawing.Point(149, 33);
             this.txt_numeropedido.Name = "txt_numeropedido";
             this.txt_numeropedido.Size = new System.Drawing.Size(141, 20);
@@ -1221,7 +1306,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroCliente.TabIndex = 0;
             this.chk_FiltroCliente.Text = "Cliente";
             this.chk_FiltroCliente.UseVisualStyleBackColor = true;
-            this.chk_FiltroCliente.CheckedChanged += new System.EventHandler(this.chk_FiltroCliente_CheckedChanged_1);
             // 
             // dgv_mnt
             // 
@@ -1492,67 +1576,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Ultimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Ultimo.ToolTipText = "Ultimo registro";
             // 
-            // cbo_condicionproceso
-            // 
-            this.cbo_condicionproceso.FormattingEnabled = true;
-            this.cbo_condicionproceso.Location = new System.Drawing.Point(155, 163);
-            this.cbo_condicionproceso.Name = "cbo_condicionproceso";
-            this.cbo_condicionproceso.Size = new System.Drawing.Size(221, 21);
-            this.cbo_condicionproceso.TabIndex = 136;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(5, 167);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(93, 13);
-            this.label41.TabIndex = 135;
-            this.label41.Text = "CondicionProceso";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(118, 167);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(10, 13);
-            this.label42.TabIndex = 134;
-            this.label42.Text = ":";
-            // 
             // cbo_condicioncobranza
             // 
+            this.cbo_condicioncobranza.DisplayMember = "Condicion_Cobranza";
             this.cbo_condicioncobranza.FormattingEnabled = true;
-            this.cbo_condicioncobranza.Location = new System.Drawing.Point(122, 32);
+            this.cbo_condicioncobranza.Location = new System.Drawing.Point(122, 31);
             this.cbo_condicioncobranza.Name = "cbo_condicioncobranza";
             this.cbo_condicioncobranza.Size = new System.Drawing.Size(237, 21);
             this.cbo_condicioncobranza.TabIndex = 133;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(5, 35);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(102, 13);
-            this.label44.TabIndex = 132;
-            this.label44.Text = "Condicion Cobranza";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(105, 35);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(10, 13);
-            this.label45.TabIndex = 131;
-            this.label45.Text = ":";
+            this.cbo_condicioncobranza.ValueMember = "IdCondicionCobranza";
             // 
             // Frm_RegistroPedidos
             // 
@@ -1715,8 +1747,8 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.ComboBox cbo_condicionproceso;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.ComboBox cbo_condicioncobranza;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox cbo_condicioncobranza;
     }
 }

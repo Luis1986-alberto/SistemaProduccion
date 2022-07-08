@@ -111,6 +111,7 @@
     <Compile Include="Repositorio\PR_aNivelUsuario_CD.cs" />
     <Compile Include="Repositorio\PR_aPosicionTaca_CD.cs" />
     <Compile Include="Repositorio\PR_aRodillos_CD.cs" />
+    <Compile Include="Repositorio\PR_aSeVendePor_CD.cs" />
     <Compile Include="Repositorio\PR_aTipoProcesoLaminado_CD.cs" />
     <Compile Include="Repositorio\PR_aAdhesivo_CD.cs" />
     <Compile Include="Repositorio\PR_aArea_CD.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Repositorio\PR_aTipoTrabajador_CD.cs" />
     <Compile Include="Repositorio\PR_aTipoTratado_CD.cs" />
     <Compile Include="Repositorio\PR_aTipoTroquel_CD.cs" />
+    <Compile Include="Repositorio\PR_aTipoVenta_CD.cs" />
     <Compile Include="Repositorio\PR_aUnidadMedidas_CD.cs" />
     <Compile Include="Repositorio\PR_aUsoProducto_CD.cs" />
     <Compile Include="Repositorio\PR_mClientes_CD.cs" />

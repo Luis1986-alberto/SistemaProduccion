@@ -64,9 +64,9 @@ namespace Capa_Presentacion.Formularios
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.IdEmpaquetado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -128,6 +128,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);
@@ -444,10 +445,6 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.Size = new System.Drawing.Size(867, 347);
             this.dgv_Mnt.TabIndex = 0;
             // 
-            // PrintDocument
-            // 
-            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
             // IdEmpaquetado
             // 
             this.IdEmpaquetado.DataPropertyName = "IdEmpaquetado";
@@ -466,6 +463,10 @@ namespace Capa_Presentacion.Formularios
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 250;
+            // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
             // 
             // Frm_Empaquetado
             // 

@@ -80,7 +80,7 @@ namespace Capa_Datos.Repositorio
                         t.Flag_NuevoRepetidoHistorico = dr["Flag_NuevoRepetidoHistorico"].ToString();
                         t.Flag_NoExisteEspecificacion = dr["Flag_NoExisteEspecificacion"].ToString();
                         t.Pedido_General = dr["Pedido_General"].ToString();
-                        t.IdVentaProducto = byte.Parse(dr["IdVentaProducto"].ToString());
+                        t.IdTipoVenta = byte.Parse(dr["IdTipoVenta"].ToString());
                         t.Nota = dr["Nota"].ToString();
                         t.Nota_Pedido = dr["Nota_Pedido"].ToString();
                         t.IdUsuario = dr["IdUsuario"].ToString();                     
@@ -153,7 +153,7 @@ namespace Capa_Datos.Repositorio
                     cmd.Parameters.AddWithValue("@Flag_NoExisteEspecificacion", pedidos.Flag_NoExisteEspecificacion);
                     cmd.Parameters.AddWithValue("@IdUsuario", pedidos.IdUsuario);
                     cmd.Parameters.AddWithValue("@Pedido_General", pedidos.Pedido_General);
-                    cmd.Parameters.AddWithValue("@IdVentaProducto", pedidos.IdVentaProducto);
+                    cmd.Parameters.AddWithValue("@IdTipoVenta", pedidos.IdTipoVenta);
                     cmd.Parameters.AddWithValue("@Nota", pedidos.Nota);
                     cmd.Parameters.AddWithValue("@Flag_DestararBobinaLaminado", pedidos.Flag_DestararBobinaLaminado);
                     cmd.Parameters.AddWithValue("@Metros", pedidos.Metros);

@@ -8,10 +8,12 @@
         public LG_aConcepto()
         { }
 
-        public LG_aConcepto(byte idconcepto)
+        public LG_aConcepto(byte idconcepto, string tipo_concepto)
         {
             this.IdConcepto = idconcepto;
+            this.Tipo_Concepto = tipo_concepto;
         }
+
 
     }
 }
