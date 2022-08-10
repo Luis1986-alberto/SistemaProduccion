@@ -56,6 +56,9 @@ namespace Capa_Presentacion.Formularios
             this.tbc_Mnt = new System.Windows.Forms.TabControl();
             this.tbp_Ingreso = new System.Windows.Forms.TabPage();
             this.png_Ingreso = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_codigocolor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbl_Puntos = new System.Windows.Forms.Label();
             this.txt_Nombre_Color = new System.Windows.Forms.TextBox();
             this.lbl_Color = new System.Windows.Forms.Label();
@@ -64,13 +67,10 @@ namespace Capa_Presentacion.Formularios
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_codigocolor = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.IdColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo_Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -132,6 +132,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);
@@ -334,6 +335,40 @@ namespace Capa_Presentacion.Formularios
             this.png_Ingreso.Size = new System.Drawing.Size(790, 214);
             this.png_Ingreso.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(109, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = ":";
+            // 
+            // txt_codigocolor
+            // 
+            this.txt_codigocolor.AcceptsReturn = true;
+            this.txt_codigocolor.AcceptsTab = true;
+            this.txt_codigocolor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_codigocolor.Enabled = false;
+            this.txt_codigocolor.Location = new System.Drawing.Point(135, 144);
+            this.txt_codigocolor.MaxLength = 0;
+            this.txt_codigocolor.Name = "txt_codigocolor";
+            this.txt_codigocolor.Size = new System.Drawing.Size(175, 20);
+            this.txt_codigocolor.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Codigo Color";
+            // 
             // lbl_Puntos
             // 
             this.lbl_Puntos.AutoSize = true;
@@ -452,44 +487,6 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.Size = new System.Drawing.Size(867, 347);
             this.dgv_Mnt.TabIndex = 0;
             // 
-            // PrintDocument
-            // 
-            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = ":";
-            // 
-            // txt_codigocolor
-            // 
-            this.txt_codigocolor.AcceptsReturn = true;
-            this.txt_codigocolor.AcceptsTab = true;
-            this.txt_codigocolor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_codigocolor.Enabled = false;
-            this.txt_codigocolor.Location = new System.Drawing.Point(135, 144);
-            this.txt_codigocolor.MaxLength = 0;
-            this.txt_codigocolor.Name = "txt_codigocolor";
-            this.txt_codigocolor.Size = new System.Drawing.Size(175, 20);
-            this.txt_codigocolor.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Codigo Color";
-            // 
             // IdColor
             // 
             this.IdColor.DataPropertyName = "IdColor";
@@ -515,6 +512,10 @@ namespace Capa_Presentacion.Formularios
             this.Codigo_Color.HeaderText = "Codigo Color";
             this.Codigo_Color.Name = "Codigo_Color";
             this.Codigo_Color.ReadOnly = true;
+            // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
             // 
             // Frm_Color
             // 

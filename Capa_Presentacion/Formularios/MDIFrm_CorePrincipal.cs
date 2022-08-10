@@ -1243,6 +1243,18 @@ namespace Capa_Presentacion.Formularios
         private void Frm_TipoVenta_FormClosing(object sender, EventArgs e)
         { this.mnu_TipoVenta.Enabled = true; }
 
+        private void mnu_SeVendePor_Click(object sender, EventArgs e)
+        {
+            this.mnu_SeVendePor.Enabled = false;
+            Frm_SeVendePor sevendepor = new Frm_SeVendePor();
+            sevendepor.MdiParent = this;
+            sevendepor.FormClosing += new FormClosingEventHandler(Frm_SeVendePor_FormClosing);
+            sevendepor.Show();
+        }
+
+        private void Frm_SeVendePor_FormClosing(object sender, EventArgs e)
+        { this.mnu_SeVendePor.Enabled = true; }
+
 
 
     }

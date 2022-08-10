@@ -1,5 +1,7 @@
 ﻿using Capa_Entidades.Tablas;
 using Dapper;
+using DapperExtensions;
+using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -60,7 +62,7 @@ namespace Capa_Datos.Repositorio
                         t.Merma = decimal.Parse(dr["Merma"].ToString());
                         t.Porcentaje_Merma = decimal.Parse(dr["Porcentaje_Merma"].ToString());
                         t.Total_Kilos = decimal.Parse(dr["Total_Kilos"].ToString());
-                        t.Flag_Ventasx = dr["Flag_Ventasx"].ToString();
+                        t.IdSeVendePor = byte.Parse(dr["IdSeVendePor"].ToString());
                         t.Cantidad_Millares = decimal.Parse(dr["Cantidad_Millares"].ToString());
                         t.Precio_Kilo = decimal.Parse(dr["Precio-Kilo"].ToString());
                         t.Precio_Millar = decimal.Parse(dr["Precio_Millar"].ToString());
@@ -112,7 +114,7 @@ namespace Capa_Datos.Repositorio
             {throw new Exception("Error al Traer por ID", Ex);}
         }
 
-        public string Pedidos_Pedidos(PR_xPedidosIndustriales pedidos, char accion)
+        public string Pedidos_Procesar(PR_xPedidosIndustriales pedidos, char accion)
         {
             try
             {
@@ -134,7 +136,6 @@ namespace Capa_Datos.Repositorio
                     cmd.Parameters.AddWithValue("@Merma", pedidos.Merma);
                     cmd.Parameters.AddWithValue("@Porcentaje_Merma", pedidos.Porcentaje_Merma);
                     cmd.Parameters.AddWithValue("@Total_Kilos", pedidos.Total_Kilos);
-                    cmd.Parameters.AddWithValue("@Flag_Ventasx", pedidos.Flag_Ventasx);
                     cmd.Parameters.AddWithValue("@Cantidad_Millares", pedidos.Cantidad_Millares);
                     cmd.Parameters.AddWithValue("@Precio_Kilo", pedidos.Precio_Kilo);
                     cmd.Parameters.AddWithValue("@Precio_Millar", pedidos.Precio_Millar);
@@ -171,7 +172,16 @@ namespace Capa_Datos.Repositorio
             {throw new Exception("Error al agregar", Ex);}
         }
 
-
+        public IEnumerable<PR_xPedidosIndustriales> FiltroPorUnCampo(IPredicate predicado)
+        {
+            using(var conexionSql = new SqlConnection(cadenaconexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.GetList<PR_xPedidosIndustriales>(predicado);
+                conexionSql.Close();
+                return result;
+            }
+        }
 
 
     }

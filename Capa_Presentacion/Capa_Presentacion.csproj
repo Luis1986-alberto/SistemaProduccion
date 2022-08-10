@@ -165,11 +165,11 @@
     <Compile Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.Designer.cs">
       <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Produccion\Frm_Pedidos.cs">
+    <Compile Include="Formularios\Produccion\Frm_RegistroPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Produccion\Frm_Pedidos.Designer.cs">
-      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
+    <Compile Include="Formularios\Produccion\Frm_RegistroPedidos.Designer.cs">
+      <DependentUpon>Frm_RegistroPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Produccion\Frm_RegistroEstandar.cs">
       <SubType>Form</SubType>
@@ -416,6 +416,12 @@
     </Compile>
     <Compile Include="Formularios\Catalogo General\Frm_SubFamiliaProduccion.Designer.cs">
       <DependentUpon>Frm_SubFamiliaProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_SeVendePor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_SeVendePor.Designer.cs">
+      <DependentUpon>Frm_SeVendePor.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Produccion\Frm_TipoDespacho.cs">
       <SubType>Form</SubType>
@@ -665,8 +671,8 @@
     <EmbeddedResource Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.resx">
       <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Produccion\Frm_Pedidos.resx">
-      <DependentUpon>Frm_Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_RegistroPedidos.resx">
+      <DependentUpon>Frm_RegistroPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_RegistroEstandar.resx">
       <DependentUpon>Frm_RegistroEstandar.cs</DependentUpon>
@@ -790,6 +796,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Catalogo General\Frm_SubFamiliaProduccion.resx">
       <DependentUpon>Frm_SubFamiliaProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_SeVendePor.resx">
+      <DependentUpon>Frm_SeVendePor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_TipoDespacho.resx">
       <DependentUpon>Frm_TipoDespacho.cs</DependentUpon>

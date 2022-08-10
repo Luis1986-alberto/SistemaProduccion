@@ -120,6 +120,7 @@ namespace Capa_Presentacion.Formularios
             this.mnu_CondicionCobranza = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_IGV = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_TipoMoneda = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_TipoVenta = new System.Windows.Forms.ToolStripMenuItem();
             this.OrdenProduccion = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_EstadoProcesoOrdenProd = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu_TipoProduccion = new System.Windows.Forms.ToolStripMenuItem();
@@ -169,7 +170,7 @@ namespace Capa_Presentacion.Formularios
             this.stb_PC_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tim_Reloj = new System.Windows.Forms.Timer(this.components);
-            this.mnu_TipoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_SeVendePor = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -725,7 +726,7 @@ namespace Capa_Presentacion.Formularios
             // mnu_TipoProcesoCorte
             // 
             this.mnu_TipoProcesoCorte.Name = "mnu_TipoProcesoCorte";
-            this.mnu_TipoProcesoCorte.Size = new System.Drawing.Size(174, 22);
+            this.mnu_TipoProcesoCorte.Size = new System.Drawing.Size(180, 22);
             this.mnu_TipoProcesoCorte.Text = "Tipo Proceso Corte";
             this.mnu_TipoProcesoCorte.Click += new System.EventHandler(this.mnu_TipoProcesoCorte_Click);
             // 
@@ -740,7 +741,7 @@ namespace Capa_Presentacion.Formularios
             // mnu_TipoDespacho
             // 
             this.mnu_TipoDespacho.Name = "mnu_TipoDespacho";
-            this.mnu_TipoDespacho.Size = new System.Drawing.Size(152, 22);
+            this.mnu_TipoDespacho.Size = new System.Drawing.Size(180, 22);
             this.mnu_TipoDespacho.Text = "Tipo Despacho";
             this.mnu_TipoDespacho.Click += new System.EventHandler(this.mnu_TipoDespacho_Click);
             // 
@@ -768,98 +769,98 @@ namespace Capa_Presentacion.Formularios
             // mnu_EmpresaEtiqueta
             // 
             this.mnu_EmpresaEtiqueta.Name = "mnu_EmpresaEtiqueta";
-            this.mnu_EmpresaEtiqueta.Size = new System.Drawing.Size(174, 22);
+            this.mnu_EmpresaEtiqueta.Size = new System.Drawing.Size(180, 22);
             this.mnu_EmpresaEtiqueta.Text = "Empresa Etiqueta";
             this.mnu_EmpresaEtiqueta.Click += new System.EventHandler(this.mnu_EmpresaEtiqueta_Click);
             // 
             // mnu_Etiquetadoras
             // 
             this.mnu_Etiquetadoras.Name = "mnu_Etiquetadoras";
-            this.mnu_Etiquetadoras.Size = new System.Drawing.Size(174, 22);
+            this.mnu_Etiquetadoras.Size = new System.Drawing.Size(180, 22);
             this.mnu_Etiquetadoras.Text = "Etiquetadoras";
             this.mnu_Etiquetadoras.Click += new System.EventHandler(this.mnu_Etiquetadoras_Click);
             // 
             // mnu_CondicionProceso
             // 
             this.mnu_CondicionProceso.Name = "mnu_CondicionProceso";
-            this.mnu_CondicionProceso.Size = new System.Drawing.Size(174, 22);
+            this.mnu_CondicionProceso.Size = new System.Drawing.Size(180, 22);
             this.mnu_CondicionProceso.Text = "Condicion Proceso";
             this.mnu_CondicionProceso.Click += new System.EventHandler(this.mnu_CondicionProceso_Click);
             // 
             // mnu_Procesos
             // 
             this.mnu_Procesos.Name = "mnu_Procesos";
-            this.mnu_Procesos.Size = new System.Drawing.Size(174, 22);
+            this.mnu_Procesos.Size = new System.Drawing.Size(180, 22);
             this.mnu_Procesos.Text = "Procesos";
             this.mnu_Procesos.Click += new System.EventHandler(this.mnu_Procesos_Click);
             // 
             // mnu_TipoRubro
             // 
             this.mnu_TipoRubro.Name = "mnu_TipoRubro";
-            this.mnu_TipoRubro.Size = new System.Drawing.Size(174, 22);
+            this.mnu_TipoRubro.Size = new System.Drawing.Size(180, 22);
             this.mnu_TipoRubro.Text = "Tipo Rubro";
             this.mnu_TipoRubro.Click += new System.EventHandler(this.mnu_TipoRubro_Click);
             // 
             // mnu_UnidadMedida
             // 
             this.mnu_UnidadMedida.Name = "mnu_UnidadMedida";
-            this.mnu_UnidadMedida.Size = new System.Drawing.Size(174, 22);
+            this.mnu_UnidadMedida.Size = new System.Drawing.Size(180, 22);
             this.mnu_UnidadMedida.Text = "Unidad Medida";
             this.mnu_UnidadMedida.Click += new System.EventHandler(this.mnu_UnidadMedida_Click);
             // 
             // mnu_PaisProcedencia
             // 
             this.mnu_PaisProcedencia.Name = "mnu_PaisProcedencia";
-            this.mnu_PaisProcedencia.Size = new System.Drawing.Size(174, 22);
+            this.mnu_PaisProcedencia.Size = new System.Drawing.Size(180, 22);
             this.mnu_PaisProcedencia.Text = "Pais Procedencia";
             this.mnu_PaisProcedencia.Click += new System.EventHandler(this.mnu_PaisProcedencia_Click);
             // 
             // mnu_TipoTrabajador
             // 
             this.mnu_TipoTrabajador.Name = "mnu_TipoTrabajador";
-            this.mnu_TipoTrabajador.Size = new System.Drawing.Size(174, 22);
+            this.mnu_TipoTrabajador.Size = new System.Drawing.Size(180, 22);
             this.mnu_TipoTrabajador.Text = "Tipo Trabajador";
             this.mnu_TipoTrabajador.Click += new System.EventHandler(this.mnu_TipoTrabajador_Click);
             // 
             // mnu_CargoTrabajador
             // 
             this.mnu_CargoTrabajador.Name = "mnu_CargoTrabajador";
-            this.mnu_CargoTrabajador.Size = new System.Drawing.Size(174, 22);
+            this.mnu_CargoTrabajador.Size = new System.Drawing.Size(180, 22);
             this.mnu_CargoTrabajador.Text = "Cargo Trabajador";
             this.mnu_CargoTrabajador.Click += new System.EventHandler(this.mnu_CargoTrabajador_Click);
             // 
             // mnu_General
             // 
             this.mnu_General.Name = "mnu_General";
-            this.mnu_General.Size = new System.Drawing.Size(174, 22);
+            this.mnu_General.Size = new System.Drawing.Size(180, 22);
             this.mnu_General.Text = "Estado General";
             this.mnu_General.Click += new System.EventHandler(this.mnu_General_Click);
             // 
             // mnu_CodigoEvento
             // 
             this.mnu_CodigoEvento.Name = "mnu_CodigoEvento";
-            this.mnu_CodigoEvento.Size = new System.Drawing.Size(174, 22);
+            this.mnu_CodigoEvento.Size = new System.Drawing.Size(180, 22);
             this.mnu_CodigoEvento.Text = "Codigo Evento";
             this.mnu_CodigoEvento.Click += new System.EventHandler(this.mnu_CodigoEvento_Click);
             // 
             // mnu_PresicionBalanza
             // 
             this.mnu_PresicionBalanza.Name = "mnu_PresicionBalanza";
-            this.mnu_PresicionBalanza.Size = new System.Drawing.Size(174, 22);
+            this.mnu_PresicionBalanza.Size = new System.Drawing.Size(180, 22);
             this.mnu_PresicionBalanza.Text = "Presicion Balanza";
             this.mnu_PresicionBalanza.Click += new System.EventHandler(this.mnu_PresicionBalanza_Click);
             // 
             // mnu_RegistroSemana
             // 
             this.mnu_RegistroSemana.Name = "mnu_RegistroSemana";
-            this.mnu_RegistroSemana.Size = new System.Drawing.Size(174, 22);
+            this.mnu_RegistroSemana.Size = new System.Drawing.Size(180, 22);
             this.mnu_RegistroSemana.Text = "Registro Semana";
             this.mnu_RegistroSemana.Click += new System.EventHandler(this.mnu_RegistroSemana_Click);
             // 
             // mnu_UsoProducto
             // 
             this.mnu_UsoProducto.Name = "mnu_UsoProducto";
-            this.mnu_UsoProducto.Size = new System.Drawing.Size(174, 22);
+            this.mnu_UsoProducto.Size = new System.Drawing.Size(180, 22);
             this.mnu_UsoProducto.Text = "Uso Producto";
             this.mnu_UsoProducto.Click += new System.EventHandler(this.mnu_UsoProducto_Click);
             // 
@@ -869,7 +870,8 @@ namespace Capa_Presentacion.Formularios
             this.mnu_CondicionCobranza,
             this.mnu_IGV,
             this.mnu_TipoMoneda,
-            this.mnu_TipoVenta});
+            this.mnu_TipoVenta,
+            this.mnu_SeVendePor});
             this.Pedidos.Name = "Pedidos";
             this.Pedidos.Size = new System.Drawing.Size(180, 22);
             this.Pedidos.Text = "Pedidos";
@@ -894,6 +896,13 @@ namespace Capa_Presentacion.Formularios
             this.mnu_TipoMoneda.Size = new System.Drawing.Size(182, 22);
             this.mnu_TipoMoneda.Text = "Tipo Moneda";
             this.mnu_TipoMoneda.Click += new System.EventHandler(this.mnu_TipoMoneda_Click);
+            // 
+            // mnu_TipoVenta
+            // 
+            this.mnu_TipoVenta.Name = "mnu_TipoVenta";
+            this.mnu_TipoVenta.Size = new System.Drawing.Size(182, 22);
+            this.mnu_TipoVenta.Text = "Tipo Venta";
+            this.mnu_TipoVenta.Click += new System.EventHandler(this.mnu_TipoVenta_Click);
             // 
             // OrdenProduccion
             // 
@@ -958,42 +967,42 @@ namespace Capa_Presentacion.Formularios
             // mnu_Empresas
             // 
             this.mnu_Empresas.Name = "mnu_Empresas";
-            this.mnu_Empresas.Size = new System.Drawing.Size(157, 22);
+            this.mnu_Empresas.Size = new System.Drawing.Size(180, 22);
             this.mnu_Empresas.Text = "Empresas";
             this.mnu_Empresas.Click += new System.EventHandler(this.mnu_Empresas_Click);
             // 
             // mnu_Almacen
             // 
             this.mnu_Almacen.Name = "mnu_Almacen";
-            this.mnu_Almacen.Size = new System.Drawing.Size(157, 22);
+            this.mnu_Almacen.Size = new System.Drawing.Size(180, 22);
             this.mnu_Almacen.Text = "Almacen";
             this.mnu_Almacen.Click += new System.EventHandler(this.mnu_Almacen_Click);
             // 
             // mnu_SectorAlmacenPT
             // 
             this.mnu_SectorAlmacenPT.Name = "mnu_SectorAlmacenPT";
-            this.mnu_SectorAlmacenPT.Size = new System.Drawing.Size(157, 22);
+            this.mnu_SectorAlmacenPT.Size = new System.Drawing.Size(180, 22);
             this.mnu_SectorAlmacenPT.Text = "Sector Almacen";
             this.mnu_SectorAlmacenPT.Click += new System.EventHandler(this.mnu_SectorAlmacenPT_Click);
             // 
             // mnu_LocalvsArea
             // 
             this.mnu_LocalvsArea.Name = "mnu_LocalvsArea";
-            this.mnu_LocalvsArea.Size = new System.Drawing.Size(157, 22);
+            this.mnu_LocalvsArea.Size = new System.Drawing.Size(180, 22);
             this.mnu_LocalvsArea.Text = "Local VS Area";
             this.mnu_LocalvsArea.Click += new System.EventHandler(this.mnu_LocalvsArea_Click);
             // 
             // mnu_Area
             // 
             this.mnu_Area.Name = "mnu_Area";
-            this.mnu_Area.Size = new System.Drawing.Size(157, 22);
+            this.mnu_Area.Size = new System.Drawing.Size(180, 22);
             this.mnu_Area.Text = "Area";
             this.mnu_Area.Click += new System.EventHandler(this.mnu_Area_Click);
             // 
             // mnu_Local
             // 
             this.mnu_Local.Name = "mnu_Local";
-            this.mnu_Local.Size = new System.Drawing.Size(157, 22);
+            this.mnu_Local.Size = new System.Drawing.Size(180, 22);
             this.mnu_Local.Text = "Local";
             this.mnu_Local.Click += new System.EventHandler(this.mnu_Local_Click);
             // 
@@ -1265,12 +1274,12 @@ namespace Capa_Presentacion.Formularios
             // 
             this.tim_Reloj.Tick += new System.EventHandler(this.tim_Reloj_Tick);
             // 
-            // mnu_TipoVenta
+            // mnu_SeVendePor
             // 
-            this.mnu_TipoVenta.Name = "mnu_TipoVenta";
-            this.mnu_TipoVenta.Size = new System.Drawing.Size(182, 22);
-            this.mnu_TipoVenta.Text = "Tipo Venta";
-            this.mnu_TipoVenta.Click += new System.EventHandler(this.mnu_TipoVenta_Click);
+            this.mnu_SeVendePor.Name = "mnu_SeVendePor";
+            this.mnu_SeVendePor.Size = new System.Drawing.Size(182, 22);
+            this.mnu_SeVendePor.Text = "Se Vende Por";
+            this.mnu_SeVendePor.Click += new System.EventHandler(this.mnu_SeVendePor_Click);
             // 
             // MDIFrm_CorePrincipal
             // 
@@ -1438,6 +1447,7 @@ namespace Capa_Presentacion.Formularios
         private System.Windows.Forms.ToolStripMenuItem mnu_Periodo;
         private System.Windows.Forms.ToolStripMenuItem mnu_RegistroPedido;
         private System.Windows.Forms.ToolStripMenuItem mnu_TipoVenta;
+        private System.Windows.Forms.ToolStripMenuItem mnu_SeVendePor;
     }
 }
 

@@ -1,5 +1,7 @@
 ﻿using Capa_Entidades.Tablas;
 using Dapper;
+using DapperExtensions;
+using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -209,13 +211,23 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSql = new SqlConnection(cadenaconexion))
                 {
                     var sqldelete = "Delete PR_mEstandar where IdEstandar = @Id";
-
                     ConexionSql.Execute(sqldelete, new { Id = idEstandar });
                     return "PROCESADO";
                 }
             }
             catch(Exception Ex)
             { throw new Exception("Error al Eliminar" + idEstandar, Ex); }
+        }
+
+        public IEnumerable<PR_mEstandar> FiltroPorUnCampo(IPredicate predicado)
+        {
+            using(var conexionSql = new SqlConnection(cadenaconexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.GetList<PR_mEstandar>(predicado);
+                conexionSql.Close();
+                return result;
+            }
         }
 
     }

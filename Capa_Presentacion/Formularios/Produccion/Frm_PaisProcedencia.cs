@@ -167,7 +167,7 @@ namespace Capa_Presentacion.Formularios
         {
             //str_Campo = dgv_Mnt.Columns[dgv_Mnt.CurrentCell.ColumnIndex].Name;
 
-            //var Listado_Ordenado = (from pais in aPaisProcedencia_CN._Instancia.Lista_PaisProcedencia().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
+            //var Listado_Ordenado = (from pais in PR_aPaisProcedencia_CN._Instancia.Lista_PaisProcedencia().OrderBy(r => r.GetType().GetProperty(str_Campo).GetValue(r, null))
             //                        select pais).ToList();
 
             //dgv_Mnt.DataSource = Listado_Ordenado;

@@ -1,5 +1,7 @@
 ﻿using Capa_Datos.Repositorio;
 using Capa_Entidades.Tablas;
+using DapperExtensions;
+using DapperExtensions.Predicate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,9 +41,13 @@ namespace Capa_Negocios
                                           PR_mEstandarImpresion mimpresion, PictureBox fotoarteimp, PR_mEstandarSellado msellado, PictureBox fotoplanosell)
         {
             string rptaextr, rptaimp, rptasell = "";
+
+            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdEstandarIndustrial, Operator.Eq , mestandar.IdEstandar);
+            if( PR_xPedidosIndustriales_CD._Instancia.FiltroPorUnCampo(predicado).Count() >0) return "EXiste Pedidos generados con este estandart";
+
             PR_mEstandar_CD._Instancia.Procesar_Estandar(mestandar, "U", Foto_Producto);
             if (mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, mestandar.IdEstandar, "U", fotoarteextr);
-            if (mimpresion != null) rptaimp = PR_mEstandarImpresion_CD._Instancia.EstandarImpresion_Procesar(mimpresion, mestandar.IdEstandar, "I", fotoarteimp);
+            if (mimpresion != null) rptaimp = PR_mEstandarImpresion_CD._Instancia.EstandarImpresion_Procesar(mimpresion, mestandar.IdEstandar, "U", fotoarteimp);
             if (msellado != null) rptasell = PR_mEstandarSellado_CD._Instancia.EstandarSellado_Procesar(msellado, mestandar.IdEstandar, "U", fotoplanosell);
 
             return "PROCESADO";
@@ -49,13 +55,15 @@ namespace Capa_Negocios
 
         public String Eliminar_Estandar(Int32 IdEstandar)
         {
+            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdEstandarIndustrial, Operator.Eq, IdEstandar);
+            if (PR_xPedidosIndustriales_CD._Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "EXiste Pedidos generados con este estandart";
+
             PR_mEstandarExtrusion_CD._Instancia.Eliminar_EstandarExtrusion(IdEstandar);
             PR_mEstandarImpresion_CD._Instancia.Eliminar_EstandarImpresion(IdEstandar);
             PR_mEstandarSellado_CD._Instancia.Eliminar_estandarSellado(IdEstandar);
             PR_mEstandar_CD._Instancia.Eliminar_Estandar(IdEstandar);
             return "PROCESADO";
         }
-
 
         public void Descargar_ImagenProducto(PictureBox imagen, long idestandar)
         {

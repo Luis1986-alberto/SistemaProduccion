@@ -8,8 +8,8 @@ namespace Capa_Entidades.Tablas
 {
     public class PR_aSeVendePor
     {   
-        private byte IdSeVendePor { get; set; }
-        private string SeVende_Por { get; set; }
+        public byte IdSeVendePor { get; set; }
+        public string SeVende_Por { get; set; }
 
         public PR_aSeVendePor()
         {  }

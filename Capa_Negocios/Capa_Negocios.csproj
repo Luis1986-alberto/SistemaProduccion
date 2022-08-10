@@ -102,6 +102,7 @@
     <Compile Include="LG_aAño_CN.cs" />
     <Compile Include="PR_aCargoTrabajador_CN.cs" />
     <Compile Include="PR_aCarreta_CN.cs" />
+    <Compile Include="PR_aSeVendePor_CN.cs" />
     <Compile Include="PR_aTipoVenta_CN.cs" />
     <Compile Include="PR_mEstandarExtrusion_CN.cs" />
     <Compile Include="PR_mEstandarImpresion_CN.cs" />
