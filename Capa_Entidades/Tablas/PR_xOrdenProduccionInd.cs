@@ -27,6 +27,7 @@ namespace Capa_Entidades.Tablas
             this.PR_xProgramaSelladoInd = new HashSet<PR_xProgramaSelladoInd>();
         }
 
+        public Int32 IdOrdProd { get; set; }
         public string IdOrdenProduccionInd { get; set; }
         public string Nota_OrdenProduccionInd { get; set; }
         public string Numero_Pedido { get; set; }
@@ -37,8 +38,7 @@ namespace Capa_Entidades.Tablas
         public Nullable<decimal> Nro_MP { get; set; }
         public Nullable<short> IdPosicionMaquina { get; set; }
         public Nullable<byte> Flag_Produccion { get; set; }
-        public Nullable<decimal> Ordenando { get; set; }
-        public decimal IdOrdProd { get; set; }
+        public Nullable<decimal> Ordenando { get; set; }        
         public Nullable<decimal> IdNumeroPedido { get; set; }
         public Nullable<byte> IdCondicionProceso { get; set; }
 

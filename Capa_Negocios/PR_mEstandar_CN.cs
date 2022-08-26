@@ -25,6 +25,9 @@ namespace Capa_Negocios
             return PR_mEstandar_CD._Instancia.TraerPorID(idestandar);
         }
 
+        public IEnumerable<PR_mEstandar> Filtrar_PorIdCliente(Int32 idcliente)
+        { return PR_mEstandar_CD._Instancia.Buscar_PorIdCliente(idcliente); }
+
         public string Agregar_Estandar(PR_mEstandar mestandar, PictureBox Foto_Producto, PR_mEstandarExtrusion mextrusion, PictureBox fotoarteextr,
                                        PR_mEstandarImpresion mimpresion, PictureBox fotoarteimp, PR_mEstandarSellado msellado, PictureBox fotoplanosell)
         {

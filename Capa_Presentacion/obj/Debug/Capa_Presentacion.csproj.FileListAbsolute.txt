@@ -752,3 +752,4 @@ D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Sistema_Produccion.pdb
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_RegistroPedidos.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_TipoVenta.resources
 D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_SeVendePor.resources
+D:\Sistemas\SistemaProduccion\Capa_Presentacion\obj\Debug\Capa_Presentacion.Formularios.Produccion.Frm_Consultaestandart.resources

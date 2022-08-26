@@ -30,8 +30,8 @@ namespace Capa_Datos
                 CadenaConexion = string.Concat("Data Source =", MiConfiguracion_Proyecto.Servidor_SQL, "; Initial Catalog =", MiConfiguracion_Proyecto.BDatos, "; Integrated Security=True");
                 NombreServidor = string.Concat(MiConfiguracion_Proyecto.Servidor_SQL);
                 BaseDatos = string.Concat(MiConfiguracion_Proyecto.BDatos);
-                //ID = miUsuario; Password = miConstraseña
 
+                //ID = miUsuario; Password = miConstraseña
                 //MessageBox.Show("Ruta de MTS: " + MiConfiguracion_Proyecto.Servidor_MTS, "Servidor MTS", MessageBoxButtons.OK);
                 //MessageBox.Show("Ruta de SQL: " + MiConfiguracion_Proyecto.Servidor_SQL, "Servidor SQL", MessageBoxButtons.OK);
                 //MessageBox.Show("Nombre del Equipo : " + Environment.MachineName);

@@ -1,4 +1,5 @@
-﻿using DapperExtensions;
+﻿using Dapper;
+using DapperExtensions;
 using DapperExtensions.Predicate;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -70,7 +71,16 @@ namespace Capa_Datos.Interface
                 return result;
             }
         }
-
+        public IEnumerable<T> ListarPorConsulta(string consulta)
+        {
+            using (var conexionSql = new SqlConnection(CadenaConexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.Query<T>(consulta);
+                conexionSql.Close();
+                return result;
+            }
+        }
         public T TraerPorId(int id)
         {
             using (var conexionSql = new SqlConnection(CadenaConexion))

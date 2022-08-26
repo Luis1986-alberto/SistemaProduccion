@@ -27,8 +27,8 @@ namespace Capa_Datos.Repositorio
             cadenaconexion = Principal.CadenaConexion;
         }
 
-        public List<PR_xPedidosIndustriales> Lista_Pedidos( string flag_cliente, Int32 idcliente, 
-                                                                  string flag_rango, DateTime fecha_inicio, DateTime fecha_final)
+        public List<PR_xPedidosIndustriales> Lista_Pedidos( string flag_cliente, Int32 idcliente, string flag_rango,
+                                                             DateTime fecha_inicio, DateTime fecha_final)
         {
             List<PR_xPedidosIndustriales> lista_pedidos = null;
             try
@@ -97,7 +97,7 @@ namespace Capa_Datos.Repositorio
             {throw new Exception("Error al Listar", Ex);}
         }
 
-        public PR_xPedidosIndustriales TraerPorId (Int32 idpedidos)
+        public IEnumerable<PR_xPedidosIndustriales> TraerPorId (Int32 idpedidos)
         {
             try
             {
@@ -107,14 +107,25 @@ namespace Capa_Datos.Repositorio
                     var sql = "select * from PR_xPedidosIndustriales as PED INNER JOIN PR_mEstandar as EST " +
                               " on PED.IdEstandarIndustrial = EST.IdEstandar  where PED.IdNumeroPedido = @id ";
 
-                    return ConexionSQL.QueryFirst<PR_xPedidosIndustriales>(sql, new { id = idpedidos });
+                    return ConexionSQL.Query<PR_xPedidosIndustriales>(sql, new { id = idpedidos });
                 }
             }
             catch(Exception Ex)
             {throw new Exception("Error al Traer por ID", Ex);}
         }
 
-        public string Pedidos_Procesar(PR_xPedidosIndustriales pedidos, char accion)
+        public IEnumerable<PR_xPedidosIndustriales> FiltroPorUnCampo(IPredicate predicado)
+        {
+            using(var conexionSql = new SqlConnection(cadenaconexion))
+            {
+                conexionSql.Open();
+                var result = conexionSql.GetList<PR_xPedidosIndustriales>(predicado);
+                conexionSql.Close();
+                return result;
+            }
+        }
+
+        public string Pedidos_Procesar(PR_xPedidosIndustriales pedidos, string accion)
         {
             try
             {
@@ -172,15 +183,19 @@ namespace Capa_Datos.Repositorio
             {throw new Exception("Error al agregar", Ex);}
         }
 
-        public IEnumerable<PR_xPedidosIndustriales> FiltroPorUnCampo(IPredicate predicado)
+        public string Eliminar_Pedidos(Int32 idpedido)
         {
-            using(var conexionSql = new SqlConnection(cadenaconexion))
+            try
             {
-                conexionSql.Open();
-                var result = conexionSql.GetList<PR_xPedidosIndustriales>(predicado);
-                conexionSql.Close();
-                return result;
+                using(var conexionsql = new SqlConnection(cadenaconexion))
+                {
+                    conexionsql.Open();
+                    var sqldelete = "delete from PR_xPedidosIndustriales where IdNumeroPedido = @idnumeropedido ";
+                    conexionsql.Execute(sqldelete, new { idnumeropedido = idpedido });
+                    return "PROCESADO";
+                }
             }
+            catch(Exception Ex) { throw new Exception("Error alEliminar", Ex);}
         }
 
 

@@ -14,10 +14,16 @@ namespace Capa_Entidades.Tablas
         public string Telefono { get; set; }
         public string Ruta_Imagen { get; set; }
         public Nullable<byte> IdTipoTrabajador { get; set; }
+        public virtual string Nombre_TipoTrabajador { get; set; }
         public byte IdEmpresa { get; set; }
+        public virtual string Nombre_Emoresa { get; set; }
         public short IdLocalArea { get; set; }
+        public virtual string Nombre_Area { get; set; }
+        public virtual string Nombre_Local { get; set; }
         public byte[] Foto_Trabajador { get; set; }
         public Nullable<byte> IdCargoTrabajador { get; set; }
+        public virtual string Nombre_CargoTrabajador { get; set; }
+
 
         public virtual PR_aCargoTrabajador PR_aCargoTrabajador { get; set; }
         public virtual PR_aEmpresa PR_aEmpresa { get; set; }

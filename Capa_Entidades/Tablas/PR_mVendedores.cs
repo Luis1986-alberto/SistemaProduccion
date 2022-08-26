@@ -5,5 +5,12 @@
         public byte IdVendedor { get; set; }
         public string Nombre_Vendedor { get; set; }
 
+
+
+        public PR_mVendedores()
+        {    }
+
+
+
     }
 }

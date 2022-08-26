@@ -110,7 +110,9 @@
     <Compile Include="PR_mEstandar_CN.cs" />
     <Compile Include="PR_mImpresora_CN.cs" />
     <Compile Include="PR_mMaquina_CN.cs" />
+    <Compile Include="PR_mTrabajador_CN.cs" />
     <Compile Include="PR_mUsuarios_CN.cs" />
+    <Compile Include="Pr_mVendedores_CN.cs" />
     <Compile Include="PR_xLocalArea_CN.cs" />
     <Compile Include="PR_mClientes_CN.cs" />
     <Compile Include="PR_aCodigoEvento_CN.cs" />

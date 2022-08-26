@@ -186,8 +186,11 @@
     <Compile Include="Repositorio\PR_mEstandar_CD.cs" />
     <Compile Include="Repositorio\PR_mImpresora_CD.cs" />
     <Compile Include="Repositorio\PR_mMaquina_CD.cs" />
+    <Compile Include="Repositorio\PR_mTrabajador_CD.cs" />
     <Compile Include="Repositorio\PR_mUsuarios_CD.cs" />
+    <Compile Include="Repositorio\PR_mVendedores_CD.cs" />
     <Compile Include="Repositorio\PR_xLocalArea_CD.cs" />
+    <Compile Include="Repositorio\PR_xOrdenProduccionInd_CD.cs" />
     <Compile Include="Repositorio\PR_xPedidosIndustriales_CD.cs" />
   </ItemGroup>
   <ItemGroup>

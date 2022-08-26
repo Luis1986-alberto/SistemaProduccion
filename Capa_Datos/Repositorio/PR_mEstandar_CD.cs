@@ -230,6 +230,21 @@ namespace Capa_Datos.Repositorio
             }
         }
 
+        public IEnumerable<PR_mEstandar>Buscar_PorIdCliente(Int32 idcliente)
+        {
+            try
+            {
+                using(var conexionsql = new SqlConnection(cadenaconexion))
+                {
+                    var sql = "select IdEstandar, Descripcion from PR_mEstandar where IdCliente = @id";
+                    return conexionsql.Query<PR_mEstandar>(sql, new { id = idcliente });
+                }
+            }
+            catch(Exception Ex)
+            {throw new Exception("Error al listar por IdCliente", Ex );}
+        }
+
+
     }
 }
 

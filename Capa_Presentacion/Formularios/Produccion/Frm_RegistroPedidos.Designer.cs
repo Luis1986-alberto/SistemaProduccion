@@ -46,6 +46,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nud_preciokilo = new System.Windows.Forms.NumericUpDown();
+            this.nud_preciomillar = new System.Windows.Forms.NumericUpDown();
             this.btn_Moneda = new System.Windows.Forms.Button();
             this.btn_TipoVenta = new System.Windows.Forms.Button();
             this.btn_CondicionCobranza = new System.Windows.Forms.Button();
@@ -62,10 +64,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label36 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.txt_preciomillar = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.txt_preciokilo = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.cbo_sevendepor = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -76,17 +76,17 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nud_Porcentajemerma = new System.Windows.Forms.NumericUpDown();
+            this.nud_totalKG = new System.Windows.Forms.NumericUpDown();
+            this.nud_merma = new System.Windows.Forms.NumericUpDown();
+            this.nud_ventakilos = new System.Windows.Forms.NumericUpDown();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txt_Porcentajemerma = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.txt_totalKG = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.txt_merma = new System.Windows.Forms.TextBox();
             this.txt_ventamillares = new System.Windows.Forms.TextBox();
-            this.txt_ventakilos = new System.Windows.Forms.TextBox();
             this.rb_ventamillares = new System.Windows.Forms.RadioButton();
             this.rb_ventasKilos = new System.Windows.Forms.RadioButton();
             this.dtp_fechaentrega = new System.Windows.Forms.DateTimePicker();
@@ -125,7 +125,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_IdPedidoIndustrial = new System.Windows.Forms.TextBox();
+            this.txt_IdPedido = new System.Windows.Forms.TextBox();
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.tp_Listado = new System.Windows.Forms.TabPage();
@@ -168,7 +168,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tp_Detalle.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preciokilo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preciomillar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Porcentajemerma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_totalKG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_merma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ventakilos)).BeginInit();
             this.panel4.SuspendLayout();
             this.tp_Listado.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -193,7 +199,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tp_Detalle.Controls.Add(this.panel2);
             this.tp_Detalle.Controls.Add(this.lbl_Clasificacion);
             this.tp_Detalle.Controls.Add(this.panel4);
-            this.tp_Detalle.Controls.Add(this.txt_IdPedidoIndustrial);
+            this.tp_Detalle.Controls.Add(this.txt_IdPedido);
             this.tp_Detalle.Controls.Add(this.lbl_IdAño_);
             this.tp_Detalle.Controls.Add(this.label43);
             this.tp_Detalle.Location = new System.Drawing.Point(4, 22);
@@ -233,7 +239,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_Vendedor.Location = new System.Drawing.Point(349, 1);
             this.btn_Vendedor.Name = "btn_Vendedor";
             this.btn_Vendedor.Size = new System.Drawing.Size(27, 24);
-            this.btn_Vendedor.TabIndex = 138;
+            this.btn_Vendedor.TabIndex = 32;
             this.btn_Vendedor.Text = "...";
             this.btn_Vendedor.UseVisualStyleBackColor = false;
             this.btn_Vendedor.Click += new System.EventHandler(this.btn_Vendedor_Click);
@@ -246,9 +252,10 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_CondicionProceso.Location = new System.Drawing.Point(349, 160);
             this.btn_CondicionProceso.Name = "btn_CondicionProceso";
             this.btn_CondicionProceso.Size = new System.Drawing.Size(27, 24);
-            this.btn_CondicionProceso.TabIndex = 137;
+            this.btn_CondicionProceso.TabIndex = 36;
             this.btn_CondicionProceso.Text = "...";
             this.btn_CondicionProceso.UseVisualStyleBackColor = false;
+            this.btn_CondicionProceso.Click += new System.EventHandler(this.btn_CondicionProceso_Click);
             // 
             // cbo_condicionproceso
             // 
@@ -258,7 +265,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_condicionproceso.Location = new System.Drawing.Point(151, 163);
             this.cbo_condicionproceso.Name = "cbo_condicionproceso";
             this.cbo_condicionproceso.Size = new System.Drawing.Size(192, 21);
-            this.cbo_condicionproceso.TabIndex = 136;
+            this.cbo_condicionproceso.TabIndex = 35;
             this.cbo_condicionproceso.ValueMember = "IdCondicionProceso";
             // 
             // label41
@@ -291,7 +298,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_observacionpedido.Multiline = true;
             this.txt_observacionpedido.Name = "txt_observacionpedido";
             this.txt_observacionpedido.Size = new System.Drawing.Size(368, 98);
-            this.txt_observacionpedido.TabIndex = 133;
+            this.txt_observacionpedido.TabIndex = 37;
             // 
             // label39
             // 
@@ -323,7 +330,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_gastosincluidos.Location = new System.Drawing.Point(129, 35);
             this.chk_gastosincluidos.Name = "chk_gastosincluidos";
             this.chk_gastosincluidos.Size = new System.Drawing.Size(104, 17);
-            this.chk_gastosincluidos.TabIndex = 98;
+            this.chk_gastosincluidos.TabIndex = 34;
             this.chk_gastosincluidos.Text = "Gastos Incluidos";
             this.chk_gastosincluidos.UseVisualStyleBackColor = true;
             // 
@@ -334,7 +341,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_comisionventa.Location = new System.Drawing.Point(9, 36);
             this.chk_comisionventa.Name = "chk_comisionventa";
             this.chk_comisionventa.Size = new System.Drawing.Size(99, 17);
-            this.chk_comisionventa.TabIndex = 97;
+            this.chk_comisionventa.TabIndex = 33;
             this.chk_comisionventa.Text = "Comision Venta";
             this.chk_comisionventa.UseVisualStyleBackColor = true;
             // 
@@ -345,7 +352,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_vendedor.Location = new System.Drawing.Point(151, 4);
             this.cbo_vendedor.Name = "cbo_vendedor";
             this.cbo_vendedor.Size = new System.Drawing.Size(192, 21);
-            this.cbo_vendedor.TabIndex = 96;
+            this.cbo_vendedor.TabIndex = 31;
             // 
             // label12
             // 
@@ -373,6 +380,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.Controls.Add(this.nud_preciokilo);
+            this.panel3.Controls.Add(this.nud_preciomillar);
             this.panel3.Controls.Add(this.btn_Moneda);
             this.panel3.Controls.Add(this.btn_TipoVenta);
             this.panel3.Controls.Add(this.btn_CondicionCobranza);
@@ -389,10 +398,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.label33);
             this.panel3.Controls.Add(this.label34);
-            this.panel3.Controls.Add(this.txt_preciomillar);
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.txt_preciokilo);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.cbo_sevendepor);
             this.panel3.Controls.Add(this.label30);
@@ -407,6 +414,32 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.Size = new System.Drawing.Size(370, 323);
             this.panel3.TabIndex = 88;
             // 
+            // nud_preciokilo
+            // 
+            this.nud_preciokilo.DecimalPlaces = 4;
+            this.nud_preciokilo.Location = new System.Drawing.Point(122, 111);
+            this.nud_preciokilo.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_preciokilo.Name = "nud_preciokilo";
+            this.nud_preciokilo.Size = new System.Drawing.Size(73, 20);
+            this.nud_preciokilo.TabIndex = 26;
+            // 
+            // nud_preciomillar
+            // 
+            this.nud_preciomillar.DecimalPlaces = 4;
+            this.nud_preciomillar.Location = new System.Drawing.Point(122, 137);
+            this.nud_preciomillar.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_preciomillar.Name = "nud_preciomillar";
+            this.nud_preciomillar.Size = new System.Drawing.Size(73, 20);
+            this.nud_preciomillar.TabIndex = 27;
+            // 
             // btn_Moneda
             // 
             this.btn_Moneda.BackColor = System.Drawing.Color.Transparent;
@@ -415,7 +448,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_Moneda.Location = new System.Drawing.Point(332, 160);
             this.btn_Moneda.Name = "btn_Moneda";
             this.btn_Moneda.Size = new System.Drawing.Size(27, 24);
-            this.btn_Moneda.TabIndex = 138;
+            this.btn_Moneda.TabIndex = 29;
             this.btn_Moneda.Text = "...";
             this.btn_Moneda.UseVisualStyleBackColor = false;
             this.btn_Moneda.Click += new System.EventHandler(this.btn_Moneda_Click);
@@ -428,7 +461,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_TipoVenta.Location = new System.Drawing.Point(332, 3);
             this.btn_TipoVenta.Name = "btn_TipoVenta";
             this.btn_TipoVenta.Size = new System.Drawing.Size(27, 24);
-            this.btn_TipoVenta.TabIndex = 137;
+            this.btn_TipoVenta.TabIndex = 19;
             this.btn_TipoVenta.Text = "...";
             this.btn_TipoVenta.UseVisualStyleBackColor = false;
             this.btn_TipoVenta.Click += new System.EventHandler(this.btn_TipoVenta_Click);
@@ -441,7 +474,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_CondicionCobranza.Location = new System.Drawing.Point(332, 29);
             this.btn_CondicionCobranza.Name = "btn_CondicionCobranza";
             this.btn_CondicionCobranza.Size = new System.Drawing.Size(27, 24);
-            this.btn_CondicionCobranza.TabIndex = 136;
+            this.btn_CondicionCobranza.TabIndex = 21;
             this.btn_CondicionCobranza.Text = "...";
             this.btn_CondicionCobranza.UseVisualStyleBackColor = false;
             this.btn_CondicionCobranza.Click += new System.EventHandler(this.btn_CondicionCobranza_Click);
@@ -454,7 +487,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_FacturadoPor.Location = new System.Drawing.Point(332, 58);
             this.btn_FacturadoPor.Name = "btn_FacturadoPor";
             this.btn_FacturadoPor.Size = new System.Drawing.Size(27, 24);
-            this.btn_FacturadoPor.TabIndex = 135;
+            this.btn_FacturadoPor.TabIndex = 23;
             this.btn_FacturadoPor.Text = "...";
             this.btn_FacturadoPor.UseVisualStyleBackColor = false;
             this.btn_FacturadoPor.Click += new System.EventHandler(this.btn_FacturadoPor_Click);
@@ -467,7 +500,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_SeVendePor.Location = new System.Drawing.Point(332, 84);
             this.btn_SeVendePor.Name = "btn_SeVendePor";
             this.btn_SeVendePor.Size = new System.Drawing.Size(27, 24);
-            this.btn_SeVendePor.TabIndex = 134;
+            this.btn_SeVendePor.TabIndex = 25;
             this.btn_SeVendePor.Text = "...";
             this.btn_SeVendePor.UseVisualStyleBackColor = false;
             this.btn_SeVendePor.Click += new System.EventHandler(this.btn_SeVendePor_Click);
@@ -479,7 +512,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_condicioncobranza.Location = new System.Drawing.Point(122, 31);
             this.cbo_condicioncobranza.Name = "cbo_condicioncobranza";
             this.cbo_condicioncobranza.Size = new System.Drawing.Size(208, 21);
-            this.cbo_condicioncobranza.TabIndex = 133;
+            this.cbo_condicioncobranza.TabIndex = 20;
             this.cbo_condicioncobranza.ValueMember = "IdCondicionCobranza";
             // 
             // label44
@@ -512,7 +545,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_notaventa.Multiline = true;
             this.txt_notaventa.Name = "txt_notaventa";
             this.txt_notaventa.Size = new System.Drawing.Size(351, 98);
-            this.txt_notaventa.TabIndex = 130;
+            this.txt_notaventa.TabIndex = 30;
+            this.txt_notaventa.TextChanged += new System.EventHandler(this.txt_notaventa_TextChanged);
             // 
             // label37
             // 
@@ -556,7 +590,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_tipomoneda.Location = new System.Drawing.Point(122, 163);
             this.cbo_tipomoneda.Name = "cbo_tipomoneda";
             this.cbo_tipomoneda.Size = new System.Drawing.Size(208, 21);
-            this.cbo_tipomoneda.TabIndex = 126;
+            this.cbo_tipomoneda.TabIndex = 28;
             this.cbo_tipomoneda.ValueMember = "IdTipoMoneda";
             // 
             // label36
@@ -594,14 +628,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label34.TabIndex = 123;
             this.label34.Text = ":";
             // 
-            // txt_preciomillar
-            // 
-            this.txt_preciomillar.Enabled = false;
-            this.txt_preciomillar.Location = new System.Drawing.Point(122, 137);
-            this.txt_preciomillar.Name = "txt_preciomillar";
-            this.txt_preciomillar.Size = new System.Drawing.Size(74, 20);
-            this.txt_preciomillar.TabIndex = 122;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -619,19 +645,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(105, 110);
+            this.label32.Location = new System.Drawing.Point(104, 114);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(10, 13);
             this.label32.TabIndex = 120;
             this.label32.Text = ":";
-            // 
-            // txt_preciokilo
-            // 
-            this.txt_preciokilo.Enabled = false;
-            this.txt_preciokilo.Location = new System.Drawing.Point(122, 111);
-            this.txt_preciokilo.Name = "txt_preciokilo";
-            this.txt_preciokilo.Size = new System.Drawing.Size(73, 20);
-            this.txt_preciokilo.TabIndex = 119;
             // 
             // label29
             // 
@@ -652,7 +670,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_sevendepor.Location = new System.Drawing.Point(122, 85);
             this.cbo_sevendepor.Name = "cbo_sevendepor";
             this.cbo_sevendepor.Size = new System.Drawing.Size(208, 21);
-            this.cbo_sevendepor.TabIndex = 101;
+            this.cbo_sevendepor.TabIndex = 24;
             this.cbo_sevendepor.ValueMember = "IdSevendePor";
             // 
             // label30
@@ -686,7 +704,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_facturadopor.Location = new System.Drawing.Point(122, 59);
             this.cbo_facturadopor.Name = "cbo_facturadopor";
             this.cbo_facturadopor.Size = new System.Drawing.Size(208, 21);
-            this.cbo_facturadopor.TabIndex = 98;
+            this.cbo_facturadopor.TabIndex = 22;
             this.cbo_facturadopor.ValueMember = "IdEmpresa";
             // 
             // label26
@@ -706,10 +724,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_tipoventa.DisplayMember = "TipoVenta";
             this.cbo_tipoventa.Enabled = false;
             this.cbo_tipoventa.FormattingEnabled = true;
+            this.cbo_tipoventa.ItemHeight = 13;
             this.cbo_tipoventa.Location = new System.Drawing.Point(122, 5);
             this.cbo_tipoventa.Name = "cbo_tipoventa";
             this.cbo_tipoventa.Size = new System.Drawing.Size(208, 21);
-            this.cbo_tipoventa.TabIndex = 96;
+            this.cbo_tipoventa.TabIndex = 18;
             this.cbo_tipoventa.ValueMember = "IdTipoVenta";
             // 
             // label23
@@ -738,17 +757,17 @@ namespace Capa_Presentacion.Formularios.Produccion
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.Controls.Add(this.nud_Porcentajemerma);
+            this.panel2.Controls.Add(this.nud_totalKG);
+            this.panel2.Controls.Add(this.nud_merma);
+            this.panel2.Controls.Add(this.nud_ventakilos);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.txt_Porcentajemerma);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.txt_totalKG);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.txt_merma);
             this.panel2.Controls.Add(this.txt_ventamillares);
-            this.panel2.Controls.Add(this.txt_ventakilos);
             this.panel2.Controls.Add(this.rb_ventamillares);
             this.panel2.Controls.Add(this.rb_ventasKilos);
             this.panel2.Controls.Add(this.dtp_fechaentrega);
@@ -779,6 +798,52 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel2.Size = new System.Drawing.Size(370, 323);
             this.panel2.TabIndex = 87;
             // 
+            // nud_Porcentajemerma
+            // 
+            this.nud_Porcentajemerma.Location = new System.Drawing.Point(302, 252);
+            this.nud_Porcentajemerma.Name = "nud_Porcentajemerma";
+            this.nud_Porcentajemerma.Size = new System.Drawing.Size(57, 20);
+            this.nud_Porcentajemerma.TabIndex = 16;
+            // 
+            // nud_totalKG
+            // 
+            this.nud_totalKG.DecimalPlaces = 4;
+            this.nud_totalKG.Location = new System.Drawing.Point(126, 278);
+            this.nud_totalKG.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_totalKG.Name = "nud_totalKG";
+            this.nud_totalKG.Size = new System.Drawing.Size(73, 20);
+            this.nud_totalKG.TabIndex = 17;
+            // 
+            // nud_merma
+            // 
+            this.nud_merma.DecimalPlaces = 4;
+            this.nud_merma.Location = new System.Drawing.Point(126, 252);
+            this.nud_merma.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_merma.Name = "nud_merma";
+            this.nud_merma.Size = new System.Drawing.Size(73, 20);
+            this.nud_merma.TabIndex = 15;
+            // 
+            // nud_ventakilos
+            // 
+            this.nud_ventakilos.DecimalPlaces = 4;
+            this.nud_ventakilos.Location = new System.Drawing.Point(126, 226);
+            this.nud_ventakilos.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_ventakilos.Name = "nud_ventakilos";
+            this.nud_ventakilos.Size = new System.Drawing.Size(73, 20);
+            this.nud_ventakilos.TabIndex = 12;
+            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -801,15 +866,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label25.Size = new System.Drawing.Size(53, 13);
             this.label25.TabIndex = 123;
             this.label25.Text = "%  Merma";
-            // 
-            // txt_Porcentajemerma
-            // 
-            this.txt_Porcentajemerma.Enabled = false;
-            this.txt_Porcentajemerma.Location = new System.Drawing.Point(302, 252);
-            this.txt_Porcentajemerma.Name = "txt_Porcentajemerma";
-            this.txt_Porcentajemerma.Size = new System.Drawing.Size(57, 20);
-            this.txt_Porcentajemerma.TabIndex = 122;
-            this.txt_Porcentajemerma.Text = "0.00";
             // 
             // label21
             // 
@@ -834,15 +890,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label24.TabIndex = 120;
             this.label24.Text = ":";
             // 
-            // txt_totalKG
-            // 
-            this.txt_totalKG.Enabled = false;
-            this.txt_totalKG.Location = new System.Drawing.Point(124, 278);
-            this.txt_totalKG.Name = "txt_totalKG";
-            this.txt_totalKG.Size = new System.Drawing.Size(74, 20);
-            this.txt_totalKG.TabIndex = 119;
-            this.txt_totalKG.Text = "0.00";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -866,31 +913,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label20.TabIndex = 117;
             this.label20.Text = ":";
             // 
-            // txt_merma
-            // 
-            this.txt_merma.Enabled = false;
-            this.txt_merma.Location = new System.Drawing.Point(124, 252);
-            this.txt_merma.Name = "txt_merma";
-            this.txt_merma.Size = new System.Drawing.Size(74, 20);
-            this.txt_merma.TabIndex = 116;
-            this.txt_merma.Text = "0.00";
-            // 
             // txt_ventamillares
             // 
             this.txt_ventamillares.Enabled = false;
             this.txt_ventamillares.Location = new System.Drawing.Point(302, 226);
             this.txt_ventamillares.Name = "txt_ventamillares";
-            this.txt_ventamillares.Size = new System.Drawing.Size(65, 20);
-            this.txt_ventamillares.TabIndex = 115;
-            // 
-            // txt_ventakilos
-            // 
-            this.txt_ventakilos.Enabled = false;
-            this.txt_ventakilos.Location = new System.Drawing.Point(124, 225);
-            this.txt_ventakilos.Name = "txt_ventakilos";
-            this.txt_ventakilos.Size = new System.Drawing.Size(74, 20);
-            this.txt_ventakilos.TabIndex = 114;
-            this.txt_ventakilos.Text = "0.00";
+            this.txt_ventamillares.Size = new System.Drawing.Size(57, 20);
+            this.txt_ventamillares.TabIndex = 14;
             // 
             // rb_ventamillares
             // 
@@ -899,7 +928,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.rb_ventamillares.Location = new System.Drawing.Point(205, 226);
             this.rb_ventamillares.Name = "rb_ventamillares";
             this.rb_ventamillares.Size = new System.Drawing.Size(91, 17);
-            this.rb_ventamillares.TabIndex = 113;
+            this.rb_ventamillares.TabIndex = 13;
             this.rb_ventamillares.TabStop = true;
             this.rb_ventamillares.Text = "Venta Millares";
             this.rb_ventamillares.UseVisualStyleBackColor = true;
@@ -911,7 +940,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.rb_ventasKilos.Location = new System.Drawing.Point(9, 226);
             this.rb_ventasKilos.Name = "rb_ventasKilos";
             this.rb_ventasKilos.Size = new System.Drawing.Size(81, 17);
-            this.rb_ventasKilos.TabIndex = 112;
+            this.rb_ventasKilos.TabIndex = 11;
             this.rb_ventasKilos.TabStop = true;
             this.rb_ventasKilos.Text = " Venta Kilos";
             this.rb_ventasKilos.UseVisualStyleBackColor = true;
@@ -922,7 +951,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dtp_fechaentrega.Location = new System.Drawing.Point(149, 140);
             this.dtp_fechaentrega.Name = "dtp_fechaentrega";
             this.dtp_fechaentrega.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fechaentrega.TabIndex = 104;
+            this.dtp_fechaentrega.TabIndex = 6;
             // 
             // label17
             // 
@@ -953,7 +982,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pedidogeneral.Location = new System.Drawing.Point(149, 5);
             this.txt_pedidogeneral.Name = "txt_pedidogeneral";
             this.txt_pedidogeneral.Size = new System.Drawing.Size(141, 20);
-            this.txt_pedidogeneral.TabIndex = 101;
+            this.txt_pedidogeneral.TabIndex = 1;
             // 
             // label15
             // 
@@ -985,7 +1014,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_destararcorte.Location = new System.Drawing.Point(295, 193);
             this.chk_destararcorte.Name = "chk_destararcorte";
             this.chk_destararcorte.Size = new System.Drawing.Size(54, 17);
-            this.chk_destararcorte.TabIndex = 98;
+            this.chk_destararcorte.TabIndex = 10;
             this.chk_destararcorte.Text = " Corte";
             this.chk_destararcorte.UseVisualStyleBackColor = true;
             // 
@@ -996,7 +1025,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_destararlaminado.Location = new System.Drawing.Point(195, 193);
             this.chk_destararlaminado.Name = "chk_destararlaminado";
             this.chk_destararlaminado.Size = new System.Drawing.Size(75, 17);
-            this.chk_destararlaminado.TabIndex = 97;
+            this.chk_destararlaminado.TabIndex = 9;
             this.chk_destararlaminado.Text = " Laminado";
             this.chk_destararlaminado.UseVisualStyleBackColor = true;
             // 
@@ -1007,7 +1036,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_destararimpresion.Location = new System.Drawing.Point(99, 193);
             this.chk_destararimpresion.Name = "chk_destararimpresion";
             this.chk_destararimpresion.Size = new System.Drawing.Size(74, 17);
-            this.chk_destararimpresion.TabIndex = 96;
+            this.chk_destararimpresion.TabIndex = 8;
             this.chk_destararimpresion.Text = " Impresion";
             this.chk_destararimpresion.UseVisualStyleBackColor = true;
             // 
@@ -1018,7 +1047,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_destararextrusion.Location = new System.Drawing.Point(9, 193);
             this.chk_destararextrusion.Name = "chk_destararextrusion";
             this.chk_destararextrusion.Size = new System.Drawing.Size(72, 17);
-            this.chk_destararextrusion.TabIndex = 95;
+            this.chk_destararextrusion.TabIndex = 7;
             this.chk_destararextrusion.Text = " Extrusion";
             this.chk_destararextrusion.UseVisualStyleBackColor = true;
             // 
@@ -1040,7 +1069,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dtp_fechapedido.Location = new System.Drawing.Point(149, 114);
             this.dtp_fechapedido.Name = "dtp_fechapedido";
             this.dtp_fechapedido.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fechapedido.TabIndex = 92;
+            this.dtp_fechapedido.TabIndex = 5;
             // 
             // label10
             // 
@@ -1071,7 +1100,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dtp_fechaordencompra.Location = new System.Drawing.Point(149, 85);
             this.dtp_fechaordencompra.Name = "dtp_fechaordencompra";
             this.dtp_fechaordencompra.Size = new System.Drawing.Size(200, 20);
-            this.dtp_fechaordencompra.TabIndex = 89;
+            this.dtp_fechaordencompra.TabIndex = 4;
             // 
             // label8
             // 
@@ -1102,7 +1131,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_ordencompra.Location = new System.Drawing.Point(149, 59);
             this.txt_ordencompra.Name = "txt_ordencompra";
             this.txt_ordencompra.Size = new System.Drawing.Size(141, 20);
-            this.txt_ordencompra.TabIndex = 86;
+            this.txt_ordencompra.TabIndex = 3;
             // 
             // label6
             // 
@@ -1133,7 +1162,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_numeropedido.Location = new System.Drawing.Point(149, 33);
             this.txt_numeropedido.Name = "txt_numeropedido";
             this.txt_numeropedido.Size = new System.Drawing.Size(141, 20);
-            this.txt_numeropedido.TabIndex = 83;
+            this.txt_numeropedido.TabIndex = 2;
             // 
             // label3
             // 
@@ -1198,21 +1227,21 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cmd_VerEstandar.Location = new System.Drawing.Point(990, 11);
             this.cmd_VerEstandar.Name = "cmd_VerEstandar";
             this.cmd_VerEstandar.Size = new System.Drawing.Size(100, 52);
-            this.cmd_VerEstandar.TabIndex = 84;
+            this.cmd_VerEstandar.TabIndex = 42;
             this.cmd_VerEstandar.Text = "Ver Estandar";
             this.cmd_VerEstandar.UseVisualStyleBackColor = false;
             this.cmd_VerEstandar.Click += new System.EventHandler(this.cmd_VerEstandar_Click);
             // 
             // cbo_Estandar
             // 
-            this.cbo_Estandar.DisplayMember = "Razon_Social";
+            this.cbo_Estandar.DisplayMember = "Descripcion";
             this.cbo_Estandar.Enabled = false;
             this.cbo_Estandar.FormattingEnabled = true;
             this.cbo_Estandar.Location = new System.Drawing.Point(123, 42);
             this.cbo_Estandar.Name = "cbo_Estandar";
             this.cbo_Estandar.Size = new System.Drawing.Size(861, 21);
-            this.cbo_Estandar.TabIndex = 83;
-            this.cbo_Estandar.ValueMember = "IdCliente";
+            this.cbo_Estandar.TabIndex = 41;
+            this.cbo_Estandar.ValueMember = "IdEstandar";
             // 
             // Cbo_Cliente
             // 
@@ -1222,8 +1251,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Cbo_Cliente.Location = new System.Drawing.Point(123, 9);
             this.Cbo_Cliente.Name = "Cbo_Cliente";
             this.Cbo_Cliente.Size = new System.Drawing.Size(582, 21);
-            this.Cbo_Cliente.TabIndex = 10;
+            this.Cbo_Cliente.TabIndex = 38;
             this.Cbo_Cliente.ValueMember = "IdCliente";
+            this.Cbo_Cliente.SelectedIndexChanged += new System.EventHandler(this.Cbo_Cliente_SelectedIndexChanged);
             // 
             // label66
             // 
@@ -1266,7 +1296,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cmd_Clientes.Location = new System.Drawing.Point(707, 9);
             this.cmd_Clientes.Name = "cmd_Clientes";
             this.cmd_Clientes.Size = new System.Drawing.Size(27, 24);
-            this.cmd_Clientes.TabIndex = 79;
+            this.cmd_Clientes.TabIndex = 39;
             this.cmd_Clientes.Text = "...";
             this.cmd_Clientes.UseVisualStyleBackColor = false;
             this.cmd_Clientes.Click += new System.EventHandler(this.cmd_Clientes_Click);
@@ -1277,7 +1307,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_CodigoEstandar.Location = new System.Drawing.Point(847, 11);
             this.txt_CodigoEstandar.Name = "txt_CodigoEstandar";
             this.txt_CodigoEstandar.Size = new System.Drawing.Size(137, 20);
-            this.txt_CodigoEstandar.TabIndex = 12;
+            this.txt_CodigoEstandar.TabIndex = 40;
             // 
             // label4
             // 
@@ -1315,15 +1345,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label2.TabIndex = 73;
             this.label2.Text = "Descripción";
             // 
-            // txt_IdPedidoIndustrial
+            // txt_IdPedido
             // 
-            this.txt_IdPedidoIndustrial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.txt_IdPedidoIndustrial.Location = new System.Drawing.Point(1045, 6);
-            this.txt_IdPedidoIndustrial.Name = "txt_IdPedidoIndustrial";
-            this.txt_IdPedidoIndustrial.ReadOnly = true;
-            this.txt_IdPedidoIndustrial.Size = new System.Drawing.Size(86, 20);
-            this.txt_IdPedidoIndustrial.TabIndex = 14;
-            this.txt_IdPedidoIndustrial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_IdPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.txt_IdPedido.Location = new System.Drawing.Point(1045, 6);
+            this.txt_IdPedido.Name = "txt_IdPedido";
+            this.txt_IdPedido.ReadOnly = true;
+            this.txt_IdPedido.Size = new System.Drawing.Size(86, 20);
+            this.txt_IdPedido.TabIndex = 14;
+            this.txt_IdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_IdAño_
             // 
@@ -1431,6 +1461,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // dgv_mnt
             // 
+            this.dgv_mnt.AllowUserToAddRows = false;
             this.dgv_mnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdNumeroPedido,
@@ -1546,6 +1577,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Modificar.Text = "&Modificar";
             this.tls_Modificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Modificar.ToolTipText = "Modificar datos";
+            this.tls_Modificar.Click += new System.EventHandler(this.tls_Modificar_Click);
             // 
             // tls_Eliminar
             // 
@@ -1572,6 +1604,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Grabar.Text = "&Grabar";
             this.tls_Grabar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Grabar.ToolTipText = "Grabar datos";
+            this.tls_Grabar.Click += new System.EventHandler(this.tls_Grabar_Click);
             // 
             // tls_Deshacer
             // 
@@ -1717,8 +1750,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preciokilo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_preciomillar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Porcentajemerma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_totalKG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_merma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_ventakilos)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tp_Listado.ResumeLayout(false);
@@ -1765,7 +1804,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.CheckBox Chk_FiltroRango;
         private System.Windows.Forms.CheckBox chk_FiltroCliente;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txt_IdPedidoIndustrial;
+        private System.Windows.Forms.TextBox txt_IdPedido;
         private System.Windows.Forms.Label lbl_IdAño_;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbo_Estandar;
@@ -1823,23 +1862,17 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txt_Porcentajemerma;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txt_totalKG;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txt_merma;
         private System.Windows.Forms.TextBox txt_ventamillares;
-        private System.Windows.Forms.TextBox txt_ventakilos;
         private System.Windows.Forms.RadioButton rb_ventamillares;
         private System.Windows.Forms.RadioButton rb_ventasKilos;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txt_preciomillar;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox txt_preciokilo;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox cbo_sevendepor;
         private System.Windows.Forms.Label label30;
@@ -1869,5 +1902,11 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Button btn_SeVendePor;
         private System.Windows.Forms.Button btn_Vendedor;
         private System.Windows.Forms.Button btn_CondicionProceso;
+        private System.Windows.Forms.NumericUpDown nud_preciokilo;
+        private System.Windows.Forms.NumericUpDown nud_preciomillar;
+        private System.Windows.Forms.NumericUpDown nud_totalKG;
+        private System.Windows.Forms.NumericUpDown nud_merma;
+        private System.Windows.Forms.NumericUpDown nud_ventakilos;
+        private System.Windows.Forms.NumericUpDown nud_Porcentajemerma;
     }
 }

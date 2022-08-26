@@ -159,6 +159,12 @@
     <Compile Include="Formularios\Materia Prima\Frm_PropiedadesMaterial.Designer.cs">
       <DependentUpon>Frm_PropiedadesMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Consultaestandart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Frm_Consultaestandart.Designer.cs">
+      <DependentUpon>Frm_Consultaestandart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -621,6 +627,12 @@
     <Compile Include="Formularios\MDIFrm_CorePrincipal.Designer.cs">
       <DependentUpon>MDIFrm_CorePrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Produccion\Registro_Vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion\Registro_Vendedor.Designer.cs">
+      <DependentUpon>Registro_Vendedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -667,6 +679,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Materia Prima\Frm_PropiedadesMaterial.resx">
       <DependentUpon>Frm_PropiedadesMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion\Frm_Consultaestandart.resx">
+      <DependentUpon>Frm_Consultaestandart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion\Frm_ImpresoraVSRodillo.resx">
       <DependentUpon>Frm_ImpresoraVSRodillo.cs</DependentUpon>
