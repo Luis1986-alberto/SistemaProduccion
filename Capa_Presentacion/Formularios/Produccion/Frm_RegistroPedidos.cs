@@ -13,7 +13,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         DataGridViewPrinter dgr_Visor_Grilla;
         private bool bln_Nuevo, bln_Editar = false;
         private string str_Campo;
-        private List<PR_xPedidosIndustriales> lst_pedidos = new List<PR_xPedidosIndustriales>();
+        private List<PR_xPedidos> lst_pedidos = new List<PR_xPedidos>();
 
         public Frm_RegistroPedidos()
         {
@@ -44,10 +44,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             cbo_facturadopor.DataSource = PR_aEmpresa_CN._Instancia.Lista_Empresas();
             cbo_sevendepor.DataSource = PR_aSeVendePor_CN._Instancia.Lista_SeVendePor();
             cbo_tipomoneda.DataSource = PR_aTipoMoneda_CN._Instancia.Lista_TipoMoneda();
-
             cbo_condicionproceso.DataSource = PR_aCondicionProceso_CN._Instancia.Lista_CondicionProceso();
-
-            //cbo_Estandar.DataSource = PR_mEstandar_CN._Instancia.Lista_Estandares();
+            cbo_vendedor.DataSource = PR_mTrabajador_CN._Intancia.lst_FiltrarDescripciontipotrabajador("ADMIN");          
+            
         }
 
 
@@ -55,7 +54,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             lst_pedidos = PR_xPedidos_CN._Instancia.Lista_Pedidos( (chk_FiltroCliente.Checked == true) ? "1" : "0", Int32.Parse(cbo_FiltroCliente.SelectedValue.ToString()),
                                                            (Chk_FiltroRango.Checked == true) ? "1" : "0", Dtp_FechaInicial.Value, Dtp_FechaFinal.Value);
-            SortableBindingList<PR_xPedidosIndustriales> lista = new SortableBindingList<PR_xPedidosIndustriales>(lst_pedidos);
+            SortableBindingList<PR_xPedidos> lista = new SortableBindingList<PR_xPedidos>(lst_pedidos);
             dgv_mnt.AutoGenerateColumns = false;
             dgv_mnt.DataSource = lista;
         }
@@ -76,9 +75,6 @@ namespace Capa_Presentacion.Formularios.Produccion
                 chk_destararimpresion.Checked = Boolean.Parse(i.Flag_DestararBobinaImpresa);
                 chk_destararlaminado.Checked = Boolean.Parse(i.Flag_DestararBobinaLaminado);
                 chk_destararcorte.Checked = Boolean.Parse(i.Flag_DestararBobinaCorte);
-                //rb_ventasKilos.Checked = Boolean.Parse(i)
-
-
             }
         }
 
@@ -102,12 +98,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         }
 
-        private void Chk_FiltroRango_CheckedChanged(object sender, EventArgs e)
-        {
-            Dtp_FechaInicial.Enabled = Chk_FiltroRango.Checked;
-            Dtp_FechaFinal.Enabled = Chk_FiltroRango.Checked;
-        }
-
+        
         private void chk_FiltroTipoEstandar_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -122,7 +113,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             tbc_Mnt.TabPages["tp_Listado"].Enabled = false;
             HabilitarControles(true);
             Limpiar_Controles();
-            txt_IdPedido.Text = "0";
+            txt_IdNumeroPedido.Text = "0";
         }
 
         private void Estado_Toolbar(Boolean vEditarForm, Boolean vUnloadForm = true)
@@ -245,35 +236,49 @@ namespace Capa_Presentacion.Formularios.Produccion
 
         private void btn_Vendedor_Click(object sender, EventArgs e)
         {
-            
+            Frm_RegistroTrabajador trabajador = new Frm_RegistroTrabajador();
+            trabajador.ShowDialog();
+            cbo_vendedor.DataSource = PR_mTrabajador_CN._Intancia.Lista_Trabajadores("0", 0, "0", 0);
         }
 
         private void cmd_VerEstandar_Click(object sender, EventArgs e)
         {
-            Frm_Consultaestandart consestandart = new Frm_Consultaestandart();
-            consestandart.idestandart = Int32.Parse(cbo_Estandar.SelectedValue.ToString());
-            //consestandart.MdiParent = this;
+            Frm_ConsEstandart consestandart = new Frm_ConsEstandart();
+            consestandart.idEstandart = Int32.Parse(cbo_Estandar.SelectedValue.ToString());
             consestandart.ShowDialog();
         }
 
         private void Cbo_Cliente_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            cbo_Estandar.DataSource = PR_mEstandar_CN._Instancia.Filtrar_PorIdCliente(Int32.Parse(Cbo_Cliente.SelectedValue.ToString()));
-        }
+        {cbo_Estandar.DataSource = PR_mEstandar_CN._Instancia.Filtrar_PorIdCliente(Int32.Parse(Cbo_Cliente.SelectedValue.ToString()));}
 
-        private void txt_notaventa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void tls_Grabar_Click(object sender, EventArgs e)
         {
+            var datos = new PR_xPedidos
+            {
+                IdNumeroPedido = Int32.Parse(txt_IdNumeroPedido.Text),
+                Pedido_General = txt_pedidogeneral.Text,
+                Numero_Pedido =txt_numeropedido.Text,
+                Numero_Orden_Compra = txt_ordencompra.Text,
+                Fecha_Orden_Compra = dtp_fechaordencompra.Value,
+                Fecha_Pedido = dtp_fechapedido.Value,
+                Fecha_Entrega = dtp_fechaentrega.Value,
+                Flag_DestararBobinaExtruida = (chk_destararextrusion.Checked == true)?"1":"0",
+                Flag_DestararBobinaCorte = (chk_destararcorte.Checked == true)?"1":"0",
+                Flag_DestararBobinaImpresa = (chk_destararimpresion.Checked == true)?"1":"0",
+                Flag_DestararBobinaLaminado = (chk_destararlaminado.Checked == true)?"1":"0",
+                IdSeVendePor = byte.Parse(cbo_sevendepor.SelectedValue.ToString()),
 
+
+
+            };
         }
 
         private void tls_Modificar_Click(object sender, EventArgs e)
         {
             
+            HabilitarControles(true);
 
         }
 
@@ -282,6 +287,28 @@ namespace Capa_Presentacion.Formularios.Produccion
             Frm_CondicionProceso condicionproceso = new Frm_CondicionProceso();
             condicionproceso.ShowDialog();
             cbo_condicionproceso.DataSource = PR_aCondicionProceso_CN._Instancia.Lista_CondicionProceso();
+        }
+
+        private void Chk_FiltroRango_CheckedChanged(object sender, EventArgs e)
+        {
+            Dtp_FechaInicial.Enabled = Chk_FiltroRango.Checked;
+            Dtp_FechaFinal.Enabled = Chk_FiltroRango.Checked;
+        }
+
+        private void chk_FiltroCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            cbo_FiltroCliente.Enabled = chk_FiltroCliente.Checked;
+        }
+
+        
+
+        private void txt_pedidogeneral_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                List<PR_xPedidos> lsta = PR_xPedidos_CN._Instancia.Buscar_PedidosIndustrial(txt_pedidogeneral.Text);
+                if (lsta.Count > 0) MessageBox.Show("Existe este NUMERO PEDIDO" + txt_pedidogeneral.Text);
+            }
         }
 
         private void Limpiarcontroles()

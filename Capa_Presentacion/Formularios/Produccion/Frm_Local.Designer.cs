@@ -135,6 +135,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);

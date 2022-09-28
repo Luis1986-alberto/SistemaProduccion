@@ -17,37 +17,41 @@ namespace Capa_Negocios
         public static PR_xPedidos_CN Instancia
         { get { return PR_xPedidos_CN._Instancia; } }
 
-        public List<PR_xPedidosIndustriales>Lista_Pedidos ( string flag_cliente, Int32 idcliente, 
+        public List<PR_xPedidos>Lista_Pedidos ( string flag_cliente, Int32 idcliente, 
                                                            string flag_rango, DateTime fecha_inicio, DateTime fecha_final)
         {
-            return PR_xPedidosIndustriales_CD._Instancia.Lista_Pedidos( flag_cliente, idcliente,flag_rango, fecha_inicio, fecha_final );
+            return PR_xPedidos_CD._Instancia.Lista_Pedidos( flag_cliente, idcliente,flag_rango, fecha_inicio, fecha_final );
         }
 
-        public IEnumerable<PR_xPedidosIndustriales> Traer_PorId(Int32 idpedido)
+        public IEnumerable<PR_xPedidos> Traer_PorId(Int32 idpedido)
         {
-            return PR_xPedidosIndustriales_CD._Instancia.TraerPorId(idpedido);
+            return PR_xPedidos_CD._Instancia.TraerPorId(idpedido);
         }
 
-        public string Agregar_Pedidos(PR_xPedidosIndustriales pedidosindustriales)
+        public string Agregar_Pedidos(PR_xPedidos pedidosindustriales)
         {
-            return PR_xPedidosIndustriales_CD._Instancia.Pedidos_Procesar(pedidosindustriales, "I");
+            return PR_xPedidos_CD._Instancia.Pedidos_Procesar(pedidosindustriales, "I");
         }
 
-        public string Actualizar_Pedidos(PR_xPedidosIndustriales pedidosindustriales)
+        public string Actualizar_Pedidos(PR_xPedidos pedidosindustriales)
         {
-            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdNumeroPedido, Operator.Eq, pedidosindustriales.IdNumeroPedido);
-            if (PR_xPedidosIndustriales_CD.Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "Existe una Orden Produccion con este Pedido ";
-            return PR_xPedidosIndustriales_CD._Instancia.Pedidos_Procesar(pedidosindustriales, "U");
+            var predicado = Predicates.Field<PR_xPedidos>(x => x.IdNumeroPedido, Operator.Eq, pedidosindustriales.IdNumeroPedido);
+            if (PR_xPedidos_CD.Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "Existe una Orden Produccion con este Pedido ";
+            return PR_xPedidos_CD._Instancia.Pedidos_Procesar(pedidosindustriales, "U");
         }
 
         public string Eliminar_Pedidos(Int32 idnumeropedido)
         {
-            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdNumeroPedido, Operator.Eq, idnumeropedido);
-            if (PR_xPedidosIndustriales_CD.Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "Existe una Orden Produccion con este Pedido ";
-            return PR_xPedidosIndustriales_CD._Instancia.Eliminar_Pedidos(idnumeropedido);
+            var predicado = Predicates.Field<PR_xPedidos>(x => x.IdNumeroPedido, Operator.Eq, idnumeropedido);
+            if (PR_xPedidos_CD.Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "Existe una Orden Produccion con este Pedido ";
+            return PR_xPedidos_CD._Instancia.Eliminar_Pedidos(idnumeropedido);
         }
 
-
+        public List<PR_xPedidos> Buscar_PedidosIndustrial(string numeropedido)
+        {
+            var lista = PR_xPedidos_CD._Instancia.Lista_Pedidos("0", 0, "0", DateTime.Now, DateTime.Now);
+            return (from pedidos in lista where pedidos.Numero_Pedido == numeropedido select pedidos).ToList();
+        }
 
 
 

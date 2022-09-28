@@ -12,7 +12,7 @@ namespace Capa_Entidades.Tablas
         public string Numero_Pedido { get; set; }
 
         public virtual PR_mEstandarLaminado PR_mEstandarLaminado { get; set; }
-        public virtual PR_xPedidosIndustriales PR_xPedidosIndustriales { get; set; }
+        public virtual PR_xPedidos PR_xPedidosIndustriales { get; set; }
 
     }
 }

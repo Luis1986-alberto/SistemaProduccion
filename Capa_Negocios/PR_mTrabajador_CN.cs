@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Capa_Negocios
 {
@@ -29,8 +30,8 @@ namespace Capa_Negocios
 
         public IEnumerable<PR_mTrabajador>Buscar_PorDNI(string dni)
         {
-            var predicado = Predicates.Field<PR_mTrabajador>(x => x.DNI, Operator.Eq, dni);
-            return PR_mTrabajador_CD._Instancia.FiltrarPorunCampo(predicado);
+            return (from trabajador in PR_mTrabajador_CD._Instancia.Lista_Trabajadores("0", 0, "0", 0).ToList()
+                    where trabajador.DNI == dni select trabajador);
         }
 
         public IEnumerable<PR_mTrabajador> Buscar_NombreApellidos(string nombres, string apaterno, string apmaterno)
@@ -40,19 +41,32 @@ namespace Capa_Negocios
                     select trabajador);
         }
 
+        public List<PR_mTrabajador>lst_FiltrarDescripciontipotrabajador(string desctipotrabajador)
+        {
+            return PR_mTrabajador_CD._Instancia.Filtrar_DescripcionTipoTrabajador(desctipotrabajador);
+        }
 
-        public string Agregar_Trabajado(PR_mTrabajador trabajador)
+        public string Agregar_Trabajado(PR_mTrabajador trabajador, PictureBox fototrabajador)
         {
             if (Buscar_PorDNI(trabajador.DNI).Count() > 0) return "EXISTE ESTE DNI REGISTRADO";
             if (Buscar_NombreApellidos(trabajador.Nombre, trabajador.Apellido_Paterno, trabajador.Apellido_Materno).Count() > 0) return "EXISTE ESTE TRABAJADOR";
-            return PR_mTrabajador_CD._Instancia.Agregar_Trabajador(trabajador);
+            return PR_mTrabajador_CD._Instancia.Agregar_Trabajador(trabajador, fototrabajador);
         }
 
-        public string Actualizar_Trabajador(PR_mTrabajador trabajador)
+        public string Actualizar_Trabajador(PR_mTrabajador trabajador, PictureBox fototrabajador)
         {
-            return PR_mTrabajador_CD._Instancia.Agregar_Trabajador(trabajador);
+            return PR_mTrabajador_CD._Instancia.Actualizar_Trabajador(trabajador, fototrabajador);
         }
 
+        public string Eliminar_Trabajador(Int32 istrabajador)
+        {
+            return PR_mTrabajador_CD._Instancia.Eliminar_Trabajador(istrabajador);
+        }
+
+        public void Descargar_FotoTrabajador(PictureBox imagen, long idtrabajador)
+        {
+            PR_mTrabajador_CD._Instancia.Descargar_Imagen(imagen, idtrabajador);
+        }
 
     }
 }

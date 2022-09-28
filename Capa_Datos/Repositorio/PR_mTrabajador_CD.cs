@@ -17,6 +17,7 @@ namespace Capa_Datos.Repositorio
     {
         public static readonly PR_mTrabajador_CD _Instancia = new PR_mTrabajador_CD();
         private Inicio principal = new Inicio();
+        private Int32 OutPutId = 0;
         private string cadenaconexion = "";
 
         private static PR_mTrabajador_CD Instancia
@@ -51,15 +52,17 @@ namespace Capa_Datos.Repositorio
                         PR_mTrabajador t = new PR_mTrabajador();
                         t.IdTrabajador = short.Parse(dr["IdTrabajador"].ToString());
                         t.Codigo_Trabajador = dr["Codigo_Trabajador"].ToString();
-                        t.Apellido_Materno = dr["Apellido_Paterno"].ToString();
-                        t.Nombre = dr["Nombres"].ToString();
+                        t.Apellido_Paterno = dr["Apellido_Paterno"].ToString();
+                        t.Apellido_Materno = dr["Apellido_Materno"].ToString();
+                        t.Nombre = dr["Nombre"].ToString();
+                        t.Nombre_Completo = dr["Nombre_Completo"].ToString();
                         t.DNI = dr["DNI"].ToString();
                         t.Telefono = dr["Telefono"].ToString();
                         t.Ruta_Imagen = dr["Ruta_Imagen"].ToString();
                         t.IdTipoTrabajador = byte.Parse(dr["IdTipoTrabajador"].ToString());
                         t.Nombre_TipoTrabajador = dr["Nombre_TipoTrabajador"].ToString();
                         t.IdEmpresa = byte.Parse(dr["IdEmpresa"].ToString());
-                        t.Nombre_Emoresa = dr["Nombre_Empresa"].ToString();
+                        t.Nombre_Empresa = dr["Nombre_Empresa"].ToString();
                         t.IdLocalArea = short.Parse(dr["IdLocalArea"].ToString());
                         t.Nombre_Area = dr["Nombre_Area"].ToString();
                         t.Nombre_Local = dr["Nombre_Local"].ToString();
@@ -97,6 +100,37 @@ namespace Capa_Datos.Repositorio
             {throw new Exception("Error al traer por Id", Ex);}
         }
 
+        public List<PR_mTrabajador>Filtrar_DescripcionTipoTrabajador(string desctipotrab)
+        {
+            List<PR_mTrabajador> Lst_Trabajadores = null;
+            try
+            {
+                using(var conexionsql = new SqlConnection(cadenaconexion))
+                {
+                    conexionsql.Open();
+                    SqlCommand cmd = new SqlCommand("select TR.IdTrabajador, 'Nombre_Completo'= TR.Apellido_Paterno + ' ' + TR.Apellido_Materno + ' ' + TR.Nombre" +
+                               " from PR_mTrabajador as TR inner join PR_aTipoTrabajador as TT on TR.IdTipoTrabajador = TT.IdTipoTrabajador " +
+                               " where TT.Nombre_TipoTrabajador LIKE '%" + desctipotrab + "%'", conexionsql);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    Lst_Trabajadores = new List<PR_mTrabajador>();
+                    
+                    while(dr.Read())
+                    {
+                        PR_mTrabajador t = new PR_mTrabajador();
+                        t.IdTrabajador = short.Parse(dr["IdTrabajador"].ToString());
+                        t.Nombre_Completo = dr["Nombre_Completo"].ToString();
+                        Lst_Trabajadores.Add(t);
+                    }
+                    conexionsql.Close();
+                    return Lst_Trabajadores;
+                }
+            }
+            catch(Exception Ex)
+            {throw new Exception("Error al listar por Descripcion TipoTrabajador", Ex);}
+        }
+
         public void Descargar_Imagen(PictureBox imagen, long idtrabajador)
         {
             using(var conexionSql = new SqlConnection(cadenaconexion))
@@ -116,64 +150,73 @@ namespace Capa_Datos.Repositorio
                     imagen.Image = System.Drawing.Bitmap.FromStream(ms);
                 }
             }
-        }
-
-        public IEnumerable<PR_mTrabajador>FiltrarPorunCampo(IPredicate predicado)
-        {
-           using(var conexionsql = new SqlConnection(cadenaconexion))
-            {
-                conexionsql.Open();
-                var result = conexionsql.GetList<PR_mTrabajador>(predicado);
-                conexionsql.Close();
-                return result;
-            }
-        }
+        }       
         
-        public string Agregar_Trabajador(PR_mTrabajador trabajador)
+        public string Agregar_Trabajador(PR_mTrabajador trabajador, PictureBox fototrabajador)
         {
+            
             try
             {
                 using(var sqlconexion = new SqlConnection(cadenaconexion))
                 {
-                    var sqlinsert = " Insert Into PR_mTrabajador (Codigo_Trabajador, Apellido_Paterno, Apellido_Materno, Nombre, DNI, Telefono, Ruta_Imagen,  " +
+                    sqlconexion.Open();
+                    SqlCommand cmd = new SqlCommand(" Insert Into PR_mTrabajador (Codigo_Trabajador, Apellido_Paterno, Apellido_Materno, Nombre, DNI, Telefono, Ruta_Imagen,  " +
                                     " IdTipoTrabajador, IdEmpresa, IdLocalArea, IdCargoTrabajador) values (@codigo_trabajador, @apellido_paterno, " +
-                                    " @apellido_materno, @nombre, @dni, @telefono, @ruta_imagen ";
-                    sqlconexion.ExecuteScalar(sqlinsert, new {
-                                                                codigo_trabajador = trabajador.Codigo_Trabajador,
-                                                                apellido_paterno = trabajador.Apellido_Paterno,
-                                                                apellido_materno = trabajador.Apellido_Materno,
-                                                                nombre = trabajador.Nombre,
-                                                                dni = trabajador.DNI,
-                                                                telefono = trabajador.Telefono,
-                                                                ruta_imagen = trabajador.Ruta_Imagen
-                                                            });
-                    return "PROCESADO";
+                                    " @apellido_materno, @nombre, @dni, @telefono, @ruta_imagen, @idtipotrabajador, @idempresa, @idlocalarea, @idcargotrabajador) select scope_identity()", sqlconexion);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@codigo_trabajador", trabajador.Codigo_Trabajador);
+                    cmd.Parameters.AddWithValue("@apellido_paterno", trabajador.Apellido_Paterno);
+                    cmd.Parameters.AddWithValue("@apellido_materno", trabajador.Apellido_Materno);
+                    cmd.Parameters.AddWithValue("@nombre", trabajador.Nombre);
+                    cmd.Parameters.AddWithValue("@DNI", trabajador.DNI);
+                    cmd.Parameters.AddWithValue("@telefono", trabajador.Telefono);
+                    cmd.Parameters.AddWithValue("@idtipotrabajador", trabajador.IdTipoTrabajador);
+                    cmd.Parameters.AddWithValue("@idempresa", trabajador.IdEmpresa);
+                    cmd.Parameters.AddWithValue("@idlocalarea", trabajador.IdLocalArea);
+                    cmd.Parameters.AddWithValue("@idcargotrabajador", trabajador.IdCargoTrabajador);
+                    cmd.Parameters.AddWithValue("@ruta_imagen", trabajador.Ruta_Imagen);
+                    
+                     OutPutId = Int32.Parse(cmd.ExecuteScalar().ToString());                        
+                    sqlconexion.Close();                    
                 }
+                Actualizar_FotoTrabajador(OutPutId, fototrabajador);
+                return "PROCESADO";
             }
             catch(Exception ex)
             {throw new Exception ("Error al agregar un trabajador", ex);}
         }
 
-        public string Actualizar_Trabajador(PR_mTrabajador trabajador)
+        public string Actualizar_Trabajador(PR_mTrabajador trabajador, PictureBox fototrabajador)
         {
             try
             {
                 using(var sqlconexion = new SqlConnection(cadenaconexion))
                 {
-                    var sqlupdate = "Update PR_mTrabajador set Codigo_Trabajador = @codigo_trabajador, Apellido_Paterno = @apellido_paterno, Apellido_Materno = @apellido_materno " +
-                                 " Nombre = @nombre, DNI = @dni, Telefono = @Telefono, ruta_imagen = @ruta_imagen, IdTipoTrabajador = @idtipotrabajador, IdEmpresa = @idempresa, " +
-                                 " IdLocalArea = @idlocalarea, IdCargoTrabajador = @idcargotrabajador where IdTrabajador = @id ";
-                    sqlconexion.ExecuteScalar(sqlupdate, new {
-                                                                codigo_trabajador = trabajador.Codigo_Trabajador,
-                                                                apellido_paterno = trabajador.Apellido_Paterno,
-                                                                apellido_materno = trabajador.Apellido_Materno,
-                                                                nombre = trabajador.Nombre,
-                                                                dni = trabajador.DNI,
-                                                                telefono = trabajador.Telefono,
-                                                                ruta_imagen = trabajador.Ruta_Imagen
-                                                            });
-                    return "PROCESADO";
+                    sqlconexion.Open();
+                    SqlCommand cmd = new SqlCommand("Update PR_mTrabajador set Codigo_Trabajador = @codigo_trabajador, Apellido_Paterno = @apellido_paterno, " +
+                                 " Apellido_Materno = @apellido_materno, Nombre = @nombre, DNI = @dni, Telefono = @Telefono, ruta_imagen = @ruta_imagen, " +
+                                 " IdTipoTrabajador = @idtipotrabajador, IdEmpresa = @idempresa, " +
+                                 " IdLocalArea = @idlocalarea, IdCargoTrabajador = @idcargotrabajador where IdTrabajador = @id ", sqlconexion);
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.Parameters.AddWithValue("@id", trabajador.IdTrabajador);
+                    cmd.Parameters.AddWithValue("@codigo_trabajador", trabajador.Codigo_Trabajador);
+                    cmd.Parameters.AddWithValue("@apellido_paterno", trabajador.Apellido_Paterno);
+                    cmd.Parameters.AddWithValue("@apellido_materno", trabajador.Apellido_Materno);
+                    cmd.Parameters.AddWithValue("@nombre", trabajador.Nombre);
+                    cmd.Parameters.AddWithValue("@DNI", trabajador.DNI);
+                    cmd.Parameters.AddWithValue("@telefono", trabajador.Telefono);
+                    cmd.Parameters.AddWithValue("@idtipotrabajador", trabajador.IdTipoTrabajador);
+                    cmd.Parameters.AddWithValue("@idempresa", trabajador.IdEmpresa);
+                    cmd.Parameters.AddWithValue("@idlocalarea", trabajador.IdLocalArea);
+                    cmd.Parameters.AddWithValue("@idcargotrabajador", trabajador.IdCargoTrabajador);
+                    cmd.Parameters.AddWithValue("@ruta_imagen", trabajador.Ruta_Imagen);
+                    cmd.ExecuteNonQuery();
+                    sqlconexion.Close();
                 }
+                Actualizar_FotoTrabajador(trabajador.IdTrabajador, fototrabajador);
+                return "PROCESADO";
             }
             catch(Exception Ex)
             {throw new Exception("Error al Atualizar", Ex);}
@@ -185,13 +228,44 @@ namespace Capa_Datos.Repositorio
             {
                 using(var sqlconexion = new SqlConnection(cadenaconexion))
                 {
-                    var sqldelete = "delete PR_mTrabajador where IdTrabajador = @id ";
-                    sqlconexion.ExecuteScalar(sqldelete, new { id = idtrabajador });
-                    return "PROCESADO";
+                    sqlconexion.Open();
+                    SqlCommand cmd = new SqlCommand("delete PR_mTrabajador where IdTrabajador = @id ", sqlconexion);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@id", idtrabajador);
+                    cmd.ExecuteNonQuery();
+                    sqlconexion.Close();
                 }
+                return "PROCESADO";
             }
             catch(Exception Ex)
             {throw new Exception("Error al Eliminar", Ex);}
+        }
+
+        private long Actualizar_FotoTrabajador(long vidtrabajador, PictureBox Imagen)
+        {
+            try
+            {
+                using(var conexionSql = new SqlConnection(cadenaconexion))
+                {
+                    conexionSql.Open();
+
+                    if(Imagen.Image != null)
+                    {
+                        SqlCommand cmd = new SqlCommand
+                        ("Update PR_mTrabajador set Foto_Trabajador = @foto_trabajador where IdTrabajador = @Id", conexionSql);
+                        cmd.Parameters.Add("@Foto_Trabajador", SqlDbType.Image);
+                        cmd.Parameters.AddWithValue("@Id", vidtrabajador);
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                        Imagen.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        cmd.Parameters["@Foto_Trabajador"].Value = ms.GetBuffer();
+                        cmd.ExecuteNonQuery();
+                        conexionSql.Close();
+                    }
+                }
+            }
+            catch
+            { return 0; }
+            return 1;
         }
     }
 }

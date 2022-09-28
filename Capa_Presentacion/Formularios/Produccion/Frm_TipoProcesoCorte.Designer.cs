@@ -65,10 +65,10 @@ namespace Capa_Presentacion.Formularios
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
-            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdTipoProcesoCorte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_TipoProcesoCorte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -131,6 +131,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);
@@ -446,14 +447,6 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.Size = new System.Drawing.Size(873, 336);
             this.dgv_Mnt.TabIndex = 0;
             // 
-            // PrintDocument
-            // 
-            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
-            // ErrorIcono
-            // 
-            this.ErrorIcono.ContainerControl = this;
-            // 
             // IdTipoProcesoCorte
             // 
             this.IdTipoProcesoCorte.DataPropertyName = "IdTipoProcesoCorte";
@@ -475,6 +468,14 @@ namespace Capa_Presentacion.Formularios
             this.Nombre_TipoProcesoCorte.Name = "Nombre_TipoProcesoCorte";
             this.Nombre_TipoProcesoCorte.ReadOnly = true;
             this.Nombre_TipoProcesoCorte.Width = 250;
+            // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
+            // 
+            // ErrorIcono
+            // 
+            this.ErrorIcono.ContainerControl = this;
             // 
             // Frm_TipoProcesoCorte
             // 

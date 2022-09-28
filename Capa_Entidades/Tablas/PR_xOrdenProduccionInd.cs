@@ -75,7 +75,7 @@ namespace Capa_Entidades.Tablas
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PR_xLiquidacionLaminado> PR_xLiquidacionLaminado { get; set; }
         public virtual PR_xMezcladoIndustrial PR_xMezcladoIndustrial { get; set; }
-        public virtual PR_xPedidosIndustriales PR_xPedidosIndustriales { get; set; }
+        public virtual PR_xPedidos PR_xPedidosIndustriales { get; set; }
         public virtual PR_xPosicionMaquina PR_xPosicionMaquina { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PR_xProgramaCorteInd> PR_xProgramaCorteInd { get; set; }

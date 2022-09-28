@@ -125,7 +125,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_IdPedido = new System.Windows.Forms.TextBox();
+            this.txt_IdNumeroPedido = new System.Windows.Forms.TextBox();
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.tp_Listado = new System.Windows.Forms.TabPage();
@@ -199,7 +199,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tp_Detalle.Controls.Add(this.panel2);
             this.tp_Detalle.Controls.Add(this.lbl_Clasificacion);
             this.tp_Detalle.Controls.Add(this.panel4);
-            this.tp_Detalle.Controls.Add(this.txt_IdPedido);
+            this.tp_Detalle.Controls.Add(this.txt_IdNumeroPedido);
             this.tp_Detalle.Controls.Add(this.lbl_IdAño_);
             this.tp_Detalle.Controls.Add(this.label43);
             this.tp_Detalle.Location = new System.Drawing.Point(4, 22);
@@ -236,7 +236,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_Vendedor.BackColor = System.Drawing.Color.Transparent;
             this.btn_Vendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Vendedor.ForeColor = System.Drawing.Color.Black;
-            this.btn_Vendedor.Location = new System.Drawing.Point(349, 1);
+            this.btn_Vendedor.Location = new System.Drawing.Point(350, 3);
             this.btn_Vendedor.Name = "btn_Vendedor";
             this.btn_Vendedor.Size = new System.Drawing.Size(27, 24);
             this.btn_Vendedor.TabIndex = 32;
@@ -249,7 +249,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.btn_CondicionProceso.BackColor = System.Drawing.Color.Transparent;
             this.btn_CondicionProceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CondicionProceso.ForeColor = System.Drawing.Color.Black;
-            this.btn_CondicionProceso.Location = new System.Drawing.Point(349, 160);
+            this.btn_CondicionProceso.Location = new System.Drawing.Point(349, 161);
             this.btn_CondicionProceso.Name = "btn_CondicionProceso";
             this.btn_CondicionProceso.Size = new System.Drawing.Size(27, 24);
             this.btn_CondicionProceso.TabIndex = 36;
@@ -262,9 +262,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_condicionproceso.DisplayMember = "Nombre_CondicionProceso";
             this.cbo_condicionproceso.Enabled = false;
             this.cbo_condicionproceso.FormattingEnabled = true;
-            this.cbo_condicionproceso.Location = new System.Drawing.Point(151, 163);
+            this.cbo_condicionproceso.Location = new System.Drawing.Point(129, 163);
             this.cbo_condicionproceso.Name = "cbo_condicionproceso";
-            this.cbo_condicionproceso.Size = new System.Drawing.Size(192, 21);
+            this.cbo_condicionproceso.Size = new System.Drawing.Size(222, 21);
             this.cbo_condicionproceso.TabIndex = 35;
             this.cbo_condicionproceso.ValueMember = "IdCondicionProceso";
             // 
@@ -285,7 +285,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(126, 166);
+            this.label42.Location = new System.Drawing.Point(110, 166);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(10, 13);
             this.label42.TabIndex = 134;
@@ -305,7 +305,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(126, 197);
+            this.label39.Location = new System.Drawing.Point(110, 197);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(10, 13);
             this.label39.TabIndex = 132;
@@ -319,9 +319,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label40.ForeColor = System.Drawing.Color.Black;
             this.label40.Location = new System.Drawing.Point(6, 197);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(114, 13);
+            this.label40.Size = new System.Drawing.Size(81, 13);
             this.label40.TabIndex = 131;
-            this.label40.Text = "Observaciones Pedido";
+            this.label40.Text = "Observaciones ";
             // 
             // chk_gastosincluidos
             // 
@@ -347,12 +347,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             // cbo_vendedor
             // 
+            this.cbo_vendedor.DisplayMember = "Nombre_Completo";
             this.cbo_vendedor.Enabled = false;
             this.cbo_vendedor.FormattingEnabled = true;
-            this.cbo_vendedor.Location = new System.Drawing.Point(151, 4);
+            this.cbo_vendedor.Location = new System.Drawing.Point(129, 4);
             this.cbo_vendedor.Name = "cbo_vendedor";
-            this.cbo_vendedor.Size = new System.Drawing.Size(192, 21);
+            this.cbo_vendedor.Size = new System.Drawing.Size(222, 21);
             this.cbo_vendedor.TabIndex = 31;
+            this.cbo_vendedor.ValueMember = "IdTrabajador";
             // 
             // label12
             // 
@@ -371,7 +373,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(126, 8);
+            this.label14.Location = new System.Drawing.Point(110, 9);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(10, 13);
             this.label14.TabIndex = 82;
@@ -546,7 +548,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_notaventa.Name = "txt_notaventa";
             this.txt_notaventa.Size = new System.Drawing.Size(351, 98);
             this.txt_notaventa.TabIndex = 30;
-            this.txt_notaventa.TextChanged += new System.EventHandler(this.txt_notaventa_TextChanged);
             // 
             // label37
             // 
@@ -983,6 +984,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pedidogeneral.Name = "txt_pedidogeneral";
             this.txt_pedidogeneral.Size = new System.Drawing.Size(141, 20);
             this.txt_pedidogeneral.TabIndex = 1;
+            this.txt_pedidogeneral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pedidogeneral_KeyPress);
             // 
             // label15
             // 
@@ -1224,9 +1226,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cmd_VerEstandar.BackColor = System.Drawing.Color.Transparent;
             this.cmd_VerEstandar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmd_VerEstandar.ForeColor = System.Drawing.Color.Black;
-            this.cmd_VerEstandar.Location = new System.Drawing.Point(990, 11);
+            this.cmd_VerEstandar.Location = new System.Drawing.Point(990, 9);
             this.cmd_VerEstandar.Name = "cmd_VerEstandar";
-            this.cmd_VerEstandar.Size = new System.Drawing.Size(100, 52);
+            this.cmd_VerEstandar.Size = new System.Drawing.Size(100, 54);
             this.cmd_VerEstandar.TabIndex = 42;
             this.cmd_VerEstandar.Text = "Ver Estandar";
             this.cmd_VerEstandar.UseVisualStyleBackColor = false;
@@ -1248,9 +1250,9 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Cbo_Cliente.DisplayMember = "Razon_Social";
             this.Cbo_Cliente.Enabled = false;
             this.Cbo_Cliente.FormattingEnabled = true;
-            this.Cbo_Cliente.Location = new System.Drawing.Point(123, 9);
+            this.Cbo_Cliente.Location = new System.Drawing.Point(123, 10);
             this.Cbo_Cliente.Name = "Cbo_Cliente";
-            this.Cbo_Cliente.Size = new System.Drawing.Size(582, 21);
+            this.Cbo_Cliente.Size = new System.Drawing.Size(584, 21);
             this.Cbo_Cliente.TabIndex = 38;
             this.Cbo_Cliente.ValueMember = "IdCliente";
             this.Cbo_Cliente.SelectedIndexChanged += new System.EventHandler(this.Cbo_Cliente_SelectedIndexChanged);
@@ -1345,15 +1347,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label2.TabIndex = 73;
             this.label2.Text = "Descripción";
             // 
-            // txt_IdPedido
+            // txt_IdNumeroPedido
             // 
-            this.txt_IdPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.txt_IdPedido.Location = new System.Drawing.Point(1045, 6);
-            this.txt_IdPedido.Name = "txt_IdPedido";
-            this.txt_IdPedido.ReadOnly = true;
-            this.txt_IdPedido.Size = new System.Drawing.Size(86, 20);
-            this.txt_IdPedido.TabIndex = 14;
-            this.txt_IdPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_IdNumeroPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.txt_IdNumeroPedido.Location = new System.Drawing.Point(1045, 6);
+            this.txt_IdNumeroPedido.Name = "txt_IdNumeroPedido";
+            this.txt_IdNumeroPedido.ReadOnly = true;
+            this.txt_IdNumeroPedido.Size = new System.Drawing.Size(86, 20);
+            this.txt_IdNumeroPedido.TabIndex = 14;
+            this.txt_IdNumeroPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_IdAño_
             // 
@@ -1448,6 +1450,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Chk_FiltroRango.TabIndex = 9;
             this.Chk_FiltroRango.Text = "Rango Fechas";
             this.Chk_FiltroRango.UseVisualStyleBackColor = true;
+            this.Chk_FiltroRango.CheckedChanged += new System.EventHandler(this.Chk_FiltroRango_CheckedChanged);
             // 
             // chk_FiltroCliente
             // 
@@ -1458,6 +1461,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroCliente.TabIndex = 0;
             this.chk_FiltroCliente.Text = "Cliente";
             this.chk_FiltroCliente.UseVisualStyleBackColor = true;
+            this.chk_FiltroCliente.CheckedChanged += new System.EventHandler(this.chk_FiltroCliente_CheckedChanged);
             // 
             // dgv_mnt
             // 
@@ -1804,7 +1808,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.CheckBox Chk_FiltroRango;
         private System.Windows.Forms.CheckBox chk_FiltroCliente;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txt_IdPedido;
+        private System.Windows.Forms.TextBox txt_IdNumeroPedido;
         private System.Windows.Forms.Label lbl_IdAño_;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbo_Estandar;

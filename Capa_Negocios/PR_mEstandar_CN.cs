@@ -45,8 +45,8 @@ namespace Capa_Negocios
         {
             string rptaextr, rptaimp, rptasell = "";
 
-            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdEstandarIndustrial, Operator.Eq , mestandar.IdEstandar);
-            if( PR_xPedidosIndustriales_CD._Instancia.FiltroPorUnCampo(predicado).Count() >0) return "EXiste Pedidos generados con este estandart";
+            var predicado = Predicates.Field<PR_xPedidos>(x => x.IdEstandar, Operator.Eq , mestandar.IdEstandar);
+            if( PR_xPedidos_CD._Instancia.FiltroPorUnCampo(predicado).Count() >0) return "EXiste Pedidos generados con este estandart";
 
             PR_mEstandar_CD._Instancia.Procesar_Estandar(mestandar, "U", Foto_Producto);
             if (mextrusion != null) rptaextr = PR_mEstandarExtrusion_CD._Instancia.EstandartExtrusion_Procesar(mextrusion, mestandar.IdEstandar, "U", fotoarteextr);
@@ -58,8 +58,8 @@ namespace Capa_Negocios
 
         public String Eliminar_Estandar(Int32 IdEstandar)
         {
-            var predicado = Predicates.Field<PR_xPedidosIndustriales>(x => x.IdEstandarIndustrial, Operator.Eq, IdEstandar);
-            if (PR_xPedidosIndustriales_CD._Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "EXiste Pedidos generados con este estandart";
+            var predicado = Predicates.Field<PR_xPedidos>(x => x.IdEstandar, Operator.Eq, IdEstandar);
+            if (PR_xPedidos_CD._Instancia.FiltroPorUnCampo(predicado).Count() > 0) return "EXiste Pedidos generados con este estandart";
 
             PR_mEstandarExtrusion_CD._Instancia.Eliminar_EstandarExtrusion(IdEstandar);
             PR_mEstandarImpresion_CD._Instancia.Eliminar_EstandarImpresion(IdEstandar);

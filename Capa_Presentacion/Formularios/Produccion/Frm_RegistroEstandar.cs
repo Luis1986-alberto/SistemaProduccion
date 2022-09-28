@@ -22,8 +22,8 @@ namespace Capa_Presentacion.Formularios.Produccion
         private PR_mEstandarExtrusion mestextrusion = null;
         private PR_mEstandarImpresion mestimpresion = null;
         private PR_mEstandarSellado mestsellado = null;
-        private PR_mEstandarLaminado mestlaminado = null;
-        private PR_mEstandarCorte mestcorte = null;
+        //private PR_mEstandarLaminado mestlaminado = null;
+        //private PR_mEstandarCorte mestcorte = null;
 
         public Frm_RegistroEstandar()
         {

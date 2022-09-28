@@ -220,7 +220,7 @@
     <Compile Include="Tablas\PR_xMezcladoIndustrial.cs" />
     <Compile Include="Tablas\PR_xModeloFormulacionGeneral.cs" />
     <Compile Include="Tablas\PR_xOrdenProduccionInd.cs" />
-    <Compile Include="Tablas\PR_xPedidosIndustriales.cs" />
+    <Compile Include="Tablas\PR_xPedidos.cs" />
     <Compile Include="Tablas\PR_xPedidos_DetSustrato_LM.cs" />
     <Compile Include="Tablas\PR_xPedido_Productos.cs" />
     <Compile Include="Tablas\PR_xPosicionMaquina.cs" />

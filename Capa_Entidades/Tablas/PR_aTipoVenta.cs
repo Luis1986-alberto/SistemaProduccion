@@ -6,7 +6,7 @@ namespace Capa_Entidades.Tablas
     {
         public PR_aTipoVenta()
         {
-            this.PR_xPedidosIndustriales = new HashSet<PR_xPedidosIndustriales>();
+            this.PR_xPedidosIndustriales = new HashSet<PR_xPedidos>();
         }
 
         public byte IdTipoVenta { get; set; }
@@ -14,6 +14,6 @@ namespace Capa_Entidades.Tablas
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
 
-        public virtual ICollection<PR_xPedidosIndustriales> PR_xPedidosIndustriales { get; set; }
+        public virtual ICollection<PR_xPedidos> PR_xPedidosIndustriales { get; set; }
     }
 }

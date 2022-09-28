@@ -514,12 +514,12 @@ namespace Capa_Presentacion.Formularios
 
         private void mnu_RegistroTrabajadores_Click(object sender, EventArgs e)
         {
-            //this.mnu_RegistroTrabajadores.Enabled = false;
-            //Frm_RegistroTrabajadores regtrabajadores = new Frm_RegistroTrabajadores();
-            //regtrabajadores.MdiParent = this;
+            this.mnu_RegistroTrabajadores.Enabled = false;
+            Frm_RegistroTrabajador trabajador = new Frm_RegistroTrabajador();
+            trabajador.MdiParent = this;
 
-            //regtrabajadores.FormClosing += new FormClosingEventHandler(Frm_RegistroTrabajadores_FormClosing);
-            //regtrabajadores.Show();
+            trabajador.FormClosing += new FormClosingEventHandler(Frm_RegistroTrabajadores_FormClosing);
+            trabajador.Show();
         }
 
         private void Frm_RegistroTrabajadores_FormClosing(object sender, FormClosingEventArgs e)

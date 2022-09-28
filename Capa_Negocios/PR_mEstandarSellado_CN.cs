@@ -23,5 +23,6 @@ namespace Capa_Negocios
             PR_mEstandarSellado_CD._Instancia.Descargar_Imagen(imagen, videstandarsell);
         }
 
+
     }
 }

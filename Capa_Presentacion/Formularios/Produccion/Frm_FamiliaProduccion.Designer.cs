@@ -30,10 +30,10 @@ namespace Capa_Presentacion.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -138,6 +138,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);
@@ -500,27 +501,27 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.AllowUserToAddRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
             this.dgv_Mnt.BackgroundColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Mnt.ColumnHeadersHeight = 35;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdFamiliaProd,
             this.Descripcion_Familia,
             this.Orden_Gerencia});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Mnt.Location = new System.Drawing.Point(0, 3);
             this.dgv_Mnt.Name = "dgv_Mnt";
             this.dgv_Mnt.ReadOnly = true;
@@ -531,8 +532,8 @@ namespace Capa_Presentacion.Formularios
             // IdFamiliaProd
             // 
             this.IdFamiliaProd.DataPropertyName = "IdFamiliaProd";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.IdFamiliaProd.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.IdFamiliaProd.DefaultCellStyle = dataGridViewCellStyle2;
             this.IdFamiliaProd.HeaderText = "Código";
             this.IdFamiliaProd.Name = "IdFamiliaProd";
             this.IdFamiliaProd.ReadOnly = true;
@@ -540,8 +541,8 @@ namespace Capa_Presentacion.Formularios
             // Descripcion_Familia
             // 
             this.Descripcion_Familia.DataPropertyName = "Descripcion_Familia";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Descripcion_Familia.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Descripcion_Familia.DefaultCellStyle = dataGridViewCellStyle3;
             this.Descripcion_Familia.HeaderText = "Descripcion Familia";
             this.Descripcion_Familia.Name = "Descripcion_Familia";
             this.Descripcion_Familia.ReadOnly = true;

@@ -29,9 +29,9 @@ namespace Capa_Presentacion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -75,7 +75,6 @@ namespace Capa_Presentacion.Formularios
             this.lbl_IdAño_ = new System.Windows.Forms.Label();
             this.tbp_Listado = new System.Windows.Forms.TabPage();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
-            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.IdCodigoEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo_Evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +83,7 @@ namespace Capa_Presentacion.Formularios
             this.Flag_EventoMaterial = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Nombre_Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_Local = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrintDocument = new System.Drawing.Printing.PrintDocument();
             this.tls_Formulario.SuspendLayout();
             this.tbc_Mnt.SuspendLayout();
             this.tbp_Ingreso.SuspendLayout();
@@ -145,6 +145,7 @@ namespace Capa_Presentacion.Formularios
             // 
             // tls_Eliminar
             // 
+            this.tls_Eliminar.Image = global::Capa_Presentacion.Properties.Resources.memory_cleaner;
             this.tls_Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tls_Eliminar.Name = "tls_Eliminar";
             this.tls_Eliminar.Size = new System.Drawing.Size(54, 67);
@@ -577,14 +578,14 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.AllowUserToAddRows = false;
             this.dgv_Mnt.AllowUserToOrderColumns = true;
             this.dgv_Mnt.BackgroundColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Mnt.ColumnHeadersHeight = 35;
             this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCodigoEvento,
@@ -595,14 +596,14 @@ namespace Capa_Presentacion.Formularios
             this.Flag_EventoMaterial,
             this.Nombre_Area,
             this.Nombre_Local});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Mnt.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Mnt.Location = new System.Drawing.Point(0, 4);
             this.dgv_Mnt.Name = "dgv_Mnt";
             this.dgv_Mnt.ReadOnly = true;
@@ -610,15 +611,11 @@ namespace Capa_Presentacion.Formularios
             this.dgv_Mnt.Size = new System.Drawing.Size(867, 347);
             this.dgv_Mnt.TabIndex = 0;
             // 
-            // PrintDocument
-            // 
-            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
-            // 
             // IdCodigoEvento
             // 
             this.IdCodigoEvento.DataPropertyName = "IdCodigoEvento";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.IdCodigoEvento.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.IdCodigoEvento.DefaultCellStyle = dataGridViewCellStyle2;
             this.IdCodigoEvento.HeaderText = "Código";
             this.IdCodigoEvento.Name = "IdCodigoEvento";
             this.IdCodigoEvento.ReadOnly = true;
@@ -681,6 +678,10 @@ namespace Capa_Presentacion.Formularios
             this.Nombre_Local.ReadOnly = true;
             this.Nombre_Local.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Nombre_Local.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // PrintDocument
+            // 
+            this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
             // 
             // Frm_CodigoEvento
             // 
