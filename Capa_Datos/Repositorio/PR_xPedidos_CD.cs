@@ -64,29 +64,30 @@ namespace Capa_Datos.Repositorio
                         t.Total_Kilos = decimal.Parse(dr["Total_Kilos"].ToString());
                         t.IdSeVendePor = byte.Parse(dr["IdSeVendePor"].ToString());
                         t.Cantidad_Millares = decimal.Parse(dr["Cantidad_Millares"].ToString());
-                        t.Precio_Kilo = decimal.Parse(dr["Precio-Kilo"].ToString());
+                        t.Precio_Kilo = decimal.Parse(dr["Precio_Kilo"].ToString());
                         t.Precio_Millar = decimal.Parse(dr["Precio_Millar"].ToString());
                         t.Reajuste_Precio_Kilo = decimal.Parse(dr["Reajuste_Precio_Kilo"].ToString());
                         t.Reajuste_Precio_Millar = decimal.Parse(dr["Reajuste_Precio_millar"].ToString());
-                        t.Flag_IGV = dr["Flag_IGV"].ToString();
-                        t.Flag_Incluido_Gastos = dr["Flag_Incluidos_Gastos"].ToString();
+                        t.Flag_MasIGV = dr["Flag_MasIGV"].ToString();
+                        t.Flag_Incluido_Gastos = dr["Flag_Incluido_Gastos"].ToString();
                         t.Flag_DestararBobinaExtruida = dr["Flag_DestararBobinaExtruida"].ToString();
                         t.Flag_DestararBobinaImpresa = dr["Flag_DestararBobinaImpresa"].ToString();
                         t.Flag_DestararBobinaLaminado = dr["Flag_DestararBobinaLaminado"].ToString();
                         t.Flag_DestararBobinaCorte = dr["Flag_DestararBobinaCorte"].ToString();
-                        t.Flag_PesarxPaquete = dr["Flag_PesarxPaquete"].ToString();
-                        t.Flag_PesarxFardo = dr["Flag_PesarxFardo"].ToString();
-                        t.Flag_PesarxCaja = dr["Flag_PesarxCaja"].ToString();
+                        //t.Flag_PesarxPaquete = dr["Flag_PesarxPaquete"].ToString();
+                        //t.Flag_PesarxFardo = dr["Flag_PesarxFardo"].ToString();
+                        //t.Flag_PesarxCaja = dr["Flag_PesarxCaja"].ToString();
+                        t.Descripcion = dr["Descripcion"].ToString();
+                        t.Razon_Social = dr["Razon_Social"].ToString();
                         t.Flag_Comision = dr["Flag_Comision"].ToString();
                         t.Nota_Pedido = dr["Nota_Pedido"].ToString();
                         t.Flag_NuevoRepetidoHistorico = dr["Flag_NuevoRepetidoHistorico"].ToString();
                         t.Flag_NoExisteEspecificacion = dr["Flag_NoExisteEspecificacion"].ToString();
                         t.Pedido_General = dr["Pedido_General"].ToString();
                         t.IdTipoVenta = byte.Parse(dr["IdTipoVenta"].ToString());
-                        t.Nota = dr["Nota"].ToString();
-                        t.Nota_Pedido = dr["Nota_Pedido"].ToString();
-                        t.IdUsuario = dr["IdUsuario"].ToString();                   
-
+                        t.IdTipoMoneda = byte.Parse(dr["IdTipoMoneda"].ToString());
+                        t.IdUsuario = dr["IdUsuario"].ToString();
+                        t.IdCliente = Int32.Parse(dr["IdCliente"].ToString());
                         lista_pedidos.Add(t);
                     }
                     dr.Close();
@@ -104,8 +105,8 @@ namespace Capa_Datos.Repositorio
                 using(var ConexionSQL = new SqlConnection(cadenaconexion))
                 {
                     ConexionSQL.Open();
-                    var sql = "select * from PR_xPedidosIndustriales as PED INNER JOIN PR_mEstandar as EST " +
-                              " on PED.IdEstandarIndustrial = EST.IdEstandar  where PED.IdNumeroPedido = @id ";
+                    var sql = "select * from PR_xPedidos as PED INNER JOIN PR_mEstandar as EST " +
+                              " on PED.IdEstandar = EST.IdEstandar  where PED.IdNumeroPedido = @id ";
 
                     return ConexionSQL.Query<PR_xPedidos>(sql, new { id = idpedidos });
                 }
@@ -154,27 +155,25 @@ namespace Capa_Datos.Repositorio
                     cmd.Parameters.AddWithValue("@Precio_Millar", pedidos.Precio_Millar);
                     cmd.Parameters.AddWithValue("@Reajuste_Precio_Kilo", pedidos.Reajuste_Precio_Kilo);
                     cmd.Parameters.AddWithValue("@Reajuste_Precio_Millar", pedidos.Reajuste_Precio_Millar);
-                    cmd.Parameters.AddWithValue("@Flag_IGV", pedidos.Flag_IGV);
+                    cmd.Parameters.AddWithValue("@Flag_MasIGV", pedidos.Flag_MasIGV);
                     cmd.Parameters.AddWithValue("@Flag_Incluido_Gastos", pedidos.Flag_Incluido_Gastos);
                     cmd.Parameters.AddWithValue("@Flag_DestararBobinaExtruida", pedidos.Flag_DestararBobinaExtruida);
                     cmd.Parameters.AddWithValue("@Flag_DestararBobinaImpresa", pedidos.Flag_DestararBobinaImpresa);
-                    cmd.Parameters.AddWithValue("@Flag_PesarxPaquete", pedidos.Flag_PesarxPaquete);
-                    cmd.Parameters.AddWithValue("@Flag_PesarxFardo", pedidos.Flag_PesarxFardo);
-                    cmd.Parameters.AddWithValue("@Flag_PesarxCaja", pedidos.Flag_PesarxCaja);
+                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaLaminado", pedidos.Flag_DestararBobinaLaminado);
+                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaCorte", pedidos.Flag_DestararBobinaCorte);
                     cmd.Parameters.AddWithValue("@Flag_Comision", pedidos.Flag_Comision);
                     cmd.Parameters.AddWithValue("@Nota_Pedido", pedidos.Nota_Pedido);
                     cmd.Parameters.AddWithValue("@Flag_NuevoRepetidoHistorico", pedidos.Flag_NuevoRepetidoHistorico);
                     cmd.Parameters.AddWithValue("@Flag_NoExisteEspecificacion", pedidos.Flag_NoExisteEspecificacion);
                     cmd.Parameters.AddWithValue("@IdUsuario", pedidos.IdUsuario);
                     cmd.Parameters.AddWithValue("@Pedido_General", pedidos.Pedido_General);
-                    cmd.Parameters.AddWithValue("@IdTipoVenta", pedidos.IdTipoVenta);
-                    cmd.Parameters.AddWithValue("@Nota", pedidos.Nota);
-                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaLaminado", pedidos.Flag_DestararBobinaLaminado);
-                    cmd.Parameters.AddWithValue("@Flag_DestararBobinaCorte", pedidos.Flag_DestararBobinaCorte);
+                    cmd.Parameters.AddWithValue("@IdTipoVenta", pedidos.IdTipoVenta);                    
                     cmd.Parameters.AddWithValue("@Metros", pedidos.Metros);
                     cmd.Parameters.AddWithValue("@Fecha_Orden_Compra", pedidos.Fecha_Orden_Compra);
                     cmd.Parameters.AddWithValue("@IdCondicionProceso", pedidos.IdCondicionProceso);
                     cmd.Parameters.AddWithValue("@IdTrabajador", pedidos.IdTrabajador);
+                    cmd.Parameters.AddWithValue("@IdTipoMoneda", pedidos.IdTipoMoneda);
+                    cmd.Parameters.AddWithValue("@IdSeVendePor", pedidos.IdSeVendePor);
                     cmd.Parameters.AddWithValue("@Output_Id", 0);
 
                     cmd.ExecuteNonQuery();
@@ -193,7 +192,7 @@ namespace Capa_Datos.Repositorio
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     conexionsql.Open();
-                    var sqldelete = "delete from PR_xPedidosIndustriales where IdNumeroPedido = @idnumeropedido ";
+                    var sqldelete = "delete from PR_xPedidos where IdNumeroPedido = @idnumeropedido ";
                     conexionsql.Execute(sqldelete, new { idnumeropedido = idpedido });
                     return "PROCESADO";
                 }
@@ -201,6 +200,32 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error alEliminar", Ex);}
         }
 
+        public IEnumerable<PR_xPedidos>Pedidos_PorEstandart(Int32 idestaandart)
+        {
+            try
+            {
+                using(var conexionsql = new SqlConnection(cadenaconexion))
+                {
+                    conexionsql.Open();
+                    var sql = " select * from PR_xPedidos where IdEstandart = @idestandart";
+                    return conexionsql.Query<PR_xPedidos>(sql, new { idestandart = idestaandart });
+                }
+            }
+            catch(Exception Ex) { throw new Exception("Error al traer por IdEstandart " + idestaandart, Ex); }
+        }
 
+        public IEnumerable<PR_xPedidos> Pedidos_PorNumeroPedio(string numeropedido)
+        {
+            try
+            {
+                using(var conexionsql = new SqlConnection(cadenaconexion))
+                {
+                    conexionsql.Open();
+                    var sql = " select * from PR_xPedidos where Numero_Pedido = @Numero_Pedido";
+                    return conexionsql.Query<PR_xPedidos>(sql, new { Numero_Pedido = numeropedido });
+                }
+            }
+            catch(Exception Ex) { throw new Exception("Error al traer por IdEstandart " + numeropedido, Ex); }
+        }
     }
 }

@@ -21,6 +21,11 @@ namespace Capa_Entidades.Tablas
         public PR_aFabricanteMaterial()
         { }
 
+        public PR_aFabricanteMaterial(Int32 idfabricantematerial)
+        {
+            _IdFabricanteMaterial = idfabricantematerial;
+        }
+
         public PR_aFabricanteMaterial(int idFabricanteMaterial, string razon_Social, string direccion, string numero_RUC, string numero_Telefono, string pais)
         {
             _IdFabricanteMaterial = idFabricanteMaterial;
@@ -30,6 +35,7 @@ namespace Capa_Entidades.Tablas
             _Numero_Telefono = numero_Telefono;
             _Pais = pais;
         }
+
 
 
     }

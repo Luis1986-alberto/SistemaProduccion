@@ -11,9 +11,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         public Int32 idEstandart;
         private Int32 idextrusion, idsellado, idimpresion, idlaminado, idcorte = 0;
         private List<PR_mEstandar> Lst_Estandares = new List<PR_mEstandar>();
-        private PR_mEstandarExtrusion mestextrusion = null;
-        private PR_mEstandarImpresion mestimpresion = null;
-        private PR_mEstandarSellado mestsellado = null;
 
         private void Chk_MostrarImagen_CheckedChanged(object sender, EventArgs e)
         {

@@ -29,25 +29,37 @@ namespace Capa_Presentacion.Formularios.Produccion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_Mnt = new System.Windows.Forms.TabControl();
             this.tp_Detalle = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.chk_masIGV = new System.Windows.Forms.CheckBox();
             this.btn_Vendedor = new System.Windows.Forms.Button();
             this.btn_CondicionProceso = new System.Windows.Forms.Button();
             this.cbo_condicionproceso = new System.Windows.Forms.ComboBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.txt_observacionpedido = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.chk_gastosincluidos = new System.Windows.Forms.CheckBox();
             this.chk_comisionventa = new System.Windows.Forms.CheckBox();
             this.cbo_vendedor = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nud_reajusteporkilo = new System.Windows.Forms.NumericUpDown();
+            this.nud_reajustepormillar = new System.Windows.Forms.NumericUpDown();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txt_notaventa = new System.Windows.Forms.TextBox();
             this.nud_preciokilo = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
             this.nud_preciomillar = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
             this.btn_Moneda = new System.Windows.Forms.Button();
             this.btn_TipoVenta = new System.Windows.Forms.Button();
             this.btn_CondicionCobranza = new System.Windows.Forms.Button();
@@ -56,9 +68,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_condicioncobranza = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.txt_notaventa = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.cbo_tipomoneda = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -76,8 +85,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.nud_Porcentajemerma = new System.Windows.Forms.NumericUpDown();
-            this.nud_totalKG = new System.Windows.Forms.NumericUpDown();
+            this.gb_DestararTuco = new System.Windows.Forms.GroupBox();
+            this.chk_destararcorte = new System.Windows.Forms.CheckBox();
+            this.chk_destararlaminado = new System.Windows.Forms.CheckBox();
+            this.chk_destararimpresion = new System.Windows.Forms.CheckBox();
+            this.chk_destararextrusion = new System.Windows.Forms.CheckBox();
+            this.txt_metrospedido = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.txt_PorcentajeMerma = new System.Windows.Forms.TextBox();
+            this.txt_totalkgpedido = new System.Windows.Forms.TextBox();
             this.nud_merma = new System.Windows.Forms.NumericUpDown();
             this.nud_ventakilos = new System.Windows.Forms.NumericUpDown();
             this.label28 = new System.Windows.Forms.Label();
@@ -95,11 +111,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pedidogeneral = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.chk_destararcorte = new System.Windows.Forms.CheckBox();
-            this.chk_destararlaminado = new System.Windows.Forms.CheckBox();
-            this.chk_destararimpresion = new System.Windows.Forms.CheckBox();
-            this.chk_destararextrusion = new System.Windows.Forms.CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.dtp_fechapedido = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -135,15 +146,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Dtp_FechaInicial = new System.Windows.Forms.DateTimePicker();
             this.Chk_FiltroRango = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
-            this.dgv_mnt = new System.Windows.Forms.DataGridView();
-            this.IdNumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_Orden_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_Mnt = new System.Windows.Forms.DataGridView();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -164,21 +167,30 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Anterior = new System.Windows.Forms.ToolStripButton();
             this.tls_Siguiente = new System.Windows.Forms.ToolStripButton();
             this.tls_Ultimo = new System.Windows.Forms.ToolStripButton();
+            this.IdNumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Orden_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbc_Mnt.SuspendLayout();
             this.tp_Detalle.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_reajusteporkilo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_reajustepormillar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_preciokilo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_preciomillar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Porcentajemerma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_totalKG)).BeginInit();
+            this.gb_DestararTuco.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_merma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_ventakilos)).BeginInit();
             this.panel4.SuspendLayout();
             this.tp_Listado.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mnt)).BeginInit();
             this.tls_Formulario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,14 +225,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.Controls.Add(this.chk_masIGV);
             this.panel5.Controls.Add(this.btn_Vendedor);
             this.panel5.Controls.Add(this.btn_CondicionProceso);
             this.panel5.Controls.Add(this.cbo_condicionproceso);
             this.panel5.Controls.Add(this.label41);
             this.panel5.Controls.Add(this.label42);
-            this.panel5.Controls.Add(this.txt_observacionpedido);
-            this.panel5.Controls.Add(this.label39);
-            this.panel5.Controls.Add(this.label40);
             this.panel5.Controls.Add(this.chk_gastosincluidos);
             this.panel5.Controls.Add(this.chk_comisionventa);
             this.panel5.Controls.Add(this.cbo_vendedor);
@@ -228,8 +238,19 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel5.Controls.Add(this.label14);
             this.panel5.Location = new System.Drawing.Point(755, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(380, 323);
+            this.panel5.Size = new System.Drawing.Size(380, 320);
             this.panel5.TabIndex = 89;
+            // 
+            // chk_masIGV
+            // 
+            this.chk_masIGV.AutoSize = true;
+            this.chk_masIGV.Enabled = false;
+            this.chk_masIGV.Location = new System.Drawing.Point(134, 65);
+            this.chk_masIGV.Name = "chk_masIGV";
+            this.chk_masIGV.Size = new System.Drawing.Size(67, 17);
+            this.chk_masIGV.TabIndex = 136;
+            this.chk_masIGV.Text = "Mas IGV";
+            this.chk_masIGV.UseVisualStyleBackColor = true;
             // 
             // btn_Vendedor
             // 
@@ -291,43 +312,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label42.TabIndex = 134;
             this.label42.Text = ":";
             // 
-            // txt_observacionpedido
-            // 
-            this.txt_observacionpedido.Enabled = false;
-            this.txt_observacionpedido.Location = new System.Drawing.Point(8, 213);
-            this.txt_observacionpedido.Multiline = true;
-            this.txt_observacionpedido.Name = "txt_observacionpedido";
-            this.txt_observacionpedido.Size = new System.Drawing.Size(368, 98);
-            this.txt_observacionpedido.TabIndex = 37;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(110, 197);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(10, 13);
-            this.label39.TabIndex = 132;
-            this.label39.Text = ":";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(6, 197);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(81, 13);
-            this.label40.TabIndex = 131;
-            this.label40.Text = "Observaciones ";
-            // 
             // chk_gastosincluidos
             // 
             this.chk_gastosincluidos.AutoSize = true;
             this.chk_gastosincluidos.Enabled = false;
-            this.chk_gastosincluidos.Location = new System.Drawing.Point(129, 35);
+            this.chk_gastosincluidos.Location = new System.Drawing.Point(247, 36);
             this.chk_gastosincluidos.Name = "chk_gastosincluidos";
             this.chk_gastosincluidos.Size = new System.Drawing.Size(104, 17);
             this.chk_gastosincluidos.TabIndex = 34;
@@ -338,7 +327,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.chk_comisionventa.AutoSize = true;
             this.chk_comisionventa.Enabled = false;
-            this.chk_comisionventa.Location = new System.Drawing.Point(9, 36);
+            this.chk_comisionventa.Location = new System.Drawing.Point(134, 36);
             this.chk_comisionventa.Name = "chk_comisionventa";
             this.chk_comisionventa.Size = new System.Drawing.Size(99, 17);
             this.chk_comisionventa.TabIndex = 33;
@@ -382,8 +371,17 @@ namespace Capa_Presentacion.Formularios.Produccion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.Controls.Add(this.nud_reajusteporkilo);
+            this.panel3.Controls.Add(this.nud_reajustepormillar);
+            this.panel3.Controls.Add(this.label39);
+            this.panel3.Controls.Add(this.label40);
+            this.panel3.Controls.Add(this.label46);
+            this.panel3.Controls.Add(this.label47);
+            this.panel3.Controls.Add(this.txt_notaventa);
             this.panel3.Controls.Add(this.nud_preciokilo);
+            this.panel3.Controls.Add(this.label37);
             this.panel3.Controls.Add(this.nud_preciomillar);
+            this.panel3.Controls.Add(this.label38);
             this.panel3.Controls.Add(this.btn_Moneda);
             this.panel3.Controls.Add(this.btn_TipoVenta);
             this.panel3.Controls.Add(this.btn_CondicionCobranza);
@@ -392,9 +390,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.Controls.Add(this.cbo_condicioncobranza);
             this.panel3.Controls.Add(this.label44);
             this.panel3.Controls.Add(this.label45);
-            this.panel3.Controls.Add(this.txt_notaventa);
-            this.panel3.Controls.Add(this.label37);
-            this.panel3.Controls.Add(this.label38);
             this.panel3.Controls.Add(this.label35);
             this.panel3.Controls.Add(this.cbo_tipomoneda);
             this.panel3.Controls.Add(this.label36);
@@ -413,13 +408,97 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel3.Controls.Add(this.label22);
             this.panel3.Location = new System.Drawing.Point(379, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 323);
+            this.panel3.Size = new System.Drawing.Size(370, 320);
             this.panel3.TabIndex = 88;
+            // 
+            // nud_reajusteporkilo
+            // 
+            this.nud_reajusteporkilo.DecimalPlaces = 4;
+            this.nud_reajusteporkilo.Enabled = false;
+            this.nud_reajusteporkilo.Location = new System.Drawing.Point(286, 144);
+            this.nud_reajusteporkilo.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_reajusteporkilo.Name = "nud_reajusteporkilo";
+            this.nud_reajusteporkilo.Size = new System.Drawing.Size(73, 20);
+            this.nud_reajusteporkilo.TabIndex = 139;
+            // 
+            // nud_reajustepormillar
+            // 
+            this.nud_reajustepormillar.DecimalPlaces = 4;
+            this.nud_reajustepormillar.Enabled = false;
+            this.nud_reajustepormillar.Location = new System.Drawing.Point(286, 170);
+            this.nud_reajustepormillar.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nud_reajustepormillar.Name = "nud_reajustepormillar";
+            this.nud_reajustepormillar.Size = new System.Drawing.Size(73, 20);
+            this.nud_reajustepormillar.TabIndex = 140;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(201, 173);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(76, 13);
+            this.label39.TabIndex = 144;
+            this.label39.Text = "Reajuste Millar";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(276, 173);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(10, 13);
+            this.label40.TabIndex = 143;
+            this.label40.Text = ":";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(201, 147);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(69, 13);
+            this.label46.TabIndex = 142;
+            this.label46.Text = "Reajuste Kilo";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.Black;
+            this.label47.Location = new System.Drawing.Point(276, 147);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(10, 13);
+            this.label47.TabIndex = 141;
+            this.label47.Text = ":";
+            // 
+            // txt_notaventa
+            // 
+            this.txt_notaventa.Enabled = false;
+            this.txt_notaventa.Location = new System.Drawing.Point(8, 213);
+            this.txt_notaventa.Multiline = true;
+            this.txt_notaventa.Name = "txt_notaventa";
+            this.txt_notaventa.Size = new System.Drawing.Size(351, 98);
+            this.txt_notaventa.TabIndex = 136;
             // 
             // nud_preciokilo
             // 
             this.nud_preciokilo.DecimalPlaces = 4;
-            this.nud_preciokilo.Location = new System.Drawing.Point(122, 111);
+            this.nud_preciokilo.Enabled = false;
+            this.nud_preciokilo.Location = new System.Drawing.Point(122, 144);
             this.nud_preciokilo.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -429,10 +508,22 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_preciokilo.Size = new System.Drawing.Size(73, 20);
             this.nud_preciokilo.TabIndex = 26;
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(105, 197);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(10, 13);
+            this.label37.TabIndex = 138;
+            this.label37.Text = ":";
+            // 
             // nud_preciomillar
             // 
             this.nud_preciomillar.DecimalPlaces = 4;
-            this.nud_preciomillar.Location = new System.Drawing.Point(122, 137);
+            this.nud_preciomillar.Enabled = false;
+            this.nud_preciomillar.Location = new System.Drawing.Point(122, 170);
             this.nud_preciomillar.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -442,12 +533,24 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_preciomillar.Size = new System.Drawing.Size(73, 20);
             this.nud_preciomillar.TabIndex = 27;
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(5, 197);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(76, 13);
+            this.label38.TabIndex = 137;
+            this.label38.Text = "Nota de Venta";
+            // 
             // btn_Moneda
             // 
             this.btn_Moneda.BackColor = System.Drawing.Color.Transparent;
             this.btn_Moneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Moneda.ForeColor = System.Drawing.Color.Black;
-            this.btn_Moneda.Location = new System.Drawing.Point(332, 160);
+            this.btn_Moneda.Location = new System.Drawing.Point(332, 111);
             this.btn_Moneda.Name = "btn_Moneda";
             this.btn_Moneda.Size = new System.Drawing.Size(27, 24);
             this.btn_Moneda.TabIndex = 29;
@@ -510,6 +613,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // cbo_condicioncobranza
             // 
             this.cbo_condicioncobranza.DisplayMember = "Condicion_Cobranza";
+            this.cbo_condicioncobranza.Enabled = false;
             this.cbo_condicioncobranza.FormattingEnabled = true;
             this.cbo_condicioncobranza.Location = new System.Drawing.Point(122, 31);
             this.cbo_condicioncobranza.Name = "cbo_condicioncobranza";
@@ -540,44 +644,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label45.TabIndex = 131;
             this.label45.Text = ":";
             // 
-            // txt_notaventa
-            // 
-            this.txt_notaventa.Enabled = false;
-            this.txt_notaventa.Location = new System.Drawing.Point(8, 213);
-            this.txt_notaventa.Multiline = true;
-            this.txt_notaventa.Name = "txt_notaventa";
-            this.txt_notaventa.Size = new System.Drawing.Size(351, 98);
-            this.txt_notaventa.TabIndex = 30;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(106, 197);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(10, 13);
-            this.label37.TabIndex = 129;
-            this.label37.Text = ":";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(5, 197);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(76, 13);
-            this.label38.TabIndex = 128;
-            this.label38.Text = "Nota de Venta";
-            // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(106, 167);
+            this.label35.Location = new System.Drawing.Point(106, 118);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(10, 13);
             this.label35.TabIndex = 127;
@@ -588,7 +660,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_tipomoneda.DisplayMember = "Tipo_Moneda";
             this.cbo_tipomoneda.Enabled = false;
             this.cbo_tipomoneda.FormattingEnabled = true;
-            this.cbo_tipomoneda.Location = new System.Drawing.Point(122, 163);
+            this.cbo_tipomoneda.Location = new System.Drawing.Point(122, 114);
             this.cbo_tipomoneda.Name = "cbo_tipomoneda";
             this.cbo_tipomoneda.Size = new System.Drawing.Size(208, 21);
             this.cbo_tipomoneda.TabIndex = 28;
@@ -600,7 +672,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(5, 167);
+            this.label36.Location = new System.Drawing.Point(5, 118);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(46, 13);
             this.label36.TabIndex = 125;
@@ -612,7 +684,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(3, 140);
+            this.label33.Location = new System.Drawing.Point(3, 173);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(64, 13);
             this.label33.TabIndex = 124;
@@ -623,7 +695,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(105, 140);
+            this.label34.Location = new System.Drawing.Point(105, 173);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(10, 13);
             this.label34.TabIndex = 123;
@@ -635,7 +707,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(3, 114);
+            this.label31.Location = new System.Drawing.Point(3, 147);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(57, 13);
             this.label31.TabIndex = 121;
@@ -646,7 +718,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(104, 114);
+            this.label32.Location = new System.Drawing.Point(104, 147);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(10, 13);
             this.label32.TabIndex = 120;
@@ -657,7 +729,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(104, 87);
+            this.label29.Location = new System.Drawing.Point(105, 91);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(10, 13);
             this.label29.TabIndex = 102;
@@ -680,7 +752,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(3, 84);
+            this.label30.Location = new System.Drawing.Point(3, 90);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(76, 13);
             this.label30.TabIndex = 100;
@@ -758,8 +830,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel2.Controls.Add(this.nud_Porcentajemerma);
-            this.panel2.Controls.Add(this.nud_totalKG);
+            this.panel2.Controls.Add(this.gb_DestararTuco);
+            this.panel2.Controls.Add(this.txt_metrospedido);
+            this.panel2.Controls.Add(this.label48);
+            this.panel2.Controls.Add(this.txt_PorcentajeMerma);
+            this.panel2.Controls.Add(this.txt_totalkgpedido);
             this.panel2.Controls.Add(this.nud_merma);
             this.panel2.Controls.Add(this.nud_ventakilos);
             this.panel2.Controls.Add(this.label28);
@@ -777,11 +852,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel2.Controls.Add(this.txt_pedidogeneral);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.chk_destararcorte);
-            this.panel2.Controls.Add(this.chk_destararlaminado);
-            this.panel2.Controls.Add(this.chk_destararimpresion);
-            this.panel2.Controls.Add(this.chk_destararextrusion);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.dtp_fechapedido);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
@@ -796,32 +866,112 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(3, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(370, 323);
+            this.panel2.Size = new System.Drawing.Size(370, 320);
             this.panel2.TabIndex = 87;
             // 
-            // nud_Porcentajemerma
+            // gb_DestararTuco
             // 
-            this.nud_Porcentajemerma.Location = new System.Drawing.Point(302, 252);
-            this.nud_Porcentajemerma.Name = "nud_Porcentajemerma";
-            this.nud_Porcentajemerma.Size = new System.Drawing.Size(57, 20);
-            this.nud_Porcentajemerma.TabIndex = 16;
+            this.gb_DestararTuco.Controls.Add(this.chk_destararcorte);
+            this.gb_DestararTuco.Controls.Add(this.chk_destararlaminado);
+            this.gb_DestararTuco.Controls.Add(this.chk_destararimpresion);
+            this.gb_DestararTuco.Controls.Add(this.chk_destararextrusion);
+            this.gb_DestararTuco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gb_DestararTuco.Location = new System.Drawing.Point(6, 173);
+            this.gb_DestararTuco.Name = "gb_DestararTuco";
+            this.gb_DestararTuco.Size = new System.Drawing.Size(353, 47);
+            this.gb_DestararTuco.TabIndex = 130;
+            this.gb_DestararTuco.TabStop = false;
+            this.gb_DestararTuco.Text = "Destarar Tuco";
             // 
-            // nud_totalKG
+            // chk_destararcorte
             // 
-            this.nud_totalKG.DecimalPlaces = 4;
-            this.nud_totalKG.Location = new System.Drawing.Point(126, 278);
-            this.nud_totalKG.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.nud_totalKG.Name = "nud_totalKG";
-            this.nud_totalKG.Size = new System.Drawing.Size(73, 20);
-            this.nud_totalKG.TabIndex = 17;
+            this.chk_destararcorte.AutoSize = true;
+            this.chk_destararcorte.Enabled = false;
+            this.chk_destararcorte.Location = new System.Drawing.Point(295, 19);
+            this.chk_destararcorte.Name = "chk_destararcorte";
+            this.chk_destararcorte.Size = new System.Drawing.Size(54, 17);
+            this.chk_destararcorte.TabIndex = 14;
+            this.chk_destararcorte.Text = " Corte";
+            this.chk_destararcorte.UseVisualStyleBackColor = true;
+            // 
+            // chk_destararlaminado
+            // 
+            this.chk_destararlaminado.AutoSize = true;
+            this.chk_destararlaminado.Enabled = false;
+            this.chk_destararlaminado.Location = new System.Drawing.Point(195, 19);
+            this.chk_destararlaminado.Name = "chk_destararlaminado";
+            this.chk_destararlaminado.Size = new System.Drawing.Size(75, 17);
+            this.chk_destararlaminado.TabIndex = 13;
+            this.chk_destararlaminado.Text = " Laminado";
+            this.chk_destararlaminado.UseVisualStyleBackColor = true;
+            // 
+            // chk_destararimpresion
+            // 
+            this.chk_destararimpresion.AutoSize = true;
+            this.chk_destararimpresion.Enabled = false;
+            this.chk_destararimpresion.Location = new System.Drawing.Point(99, 19);
+            this.chk_destararimpresion.Name = "chk_destararimpresion";
+            this.chk_destararimpresion.Size = new System.Drawing.Size(74, 17);
+            this.chk_destararimpresion.TabIndex = 12;
+            this.chk_destararimpresion.Text = " Impresion";
+            this.chk_destararimpresion.UseVisualStyleBackColor = true;
+            // 
+            // chk_destararextrusion
+            // 
+            this.chk_destararextrusion.AutoSize = true;
+            this.chk_destararextrusion.Enabled = false;
+            this.chk_destararextrusion.Location = new System.Drawing.Point(9, 19);
+            this.chk_destararextrusion.Name = "chk_destararextrusion";
+            this.chk_destararextrusion.Size = new System.Drawing.Size(72, 17);
+            this.chk_destararextrusion.TabIndex = 11;
+            this.chk_destararextrusion.Text = " Extrusion";
+            this.chk_destararextrusion.UseVisualStyleBackColor = true;
+            // 
+            // txt_metrospedido
+            // 
+            this.txt_metrospedido.Enabled = false;
+            this.txt_metrospedido.Location = new System.Drawing.Point(302, 281);
+            this.txt_metrospedido.MaxLength = 7;
+            this.txt_metrospedido.Name = "txt_metrospedido";
+            this.txt_metrospedido.Size = new System.Drawing.Size(57, 20);
+            this.txt_metrospedido.TabIndex = 129;
+            this.txt_metrospedido.Text = "0.00";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Black;
+            this.label48.Location = new System.Drawing.Point(217, 284);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(75, 13);
+            this.label48.TabIndex = 128;
+            this.label48.Text = "Metros Pedido";
+            // 
+            // txt_PorcentajeMerma
+            // 
+            this.txt_PorcentajeMerma.Enabled = false;
+            this.txt_PorcentajeMerma.Location = new System.Drawing.Point(302, 255);
+            this.txt_PorcentajeMerma.MaxLength = 6;
+            this.txt_PorcentajeMerma.Name = "txt_PorcentajeMerma";
+            this.txt_PorcentajeMerma.Size = new System.Drawing.Size(57, 20);
+            this.txt_PorcentajeMerma.TabIndex = 126;
+            this.txt_PorcentajeMerma.Text = "0.00";
+            // 
+            // txt_totalkgpedido
+            // 
+            this.txt_totalkgpedido.Enabled = false;
+            this.txt_totalkgpedido.Location = new System.Drawing.Point(126, 281);
+            this.txt_totalkgpedido.Name = "txt_totalkgpedido";
+            this.txt_totalkgpedido.Size = new System.Drawing.Size(73, 20);
+            this.txt_totalkgpedido.TabIndex = 125;
+            this.txt_totalkgpedido.Text = "0.00";
             // 
             // nud_merma
             // 
-            this.nud_merma.DecimalPlaces = 4;
+            this.nud_merma.DecimalPlaces = 2;
+            this.nud_merma.Enabled = false;
             this.nud_merma.Location = new System.Drawing.Point(126, 252);
             this.nud_merma.Maximum = new decimal(new int[] {
             9999,
@@ -831,11 +981,15 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_merma.Name = "nud_merma";
             this.nud_merma.Size = new System.Drawing.Size(73, 20);
             this.nud_merma.TabIndex = 15;
+            this.nud_merma.Click += new System.EventHandler(this.nud_merma_Click);
+            this.nud_merma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_merma_KeyPress);
+            this.nud_merma.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_merma_KeyUp);
             // 
             // nud_ventakilos
             // 
-            this.nud_ventakilos.DecimalPlaces = 4;
-            this.nud_ventakilos.Location = new System.Drawing.Point(126, 226);
+            this.nud_ventakilos.DecimalPlaces = 2;
+            this.nud_ventakilos.Enabled = false;
+            this.nud_ventakilos.Location = new System.Drawing.Point(126, 227);
             this.nud_ventakilos.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -844,13 +998,16 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.nud_ventakilos.Name = "nud_ventakilos";
             this.nud_ventakilos.Size = new System.Drawing.Size(73, 20);
             this.nud_ventakilos.TabIndex = 12;
+            this.nud_ventakilos.Click += new System.EventHandler(this.nud_ventakilos_Click);
+            this.nud_ventakilos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nud_ventakilos_KeyPress);
+            this.nud_ventakilos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_ventakilos_KeyUp);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(107, 231);
+            this.label28.Location = new System.Drawing.Point(108, 228);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(10, 13);
             this.label28.TabIndex = 124;
@@ -874,7 +1031,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(6, 281);
+            this.label21.Location = new System.Drawing.Point(6, 284);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(85, 13);
             this.label21.TabIndex = 121;
@@ -885,7 +1042,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(107, 281);
+            this.label24.Location = new System.Drawing.Point(107, 288);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(10, 13);
             this.label24.TabIndex = 120;
@@ -918,9 +1075,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             // 
             this.txt_ventamillares.Enabled = false;
             this.txt_ventamillares.Location = new System.Drawing.Point(302, 226);
+            this.txt_ventamillares.MaxLength = 9;
             this.txt_ventamillares.Name = "txt_ventamillares";
             this.txt_ventamillares.Size = new System.Drawing.Size(57, 20);
             this.txt_ventamillares.TabIndex = 14;
+            this.txt_ventamillares.Text = "0.00";
+            this.txt_ventamillares.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ventamillares_KeyPress);
             // 
             // rb_ventamillares
             // 
@@ -951,7 +1111,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dtp_fechaentrega.Enabled = false;
             this.dtp_fechaentrega.Location = new System.Drawing.Point(149, 140);
             this.dtp_fechaentrega.Name = "dtp_fechaentrega";
-            this.dtp_fechaentrega.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fechaentrega.Size = new System.Drawing.Size(210, 20);
             this.dtp_fechaentrega.TabIndex = 6;
             // 
             // label17
@@ -984,7 +1144,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_pedidogeneral.Name = "txt_pedidogeneral";
             this.txt_pedidogeneral.Size = new System.Drawing.Size(141, 20);
             this.txt_pedidogeneral.TabIndex = 1;
-            this.txt_pedidogeneral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pedidogeneral_KeyPress);
             // 
             // label15
             // 
@@ -1009,68 +1168,12 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.label16.TabIndex = 99;
             this.label16.Text = "Numero Pedido General";
             // 
-            // chk_destararcorte
-            // 
-            this.chk_destararcorte.AutoSize = true;
-            this.chk_destararcorte.Enabled = false;
-            this.chk_destararcorte.Location = new System.Drawing.Point(295, 193);
-            this.chk_destararcorte.Name = "chk_destararcorte";
-            this.chk_destararcorte.Size = new System.Drawing.Size(54, 17);
-            this.chk_destararcorte.TabIndex = 10;
-            this.chk_destararcorte.Text = " Corte";
-            this.chk_destararcorte.UseVisualStyleBackColor = true;
-            // 
-            // chk_destararlaminado
-            // 
-            this.chk_destararlaminado.AutoSize = true;
-            this.chk_destararlaminado.Enabled = false;
-            this.chk_destararlaminado.Location = new System.Drawing.Point(195, 193);
-            this.chk_destararlaminado.Name = "chk_destararlaminado";
-            this.chk_destararlaminado.Size = new System.Drawing.Size(75, 17);
-            this.chk_destararlaminado.TabIndex = 9;
-            this.chk_destararlaminado.Text = " Laminado";
-            this.chk_destararlaminado.UseVisualStyleBackColor = true;
-            // 
-            // chk_destararimpresion
-            // 
-            this.chk_destararimpresion.AutoSize = true;
-            this.chk_destararimpresion.Enabled = false;
-            this.chk_destararimpresion.Location = new System.Drawing.Point(99, 193);
-            this.chk_destararimpresion.Name = "chk_destararimpresion";
-            this.chk_destararimpresion.Size = new System.Drawing.Size(74, 17);
-            this.chk_destararimpresion.TabIndex = 8;
-            this.chk_destararimpresion.Text = " Impresion";
-            this.chk_destararimpresion.UseVisualStyleBackColor = true;
-            // 
-            // chk_destararextrusion
-            // 
-            this.chk_destararextrusion.AutoSize = true;
-            this.chk_destararextrusion.Enabled = false;
-            this.chk_destararextrusion.Location = new System.Drawing.Point(9, 193);
-            this.chk_destararextrusion.Name = "chk_destararextrusion";
-            this.chk_destararextrusion.Size = new System.Drawing.Size(72, 17);
-            this.chk_destararextrusion.TabIndex = 7;
-            this.chk_destararextrusion.Text = " Extrusion";
-            this.chk_destararextrusion.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(9, 167);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 13);
-            this.label13.TabIndex = 93;
-            this.label13.Text = "Destarar";
-            // 
             // dtp_fechapedido
             // 
             this.dtp_fechapedido.Enabled = false;
             this.dtp_fechapedido.Location = new System.Drawing.Point(149, 114);
             this.dtp_fechapedido.Name = "dtp_fechapedido";
-            this.dtp_fechapedido.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fechapedido.Size = new System.Drawing.Size(210, 20);
             this.dtp_fechapedido.TabIndex = 5;
             // 
             // label10
@@ -1101,7 +1204,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dtp_fechaordencompra.Enabled = false;
             this.dtp_fechaordencompra.Location = new System.Drawing.Point(149, 85);
             this.dtp_fechaordencompra.Name = "dtp_fechaordencompra";
-            this.dtp_fechaordencompra.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fechaordencompra.Size = new System.Drawing.Size(210, 20);
             this.dtp_fechaordencompra.TabIndex = 4;
             // 
             // label8
@@ -1165,6 +1268,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.txt_numeropedido.Name = "txt_numeropedido";
             this.txt_numeropedido.Size = new System.Drawing.Size(141, 20);
             this.txt_numeropedido.TabIndex = 2;
+            this.txt_numeropedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeropedido_KeyPress);
             // 
             // label3
             // 
@@ -1388,7 +1492,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             // tp_Listado
             // 
             this.tp_Listado.Controls.Add(this.panel1);
-            this.tp_Listado.Controls.Add(this.dgv_mnt);
+            this.tp_Listado.Controls.Add(this.dgv_Mnt);
             this.tp_Listado.Location = new System.Drawing.Point(4, 22);
             this.tp_Listado.Name = "tp_Listado";
             this.tp_Listado.Padding = new System.Windows.Forms.Padding(3);
@@ -1421,6 +1525,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_FiltroCliente.Size = new System.Drawing.Size(394, 21);
             this.cbo_FiltroCliente.TabIndex = 14;
             this.cbo_FiltroCliente.ValueMember = "IdCliente";
+            this.cbo_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbo_FiltroCliente_SelectedIndexChanged_1);
             // 
             // Dtp_FechaFinal
             // 
@@ -1463,11 +1568,21 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.chk_FiltroCliente.UseVisualStyleBackColor = true;
             this.chk_FiltroCliente.CheckedChanged += new System.EventHandler(this.chk_FiltroCliente_CheckedChanged);
             // 
-            // dgv_mnt
+            // dgv_Mnt
             // 
-            this.dgv_mnt.AllowUserToAddRows = false;
-            this.dgv_mnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_Mnt.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dgv_Mnt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Mnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Mnt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdNumeroPedido,
             this.Numero_Pedido,
             this.Numero_Orden_Compra,
@@ -1476,61 +1591,19 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Razon_Social,
             this.Descripcion,
             this.Total_Kilos});
-            this.dgv_mnt.Location = new System.Drawing.Point(3, 34);
-            this.dgv_mnt.Name = "dgv_mnt";
-            this.dgv_mnt.Size = new System.Drawing.Size(1132, 396);
-            this.dgv_mnt.TabIndex = 0;
-            // 
-            // IdNumeroPedido
-            // 
-            this.IdNumeroPedido.DataPropertyName = "IdNumeroPedido";
-            this.IdNumeroPedido.HeaderText = "Codigo";
-            this.IdNumeroPedido.Name = "IdNumeroPedido";
-            this.IdNumeroPedido.Width = 70;
-            // 
-            // Numero_Pedido
-            // 
-            this.Numero_Pedido.DataPropertyName = "Numero_Pedido";
-            this.Numero_Pedido.HeaderText = "Numero Pedido";
-            this.Numero_Pedido.Name = "Numero_Pedido";
-            // 
-            // Numero_Orden_Compra
-            // 
-            this.Numero_Orden_Compra.DataPropertyName = "Numero_Orden_Compra";
-            this.Numero_Orden_Compra.HeaderText = " Orden Compra";
-            this.Numero_Orden_Compra.Name = "Numero_Orden_Compra";
-            // 
-            // Fecha_Pedido
-            // 
-            this.Fecha_Pedido.DataPropertyName = "Fecha_Pedido";
-            this.Fecha_Pedido.HeaderText = "Fecha Pedido";
-            this.Fecha_Pedido.Name = "Fecha_Pedido";
-            // 
-            // Fecha_Entrega
-            // 
-            this.Fecha_Entrega.DataPropertyName = "Fecha_Entrega";
-            this.Fecha_Entrega.HeaderText = "Fecha Entrega";
-            this.Fecha_Entrega.Name = "Fecha_Entrega";
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Razon Social";
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.Width = 200;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 280;
-            // 
-            // Total_Kilos
-            // 
-            this.Total_Kilos.DataPropertyName = "Total_Kilos";
-            this.Total_Kilos.HeaderText = "Total_Kilos";
-            this.Total_Kilos.Name = "Total_Kilos";
+            this.dgv_Mnt.Location = new System.Drawing.Point(3, 34);
+            this.dgv_Mnt.Name = "dgv_Mnt";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Mnt.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Mnt.Size = new System.Drawing.Size(1132, 396);
+            this.dgv_Mnt.TabIndex = 0;
             // 
             // tls_Formulario
             // 
@@ -1619,6 +1692,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Deshacer.Size = new System.Drawing.Size(59, 67);
             this.tls_Deshacer.Text = "Deshacer";
             this.tls_Deshacer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tls_Deshacer.Click += new System.EventHandler(this.tls_Deshacer_Click);
             // 
             // tls_Separador2
             // 
@@ -1659,6 +1733,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Buscar.Text = "&Buscar";
             this.tls_Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Buscar.ToolTipText = "Buscar datos";
+            this.tls_Buscar.Click += new System.EventHandler(this.tls_Buscar_Click);
             // 
             // tls_OrdenASC
             // 
@@ -1669,6 +1744,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_OrdenASC.Text = "A&sc";
             this.tls_OrdenASC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_OrdenASC.ToolTipText = "Ordenar Ascendente";
+            this.tls_OrdenASC.Click += new System.EventHandler(this.tls_OrdenASC_Click);
             // 
             // tls_OrdenDsc
             // 
@@ -1679,6 +1755,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_OrdenDsc.Text = "D&esc";
             this.tls_OrdenDsc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_OrdenDsc.ToolTipText = "Ordenar Descendente";
+            this.tls_OrdenDsc.Click += new System.EventHandler(this.tls_OrdenDsc_Click);
             // 
             // tls_Separador4
             // 
@@ -1694,6 +1771,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Refrescar.Text = "&Refrescar";
             this.tls_Refrescar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Refrescar.ToolTipText = "Refrescar datos";
+            this.tls_Refrescar.Click += new System.EventHandler(this.tls_Refrescar_Click);
             // 
             // tls_Primero
             // 
@@ -1704,6 +1782,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Primero.Text = "Pri&mero";
             this.tls_Primero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Primero.ToolTipText = "Primer registro";
+            this.tls_Primero.Click += new System.EventHandler(this.tls_Primero_Click);
             // 
             // tls_Anterior
             // 
@@ -1714,6 +1793,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Anterior.Text = "An&terior";
             this.tls_Anterior.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Anterior.ToolTipText = "Anterior registro";
+            this.tls_Anterior.Click += new System.EventHandler(this.tls_Anterior_Click);
             // 
             // tls_Siguiente
             // 
@@ -1724,6 +1804,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Siguiente.Text = "&Siguiente";
             this.tls_Siguiente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Siguiente.ToolTipText = "Siguiente registro";
+            this.tls_Siguiente.Click += new System.EventHandler(this.tls_Siguiente_Click);
             // 
             // tls_Ultimo
             // 
@@ -1734,6 +1815,75 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Ultimo.Text = "&Ultimo";
             this.tls_Ultimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Ultimo.ToolTipText = "Ultimo registro";
+            this.tls_Ultimo.Click += new System.EventHandler(this.tls_Ultimo_Click);
+            // 
+            // IdNumeroPedido
+            // 
+            this.IdNumeroPedido.DataPropertyName = "IdNumeroPedido";
+            this.IdNumeroPedido.HeaderText = "Codigo";
+            this.IdNumeroPedido.Name = "IdNumeroPedido";
+            this.IdNumeroPedido.ReadOnly = true;
+            this.IdNumeroPedido.Width = 70;
+            // 
+            // Numero_Pedido
+            // 
+            this.Numero_Pedido.DataPropertyName = "Numero_Pedido";
+            this.Numero_Pedido.HeaderText = "Numero Pedido";
+            this.Numero_Pedido.Name = "Numero_Pedido";
+            this.Numero_Pedido.ReadOnly = true;
+            // 
+            // Numero_Orden_Compra
+            // 
+            this.Numero_Orden_Compra.DataPropertyName = "Numero_Orden_Compra";
+            this.Numero_Orden_Compra.HeaderText = " Orden Compra";
+            this.Numero_Orden_Compra.Name = "Numero_Orden_Compra";
+            this.Numero_Orden_Compra.ReadOnly = true;
+            // 
+            // Fecha_Pedido
+            // 
+            this.Fecha_Pedido.DataPropertyName = "Fecha_Pedido";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Fecha_Pedido.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fecha_Pedido.HeaderText = "Fecha Pedido";
+            this.Fecha_Pedido.Name = "Fecha_Pedido";
+            this.Fecha_Pedido.ReadOnly = true;
+            this.Fecha_Pedido.Width = 70;
+            // 
+            // Fecha_Entrega
+            // 
+            this.Fecha_Entrega.DataPropertyName = "Fecha_Entrega";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Fecha_Entrega.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Fecha_Entrega.HeaderText = "Fecha Entrega";
+            this.Fecha_Entrega.Name = "Fecha_Entrega";
+            this.Fecha_Entrega.ReadOnly = true;
+            this.Fecha_Entrega.Width = 70;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Razon Social";
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 200;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 380;
+            // 
+            // Total_Kilos
+            // 
+            this.Total_Kilos.DataPropertyName = "Total_Kilos";
+            this.Total_Kilos.HeaderText = "Total Kilos";
+            this.Total_Kilos.Name = "Total_Kilos";
+            this.Total_Kilos.ReadOnly = true;
+            this.Total_Kilos.Width = 90;
             // 
             // Frm_RegistroPedidos
             // 
@@ -1754,12 +1904,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_reajusteporkilo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_reajustepormillar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_preciokilo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_preciomillar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_Porcentajemerma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nud_totalKG)).EndInit();
+            this.gb_DestararTuco.ResumeLayout(false);
+            this.gb_DestararTuco.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_merma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_ventakilos)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -1767,7 +1919,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tp_Listado.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Mnt)).EndInit();
             this.tls_Formulario.ResumeLayout(false);
             this.tls_Formulario.PerformLayout();
             this.ResumeLayout(false);
@@ -1800,7 +1952,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.ToolStripButton tls_Anterior;
         private System.Windows.Forms.ToolStripButton tls_Siguiente;
         private System.Windows.Forms.ToolStripButton tls_Ultimo;
-        private System.Windows.Forms.DataGridView dgv_mnt;
+        private System.Windows.Forms.DataGridView dgv_Mnt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbo_FiltroCliente;
         private System.Windows.Forms.DateTimePicker Dtp_FechaFinal;
@@ -1823,14 +1975,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_Clasificacion;
         private System.Windows.Forms.Button cmd_VerEstandar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdNumeroPedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Pedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Orden_Compra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Pedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Entrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Kilos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DateTimePicker dtp_fechaordencompra;
         private System.Windows.Forms.Label label8;
@@ -1845,11 +1989,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.ComboBox cbo_tipoventa;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.CheckBox chk_destararcorte;
-        private System.Windows.Forms.CheckBox chk_destararlaminado;
-        private System.Windows.Forms.CheckBox chk_destararimpresion;
-        private System.Windows.Forms.CheckBox chk_destararextrusion;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dtp_fechapedido;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -1883,15 +2022,9 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox cbo_facturadopor;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txt_notaventa;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox cbo_tipomoneda;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txt_observacionpedido;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.CheckBox chk_gastosincluidos;
         private System.Windows.Forms.ComboBox cbo_condicionproceso;
         private System.Windows.Forms.Label label41;
@@ -1908,9 +2041,34 @@ namespace Capa_Presentacion.Formularios.Produccion
         private System.Windows.Forms.Button btn_CondicionProceso;
         private System.Windows.Forms.NumericUpDown nud_preciokilo;
         private System.Windows.Forms.NumericUpDown nud_preciomillar;
-        private System.Windows.Forms.NumericUpDown nud_totalKG;
         private System.Windows.Forms.NumericUpDown nud_merma;
         private System.Windows.Forms.NumericUpDown nud_ventakilos;
-        private System.Windows.Forms.NumericUpDown nud_Porcentajemerma;
+        private System.Windows.Forms.TextBox txt_totalkgpedido;
+        private System.Windows.Forms.TextBox txt_PorcentajeMerma;
+        private System.Windows.Forms.TextBox txt_notaventa;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.NumericUpDown nud_reajusteporkilo;
+        private System.Windows.Forms.NumericUpDown nud_reajustepormillar;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox txt_metrospedido;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.CheckBox chk_masIGV;
+        private System.Windows.Forms.GroupBox gb_DestararTuco;
+        private System.Windows.Forms.CheckBox chk_destararcorte;
+        private System.Windows.Forms.CheckBox chk_destararlaminado;
+        private System.Windows.Forms.CheckBox chk_destararimpresion;
+        private System.Windows.Forms.CheckBox chk_destararextrusion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdNumeroPedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Pedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Orden_Compra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Pedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Entrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_Social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Kilos;
     }
 }

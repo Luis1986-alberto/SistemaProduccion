@@ -243,7 +243,6 @@ namespace Capa_Presentacion.Formularios
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex - 1].Selected = true;
             SelectIndex = SelectIndex - 1;
-
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEmpresa"].Value.ToString()));
         }
 
@@ -257,7 +256,6 @@ namespace Capa_Presentacion.Formularios
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[SelectIndex + 1].Selected = true;
             SelectIndex = SelectIndex + 1;
-
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEmpresa"].Value.ToString()));
         }
 
@@ -267,9 +265,7 @@ namespace Capa_Presentacion.Formularios
 
             dgv_Mnt.ClearSelection();
             dgv_Mnt.Rows[dgv_Mnt.Rows.Count - 1].Selected = true;
-
             Entrada_Datos(byte.Parse(dgv_Mnt.SelectedRows[0].Cells["IdEmpresa"].Value.ToString()));
-
             dgv_Mnt.FirstDisplayedScrollingRowIndex = dgv_Mnt.SelectedRows[0].Index;
         }
 
