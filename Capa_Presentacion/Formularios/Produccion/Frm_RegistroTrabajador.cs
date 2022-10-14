@@ -228,10 +228,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         {
             Frm_VisorReporte visorReporte = new Frm_VisorReporte();
             visorReporte.Reporte_ListaTrabajadores(trabajador.ToList());
-            visorReporte.ShowDialog();
-            
-
-     
+            visorReporte.ShowDialog();         
         }
 
         private void tls_Buscar_Click(object sender, EventArgs e)

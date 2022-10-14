@@ -30,8 +30,9 @@ namespace Capa_Negocios
 
         public string Agregar_Pedidos(PR_xPedidos pedidos)
         {
-            return PR_xPedidos_CD._Instancia.Pedidos_Procesar(pedidos, "I");
-            
+            List<PR_xPedidos> lstapedido = PR_xPedidos_CD._Instancia.Pedidos_PorEstandart(pedidos.IdEstandar).ToList();
+            if (lstapedido.Count > 0) pedidos.Flag_NuevoRepetidoHistorico = "1";
+            return PR_xPedidos_CD._Instancia.Pedidos_Procesar(pedidos, "I");            
         }
 
         public string Actualizar_Pedidos(PR_xPedidos pedidos)

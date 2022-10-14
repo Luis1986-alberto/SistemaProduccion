@@ -200,18 +200,18 @@ namespace Capa_Datos.Repositorio
             catch(Exception Ex) { throw new Exception("Error alEliminar", Ex);}
         }
 
-        public IEnumerable<PR_xPedidos>Pedidos_PorEstandart(Int32 idestaandart)
+        public IEnumerable<PR_xPedidos>Pedidos_PorEstandart(Int32 idestandar)
         {
             try
             {
                 using(var conexionsql = new SqlConnection(cadenaconexion))
                 {
                     conexionsql.Open();
-                    var sql = " select * from PR_xPedidos where IdEstandart = @idestandart";
-                    return conexionsql.Query<PR_xPedidos>(sql, new { idestandart = idestaandart });
+                    var sql = " select * from PR_xPedidos where IdEstandar = @Id";
+                    return conexionsql.Query<PR_xPedidos>(sql, new { Id = idestandar });
                 }
             }
-            catch(Exception Ex) { throw new Exception("Error al traer por IdEstandart " + idestaandart, Ex); }
+            catch(Exception Ex) { throw new Exception("Error al traer por IdEstandart " + idestandar, Ex); }
         }
 
         public IEnumerable<PR_xPedidos> Pedidos_PorNumeroPedio(string numeropedido)

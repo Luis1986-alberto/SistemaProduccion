@@ -239,11 +239,13 @@ namespace Capa_Presentacion.Formularios
 
         private void tls_Imprimir_Click(object sender, EventArgs e)
         {
-            if (SetupThePrinting()) { PrintDocument.Print(); }
+            if (SetupThePrinting())
+            { PrintDocument.Print(); }
         }
 
         private void tls_Previo_Click(object sender, EventArgs e)
         {
+
             if (SetupThePrinting())
             {
                 PrintPreviewDialog MyPrintPreviewDialog = new PrintPreviewDialog();
@@ -449,7 +451,7 @@ namespace Capa_Presentacion.Formularios
             return true;
         }
 
-        private void PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             bool more = dgr_Visor_Grilla.DrawDataGridView(e.Graphics);
             if (more == true)

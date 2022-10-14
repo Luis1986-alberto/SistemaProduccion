@@ -147,6 +147,14 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.Chk_FiltroRango = new System.Windows.Forms.CheckBox();
             this.chk_FiltroCliente = new System.Windows.Forms.CheckBox();
             this.dgv_Mnt = new System.Windows.Forms.DataGridView();
+            this.IdNumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Orden_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tls_Formulario = new System.Windows.Forms.ToolStrip();
             this.tls_Agregar = new System.Windows.Forms.ToolStripButton();
             this.tls_Modificar = new System.Windows.Forms.ToolStripButton();
@@ -167,14 +175,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Anterior = new System.Windows.Forms.ToolStripButton();
             this.tls_Siguiente = new System.Windows.Forms.ToolStripButton();
             this.tls_Ultimo = new System.Windows.Forms.ToolStripButton();
-            this.IdNumeroPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_Orden_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_Social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbc_Mnt.SuspendLayout();
             this.tp_Detalle.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -1525,7 +1525,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.cbo_FiltroCliente.Size = new System.Drawing.Size(394, 21);
             this.cbo_FiltroCliente.TabIndex = 14;
             this.cbo_FiltroCliente.ValueMember = "IdCliente";
-            this.cbo_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbo_FiltroCliente_SelectedIndexChanged_1);
+            this.cbo_FiltroCliente.SelectedIndexChanged += new System.EventHandler(this.cbo_FiltroCliente_SelectedIndexChanged);
             // 
             // Dtp_FechaFinal
             // 
@@ -1604,6 +1604,74 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.dgv_Mnt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Mnt.Size = new System.Drawing.Size(1132, 396);
             this.dgv_Mnt.TabIndex = 0;
+            // 
+            // IdNumeroPedido
+            // 
+            this.IdNumeroPedido.DataPropertyName = "IdNumeroPedido";
+            this.IdNumeroPedido.HeaderText = "Codigo";
+            this.IdNumeroPedido.Name = "IdNumeroPedido";
+            this.IdNumeroPedido.ReadOnly = true;
+            this.IdNumeroPedido.Width = 70;
+            // 
+            // Numero_Pedido
+            // 
+            this.Numero_Pedido.DataPropertyName = "Numero_Pedido";
+            this.Numero_Pedido.HeaderText = "Numero Pedido";
+            this.Numero_Pedido.Name = "Numero_Pedido";
+            this.Numero_Pedido.ReadOnly = true;
+            // 
+            // Numero_Orden_Compra
+            // 
+            this.Numero_Orden_Compra.DataPropertyName = "Numero_Orden_Compra";
+            this.Numero_Orden_Compra.HeaderText = " Orden Compra";
+            this.Numero_Orden_Compra.Name = "Numero_Orden_Compra";
+            this.Numero_Orden_Compra.ReadOnly = true;
+            // 
+            // Fecha_Pedido
+            // 
+            this.Fecha_Pedido.DataPropertyName = "Fecha_Pedido";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Fecha_Pedido.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fecha_Pedido.HeaderText = "Fecha Pedido";
+            this.Fecha_Pedido.Name = "Fecha_Pedido";
+            this.Fecha_Pedido.ReadOnly = true;
+            this.Fecha_Pedido.Width = 70;
+            // 
+            // Fecha_Entrega
+            // 
+            this.Fecha_Entrega.DataPropertyName = "Fecha_Entrega";
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Fecha_Entrega.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Fecha_Entrega.HeaderText = "Fecha Entrega";
+            this.Fecha_Entrega.Name = "Fecha_Entrega";
+            this.Fecha_Entrega.ReadOnly = true;
+            this.Fecha_Entrega.Width = 70;
+            // 
+            // Razon_Social
+            // 
+            this.Razon_Social.DataPropertyName = "Razon_Social";
+            this.Razon_Social.HeaderText = "Razon Social";
+            this.Razon_Social.Name = "Razon_Social";
+            this.Razon_Social.ReadOnly = true;
+            this.Razon_Social.Width = 200;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 380;
+            // 
+            // Total_Kilos
+            // 
+            this.Total_Kilos.DataPropertyName = "Total_Kilos";
+            this.Total_Kilos.HeaderText = "Total Kilos";
+            this.Total_Kilos.Name = "Total_Kilos";
+            this.Total_Kilos.ReadOnly = true;
+            this.Total_Kilos.Width = 90;
             // 
             // tls_Formulario
             // 
@@ -1718,6 +1786,7 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Previo.Text = "&Previo";
             this.tls_Previo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Previo.ToolTipText = "Previo de datos antes de imprimir";
+            this.tls_Previo.Click += new System.EventHandler(this.tls_Previo_Click);
             // 
             // tls_Separador3
             // 
@@ -1816,74 +1885,6 @@ namespace Capa_Presentacion.Formularios.Produccion
             this.tls_Ultimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tls_Ultimo.ToolTipText = "Ultimo registro";
             this.tls_Ultimo.Click += new System.EventHandler(this.tls_Ultimo_Click);
-            // 
-            // IdNumeroPedido
-            // 
-            this.IdNumeroPedido.DataPropertyName = "IdNumeroPedido";
-            this.IdNumeroPedido.HeaderText = "Codigo";
-            this.IdNumeroPedido.Name = "IdNumeroPedido";
-            this.IdNumeroPedido.ReadOnly = true;
-            this.IdNumeroPedido.Width = 70;
-            // 
-            // Numero_Pedido
-            // 
-            this.Numero_Pedido.DataPropertyName = "Numero_Pedido";
-            this.Numero_Pedido.HeaderText = "Numero Pedido";
-            this.Numero_Pedido.Name = "Numero_Pedido";
-            this.Numero_Pedido.ReadOnly = true;
-            // 
-            // Numero_Orden_Compra
-            // 
-            this.Numero_Orden_Compra.DataPropertyName = "Numero_Orden_Compra";
-            this.Numero_Orden_Compra.HeaderText = " Orden Compra";
-            this.Numero_Orden_Compra.Name = "Numero_Orden_Compra";
-            this.Numero_Orden_Compra.ReadOnly = true;
-            // 
-            // Fecha_Pedido
-            // 
-            this.Fecha_Pedido.DataPropertyName = "Fecha_Pedido";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Fecha_Pedido.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Fecha_Pedido.HeaderText = "Fecha Pedido";
-            this.Fecha_Pedido.Name = "Fecha_Pedido";
-            this.Fecha_Pedido.ReadOnly = true;
-            this.Fecha_Pedido.Width = 70;
-            // 
-            // Fecha_Entrega
-            // 
-            this.Fecha_Entrega.DataPropertyName = "Fecha_Entrega";
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Fecha_Entrega.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Fecha_Entrega.HeaderText = "Fecha Entrega";
-            this.Fecha_Entrega.Name = "Fecha_Entrega";
-            this.Fecha_Entrega.ReadOnly = true;
-            this.Fecha_Entrega.Width = 70;
-            // 
-            // Razon_Social
-            // 
-            this.Razon_Social.DataPropertyName = "Razon_Social";
-            this.Razon_Social.HeaderText = "Razon Social";
-            this.Razon_Social.Name = "Razon_Social";
-            this.Razon_Social.ReadOnly = true;
-            this.Razon_Social.Width = 200;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 380;
-            // 
-            // Total_Kilos
-            // 
-            this.Total_Kilos.DataPropertyName = "Total_Kilos";
-            this.Total_Kilos.HeaderText = "Total Kilos";
-            this.Total_Kilos.Name = "Total_Kilos";
-            this.Total_Kilos.ReadOnly = true;
-            this.Total_Kilos.Width = 90;
             // 
             // Frm_RegistroPedidos
             // 

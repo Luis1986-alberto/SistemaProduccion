@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Capa_Presentacion.Clases
 {
-    class DataGridViewPrinter
+    public class DataGridViewPrinter
     {
         public string[] GroupColumns { get; set; }
         private DataGridView TheDataGridView; // The DataGridView Control which will be printed

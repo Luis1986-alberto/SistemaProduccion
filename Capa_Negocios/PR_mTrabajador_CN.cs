@@ -24,8 +24,9 @@ namespace Capa_Negocios
         }
 
         public PR_mTrabajador Traer_PorId(Int32 idtrabajador)
-        {
+        {           
             return PR_mTrabajador_CD._Instancia.Traer_PorId(idtrabajador);
+
         }
 
         public IEnumerable<PR_mTrabajador>Buscar_PorDNI(string dni)

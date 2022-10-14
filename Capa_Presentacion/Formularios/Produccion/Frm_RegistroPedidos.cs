@@ -4,6 +4,8 @@ using Capa_Presentacion.Clases;
 using Capa_Presentacion.Framework.ComponetModel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -11,7 +13,7 @@ namespace Capa_Presentacion.Formularios.Produccion
 {
     public partial class Frm_RegistroPedidos : Form
     {
-        
+        DataGridViewPrinter dgr_Visor_Grilla;
         private bool bln_Nuevo, bln_Editar = false;        
         private List<PR_xPedidos> lst_pedidos = new List<PR_xPedidos>();
 
@@ -23,7 +25,6 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void Frm_RegistroPedidos_Load(object sender, EventArgs e)
         {
             tbc_Mnt.SelectTab(1);
-
             Cargar_Combos();
             Cargar_Datos();
             tbc_Mnt.Selecting += new TabControlCancelEventHandler(tbc_Mnt_Selecting);
@@ -45,10 +46,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             cbo_sevendepor.DataSource = PR_aSeVendePor_CN._Instancia.Lista_SeVendePor();
             cbo_tipomoneda.DataSource = PR_aTipoMoneda_CN._Instancia.Lista_TipoMoneda();
             cbo_condicionproceso.DataSource = PR_aCondicionProceso_CN._Instancia.Lista_CondicionProceso();
-            cbo_vendedor.DataSource = PR_mTrabajador_CN._Intancia.lst_FiltrarDescripciontipotrabajador("ADMIN");          
-            
+            cbo_vendedor.DataSource = PR_mTrabajador_CN._Intancia.lst_FiltrarDescripciontipotrabajador("ADMIN");            
         }
-
 
         public void Cargar_Datos()
         {
@@ -104,27 +103,11 @@ namespace Capa_Presentacion.Formularios.Produccion
             }
         }
 
-        private void cbo_FiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Cbo_FiltroTipoProduccion_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void Dtp_FechaFinal_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dtp_FechaInicial_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
         private void chk_FiltroTipoEstandar_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -178,7 +161,8 @@ namespace Capa_Presentacion.Formularios.Produccion
             nud_ventakilos.Enabled = vestado;
             rb_ventamillares.Enabled = vestado;
             txt_ventamillares.Enabled = vestado;
-            nud_merma.Enabled = vestado;          
+            nud_merma.Enabled = vestado;
+            txt_metrospedido.Enabled = vestado;
             cbo_tipoventa.Enabled = vestado;
             cbo_condicioncobranza.Enabled = vestado;
             cbo_facturadopor.Enabled = vestado;
@@ -329,9 +313,13 @@ namespace Capa_Presentacion.Formularios.Produccion
             if (rpta == "PROCESADO") {
                 MessageBox.Show("SE REALIZO EL PROCESO CON EXITO", "SE PROCESO ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 HabilitarControles(false);
+                Estado_Toolbar(false);
                 Cargar_Datos();
                 tbc_Mnt.TabPages["tp_Listado"].Enabled = true;
-                tbc_Mnt.SelectTab(1);}
+                tbc_Mnt.SelectTab(1);
+
+            }
+
             else MessageBox.Show(rpta, "OCURRIO EL SIGUIENTE ERROR :", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -358,6 +346,7 @@ namespace Capa_Presentacion.Formularios.Produccion
         private void chk_FiltroCliente_CheckedChanged(object sender, EventArgs e)
         {
             cbo_FiltroCliente.Enabled = chk_FiltroCliente.Checked;
+            Cargar_Datos();
         }
 
         private void Limpiarcontroles()
@@ -492,9 +481,16 @@ namespace Capa_Presentacion.Formularios.Produccion
             HabilitarControles(false);
         }
 
-        private void cbo_FiltroCliente_SelectedIndexChanged_1(object sender, EventArgs e)
-        {if(chk_FiltroCliente.Checked == true)Cargar_Datos();}
+        private void cbo_FiltroCliente_SelectedIndexChanged(object sender, EventArgs e)
+        { if (chk_FiltroCliente.Checked == true) Cargar_Datos();}
 
+        private void tls_Previo_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        
+       
         private void Calcular_Totales()
         {
             if (nud_ventakilos.Value == 0) return;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Capa_Entidades.Tablas
 {
@@ -19,8 +20,9 @@ namespace Capa_Entidades.Tablas
         public string Numero_Celular1 { get; set; }
         public string Numero_Celular2 { get; set; }
         public byte IdTipoRubro { get; set; }
+        public List<PR_aTipoRubro> PR_aTipoRubro{get;set;}
         public virtual string Nombre_TipoRubro { get; set; }
-
+            
         public PR_mClientes()
         { }
     }

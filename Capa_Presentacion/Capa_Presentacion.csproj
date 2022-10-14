@@ -81,6 +81,7 @@
     <Compile Include="Clases\DataGridViewPrinter.cs" />
     <Compile Include="Clases\PropertyComparer.cs" />
     <Compile Include="Clases\SortableBindingList.cs" />
+    <Compile Include="Clases\Tipos_Impresion.cs" />
     <Compile Include="Clases\Validar_Campos.cs" />
     <Compile Include="Clases\Variables_Globales.cs" />
     <Compile Include="Formularios\Frm_Mes.cs">
